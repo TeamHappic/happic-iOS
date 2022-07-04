@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
+		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
+		CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE32287309A7008583C3 /* Alamofire */; };
+		CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE35287309D5008583C3 /* Kingfisher */; };
+		CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D22873087D000EEB8A /* AppDelegate.swift */; };
+		CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D42873087D000EEB8A /* SceneDelegate.swift */; };
+		CEBB69D72873087D000EEB8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D62873087D000EEB8A /* ViewController.swift */; };
+		CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69D82873087E000EEB8A /* Main.storyboard */; };
+		CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DB2873087F000EEB8A /* Assets.xcassets */; };
+		CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEBB69D42873087D000EEB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEBB69D62873087D000EEB8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEBB69D92873087E000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEBB69DB2873087F000EEB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEBB69DE2873087F000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEBB69E02873087F000EEB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEBB69CC2873087D000EEB8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */,
+				CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */,
+				CEA4BE2D2873094C008583C3 /* Then in Frameworks */,
+				CEA4BE302873096C008583C3 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEBB69C62873087D000EEB8A = {
+			isa = PBXGroup;
+			children = (
+				CEBB69D12873087D000EEB8A /* Happic-iOS */,
+				CEBB69D02873087D000EEB8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEBB69D02873087D000EEB8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB69CF2873087D000EEB8A /* Happic-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEBB69D12873087D000EEB8A /* Happic-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB69D22873087D000EEB8A /* AppDelegate.swift */,
+				CEBB69D42873087D000EEB8A /* SceneDelegate.swift */,
+				CEBB69D62873087D000EEB8A /* ViewController.swift */,
+				CEBB69D82873087E000EEB8A /* Main.storyboard */,
+				CEBB69DB2873087F000EEB8A /* Assets.xcassets */,
+				CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */,
+				CEBB69E02873087F000EEB8A /* Info.plist */,
+			);
+			path = "Happic-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEBB69CE2873087D000EEB8A /* Happic-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBB69E32873087F000EEB8A /* Build configuration list for PBXNativeTarget "Happic-iOS" */;
+			buildPhases = (
+				CEBB69CB2873087D000EEB8A /* Sources */,
+				CEBB69CC2873087D000EEB8A /* Frameworks */,
+				CEBB69CD2873087D000EEB8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Happic-iOS";
+			packageProductDependencies = (
+				CEA4BE2C2873094C008583C3 /* Then */,
+				CEA4BE2F2873096C008583C3 /* SnapKit */,
+				CEA4BE32287309A7008583C3 /* Alamofire */,
+				CEA4BE35287309D5008583C3 /* Kingfisher */,
+			);
+			productName = "Happic-iOS";
+			productReference = CEBB69CF2873087D000EEB8A /* Happic-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEBB69C72873087D000EEB8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CEBB69CE2873087D000EEB8A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CEBB69CA2873087D000EEB8A /* Build configuration list for PBXProject "Happic-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEBB69C62873087D000EEB8A;
+			packageReferences = (
+				CEA4BE2B2873094C008583C3 /* XCRemoteSwiftPackageReference "Then" */,
+				CEA4BE2E2873096C008583C3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CEA4BE31287309A7008583C3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = CEBB69D02873087D000EEB8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEBB69CE2873087D000EEB8A /* Happic-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEBB69CD2873087D000EEB8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */,
+				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
+				CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEBB69CB2873087D000EEB8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBB69D72873087D000EEB8A /* ViewController.swift in Sources */,
+				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
+				CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEBB69D82873087E000EEB8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBB69D92873087E000EEB8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBB69DE2873087F000EEB8A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEBB69E12873087F000EEB8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEBB69E22873087F000EEB8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEBB69E42873087F000EEB8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Happic-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happic.Happic-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CEBB69E52873087F000EEB8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Happic-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happic.Happic-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEBB69CA2873087D000EEB8A /* Build configuration list for PBXProject "Happic-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBB69E12873087F000EEB8A /* Debug */,
+				CEBB69E22873087F000EEB8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBB69E32873087F000EEB8A /* Build configuration list for PBXNativeTarget "Happic-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBB69E42873087F000EEB8A /* Debug */,
+				CEBB69E52873087F000EEB8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEA4BE2B2873094C008583C3 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CEA4BE2E2873096C008583C3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		CEA4BE31287309A7008583C3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEA4BE2C2873094C008583C3 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA4BE2B2873094C008583C3 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CEA4BE2F2873096C008583C3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA4BE2E2873096C008583C3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CEA4BE32287309A7008583C3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA4BE31287309A7008583C3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CEA4BE35287309D5008583C3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CEBB69C72873087D000EEB8A /* Project object */;
+}
