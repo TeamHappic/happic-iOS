@@ -19,12 +19,30 @@
       }
     },
     {
+      "identity" : "pageboy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uias/Pageboy",
+      "state" : {
+        "revision" : "34ecb6e7c4e0e07494960ab2f7cc9a02293915a6",
+        "version" : "3.6.2"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",
       "state" : {
         "branch" : "develop",
         "revision" : "07c5d1f6044701d97e94dc11157259e8811977be"
+      }
+    },
+    {
+      "identity" : "tabman",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uias/Tabman",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cf7732bec52323c42721ec8a6b4e95b3080bba6e"
       }
     },
     {

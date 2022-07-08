@@ -48,6 +48,7 @@
 		CEF6E0A72878150100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* temp.swift */; };
 		CEF6E0A92878150400A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* temp.swift */; };
 		CEF6E0AB2878150700A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* temp.swift */; };
+		CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CEF6E0AD2878973E00A1636F /* Tabman */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */,
 				CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */,
 				CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */,
 				CEA4BE2D2873094C008583C3 /* Then in Frameworks */,
@@ -550,6 +552,7 @@
 				CEA4BE2F2873096C008583C3 /* SnapKit */,
 				CEA4BE32287309A7008583C3 /* Alamofire */,
 				CEA4BE35287309D5008583C3 /* Kingfisher */,
+				CEF6E0AD2878973E00A1636F /* Tabman */,
 			);
 			productName = "Happic-iOS";
 			productReference = CEBB69CF2873087D000EEB8A /* Happic-iOS.app */;
@@ -584,6 +587,7 @@
 				CEA4BE2E2873096C008583C3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CEA4BE31287309A7008583C3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = CEBB69D02873087D000EEB8A /* Products */;
 			projectDirPath = "";
@@ -916,6 +920,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -938,6 +950,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CEF6E0AD2878973E00A1636F /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
