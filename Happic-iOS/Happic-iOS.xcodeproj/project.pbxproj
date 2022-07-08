@@ -18,37 +18,36 @@
 		CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69D82873087E000EEB8A /* Main.storyboard */; };
 		CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DB2873087F000EEB8A /* Assets.xcassets */; };
 		CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */; };
-		CEF6E04328780EDA00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04228780EDA00A1636F /* temp.swift */; };
-		CEF6E04528780EE100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* temp.swift */; };
-		CEF6E04728780EE800A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* temp.swift */; };
-		CEF6E04E28780F9A00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04D28780F9A00A1636F /* temp.swift */; };
-		CEF6E05028780FA100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04F28780FA100A1636F /* temp.swift */; };
-		CEF6E05428780FAA00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* temp.swift */; };
-		CEF6E07B2878149300A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07A2878149300A1636F /* temp.swift */; };
-		CEF6E07D287814A400A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* temp.swift */; };
-		CEF6E07F287814AB00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07E287814AB00A1636F /* temp.swift */; };
-		CEF6E081287814AF00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E080287814AF00A1636F /* temp.swift */; };
-		CEF6E083287814B300A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E082287814B300A1636F /* temp.swift */; };
-		CEF6E085287814B700A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E084287814B700A1636F /* temp.swift */; };
-		CEF6E087287814BA00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E086287814BA00A1636F /* temp.swift */; };
-		CEF6E089287814BF00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E088287814BF00A1636F /* temp.swift */; };
-		CEF6E08B287814C400A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08A287814C400A1636F /* temp.swift */; };
-		CEF6E08D287814C900A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* temp.swift */; };
-		CEF6E08F287814CD00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08E287814CD00A1636F /* temp.swift */; };
-		CEF6E091287814D100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E090287814D100A1636F /* temp.swift */; };
-		CEF6E093287814D500A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* temp.swift */; };
-		CEF6E095287814DA00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E094287814DA00A1636F /* temp.swift */; };
-		CEF6E097287814DD00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E096287814DD00A1636F /* temp.swift */; };
-		CEF6E099287814E100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E098287814E100A1636F /* temp.swift */; };
-		CEF6E09B287814E600A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09A287814E600A1636F /* temp.swift */; };
-		CEF6E09D287814E900A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09C287814E900A1636F /* temp.swift */; };
-		CEF6E09F287814ED00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09E287814ED00A1636F /* temp.swift */; };
-		CEF6E0A1287814F200A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A0287814F200A1636F /* temp.swift */; };
-		CEF6E0A3287814F600A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* temp.swift */; };
-		CEF6E0A5287814FC00A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* temp.swift */; };
-		CEF6E0A72878150100A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* temp.swift */; };
-		CEF6E0A92878150400A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* temp.swift */; };
-		CEF6E0AB2878150700A1636F /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* temp.swift */; };
+		CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04228780EDA00A1636F /* tempFoundation.swift */; };
+		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
+		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
+		CEF6E04E28780F9A00A1636F /* tempLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04D28780F9A00A1636F /* tempLiteral.swift */; };
+		CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* tempUIComponent.swift */; };
+		CEF6E07B2878149300A1636F /* tempTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07A2878149300A1636F /* tempTabbarView.swift */; };
+		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
+		CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07E287814AB00A1636F /* tempAuthView.swift */; };
+		CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E080287814AF00A1636F /* tempAuthController.swift */; };
+		CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */; };
+		CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */; };
+		CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */; };
+		CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */; };
+		CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08A287814C400A1636F /* tempHappicCapsuleView.swift */; };
+		CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */; };
+		CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08E287814CD00A1636F /* tempHomeModel.swift */; };
+		CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E090287814D100A1636F /* tempHomeView.swift */; };
+		CEF6E093287814D500A1636F /* tempHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* tempHomeController.swift */; };
+		CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */; };
+		CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */; };
+		CEF6E099287814E100A1636F /* tempHaruHappicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E098287814E100A1636F /* tempHaruHappicController.swift */; };
+		CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */; };
+		CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */; };
+		CEF6E09F287814ED00A1636F /* tempCreateContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */; };
+		CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */; };
+		CEF6E0A3287814F600A1636F /* tempHappicReportModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */; };
+		CEF6E0A5287814FC00A1636F /* tempHappicReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */; };
+		CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* tempSettingModel.swift */; };
+		CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* tempSettingView.swift */; };
+		CEF6E0AB2878150700A1636F /* tempSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* tempSettingController.swift */; };
 		CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CEF6E0AD2878973E00A1636F /* Tabman */; };
 		CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */; };
 		CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0B128789FFC00A1636F /* UIViewController+.swift */; };
@@ -68,37 +67,36 @@
 		CEBB69DB2873087F000EEB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBB69DE2873087F000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBB69E02873087F000EEB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF6E04228780EDA00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E04428780EE100A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E04628780EE800A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E04D28780F9A00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E04F28780FA100A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E05328780FAA00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E07A2878149300A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E07C287814A400A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E07E287814AB00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E080287814AF00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E082287814B300A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E084287814B700A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E086287814BA00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E088287814BF00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E08A287814C400A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E08C287814C900A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E08E287814CD00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E090287814D100A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E092287814D500A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E094287814DA00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E096287814DD00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E098287814E100A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E09A287814E600A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E09C287814E900A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E09E287814ED00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0A0287814F200A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0A2287814F600A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0A4287814FC00A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0A62878150100A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0A82878150400A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
-		CEF6E0AA2878150700A1636F /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
+		CEF6E04228780EDA00A1636F /* tempFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempFoundation.swift; sourceTree = "<group>"; };
+		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
+		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
+		CEF6E04D28780F9A00A1636F /* tempLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempLiteral.swift; sourceTree = "<group>"; };
+		CEF6E05328780FAA00A1636F /* tempUIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempUIComponent.swift; sourceTree = "<group>"; };
+		CEF6E07A2878149300A1636F /* tempTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempTabbarView.swift; sourceTree = "<group>"; };
+		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
+		CEF6E07E287814AB00A1636F /* tempAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthView.swift; sourceTree = "<group>"; };
+		CEF6E080287814AF00A1636F /* tempAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthController.swift; sourceTree = "<group>"; };
+		CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterModel.swift; sourceTree = "<group>"; };
+		CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterView.swift; sourceTree = "<group>"; };
+		CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterController.swift; sourceTree = "<group>"; };
+		CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleModel.swift; sourceTree = "<group>"; };
+		CEF6E08A287814C400A1636F /* tempHappicCapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleView.swift; sourceTree = "<group>"; };
+		CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleController.swift; sourceTree = "<group>"; };
+		CEF6E08E287814CD00A1636F /* tempHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeModel.swift; sourceTree = "<group>"; };
+		CEF6E090287814D100A1636F /* tempHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeView.swift; sourceTree = "<group>"; };
+		CEF6E092287814D500A1636F /* tempHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeController.swift; sourceTree = "<group>"; };
+		CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicModel.swift; sourceTree = "<group>"; };
+		CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicView.swift; sourceTree = "<group>"; };
+		CEF6E098287814E100A1636F /* tempHaruHappicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicController.swift; sourceTree = "<group>"; };
+		CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsModel.swift; sourceTree = "<group>"; };
+		CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsView.swift; sourceTree = "<group>"; };
+		CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsController.swift; sourceTree = "<group>"; };
+		CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModel.swift; sourceTree = "<group>"; };
+		CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModelView.swift; sourceTree = "<group>"; };
+		CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportController.swift; sourceTree = "<group>"; };
+		CEF6E0A62878150100A1636F /* tempSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingModel.swift; sourceTree = "<group>"; };
+		CEF6E0A82878150400A1636F /* tempSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingView.swift; sourceTree = "<group>"; };
+		CEF6E0AA2878150700A1636F /* tempSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingController.swift; sourceTree = "<group>"; };
 		CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		CEF6E0B128789FFC00A1636F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		CEF6E0B32878A08400A1636F /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -193,7 +191,7 @@
 		CEF6E03F28780E6900A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04628780EE800A1636F /* temp.swift */,
+				CEF6E04628780EE800A1636F /* tempModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,7 +199,7 @@
 		CEF6E04028780E7000A1636F /* APIService */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04428780EE100A1636F /* temp.swift */,
+				CEF6E04428780EE100A1636F /* tempAPIService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -209,7 +207,7 @@
 		CEF6E04128780EBB00A1636F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04228780EDA00A1636F /* temp.swift */,
+				CEF6E04228780EDA00A1636F /* tempFoundation.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -226,7 +224,7 @@
 		CEF6E04928780F0B00A1636F /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E05328780FAA00A1636F /* temp.swift */,
+				CEF6E05328780FAA00A1636F /* tempUIComponent.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -243,7 +241,6 @@
 		CEF6E04B28780F3000A1636F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04F28780FA100A1636F /* temp.swift */,
 				CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */,
 				CEF6E0B128789FFC00A1636F /* UIViewController+.swift */,
 				CEF6E0B32878A08400A1636F /* UITextField+.swift */,
@@ -258,7 +255,7 @@
 		CEF6E04C28780F3D00A1636F /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04D28780F9A00A1636F /* temp.swift */,
+				CEF6E04D28780F9A00A1636F /* tempLiteral.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -274,7 +271,7 @@
 		CEF6E058287810BD00A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E07A2878149300A1636F /* temp.swift */,
+				CEF6E07A2878149300A1636F /* tempTabbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,7 +359,7 @@
 		CEF6E0612878140000A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E07C287814A400A1636F /* temp.swift */,
+				CEF6E07C287814A400A1636F /* tempAuthModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +367,7 @@
 		CEF6E0622878140500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E07E287814AB00A1636F /* temp.swift */,
+				CEF6E07E287814AB00A1636F /* tempAuthView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,7 +375,7 @@
 		CEF6E0632878141000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E080287814AF00A1636F /* temp.swift */,
+				CEF6E080287814AF00A1636F /* tempAuthController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -386,7 +383,7 @@
 		CEF6E0642878142000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E086287814BA00A1636F /* temp.swift */,
+				CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,7 +391,7 @@
 		CEF6E0652878142500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E084287814B700A1636F /* temp.swift */,
+				CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,7 +399,7 @@
 		CEF6E0662878142900A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E082287814B300A1636F /* temp.swift */,
+				CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,7 +407,7 @@
 		CEF6E0672878143000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E08C287814C900A1636F /* temp.swift */,
+				CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -418,7 +415,7 @@
 		CEF6E0682878143400A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E08A287814C400A1636F /* temp.swift */,
+				CEF6E08A287814C400A1636F /* tempHappicCapsuleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,7 +423,7 @@
 		CEF6E0692878143700A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E088287814BF00A1636F /* temp.swift */,
+				CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,7 +431,7 @@
 		CEF6E06A2878144100A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E092287814D500A1636F /* temp.swift */,
+				CEF6E092287814D500A1636F /* tempHomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,7 +439,7 @@
 		CEF6E06B2878144500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E090287814D100A1636F /* temp.swift */,
+				CEF6E090287814D100A1636F /* tempHomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,7 +447,7 @@
 		CEF6E06C2878144800A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E08E287814CD00A1636F /* temp.swift */,
+				CEF6E08E287814CD00A1636F /* tempHomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,7 +455,7 @@
 		CEF6E06D2878144C00A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E098287814E100A1636F /* temp.swift */,
+				CEF6E098287814E100A1636F /* tempHaruHappicController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,7 +463,7 @@
 		CEF6E06E2878144F00A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E096287814DD00A1636F /* temp.swift */,
+				CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,7 +471,7 @@
 		CEF6E06F2878145300A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E094287814DA00A1636F /* temp.swift */,
+				CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,7 +479,7 @@
 		CEF6E0702878145700A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E09E287814ED00A1636F /* temp.swift */,
+				CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -490,7 +487,7 @@
 		CEF6E0712878145A00A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E09C287814E900A1636F /* temp.swift */,
+				CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,7 +495,7 @@
 		CEF6E0722878145D00A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E09A287814E600A1636F /* temp.swift */,
+				CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,7 +503,7 @@
 		CEF6E0732878146100A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A4287814FC00A1636F /* temp.swift */,
+				CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -514,7 +511,7 @@
 		CEF6E0742878146500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A2287814F600A1636F /* temp.swift */,
+				CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,7 +519,7 @@
 		CEF6E0752878146800A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A0287814F200A1636F /* temp.swift */,
+				CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -530,7 +527,7 @@
 		CEF6E0762878146D00A1636F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A62878150100A1636F /* temp.swift */,
+				CEF6E0A62878150100A1636F /* tempSettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -538,7 +535,7 @@
 		CEF6E0772878146F00A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0AA2878150700A1636F /* temp.swift */,
+				CEF6E0AA2878150700A1636F /* tempSettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,7 +543,7 @@
 		CEF6E0782878147600A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A82878150400A1636F /* temp.swift */,
+				CEF6E0A82878150400A1636F /* tempSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -661,44 +658,43 @@
 				CEBB69D72873087D000EEB8A /* ViewController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
-				CEF6E0A5287814FC00A1636F /* temp.swift in Sources */,
+				CEF6E0A5287814FC00A1636F /* tempHappicReportController.swift in Sources */,
 				CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */,
-				CEF6E05028780FA100A1636F /* temp.swift in Sources */,
-				CEF6E04328780EDA00A1636F /* temp.swift in Sources */,
-				CEF6E091287814D100A1636F /* temp.swift in Sources */,
-				CEF6E08D287814C900A1636F /* temp.swift in Sources */,
-				CEF6E083287814B300A1636F /* temp.swift in Sources */,
+				CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */,
+				CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */,
+				CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */,
+				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
-				CEF6E04528780EE100A1636F /* temp.swift in Sources */,
-				CEF6E099287814E100A1636F /* temp.swift in Sources */,
-				CEF6E093287814D500A1636F /* temp.swift in Sources */,
-				CEF6E04E28780F9A00A1636F /* temp.swift in Sources */,
-				CEF6E0AB2878150700A1636F /* temp.swift in Sources */,
+				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
+				CEF6E099287814E100A1636F /* tempHaruHappicController.swift in Sources */,
+				CEF6E093287814D500A1636F /* tempHomeController.swift in Sources */,
+				CEF6E04E28780F9A00A1636F /* tempLiteral.swift in Sources */,
+				CEF6E0AB2878150700A1636F /* tempSettingController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
-				CEF6E097287814DD00A1636F /* temp.swift in Sources */,
-				CEF6E04728780EE800A1636F /* temp.swift in Sources */,
-				CEF6E095287814DA00A1636F /* temp.swift in Sources */,
+				CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */,
+				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
+				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
 				CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */,
-				CEF6E05428780FAA00A1636F /* temp.swift in Sources */,
-				CEF6E07D287814A400A1636F /* temp.swift in Sources */,
-				CEF6E08B287814C400A1636F /* temp.swift in Sources */,
-				CEF6E087287814BA00A1636F /* temp.swift in Sources */,
-				CEF6E0A92878150400A1636F /* temp.swift in Sources */,
-				CEF6E09F287814ED00A1636F /* temp.swift in Sources */,
-				CEF6E081287814AF00A1636F /* temp.swift in Sources */,
-				CEF6E09D287814E900A1636F /* temp.swift in Sources */,
-				CEF6E089287814BF00A1636F /* temp.swift in Sources */,
-				CEF6E07B2878149300A1636F /* temp.swift in Sources */,
-				CEF6E07F287814AB00A1636F /* temp.swift in Sources */,
+				CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */,
+				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
+				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
+				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
+				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
+				CEF6E09F287814ED00A1636F /* tempCreateContentsController.swift in Sources */,
+				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
+				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
+				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
+				CEF6E07B2878149300A1636F /* tempTabbarView.swift in Sources */,
+				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
 				CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */,
-				CEF6E09B287814E600A1636F /* temp.swift in Sources */,
-				CEF6E0A72878150100A1636F /* temp.swift in Sources */,
-				CEF6E085287814B700A1636F /* temp.swift in Sources */,
+				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
+				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,
+				CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */,
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
-				CEF6E0A1287814F200A1636F /* temp.swift in Sources */,
-				CEF6E08F287814CD00A1636F /* temp.swift in Sources */,
-				CEF6E0A3287814F600A1636F /* temp.swift in Sources */,
+				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
+				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,
+				CEF6E0A3287814F600A1636F /* tempHappicReportModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
