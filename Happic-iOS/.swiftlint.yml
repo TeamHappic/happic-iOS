@@ -1,5 +1,6 @@
 disabled_rules:
   - trailing_whitespace
+  - identifier_name
 #   - function_body_length
 #   - line_length
 #   - orphaned_doc_comment
@@ -12,11 +13,12 @@ included:
   - Happic-iOS
 excluded:
   # AppDelegate, SceneDelegate file 무시
-  - Happic-iOS/AppDelegate.swift
-  - Happic-iOS/SceneDelegate.swift
+  - Happic-iOS/Global/Supports/AppDelegate.swift
+  - Happic-iOS/Global/Supports/SceneDelegate.swift
 
 # identifier_name:
 #   excluded:
 #     - id
 
 # force_cast: warning
+line_length: 150
