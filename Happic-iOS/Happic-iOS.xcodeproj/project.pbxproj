@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D1640287AD0F400269EA2 /* Colors.xcassets */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E9D1640287AD0F400269EA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBB69DB2873087F000EEB8A /* Assets.xcassets */,
+				8E9D1640287AD0F400269EA2 /* Colors.xcassets */,
 				CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -622,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */,
+				8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */,
 				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
 				CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */,
 			);
