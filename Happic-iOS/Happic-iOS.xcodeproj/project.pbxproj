@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D1640287AD0F400269EA2 /* Colors.xcassets */; };
+		8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
@@ -22,7 +23,6 @@
 		CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04228780EDA00A1636F /* tempFoundation.swift */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
-		CEF6E04E28780F9A00A1636F /* tempLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04D28780F9A00A1636F /* tempLiteral.swift */; };
 		CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* tempUIComponent.swift */; };
 		CEF6E07B2878149300A1636F /* tempTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07A2878149300A1636F /* tempTabbarView.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
@@ -60,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		8E9D1640287AD0F400269EA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorLiteral.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		CEF6E04228780EDA00A1636F /* tempFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempFoundation.swift; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
-		CEF6E04D28780F9A00A1636F /* tempLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempLiteral.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* tempUIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempUIComponent.swift; sourceTree = "<group>"; };
 		CEF6E07A2878149300A1636F /* tempTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempTabbarView.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		CEF6E04C28780F3D00A1636F /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E04D28780F9A00A1636F /* tempLiteral.swift */,
+				8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -672,7 +672,6 @@
 				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
 				CEF6E099287814E100A1636F /* tempHaruHappicController.swift in Sources */,
 				CEF6E093287814D500A1636F /* tempHomeController.swift in Sources */,
-				CEF6E04E28780F9A00A1636F /* tempLiteral.swift in Sources */,
 				CEF6E0AB2878150700A1636F /* tempSettingController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
 				CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */,
@@ -682,6 +681,7 @@
 				CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
+				8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* tempCreateContentsController.swift in Sources */,
