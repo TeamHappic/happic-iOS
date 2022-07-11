@@ -35,19 +35,19 @@
 		CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */; };
 		CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08E287814CD00A1636F /* tempHomeModel.swift */; };
 		CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E090287814D100A1636F /* tempHomeView.swift */; };
-		CEF6E093287814D500A1636F /* tempHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* tempHomeController.swift */; };
+		CEF6E093287814D500A1636F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* HomeController.swift */; };
 		CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */; };
 		CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */; };
-		CEF6E099287814E100A1636F /* tempHaruHappicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E098287814E100A1636F /* tempHaruHappicController.swift */; };
+		CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E098287814E100A1636F /* HaruHappicController.swift */; };
 		CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */; };
 		CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */; };
-		CEF6E09F287814ED00A1636F /* tempCreateContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */; };
+		CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09E287814ED00A1636F /* CreateContentsController.swift */; };
 		CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */; };
 		CEF6E0A3287814F600A1636F /* tempHappicReportModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */; };
-		CEF6E0A5287814FC00A1636F /* tempHappicReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */; };
+		CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* HappicReportController.swift */; };
 		CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* tempSettingModel.swift */; };
 		CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* tempSettingView.swift */; };
-		CEF6E0AB2878150700A1636F /* tempSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* tempSettingController.swift */; };
+		CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* SettingController.swift */; };
 		CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CEF6E0AD2878973E00A1636F /* Tabman */; };
 		CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */; };
 		CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0B128789FFC00A1636F /* UIViewController+.swift */; };
@@ -84,19 +84,19 @@
 		CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleController.swift; sourceTree = "<group>"; };
 		CEF6E08E287814CD00A1636F /* tempHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeModel.swift; sourceTree = "<group>"; };
 		CEF6E090287814D100A1636F /* tempHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeView.swift; sourceTree = "<group>"; };
-		CEF6E092287814D500A1636F /* tempHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeController.swift; sourceTree = "<group>"; };
+		CEF6E092287814D500A1636F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicModel.swift; sourceTree = "<group>"; };
 		CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicView.swift; sourceTree = "<group>"; };
-		CEF6E098287814E100A1636F /* tempHaruHappicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicController.swift; sourceTree = "<group>"; };
+		CEF6E098287814E100A1636F /* HaruHappicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicController.swift; sourceTree = "<group>"; };
 		CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsModel.swift; sourceTree = "<group>"; };
 		CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsView.swift; sourceTree = "<group>"; };
-		CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsController.swift; sourceTree = "<group>"; };
+		CEF6E09E287814ED00A1636F /* CreateContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsController.swift; sourceTree = "<group>"; };
 		CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModel.swift; sourceTree = "<group>"; };
 		CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModelView.swift; sourceTree = "<group>"; };
-		CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportController.swift; sourceTree = "<group>"; };
+		CEF6E0A4287814FC00A1636F /* HappicReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportController.swift; sourceTree = "<group>"; };
 		CEF6E0A62878150100A1636F /* tempSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingModel.swift; sourceTree = "<group>"; };
 		CEF6E0A82878150400A1636F /* tempSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingView.swift; sourceTree = "<group>"; };
-		CEF6E0AA2878150700A1636F /* tempSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingController.swift; sourceTree = "<group>"; };
+		CEF6E0AA2878150700A1636F /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		CEF6E0B128789FFC00A1636F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		CEF6E0B32878A08400A1636F /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 		CEF6E06A2878144100A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E092287814D500A1636F /* tempHomeController.swift */,
+				CEF6E092287814D500A1636F /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,7 +455,7 @@
 		CEF6E06D2878144C00A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E098287814E100A1636F /* tempHaruHappicController.swift */,
+				CEF6E098287814E100A1636F /* HaruHappicController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 		CEF6E0702878145700A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E09E287814ED00A1636F /* tempCreateContentsController.swift */,
+				CEF6E09E287814ED00A1636F /* CreateContentsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 		CEF6E0732878146100A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A4287814FC00A1636F /* tempHappicReportController.swift */,
+				CEF6E0A4287814FC00A1636F /* HappicReportController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 		CEF6E0772878146F00A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0AA2878150700A1636F /* tempSettingController.swift */,
+				CEF6E0AA2878150700A1636F /* SettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -658,7 +658,7 @@
 				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
-				CEF6E0A5287814FC00A1636F /* tempHappicReportController.swift in Sources */,
+				CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */,
 				CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */,
 				CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */,
 				CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */,
@@ -666,9 +666,9 @@
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
-				CEF6E099287814E100A1636F /* tempHaruHappicController.swift in Sources */,
-				CEF6E093287814D500A1636F /* tempHomeController.swift in Sources */,
-				CEF6E0AB2878150700A1636F /* tempSettingController.swift in Sources */,
+				CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */,
+				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
+				CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
 				CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */,
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
@@ -680,7 +680,7 @@
 				8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
-				CEF6E09F287814ED00A1636F /* tempCreateContentsController.swift in Sources */,
+				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,

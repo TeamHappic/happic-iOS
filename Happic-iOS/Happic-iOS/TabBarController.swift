@@ -7,10 +7,16 @@
 
 import UIKit
 
-class TabBarController: UIViewController {
+final class TabBarController: UITabBarController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.        
+        setTabBar()
+    }
+    
+    // MARK: - Functions
+    private func setTabBar() {
+        
     }
 }
