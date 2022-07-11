@@ -22,7 +22,7 @@
 		CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04228780EDA00A1636F /* tempFoundation.swift */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
-		CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* tempUIComponent.swift */; };
+		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
 		CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07E287814AB00A1636F /* tempAuthView.swift */; };
 		CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E080287814AF00A1636F /* tempAuthController.swift */; };
@@ -70,7 +70,7 @@
 		CEF6E04228780EDA00A1636F /* tempFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempFoundation.swift; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
-		CEF6E05328780FAA00A1636F /* tempUIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempUIComponent.swift; sourceTree = "<group>"; };
+		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
 		CEF6E07E287814AB00A1636F /* tempAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthView.swift; sourceTree = "<group>"; };
 		CEF6E080287814AF00A1636F /* tempAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthController.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		CEF6E04928780F0B00A1636F /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E05328780FAA00A1636F /* tempUIComponent.swift */,
+				CEF6E05328780FAA00A1636F /* CustomViewPager.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -671,7 +671,7 @@
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
 				CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */,
-				CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */,
+				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */,
