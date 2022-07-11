@@ -42,7 +42,7 @@
 		CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */; };
 		CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09E287814ED00A1636F /* CreateContentsController.swift */; };
 		CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */; };
-		CEF6E0A3287814F600A1636F /* tempHappicReportModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */; };
+		CEF6E0A3287814F600A1636F /* BestHappicMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */; };
 		CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* HappicReportController.swift */; };
 		CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* tempSettingModel.swift */; };
 		CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* tempSettingView.swift */; };
@@ -90,7 +90,7 @@
 		CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsView.swift; sourceTree = "<group>"; };
 		CEF6E09E287814ED00A1636F /* CreateContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsController.swift; sourceTree = "<group>"; };
 		CEF6E0A0287814F200A1636F /* tempHappicReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModel.swift; sourceTree = "<group>"; };
-		CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicReportModelView.swift; sourceTree = "<group>"; };
+		CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestHappicMomentView.swift; sourceTree = "<group>"; };
 		CEF6E0A4287814FC00A1636F /* HappicReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportController.swift; sourceTree = "<group>"; };
 		CEF6E0A62878150100A1636F /* tempSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingModel.swift; sourceTree = "<group>"; };
 		CEF6E0A82878150400A1636F /* tempSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingView.swift; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 		CEF6E0742878146500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A2287814F600A1636F /* tempHappicReportModelView.swift */,
+				CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -690,7 +690,7 @@
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
 				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,
-				CEF6E0A3287814F600A1636F /* tempHappicReportModelView.swift in Sources */,
+				CEF6E0A3287814F600A1636F /* BestHappicMomentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
