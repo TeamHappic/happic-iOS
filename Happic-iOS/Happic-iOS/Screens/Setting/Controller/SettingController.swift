@@ -1,5 +1,5 @@
 //
-//  temp.swift
+//  SettingController.swift
 //  Happic-iOS
 //
 //  Created by sejin on 2022/07/08.

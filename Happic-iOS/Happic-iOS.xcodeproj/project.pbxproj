@@ -23,7 +23,6 @@
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* tempUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* tempUIComponent.swift */; };
-		CEF6E07B2878149300A1636F /* tempTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07A2878149300A1636F /* tempTabbarView.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
 		CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07E287814AB00A1636F /* tempAuthView.swift */; };
 		CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E080287814AF00A1636F /* tempAuthController.swift */; };
@@ -72,7 +71,6 @@
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* tempUIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempUIComponent.swift; sourceTree = "<group>"; };
-		CEF6E07A2878149300A1636F /* tempTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempTabbarView.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
 		CEF6E07E287814AB00A1636F /* tempAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthView.swift; sourceTree = "<group>"; };
 		CEF6E080287814AF00A1636F /* tempAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthController.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				CEF6E03C28780DE000A1636F /* Network */,
 				CEF6E03D28780DE900A1636F /* Global */,
 				CEF6E03E28780DEF00A1636F /* Screens */,
-				CEBB69D62873087D000EEB8A /* TabBarController.swift */,
 				CEBB69E02873087F000EEB8A /* Info.plist */,
 			);
 			path = "Happic-iOS";
@@ -263,17 +260,17 @@
 		CEF6E057287810B200A1636F /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E058287810BD00A1636F /* View */,
+				CEF6E058287810BD00A1636F /* Controller */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		CEF6E058287810BD00A1636F /* View */ = {
+		CEF6E058287810BD00A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E07A2878149300A1636F /* tempTabbarView.swift */,
+				CEBB69D62873087D000EEB8A /* TabBarController.swift */,
 			);
-			path = View;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CEF6E0592878117F00A1636F /* Home */ = {
@@ -684,7 +681,6 @@
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
-				CEF6E07B2878149300A1636F /* tempTabbarView.swift in Sources */,
 				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
 				CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */,
