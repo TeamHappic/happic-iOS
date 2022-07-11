@@ -16,8 +16,7 @@
 		CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE35287309D5008583C3 /* Kingfisher */; };
 		CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D22873087D000EEB8A /* AppDelegate.swift */; };
 		CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D42873087D000EEB8A /* SceneDelegate.swift */; };
-		CEBB69D72873087D000EEB8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D62873087D000EEB8A /* ViewController.swift */; };
-		CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69D82873087E000EEB8A /* Main.storyboard */; };
+		CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D62873087D000EEB8A /* TabBarController.swift */; };
 		CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DB2873087F000EEB8A /* Assets.xcassets */; };
 		CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */; };
 		CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04228780EDA00A1636F /* tempFoundation.swift */; };
@@ -65,8 +64,7 @@
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBB69D42873087D000EEB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEBB69D62873087D000EEB8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEBB69D92873087E000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEBB69D62873087D000EEB8A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEBB69DB2873087F000EEB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBB69DE2873087F000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBB69E02873087F000EEB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,8 +143,7 @@
 				CEF6E03C28780DE000A1636F /* Network */,
 				CEF6E03D28780DE900A1636F /* Global */,
 				CEF6E03E28780DEF00A1636F /* Screens */,
-				CEBB69D82873087E000EEB8A /* Main.storyboard */,
-				CEBB69D62873087D000EEB8A /* ViewController.swift */,
+				CEBB69D62873087D000EEB8A /* TabBarController.swift */,
 				CEBB69E02873087F000EEB8A /* Info.plist */,
 			);
 			path = "Happic-iOS";
@@ -627,7 +624,6 @@
 				CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */,
 				8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */,
 				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
-				CEBB69DA2873087E000EEB8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBB69D72873087D000EEB8A /* ViewController.swift in Sources */,
+				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
 				CEF6E0A5287814FC00A1636F /* tempHappicReportController.swift in Sources */,
@@ -705,14 +701,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CEBB69D82873087E000EEB8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEBB69D92873087E000EEB8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -849,9 +837,9 @@
 				INFOPLIST_FILE = "Happic-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,9 +864,9 @@
 				INFOPLIST_FILE = "Happic-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
