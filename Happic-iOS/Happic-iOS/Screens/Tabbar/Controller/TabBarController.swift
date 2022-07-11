@@ -34,12 +34,12 @@ final class TabBarController: UITabBarController {
                                                                     selectedImage: UIImage(systemName: "plus.circle")!,
                                                                     rootViewController: CreateContentsController())
         
-        let happicReportController = templateNavigationController(title: "추가",
+        let happicReportController = templateNavigationController(title: "해픽레포트",
                                                                   unselectedImage: UIImage(systemName: "doc")!,
                                                                   selectedImage: UIImage(systemName: "doc")!,
                                                                   rootViewController: HappicReportController())
         
-        let settingController = templateNavigationController(title: "추가",
+        let settingController = templateNavigationController(title: "설정",
                                                              unselectedImage: UIImage(systemName: "gearshape")!,
                                                              selectedImage: UIImage(systemName: "gearshape")!,
                                                              rootViewController: SettingController())
