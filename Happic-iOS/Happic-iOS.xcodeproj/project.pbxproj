@@ -66,6 +66,7 @@
 		CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */; };
 		CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */; };
 		CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */; };
+		CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,7 @@
 		CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRankView.swift; sourceTree = "<group>"; };
 		CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailController.swift; sourceTree = "<group>"; };
 		CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailWithImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +603,7 @@
 			children = (
 				CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */,
 				CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */,
+				CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
+				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
 				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
