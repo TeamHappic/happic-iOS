@@ -47,22 +47,8 @@ class CategoryDetailController: UIViewController {
     
     // MARK: - Functions
     private func configureUI() {
-        setViewForType()
         setCollectionView()
         setCollectionViewLayout()
-    }
-    
-    private func setViewForType() {
-        switch type {
-        case .hourCategory:
-            view.backgroundColor = .black
-        case .whereCategory:
-            view.backgroundColor = .green
-        case .whoCategory:
-            view.backgroundColor = .purple
-        case .whatCategory:
-            view.backgroundColor = .brown
-        }
     }
     
     private func setCollectionView() {
@@ -97,11 +83,13 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
                 withReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className, for: indexPath)
                     as? CategoryDetailWithImageCollectionViewCell
             else { return UICollectionViewCell() }
+            cell.setCategoryNameLabel(type: type, index: indexPath.row)
             return cell
         }
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
+        cell.setCategoryNameLabel(type: type, index: indexPath.row)
         
         return cell
     }

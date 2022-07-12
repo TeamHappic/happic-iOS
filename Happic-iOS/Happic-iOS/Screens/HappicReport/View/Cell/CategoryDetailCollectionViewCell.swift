@@ -58,4 +58,27 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
             make.centerY.equalToSuperview()
         }
     }
+    
+    func setCategoryNameLabel(type: CategoryType, index: Int) {
+        switch type {
+        case .hourCategory:
+            categoryNameLabel.attributedText = makeCategoryString(category: "#hour ", index: index)
+        case .whereCategory:
+            categoryNameLabel.attributedText = makeCategoryString(category: "#where ", index: index)
+        case .whoCategory:
+            categoryNameLabel.attributedText = makeCategoryString(category: "#who ", index: index)
+        case .whatCategory:
+            categoryNameLabel.attributedText = makeCategoryString(category: "#what ", index: index)
+        }
+    }
+    
+    func makeCategoryString(category: String, index: Int) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: category,
+                                                         attributes:
+                                                            [.font: UIFont.font(.pretendardRegular, ofSize: 14), .foregroundColor: UIColor.gray])
+        attributedString.append(NSAttributedString(string: String(index),
+                                                   attributes: [.font: UIFont.font(.pretendardBold, ofSize: 14),
+                                                    .foregroundColor: UIColor.gray]))
+        return attributedString
+    }
 }
