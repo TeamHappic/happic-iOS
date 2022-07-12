@@ -39,7 +39,7 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hp_gray8
+        backgroundColor = .hpGray8
         layer.cornerRadius = 10
 
         addSubviews(categoryNameLabel, userKeywordLabel, countLabel)
