@@ -64,7 +64,7 @@
 		CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */; };
 		CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */; };
 		CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */; };
-		CEFC3C37287D4D4800F187BE /* HourCategoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C36287D4D4800F187BE /* HourCategoryDetailController.swift */; };
+		CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,7 +122,7 @@
 		CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSectionHeader.swift; sourceTree = "<group>"; };
 		CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRankView.swift; sourceTree = "<group>"; };
-		CEFC3C36287D4D4800F187BE /* HourCategoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCategoryDetailController.swift; sourceTree = "<group>"; };
+		CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,7 +605,7 @@
 		CEFC3C35287D4CA700F187BE /* CategoryDetailController */ = {
 			isa = PBXGroup;
 			children = (
-				CEFC3C36287D4D4800F187BE /* HourCategoryDetailController.swift */,
+				CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */,
 			);
 			path = CategoryDetailController;
 			sourceTree = "<group>";
@@ -762,7 +762,7 @@
 				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
 				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,
 				CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */,
-				CEFC3C37287D4D4800F187BE /* HourCategoryDetailController.swift in Sources */,
+				CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */,
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
 				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,
