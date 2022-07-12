@@ -20,7 +20,7 @@ class CategoryRankView: UIView {
         viewControllers: [hourViewController, whereViewController, whoViewController, whatViewController],
         buttonTitles: ["#hour", "#where", "#who", "#what"], isScrollEnabled: false)
 
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()

@@ -35,7 +35,7 @@ final class HappicReportSectionHeader: UIView {
         $0.tintColor = .white
     }
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     init(type: HappicReportSectionType) {
         super.init(frame: .zero)
         configureUI(type: type)

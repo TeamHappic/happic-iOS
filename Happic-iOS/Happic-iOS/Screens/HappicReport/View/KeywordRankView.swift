@@ -21,7 +21,7 @@ final class KeywordRankView: UIView {
         return collectionView
     }()
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
