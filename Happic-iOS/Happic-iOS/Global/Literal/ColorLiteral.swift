@@ -1,5 +1,5 @@
 //
-//  UIColorLiteral.swift
+//  ColorLiteral.swift
 //  Happic-iOS
 //
 //  Created by devxsby on 2022/07/10.
@@ -8,63 +8,63 @@
 import UIKit
 
 extension UIColor {
-    static var hp_white: UIColor {
+    static var hpWhite: UIColor {
         return UIColor(hex: "#f3f3f3")
     }
     
-    static var hp_gray1: UIColor {
+    static var hpGray1: UIColor {
         return UIColor(hex: "#f9f9f9")
     }
     
-    static var hp_gray2: UIColor {
+    static var hpGray2: UIColor {
         return UIColor(hex: "#f5f5f5")
     }
     
-    static var hp_gray3: UIColor {
+    static var hpGray3: UIColor {
         return UIColor(hex: "#e6e6e6")
     }
     
-    static var hp_gray4: UIColor {
+    static var hpGray4: UIColor {
         return UIColor(hex: "#d3d3d3")
     }
     
-    static var hp_gray5: UIColor {
+    static var hpGray5: UIColor {
         return UIColor(hex: "#aeaeae")
     }
     
-    static var hp_gray6: UIColor {
+    static var hpGray6: UIColor {
         return UIColor(hex: "#868686")
     }
     
-    static var hp_gray7: UIColor {
+    static var hpGray7: UIColor {
         return UIColor(hex: "#585858")
     }
     
-    static var hp_gray8: UIColor {
+    static var hpGray8: UIColor {
         return UIColor(hex: "#4c4c4c")
     }
     
-    static var hp_gray9: UIColor {
+    static var hpGray9: UIColor {
         return UIColor(hex: "#2e2e2e")
     }
     
-    static var hp_bgblack1: UIColor {
+    static var hpBgBlack1: UIColor {
         return UIColor(hex: "#19191f")
     }
     
-    static var hp_bgblack2h: UIColor {
+    static var hpBgBlack2h: UIColor {
         return UIColor(hex: "#0b0b0b")
     }
     
-    static var hp_darkpurple: UIColor {
+    static var hpDarkPurple: UIColor {
         return UIColor(hex: "#7d5b79")
     }
     
-    static var hp_darkblue: UIColor {
+    static var hpDarkBlue: UIColor {
         return UIColor(hex: "#6a5eb1")
     }
     
-    static var hp_orange: UIColor {
+    static var hpOrange: UIColor {
         return UIColor(hex: "#f9956a")
     }
     
