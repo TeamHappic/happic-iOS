@@ -31,6 +31,7 @@ final class HaruHappicTagViewController: UIViewController {
         layout.minimumInteritemSpacing = 5
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = true
+        collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
     
