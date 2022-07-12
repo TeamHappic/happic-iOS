@@ -54,8 +54,8 @@ final class HappicReportController: UIViewController {
         keywordRankView.snp.makeConstraints { make in
             make.top.equalTo(bestHappicMomentView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(384.adjustedH)
-            make.bottom.equalToSuperview()
+            make.height.equalTo(374.adjustedH)
+            make.bottom.equalToSuperview().inset(50)
         }
         
     }
