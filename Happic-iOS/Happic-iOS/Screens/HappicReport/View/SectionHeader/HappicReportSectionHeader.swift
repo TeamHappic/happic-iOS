@@ -39,7 +39,6 @@ final class HappicReportSectionHeader: UIView {
     init(type: HappicReportSectionType) {
         super.init(frame: .zero)
         configureUI(type: type)
-        backgroundColor = .red
     }
     
     required init?(coder: NSCoder) {
