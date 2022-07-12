@@ -60,7 +60,7 @@ final class HaruHappicPhotoController: UIViewController {
         
         containerCollectionView.snp.makeConstraints { make in
             make.top.equalTo(monthSelectorButton.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.leading.trailing.equalToSuperview().inset(7)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
