@@ -60,6 +60,8 @@
 		CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0B52878A0C900A1636F /* UIView+.swift */; };
 		CEF6E0B82878A1C200A1636F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0B72878A1C200A1636F /* String+.swift */; };
 		CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0B92878A21B00A1636F /* UserDefaults+.swift */; };
+		CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */; };
+		CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,8 @@
 		CEF6E0B52878A0C900A1636F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CEF6E0B72878A1C200A1636F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		CEF6E0B92878A21B00A1636F /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankView.swift; sourceTree = "<group>"; };
+		CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,7 +538,9 @@
 		CEF6E0742878146500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC3C2F287D2FBC00F187BE /* SectionHeader */,
 				CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */,
+				CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,6 +575,14 @@
 				CEF6E0A82878150400A1636F /* tempSettingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEFC3C2F287D2FBC00F187BE /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */,
+			);
+			path = SectionHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -698,6 +712,7 @@
 				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
 				CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
+				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */,
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
@@ -713,6 +728,7 @@
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
 				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
+				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
 				CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */,
 				8E8A1CEA287C7C0D0050184F /* UIFontLiteral.swift in Sources */,

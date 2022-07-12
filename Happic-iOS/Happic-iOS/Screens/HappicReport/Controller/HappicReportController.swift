@@ -14,7 +14,8 @@ final class HappicReportController: UIViewController {
     // MARK: - UI
     private let reportScrollView = UIScrollView()
     private let contentView = UIView()
-    private let bestHappicMoment = BestHappicMomentView()
+    private let bestHappicMomentView = BestHappicMomentView()
+    private let keywordRankView = KeywordRankView()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -29,11 +30,12 @@ final class HappicReportController: UIViewController {
     }
     
     private func setScrollViewLayout() {
-        view.addSubviews(reportScrollView, contentView)
+        view.addSubviews(reportScrollView)
         reportScrollView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
+        reportScrollView.addSubview(contentView)
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(reportScrollView.contentLayoutGuide)
             make.width.equalTo(reportScrollView.snp.width)
@@ -42,11 +44,19 @@ final class HappicReportController: UIViewController {
     }
     
     private func setSubViewsLayout() {
-        contentView.addSubviews(bestHappicMoment)
-        bestHappicMoment.snp.makeConstraints { make in
+        contentView.addSubviews(bestHappicMomentView, keywordRankView)
+        bestHappicMomentView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(60)
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(287.adjustedH)
         }
+        
+        keywordRankView.snp.makeConstraints { make in
+            make.top.equalTo(bestHappicMomentView.snp.bottom).offset(32)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(384.adjustedH)
+            make.bottom.equalToSuperview()
+        }
+        
     }
 }

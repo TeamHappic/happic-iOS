@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BestHappicMomentView: UIView {
+final class BestHappicMomentView: UIView {
     // MARK: - UI
     private let titleLabel = UILabel().then {
         let attributedString = NSMutableAttributedString(string: "이번 달 베스트 ", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)])
