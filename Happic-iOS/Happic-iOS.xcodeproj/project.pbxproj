@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			children = (
 				8E9D1642287AD62300269EA2 /* ColorLiteral.swift */,
 				8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */,
+				8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */,
+				8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
