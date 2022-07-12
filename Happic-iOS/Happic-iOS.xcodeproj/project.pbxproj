@@ -68,6 +68,7 @@
 		CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */; };
 		CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */; };
 		CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */; };
+		CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		CEFC3C36287D4D4800F187BE /* CategoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailController.swift; sourceTree = "<group>"; };
 		CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailWithImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		CEF6E03D28780DE900A1636F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC3C42287DCF9900F187BE /* Util */,
 				CEF6E04C28780F3D00A1636F /* Literal */,
 				CEF6E04B28780F3000A1636F /* Extension */,
 				CEF6E04A28780F2000A1636F /* Resource */,
@@ -619,6 +622,14 @@
 			path = CategoryDetailController;
 			sourceTree = "<group>";
 		};
+		CEFC3C42287DCF9900F187BE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -765,6 +776,7 @@
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
+				CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
 				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
