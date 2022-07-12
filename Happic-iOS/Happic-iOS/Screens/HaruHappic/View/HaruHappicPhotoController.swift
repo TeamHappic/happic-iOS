@@ -31,6 +31,7 @@ final class HaruHappicPhotoController: UIViewController {
         layout.minimumInteritemSpacing = 5
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = true
+        collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
     
@@ -59,7 +60,7 @@ final class HaruHappicPhotoController: UIViewController {
         
         containerCollectionView.snp.makeConstraints { make in
             make.top.equalTo(monthSelectorButton.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.leading.trailing.equalToSuperview().inset(7)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
