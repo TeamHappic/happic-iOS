@@ -11,7 +11,7 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
     // MARK: - UI
     private lazy var rankLabel = UILabel().then {
         $0.text = "1"
-        $0.textColor = .hp_orange
+        $0.textColor = .hpOrange
         $0.font = UIFont.font(.pretendardRegular, ofSize: 16)
     }
     
@@ -45,7 +45,7 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hp_gray8
+        backgroundColor = .hpGray8
         layer.cornerRadius = 10
         
         addSubviews(rankLabel, userKeywordLabel, keywordNameLabel, countLabel)

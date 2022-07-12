@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
 		8E8A1CE7287C75480050184F /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE2287C75480050184F /* GmarketSansBold.otf */; };
 		8E8A1CE8287C75480050184F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE3287C75480050184F /* Pretendard-Regular.otf */; };
-		8E8A1CEA287C7C0D0050184F /* UIFontLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE9287C7C0D0050184F /* UIFontLiteral.swift */; };
+		8E8A1CEA287C7C0D0050184F /* FontLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */; };
 		8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D1640287AD0F400269EA2 /* Colors.xcassets */; };
-		8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */; };
+		8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* ColorLiteral.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
@@ -66,14 +67,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		8E8A1CE2287C75480050184F /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		8E8A1CE3287C75480050184F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		8E8A1CE9287C7C0D0050184F /* UIFontLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontLiteral.swift; sourceTree = "<group>"; };
+		8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiteral.swift; sourceTree = "<group>"; };
 		8E9D1640287AD0F400269EA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorLiteral.swift; sourceTree = "<group>"; };
+		8E9D1642287AD62300269EA2 /* ColorLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiteral.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -283,8 +285,9 @@
 		CEF6E04C28780F3D00A1636F /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				8E9D1642287AD62300269EA2 /* UIColorLiteral.swift */,
-				8E8A1CE9287C7C0D0050184F /* UIFontLiteral.swift */,
+				8E9D1642287AD62300269EA2 /* ColorLiteral.swift */,
+				8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */,
+				8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -732,7 +735,8 @@
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
-				8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */,
+				8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */,
+				8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
@@ -743,7 +747,7 @@
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
 				CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */,
-				8E8A1CEA287C7C0D0050184F /* UIFontLiteral.swift in Sources */,
+				8E8A1CEA287C7C0D0050184F /* FontLiteral.swift in Sources */,
 				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
 				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,
 				CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */,

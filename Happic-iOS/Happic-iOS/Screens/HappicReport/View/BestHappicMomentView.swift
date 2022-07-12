@@ -13,7 +13,7 @@ final class BestHappicMomentView: UIView {
         let attributedString = NSMutableAttributedString(string: "이번 달 베스트 ", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)])
         attributedString.append(NSAttributedString(string: "해픽 ",
                                                    attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold),
-                                                    .foregroundColor: UIColor.hp_orange]))
+                                                                .foregroundColor: UIColor.hpOrange]))
         attributedString.append(NSAttributedString(string: "모먼트는 이거야",
                                                    attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)]))
         $0.attributedText = attributedString
@@ -65,7 +65,7 @@ final class BestHappicMomentView: UIView {
         let attributedString = NSMutableAttributedString(string: "하는 순간이 가장 ", attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)])
         attributedString.append(NSAttributedString(string: "행복",
                                                    attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .medium),
-                                                    .foregroundColor: UIColor.hp_orange]))
+                                                                .foregroundColor: UIColor.hpOrange]))
         attributedString.append(NSAttributedString(string: "했어요",
                                                    attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)]))
         $0.attributedText = attributedString
