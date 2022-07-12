@@ -62,7 +62,7 @@ final class HappicReportSectionHeader: UIView {
         addSubviews(sectionDividerImageView, sectionTitleLabel, showDetailRankViewButton)
         sectionDividerImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
-            make.top.equalToSuperview().inset(28)
+            make.top.equalToSuperview().inset(16)
         }
         
         sectionTitleLabel.snp.makeConstraints { make in
@@ -72,8 +72,8 @@ final class HappicReportSectionHeader: UIView {
         }
         
         showDetailRankViewButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(54)
             make.trailing.equalToSuperview()
+            make.centerY.equalTo(sectionTitleLabel)
         }
     }
 }

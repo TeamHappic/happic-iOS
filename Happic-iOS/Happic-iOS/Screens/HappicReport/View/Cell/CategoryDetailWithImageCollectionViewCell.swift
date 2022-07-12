@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
+final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
  
     // MARK: - UI
     private lazy var categoryNameLabel = UILabel().then {
@@ -17,7 +17,7 @@ class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var userKeywordLabel = UILabel().then {
-        $0.text = "수빈"
+        $0.text = "햄식이"
         $0.textColor = .white
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
@@ -26,6 +26,36 @@ class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
         $0.text = "xx회"
         $0.textColor = .white
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+    }
+    
+    private lazy var firstImageView = UIImageView().then {
+        $0.image = UIImage(named: "icn_splash")
+        $0.contentMode = .scaleToFill
+        $0.clipsToBounds = true
+        $0.tintColor = .white
+        $0.backgroundColor = .black
+    }
+    
+    private lazy var secondImageView = UIImageView().then {
+        $0.image = UIImage(named: "icn_splash")
+        $0.contentMode = .scaleToFill
+        $0.clipsToBounds = true
+        $0.tintColor = .white
+        $0.backgroundColor = .black
+    }
+    
+    private lazy var thirdImageView = UIImageView().then {
+        $0.image = UIImage(named: "icn_splash")
+        $0.contentMode = .scaleToFill
+        $0.clipsToBounds = true
+        $0.tintColor = .white
+        $0.backgroundColor = .black
+    }
+    
+    private lazy var imageStackView = UIStackView(arrangedSubviews: [firstImageView, secondImageView, thirdImageView]).then {
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.spacing = 12
     }
     
     // MARK: - Initialization
@@ -40,7 +70,10 @@ class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        addSubviews(categoryNameLabel, userKeywordLabel, countLabel)
+        backgroundColor = .hp_gray8
+        layer.cornerRadius = 10
+        
+        addSubviews(categoryNameLabel, userKeywordLabel, countLabel, imageStackView)
         
         categoryNameLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(24)
@@ -56,5 +89,12 @@ class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
             make.trailing.equalToSuperview().inset(42)
             make.centerY.equalTo(categoryNameLabel)
         }
+        
+        imageStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(categoryNameLabel.snp.bottom).offset(17)
+            make.leading.trailing.equalToSuperview().inset(24)
+            make.height.equalTo(88)
+        }        
     }
 }

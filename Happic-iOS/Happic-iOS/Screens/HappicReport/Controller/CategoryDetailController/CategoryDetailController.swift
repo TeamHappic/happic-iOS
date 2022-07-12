@@ -68,7 +68,10 @@ class CategoryDetailController: UIViewController {
     private func setCollectionView() {
         rankCollectionView.delegate = self
         rankCollectionView.dataSource = self
-        rankCollectionView.register(CategoryDetailCollectionViewCell.self, forCellWithReuseIdentifier: CategoryDetailCollectionViewCell.className)
+        rankCollectionView.register(CategoryDetailCollectionViewCell.self,
+                                    forCellWithReuseIdentifier: CategoryDetailCollectionViewCell.className)
+        rankCollectionView.register(CategoryDetailWithImageCollectionViewCell.self,
+                                    forCellWithReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className)
     }
     
     private func setCollectionViewLayout() {
@@ -88,6 +91,15 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.row == 0 {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className, for: indexPath)
+                    as? CategoryDetailWithImageCollectionViewCell
+            else { return UICollectionViewCell() }
+            return cell
+        }
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
         
@@ -99,6 +111,9 @@ extension CategoryDetailController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 60.adjustedH)
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.frame.width, height: 156)
+        }
+        return CGSize(width: collectionView.frame.width, height: 60)
     }
 }

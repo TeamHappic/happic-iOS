@@ -24,7 +24,6 @@ class CategoryRankView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
-        backgroundColor = .lightGray
     }
     
     required init?(coder: NSCoder) {
@@ -41,7 +40,7 @@ class CategoryRankView: UIView {
         categoryViewPager.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().inset(32)
+            make.bottom.equalToSuperview()
         }
     }
 }
