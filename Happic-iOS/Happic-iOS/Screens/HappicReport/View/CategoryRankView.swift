@@ -11,10 +11,10 @@ class CategoryRankView: UIView {
     // MARK: - UI
     private lazy var headerView = HappicReportSectionHeader(type: .categoryRank)
     // ViewPager에 들어갈 카테고리 별 ViewController 처리
-    private lazy var hourViewController = CategoryDetailController()
-    private lazy var whereViewController = CategoryDetailController()
-    private lazy var whoViewController = CategoryDetailController()
-    private lazy var whatViewController = CategoryDetailController()
+    private lazy var hourViewController = CategoryDetailController(type: .hourCategory)
+    private lazy var whereViewController = CategoryDetailController(type: .whereCategory)
+    private lazy var whoViewController = CategoryDetailController(type: .whoCategory)
+    private lazy var whatViewController = CategoryDetailController(type: .whatCategory)
     
     private lazy var categoryViewPager = CustomViewPager(
         viewControllers: [hourViewController, whereViewController, whoViewController, whatViewController],
