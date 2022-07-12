@@ -8,7 +8,7 @@
 import UIKit
 
 enum ImageLiteral {
-//    static var btnAdd: UIImage { .load(named: "btnAdd")}
+    static var icnAddPhoto: UIImage { .load(named: "icn_addphoto")}
 }
 
 extension UIImage {
