@@ -21,8 +21,6 @@ final class HaruHappicController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setCollectionView()
-        setCollectionViewLayout()
     }
     
     // MARK: - Functions
@@ -40,13 +38,5 @@ final class HaruHappicController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-    }
-    
-    private func setCollectionView() {
-        
-    }
-    
-    private func setCollectionViewLayout() {
-        
     }
 }
