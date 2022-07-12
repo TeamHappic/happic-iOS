@@ -158,8 +158,9 @@ Happic-iOS
  ┣ Base.lproj
  ┃ ┗ Main.storyboard
  ┣ Global
- ┃ ┣ Extension
+ ┃ ┣ Util
  ┃ ┣ Literal
+ ┃ ┣ Extension
  ┃ ┣ Resource
  ┃ ┃ ┣ Assets.xcassets
  ┃ ┃ ┃ ┣ AccentColor.colorset
@@ -218,10 +219,9 @@ Happic-iOS
   홈 | 탭 바 커스텀 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 캐릭터 뷰 |  | 윤수빈
   하루해픽 | 사진, 태그 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
-  &nbsp; | 상세보기 | | 윤수빈
   &nbsp; | 게시글 작성 | | 윤수빈
-   &nbsp; | 게시글 상세보기 |  | 윤수빈
-  해픽캡슐 | 캡슐뽑기 뷰 |  | 강승현
+   &nbsp; | 게시글 상세보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
+  해픽캡슐 | 캡슐뽑기 뷰 |  | 윤수빈
   &nbsp; | 푸시 알림 |  | 이세진
   해픽리포트 | 전체보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 키워드 순위 | | 이세진
