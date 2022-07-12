@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HaruHappicPhotoController: UIViewController {
+final class HaruHappicPhotoController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

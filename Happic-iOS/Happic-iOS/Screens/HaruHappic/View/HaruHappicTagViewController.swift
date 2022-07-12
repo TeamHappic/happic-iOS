@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HaruHappicTagViewController: UIViewController {
+final class HaruHappicTagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
