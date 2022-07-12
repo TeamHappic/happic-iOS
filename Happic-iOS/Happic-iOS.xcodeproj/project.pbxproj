@@ -63,6 +63,7 @@
 		CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */; };
 		CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */; };
 		CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */; };
+		CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankView.swift; sourceTree = "<group>"; };
 		CEFC3C2D287D285700F187BE /* HappicReportSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSectionHeader.swift; sourceTree = "<group>"; };
 		CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -544,6 +546,7 @@
 				CEFC3C30287D370D00F187BE /* Cell */,
 				CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */,
 				CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */,
+				CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* UIColorLiteral.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
+				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
