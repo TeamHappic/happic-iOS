@@ -109,9 +109,10 @@
 5. Pull Request 작성 
    - closed : #IssueNumber로 이슈 연결, 프로젝트 연결, 리뷰어 지정
 
-5. Code Review 완료 후 Pull Request 작성자가 develop Branch로 merge하기
+6. Code Review 완료 후 Pull Request 작성자가 develop Branch로 merge하기
+   - Develop Branch protection rules : Merge 전 최소 1 Approve 필요
 
-6. 종료된 Issue와 Pull Request의 Label과 Project를 관리
+7. 종료된 Issue와 Pull Request의 Label과 Project를 관리
 ```
    
  <br>
