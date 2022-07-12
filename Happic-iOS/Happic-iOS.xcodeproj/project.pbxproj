@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */; };
+		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
+		8E367614287D429600326074 /* HaruHappicTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagViewController.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -16,6 +18,8 @@
 		8E8A1CEA287C7C0D0050184F /* FontLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */; };
 		8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D1640287AD0F400269EA2 /* Colors.xcassets */; };
 		8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* ColorLiteral.swift */; };
+		8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */; };
+		8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
@@ -43,7 +47,6 @@
 		CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E090287814D100A1636F /* tempHomeView.swift */; };
 		CEF6E093287814D500A1636F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* HomeController.swift */; };
 		CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */; };
-		CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */; };
 		CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E098287814E100A1636F /* HaruHappicController.swift */; };
 		CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */; };
 		CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */; };
@@ -73,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
+		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
+		8E367613287D429600326074 /* HaruHappicTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagViewController.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -81,6 +86,8 @@
 		8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiteral.swift; sourceTree = "<group>"; };
 		8E9D1640287AD0F400269EA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8E9D1642287AD62300269EA2 /* ColorLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiteral.swift; sourceTree = "<group>"; };
+		8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +113,6 @@
 		CEF6E090287814D100A1636F /* tempHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeView.swift; sourceTree = "<group>"; };
 		CEF6E092287814D500A1636F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CEF6E094287814DA00A1636F /* tempHaruHappicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicModel.swift; sourceTree = "<group>"; };
-		CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHaruHappicView.swift; sourceTree = "<group>"; };
 		CEF6E098287814E100A1636F /* HaruHappicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicController.swift; sourceTree = "<group>"; };
 		CEF6E09A287814E600A1636F /* tempCreateContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsModel.swift; sourceTree = "<group>"; };
 		CEF6E09C287814E900A1636F /* tempCreateContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateContentsView.swift; sourceTree = "<group>"; };
@@ -159,6 +165,15 @@
 				8E8A1CE3287C75480050184F /* Pretendard-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8EB2112E287D59F700F53A95 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */,
+				8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CEBB69C62873087D000EEB8A = {
@@ -506,7 +521,9 @@
 		CEF6E06E2878144F00A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E096287814DD00A1636F /* tempHaruHappicView.swift */,
+				8EB2112E287D59F700F53A95 /* Cells */,
+				8E367611287D428800326074 /* HaruHappicPhotoController.swift */,
+				8E367613287D429600326074 /* HaruHappicTagViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,14 +768,15 @@
 				CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */,
 				CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */,
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
+				8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
 				CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */,
 				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
 				CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */,
+				8E367614287D429600326074 /* HaruHappicTagViewController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
-				CEF6E097287814DD00A1636F /* tempHaruHappicView.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
@@ -768,6 +786,7 @@
 				CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */,
 				8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */,
+				8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
@@ -778,6 +797,7 @@
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
 				CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
+				8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */,
 				CEF6E07F287814AB00A1636F /* tempAuthView.swift in Sources */,
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
