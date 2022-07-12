@@ -21,7 +21,7 @@ final class KeywordRankView: UIView {
         return collectionView
     }()
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -56,7 +56,7 @@ final class KeywordRankView: UIView {
         keywordCollectionView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(268.adjustedH)
+            make.height.equalTo(268)
         }
     }
 }
@@ -81,6 +81,6 @@ extension KeywordRankView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 60.adjustedH)
+        return CGSize(width: collectionView.frame.width, height: 60)
     }
 }

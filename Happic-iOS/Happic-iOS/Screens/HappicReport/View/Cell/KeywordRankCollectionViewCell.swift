@@ -33,7 +33,7 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()

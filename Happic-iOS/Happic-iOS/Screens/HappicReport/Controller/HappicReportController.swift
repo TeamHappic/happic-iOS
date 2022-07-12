@@ -16,6 +16,7 @@ final class HappicReportController: UIViewController {
     private let contentView = UIView()
     private let bestHappicMomentView = BestHappicMomentView()
     private let keywordRankView = KeywordRankView()
+    private let categoryRankView = CategoryRankView()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -44,19 +45,24 @@ final class HappicReportController: UIViewController {
     }
     
     private func setSubViewsLayout() {
-        contentView.addSubviews(bestHappicMomentView, keywordRankView)
+        contentView.addSubviews(bestHappicMomentView, keywordRankView, categoryRankView)
         bestHappicMomentView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(60)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(287.adjustedH)
+            make.height.equalTo(287)
         }
         
         keywordRankView.snp.makeConstraints { make in
             make.top.equalTo(bestHappicMomentView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(374.adjustedH)
-            make.bottom.equalToSuperview().inset(50)
+            make.height.equalTo(374)
         }
         
+        categoryRankView.snp.makeConstraints { make in
+            make.top.equalTo(keywordRankView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(525)
+            make.bottom.equalToSuperview().inset(50)
+        }
     }
 }
