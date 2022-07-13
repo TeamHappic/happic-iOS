@@ -141,7 +141,13 @@
 - 상속받지 않는 클래스는 **final 키워드**를 붙인다.
 - 단일 정의 내에서만 사용되는 특정 기능 구현은 **private 접근 제한자**를 적극 사용한다.
 - 퀵헬프기능을 활용한 마크업 문법을 활용한 주석을 적극 사용한다.
-- 이외는 trailing_whitespace 완화 적용 외에 기본 **SwiftLint Rule**을 적용한다.
+- 이외는 커스텀한 **SwiftLint Rule**을 적용한다.
+   - **제외사항**
+   - trailing_whitespace
+   - identifier_name
+   - line_length
+   - type_name
+   
    
  <br>
 
@@ -224,7 +230,7 @@ Happic-iOS
   해픽캡슐 | 캡슐뽑기 뷰 |  | 윤수빈
   &nbsp; | 푸시 알림 |  | 이세진
   해픽리포트 | 전체보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
-  &nbsp; | 키워드 순위 | | 이세진
+  &nbsp; | 키워드 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png>  | 이세진
   &nbsp; | 카테고리 순위 | | 이세진
   &nbsp; | 월 기록 횟수 | | 이세진
   설정 | 설정 뷰 |  | 이세진
