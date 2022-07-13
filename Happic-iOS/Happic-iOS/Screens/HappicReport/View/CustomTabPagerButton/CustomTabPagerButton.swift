@@ -14,7 +14,7 @@ class CustomTabPagerButton: Tabman.TMLabelBarButton {
         case .selected:
             backgroundColor = .black
         default:
-            backgroundColor = UIColor.hpGray9
+            backgroundColor = .hpGray9
         }
         super.update(for: selectionState)
     }

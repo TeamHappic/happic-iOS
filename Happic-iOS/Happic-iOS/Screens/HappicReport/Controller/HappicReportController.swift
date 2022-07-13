@@ -23,15 +23,19 @@ final class HappicReportController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        keywordRankView.headerView.delegate = self
-        categoryRankView.headerView.delegate = self
-        monthHappicRecordView.headerView.delegate = self
+        setDelegate()
     }
     
     // MARK: - Functions
     private func configureUI() {
         setScrollViewLayout()
         setSubViewsLayout()
+    }
+    
+    private func setDelegate() {
+        keywordRankView.headerView.delegate = self
+        categoryRankView.headerView.delegate = self
+        monthHappicRecordView.headerView.delegate = self
     }
     
     private func setScrollViewLayout() {
