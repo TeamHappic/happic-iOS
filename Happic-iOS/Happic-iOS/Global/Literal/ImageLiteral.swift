@@ -10,6 +10,8 @@ import UIKit
 enum ImageLiteral {
     static var icnAddPhoto: UIImage { .load(named: "icn_addphoto")}
     static var icnArrowMore: UIImage { .load(named: "icn_arrow_more")}
+    static var icnArrowBack: UIImage { .load(named: "icn_arrow_back")}
+    static var icnArrowNext: UIImage { .load(named: "icn_arrow_next")}
     
     static var imageDailySample1: UIImage { .load(named: "image_daily_sample1")}
     static var imageDailySample2: UIImage { .load(named: "image_daily_sample2")}
