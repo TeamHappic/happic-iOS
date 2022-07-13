@@ -72,6 +72,7 @@
 		CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */; };
 		CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */; };
 		CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */; };
+		CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C45287DF5A000F187BE /* MonthHappicRecordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,7 @@
 		CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailWithImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		CEFC3C45287DF5A000F187BE /* MonthHappicRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHappicRecordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +579,7 @@
 				CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */,
 				CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */,
 				CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */,
+				CEFC3C45287DF5A000F187BE /* MonthHappicRecordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
+				CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */,
 				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
