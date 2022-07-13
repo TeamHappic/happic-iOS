@@ -11,6 +11,7 @@ enum HappicReportSectionType: Int {
     case keywordRank
     case categoryRank
     case monthCount
+    case monthCalendar
 }
 
 protocol HappicReportSectionHeaderDelegate: AnyObject {
@@ -64,6 +65,8 @@ final class HappicReportSectionHeader: UIView {
             sectionTitleLabel.text = "카테고리 별 행복 키워드 순위"
         case .monthCount:
             sectionTitleLabel.text = "월 별 해픽 기록"
+        case .monthCalendar:
+            sectionTitleLabel.text = "이번달 모은 행복의 조각"
         }
     }
     

@@ -78,6 +78,8 @@
 		CEFC3C4E287E960800F187BE /* CategoryRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C4D287E960800F187BE /* CategoryRankController.swift */; };
 		CEFC3C50287E961200F187BE /* MonthHappicRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C4F287E961200F187BE /* MonthHappicRecordController.swift */; };
 		CEFC3C53287EA88C00F187BE /* CustomTabPagerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C52287EA88C00F187BE /* CustomTabPagerButton.swift */; };
+		CEFC3C55287EF75200F187BE /* CustomCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C54287EF75200F187BE /* CustomCalendarView.swift */; };
+		CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3C56287EFA4D00F187BE /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		CEFC3C4D287E960800F187BE /* CategoryRankController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRankController.swift; sourceTree = "<group>"; };
 		CEFC3C4F287E961200F187BE /* MonthHappicRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHappicRecordController.swift; sourceTree = "<group>"; };
 		CEFC3C52287EA88C00F187BE /* CustomTabPagerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabPagerButton.swift; sourceTree = "<group>"; };
+		CEFC3C54287EF75200F187BE /* CustomCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarView.swift; sourceTree = "<group>"; };
+		CEFC3C56287EFA4D00F187BE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +596,7 @@
 				CEFC3C2B287D27FF00F187BE /* KeywordRankView.swift */,
 				CEFC3C33287D4ABF00F187BE /* CategoryRankView.swift */,
 				CEFC3C45287DF5A000F187BE /* MonthHappicRecordView.swift */,
+				CEFC3C54287EF75200F187BE /* CustomCalendarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				CEFC3C31287D374100F187BE /* KeywordRankCollectionViewCell.swift */,
 				CEFC3C3E287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift */,
 				CEFC3C40287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift */,
+				CEFC3C56287EFA4D00F187BE /* CalendarCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -825,7 +831,9 @@
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
+				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
+				CEFC3C55287EF75200F187BE /* CustomCalendarView.swift in Sources */,
 				CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */,
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
