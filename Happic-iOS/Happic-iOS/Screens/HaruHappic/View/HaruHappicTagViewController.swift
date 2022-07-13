@@ -10,19 +10,7 @@ import UIKit
 final class HaruHappicTagViewController: UIViewController {
 
     // MARK: - UI
-    private lazy var monthSelectorButton = UIButton(type: .system).then {
-        $0.setTitle("2022.06", for: .normal)
-        $0.setTitleColor(.hpWhite, for: .normal)
-        $0.titleLabel?.font = UIFont.font(.gmarketSansBold, ofSize: 16)
-    }
-    
-    private lazy var monthSelectorArrowImage = UIImageView().then {
-        $0.image = ImageLiteral.icnArrowMore
-        $0.contentMode = .scaleAspectFill
-        $0.clipsToBounds = true
-        $0.backgroundColor = .black
-        $0.tintColor = .white
-    }
+    private lazy var customMonthView = CustomMonthView()
 
     private lazy var containerCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -45,22 +33,18 @@ final class HaruHappicTagViewController: UIViewController {
     // MARK: - Functions
     private func configureUI() {
         
-        view.addSubviews(monthSelectorButton, monthSelectorArrowImage, containerCollectionView)
+        view.addSubviews(containerCollectionView, customMonthView)
         
-        monthSelectorButton.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+        customMonthView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
+            make.leading.trailing.equalToSuperview().inset(100)
+            make.height.equalTo(40)
             make.centerX.equalToSuperview()
         }
         
-        monthSelectorArrowImage.snp.makeConstraints { make in
-            make.leading.equalTo(monthSelectorButton.snp.trailing).offset(10)
-            make.centerY.equalTo(monthSelectorButton)
-            make.width.height.equalTo(12)
-        }
-        
         containerCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(monthSelectorButton.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.top.equalTo(customMonthView.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(7)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
