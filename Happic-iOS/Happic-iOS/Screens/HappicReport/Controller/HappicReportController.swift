@@ -77,6 +77,8 @@ final class HappicReportController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension HappicReportController: HappicReportSectionHeaderDelegate {
     func showOverallStatsController(type: HappicReportSectionType) {
         let overallStatsController = OverallStatsController()

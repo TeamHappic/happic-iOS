@@ -15,6 +15,7 @@ enum CategoryType {
 }
 
 class CategoryDetailController: UIViewController {
+    
     // MARK: - Properties
     var type: CategoryType = .hourCategory
     

@@ -8,6 +8,7 @@
 import UIKit
 
 final class CategoryRankController: UIViewController {
+    
     // MARK: - UI
     private lazy var categoryRankView = CategoryRankView()
     

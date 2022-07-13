@@ -16,11 +16,8 @@ final class OverallStatsController: UIViewController {
     private let keywordRankViewController = KeywordRankController()
     private let categoryRankController = CategoryRankController()
     private let monthHappicRecordController = MonthHappicRecordController()
-
     private lazy var viewControllers = [keywordRankViewController, categoryRankController, monthHappicRecordController]
-    
     private let buttonTitles = ["키워드 순위", "카테고리 별 순위", "월 기록 횟수"]
-    
     var selectedIndex = 0
     
     // MARK: - UI
