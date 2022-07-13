@@ -24,7 +24,8 @@ final class MonthHappicRecordController: UIViewController {
         view.addSubviews(monthHappicRecordView)
         monthHappicRecordView.headerView.hideShowDetailRankViewButton()
         monthHappicRecordView.snp.makeConstraints { make in
-            make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(295)
         }
     }

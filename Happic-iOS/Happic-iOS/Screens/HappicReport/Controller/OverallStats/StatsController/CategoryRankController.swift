@@ -25,7 +25,7 @@ final class CategoryRankController: UIViewController {
         categoryRankView.headerView.hideShowDetailRankViewButton()
         categoryRankView.collectionViewCanScroll(true)
         categoryRankView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)        }
     }
 }

@@ -25,7 +25,8 @@ final class KeywordRankController: UIViewController {
         keywordRankView.headerView.hideShowDetailRankViewButton()
         keywordRankView.collectionViewCanScroll(true)
         keywordRankView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
 }
