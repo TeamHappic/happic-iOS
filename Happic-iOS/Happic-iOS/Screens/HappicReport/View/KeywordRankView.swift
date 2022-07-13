@@ -10,7 +10,7 @@ import UIKit
 final class KeywordRankView: UIView {
 
     // MARK: - UI
-    private let headerView = HappicReportSectionHeader(type: .keywordRank)
+    let headerView = HappicReportSectionHeader(type: .keywordRank)
     private lazy var keywordCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -56,8 +56,12 @@ final class KeywordRankView: UIView {
         keywordCollectionView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(268)
+            make.bottom.equalToSuperview()
         }
+    }
+    
+    func collectionViewCanScroll(_ isScrollEnabled: Bool) {
+        keywordCollectionView.isScrollEnabled = isScrollEnabled
     }
 }
 

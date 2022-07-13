@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MonthHappicRecordView: UIView {
+final class MonthHappicRecordView: UIView {
     
     // MARK: - UI
-    private let headerView = HappicReportSectionHeader(type: .monthCount)
+    let headerView = HappicReportSectionHeader(type: .monthCount)
     private lazy var countImageView = UIImageView().then {
         $0.image = UIImage()
         $0.backgroundColor = .purple

@@ -15,6 +15,7 @@ enum CategoryType {
 }
 
 class CategoryDetailController: UIViewController {
+    
     // MARK: - Properties
     var type: CategoryType = .hourCategory
     
@@ -66,6 +67,10 @@ class CategoryDetailController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
             make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    func collectionViewCanScroll(_ isScrollEnabled: Bool) {
+        rankCollectionView.isScrollEnabled = isScrollEnabled
     }
 }
 
