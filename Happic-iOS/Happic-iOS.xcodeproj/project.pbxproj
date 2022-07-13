@@ -21,6 +21,7 @@
 		8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */; };
 		8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */; };
 		8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21133287E8B9500F53A95 /* CustomMonthView.swift */; };
+		8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
@@ -91,6 +92,7 @@
 		8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21133287E8B9500F53A95 /* CustomMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthView.swift; sourceTree = "<group>"; };
+		8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthPickerView.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				CEF6E05328780FAA00A1636F /* CustomViewPager.swift */,
 				8EB21133287E8B9500F53A95 /* CustomMonthView.swift */,
+				8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
+				8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */,
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
 				CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
