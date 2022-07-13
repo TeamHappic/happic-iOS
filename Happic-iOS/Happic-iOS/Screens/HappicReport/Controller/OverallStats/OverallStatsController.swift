@@ -33,7 +33,13 @@ final class OverallStatsController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.tintColor = .white
         scrollToIndex(indexOf: selectedIndex)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     // MARK: - Functions
