@@ -18,7 +18,7 @@ final class CustomViewPager: UIView {
     // MARK: - UI
     private let tabMan = TabmanViewController()
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     init(viewControllers: [UIViewController],
          buttonTitles: [String],
          barHeight: Int = 40,
