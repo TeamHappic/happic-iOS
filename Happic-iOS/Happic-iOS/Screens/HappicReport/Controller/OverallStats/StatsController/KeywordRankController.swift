@@ -8,10 +8,24 @@
 import UIKit
 
 final class KeywordRankController: UIViewController {
-
+    
+    // MARK: - UI
+    private lazy var keywordRankView = KeywordRankView()
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .purple
+        configureUI()
+    }
+    
+    // MARK: - Functions
+    private func configureUI() {
+        view.addSubviews(keywordRankView)
+        keywordRankView.headerView.hideShowDetailRankViewButton()
+        keywordRankView.collectionViewCanScroll(true)
+        keywordRankView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }

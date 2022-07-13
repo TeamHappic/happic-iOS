@@ -86,6 +86,10 @@ final class HappicReportSectionHeader: UIView {
         }
     }
     
+    func hideShowDetailRankViewButton() {
+        showDetailRankViewButton.isHidden = true
+    }
+    
     @objc func showDetailRankViewButtonDidTap() {
         delegate?.showOverallStatsController(type: type)
     }
