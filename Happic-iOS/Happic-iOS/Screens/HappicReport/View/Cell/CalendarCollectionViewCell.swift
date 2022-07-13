@@ -26,6 +26,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Functions
     private func configureUI() {
         backgroundColor = .gray
         addSubview(dayLabel)

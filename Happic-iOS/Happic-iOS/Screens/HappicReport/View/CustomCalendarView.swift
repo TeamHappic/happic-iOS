@@ -72,7 +72,7 @@ class CustomCalendarView: UIView {
         return collectionView
     }()
     
-    // MARK: - View Life Cycle
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -162,8 +162,6 @@ extension CustomCalendarView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.size.width) / 7
         let height =  width * (32/40)
-        // let height = (collectionView.frame.size.height) / 7
-        // 일단 cell 크기를 1대1 비율로 했는데 이러면 콜렉션뷰 하단에 여백 생김
         return CGSize(width: width, height: height)
     }
 }

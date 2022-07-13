@@ -61,7 +61,6 @@ final class MonthHappicRecordController: UIViewController {
         calendarView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.trailing.leading.equalToSuperview().inset(20)
-            // make.height.equalTo(258)
             make.bottom.equalToSuperview().inset(100)
         }
     }
