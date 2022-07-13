@@ -10,7 +10,7 @@ import UIKit
 final class KeywordRankView: UIView {
 
     // MARK: - UI
-    private let headerView = HappicReportSectionHeader(type: .keywordRank)
+    let headerView = HappicReportSectionHeader(type: .keywordRank)
     private lazy var keywordCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical

@@ -7,13 +7,20 @@
 
 import UIKit
 
-enum HappicReportSectionType {
+enum HappicReportSectionType: Int {
     case keywordRank
     case categoryRank
     case monthCount
 }
 
+protocol HappicReportSectionHeaderDelegate: AnyObject {
+    func showOverallStatsController(type: HappicReportSectionType)
+}
+
 final class HappicReportSectionHeader: UIView {
+    // MARK: - Properties
+    var type: HappicReportSectionType = .keywordRank
+    weak var delegate: HappicReportSectionHeaderDelegate?
 
     // MARK: - UI
     private let sectionDividerImageView = UIImageView().then {
@@ -33,10 +40,12 @@ final class HappicReportSectionHeader: UIView {
     private lazy var showDetailRankViewButton = UIButton(type: .system).then {
         $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         $0.tintColor = .white
+        $0.addTarget(self, action: #selector(showDetailRankViewButtonDidTap), for: .touchUpInside)
     }
     
     // MARK: - Initialization
     init(type: HappicReportSectionType) {
+        self.type = type
         super.init(frame: .zero)
         configureUI(type: type)
     }
@@ -75,5 +84,9 @@ final class HappicReportSectionHeader: UIView {
             make.trailing.equalToSuperview()
             make.centerY.equalTo(sectionTitleLabel)
         }
+    }
+    
+    @objc func showDetailRankViewButtonDidTap() {
+        delegate?.showOverallStatsController(type: type)
     }
 }

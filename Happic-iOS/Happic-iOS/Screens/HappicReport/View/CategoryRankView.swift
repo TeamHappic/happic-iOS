@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CategoryRankView: UIView {
+final class CategoryRankView: UIView {
     // MARK: - UI
-    private lazy var headerView = HappicReportSectionHeader(type: .categoryRank)
+    let headerView = HappicReportSectionHeader(type: .categoryRank)
     // ViewPager에 들어갈 카테고리 별 ViewController 처리
     private lazy var hourViewController = CategoryDetailController(type: .hourCategory)
     private lazy var whereViewController = CategoryDetailController(type: .whereCategory)

@@ -23,6 +23,9 @@ final class HappicReportController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        keywordRankView.headerView.delegate = self
+        categoryRankView.headerView.delegate = self
+        monthHappicRecordView.headerView.delegate = self
     }
     
     // MARK: - Functions
@@ -71,5 +74,13 @@ final class HappicReportController: UIViewController {
             make.height.equalTo(313)
             make.bottom.equalToSuperview().inset(50)
         }
+    }
+}
+
+extension HappicReportController: HappicReportSectionHeaderDelegate {
+    func showOverallStatsController(type: HappicReportSectionType) {
+        let overallStatsController = OverallStatsController()
+        overallStatsController.selectedIndex = type.rawValue
+        self.navigationController?.pushViewController(overallStatsController, animated: true)
     }
 }
