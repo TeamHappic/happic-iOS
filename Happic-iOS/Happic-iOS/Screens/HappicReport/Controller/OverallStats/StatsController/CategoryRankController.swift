@@ -8,10 +8,23 @@
 import UIKit
 
 final class CategoryRankController: UIViewController {
-
+    // MARK: - UI
+    private lazy var categoryRankView = CategoryRankView()
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .red
+        
+        configureUI()
+    }
+    
+    // MARK: - Functions
+    private func configureUI() {
+        view.addSubviews(categoryRankView)
+        categoryRankView.headerView.hideShowDetailRankViewButton()
+        categoryRankView.collectionViewCanScroll(true)
+        categoryRankView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }

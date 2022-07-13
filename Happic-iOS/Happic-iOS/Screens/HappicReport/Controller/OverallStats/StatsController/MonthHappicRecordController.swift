@@ -8,10 +8,23 @@
 import UIKit
 
 final class MonthHappicRecordController: UIViewController {
-
+    
+    // MARK: - UI
+    private let monthHappicRecordView = MonthHappicRecordView()
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemPink
+        configureUI()
+    }
+    
+    // MARK: - Functions
+    private func configureUI() {
+        view.addSubviews(monthHappicRecordView)
+        monthHappicRecordView.headerView.hideShowDetailRankViewButton()
+        monthHappicRecordView.snp.makeConstraints { make in
+            make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(295)
+        }
     }
 }

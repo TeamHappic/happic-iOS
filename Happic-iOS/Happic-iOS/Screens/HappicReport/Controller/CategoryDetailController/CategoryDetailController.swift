@@ -67,6 +67,10 @@ class CategoryDetailController: UIViewController {
             make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
+    
+    func collectionViewCanScroll(_ isScrollEnabled: Bool) {
+        rankCollectionView.isScrollEnabled = isScrollEnabled
+    }
 }
 
 // MARK: - Extensions
