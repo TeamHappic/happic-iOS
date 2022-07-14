@@ -73,8 +73,7 @@ extension KeywordRankView: UICollectionViewDelegate, UICollectionViewDataSource 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeywordRankCollectionViewCell.className,
-                                                            for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeywordRankCollectionViewCell.className, for: indexPath)
                 as? KeywordRankCollectionViewCell else { return UICollectionViewCell()}
         
         return cell
