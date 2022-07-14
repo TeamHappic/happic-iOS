@@ -58,18 +58,12 @@ protocol CustomMonthViewDelegate: AnyObject {
     // MARK: - Functions
     private func configureUI() {
         
-        addSubviews(monthPickerView, customMonthPickerView)
+        addSubviews(monthPickerView)
         
         monthPickerView.snp.makeConstraints { make in
             make.top.leading.trailing.bottom.equalToSuperview()
         }
-        
-        customMonthPickerView.snp.makeConstraints { make in
-            make.top.equalTo(monthPickerView.snp.bottom)
-            make.centerX.equalTo(monthPickerView)
-            make.width.equalTo(335)
-            make.height.equalTo(230)
-        }
+    }
         customMonthPickerView.isHidden = true
     }
     
