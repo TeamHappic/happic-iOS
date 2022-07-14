@@ -44,7 +44,7 @@ final class HaruHappicTagViewController: UIViewController {
         
         containerCollectionView.snp.makeConstraints { make in
             make.top.equalTo(customMonthView.snp.bottom).offset(10)
-            make.leading.trailing.equalToSuperview().inset(7)
+            make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
