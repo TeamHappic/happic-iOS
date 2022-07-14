@@ -33,7 +33,7 @@ final class HaruHappicPhotoController: UIViewController {
     // MARK: - Functions
     private func configureUI() {
         
-        view.addSubviews(containerCollectionView, customMonthView)
+        view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
                 
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
@@ -46,7 +46,12 @@ final class HaruHappicPhotoController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-    }
+        
+        customMonthPickerView.snp.makeConstraints { make in
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.height.equalTo(230)
+        }
     
     private func setCollectionView() {
         containerCollectionView.delegate = self
