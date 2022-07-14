@@ -72,7 +72,7 @@ final class CustomMonthView: UIView { // delegate 추가
             make.top.equalTo(monthPickerView.snp.bottom)
             make.centerX.equalTo(monthPickerView)
             make.width.equalTo(335)
-            make.height.equalTo(0)
+            make.height.equalTo(230)
         }
         customMonthPickerView.isHidden = true
     }
@@ -87,19 +87,13 @@ final class CustomMonthView: UIView { // delegate 추가
     }
     
     private func setCustomPickerView() {
-
+        
         isMonthViewEnabled.toggle()
         
         if isMonthViewEnabled == true {
-            customMonthPickerView.snp.updateConstraints { make in
-                make.height.equalTo(230)
-                customMonthPickerView.isHidden = false
-            }
+            customMonthPickerView.isHidden = false
         } else {
-            customMonthPickerView.snp.updateConstraints { make in
-                make.height.equalTo(0)
-                customMonthPickerView.isHidden = true
-            }
+            customMonthPickerView.isHidden = true
         }
     }
 }
