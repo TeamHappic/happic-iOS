@@ -142,6 +142,10 @@ class CustomMonthPickerView: UIView {
             make.edges.equalToSuperview().inset(1)
         }
         
+        setMonthButtonStack()
+    }
+    
+    private func setMonthButtonStack() {
         let stack1 = UIStackView(arrangedSubviews: [janButton, febButton, marButton, aprButton])
         let stack2 = UIStackView(arrangedSubviews: [mayButton, junButton, julButton, augButton])
         let stack3 = UIStackView(arrangedSubviews: [sepButton, octButton, novButton, decButton])
