@@ -10,64 +10,64 @@ import UIKit
 final class BestHappicMomentView: UIView {
     // MARK: - UI
     private let titleLabel = UILabel().then {
-        let attributedString = NSMutableAttributedString(string: "이번 달 베스트 ", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)])
+        let attributedString = NSMutableAttributedString(string: "이번 달 베스트 ", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)])
         attributedString.append(NSAttributedString(string: "해픽 ",
-                                                   attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                                                   attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16),
                                                                 .foregroundColor: UIColor.hpOrange]))
         attributedString.append(NSAttributedString(string: "모먼트는 이거야",
-                                                   attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)]))
+                                                   attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]))
         $0.attributedText = attributedString
     }
     
     private lazy var bestHourLabel = UILabel().then {
         $0.text = "19:00"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhereLabel = UILabel().then {
         $0.text = "집구석"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhoLabel = UILabel().then {
         $0.text = "햄식이"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhatLabel = UILabel().then {
         $0.text = "귀여워"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var hourLabel = UILabel().then {
         $0.text = "시에"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     private lazy var whereLabel = UILabel().then {
         $0.text = "에서"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     private lazy var whoLabel = UILabel().then {
         $0.text = "와 함께"
         $0.textColor = .white
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     private lazy var whatLabel = UILabel().then {
         let attributedString = NSMutableAttributedString(string: "하는 순간이 가장 ", attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)])
         attributedString.append(NSAttributedString(string: "행복",
-                                                   attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .medium),
+                                                   attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14),
                                                                 .foregroundColor: UIColor.hpOrange]))
         attributedString.append(NSAttributedString(string: "했어요",
-                                                   attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)]))
+                                                   attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14)]))
         $0.attributedText = attributedString
     }
     
@@ -77,8 +77,8 @@ final class BestHappicMomentView: UIView {
         
         let bestKeywordStackView = UIStackView(arrangedSubviews: [bestHourLabel, bestWhereLabel, bestWhoLabel, bestWhatLabel])
         bestKeywordStackView.axis = .vertical
-        bestKeywordStackView.alignment = .fill
-        bestKeywordStackView.distribution = .equalSpacing
+        bestKeywordStackView.distribution = .fillEqually
+        bestKeywordStackView.spacing = 24
         $0.addSubview(bestKeywordStackView)
         bestKeywordStackView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(44)
@@ -88,14 +88,14 @@ final class BestHappicMomentView: UIView {
         
         let keywordStackView = UIStackView(arrangedSubviews: [hourLabel, whereLabel, whoLabel, whatLabel])
         keywordStackView.axis = .vertical
-        keywordStackView.alignment = .fill
-        keywordStackView.distribution = .equalSpacing
+        keywordStackView.spacing = 24
+        keywordStackView.distribution = .fillEqually
         $0.addSubview(keywordStackView)
         keywordStackView.snp.makeConstraints { make in
             make.leading.equalTo(bestKeywordStackView.snp.trailing).offset(19)
-            make.top.equalToSuperview().offset(28)
+            make.top.equalTo(bestKeywordStackView)
             make.trailing.equalToSuperview().inset(27)
-            make.bottom.equalToSuperview().inset(28)
+            make.bottom.equalTo(bestKeywordStackView)
         }
         
     }
@@ -115,10 +115,12 @@ final class BestHappicMomentView: UIView {
     private func configureUI() {
         addSubviews(titleLabel, containerView)
         titleLabel.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.top.equalToSuperview().inset(19)
+            make.height.equalTo(24)
         }
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(11)
+            make.top.equalTo(titleLabel.snp.bottom).offset(6)
             make.leading.bottom.trailing.equalToSuperview()
         }
     }
