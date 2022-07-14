@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class CustomMonthView: UIView { // delegate 추가
-//    func monthData(_data: String) {
-//        
-//    }
+protocol CustomMonthViewDelegate: AnyObject {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool)
+}
+
     
     // MARK: - Properties
     var isMonthViewEnabled: Bool = false
@@ -51,7 +51,6 @@ final class CustomMonthView: UIView { // delegate 추가
         super.init(frame: frame)
         configureUI()
         setTapGesture()
-//        delegate?.monthData(_data: <#T##String#>)
     }
     
     required init?(coder: NSCoder) {
