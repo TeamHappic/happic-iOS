@@ -17,7 +17,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var whenLabel = UILabel().then {
-        $0.text = "#저녁"
+        $0.text = "오후2시"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
@@ -41,7 +41,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var whereLabel = UILabel().then {
-        $0.text = "#집구석"
+        $0.text = "집구석구석"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
@@ -56,7 +56,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var whoLabel = UILabel().then {
-        $0.text = "#햄식이"
+        $0.text = "햄식달식이"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
@@ -71,7 +71,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var whatLabel = UILabel().then {
-        $0.text = "#귀여워"
+        $0.text = "짱짱귀여워"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
