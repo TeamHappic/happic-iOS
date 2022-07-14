@@ -29,7 +29,7 @@ class CustomMonthPickerView: UIView {
     }
     
     private lazy var containerView = UIView().then {
-        $0.backgroundColor = .hpBgBlack2h //알파값주기 0.95
+        $0.backgroundColor = .hpBgBlack2h // 알파값주기 0.95
         $0.layer.cornerRadius = 8
         
         $0.addSubviews(lastYearSelectorButton, yearIndicatorLabel, nextYearSelectorButton)
