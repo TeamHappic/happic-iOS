@@ -218,22 +218,23 @@ Happic-iOS
 
 대분류 | 기능 | 구현 여부 | 담당자
 :---------:|---------|:----------:|:---------:
- 온보딩 | 스플래시 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
- &nbsp; | 온보딩 |  | 강승현
-  &nbsp; | 소셜로그인 |  | 강승현
+ 온보딩 | 런치스크린 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
+ &nbsp; | 온보딩 | - | 윤수빈
+  회원가입 | 소셜로그인 |  | 윤수빈
+  &nbsp; | 회원가입, 로그인 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
   &nbsp; | 캐릭터 선택 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
   홈 | 탭 바 커스텀 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 캐릭터 뷰 |  | 윤수빈
   하루해픽 | 사진, 태그 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
-  &nbsp; | 게시글 작성 | | 윤수빈
-   &nbsp; | 게시글 상세보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
-  해픽캡슐 | 캡슐뽑기 뷰 |  | 윤수빈
+  &nbsp; | 게시글 작성 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
+   &nbsp; | 게시글 상세보기 |  | 윤수빈
+  해픽캡슐 | 캡슐뽑기 뷰 |  | 이세진
   &nbsp; | 푸시 알림 |  | 이세진
-  해픽리포트 | 전체보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
+  해픽레포트 | 전체보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 키워드 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png>  | 이세진
-  &nbsp; | 카테고리 순위 | | 이세진
-  &nbsp; | 월 기록 횟수 | | 이세진
-  설정 | 설정 뷰 |  | 이세진
+  &nbsp; | 카테고리 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
+  &nbsp; | 월 기록 횟수 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
+  설정 | 설정 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
 
 
 <br>
