@@ -51,7 +51,6 @@ final class TabBarController: UITabBarController {
         tabBar.backgroundColor = .black
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .gray
-        
     }
     
     private func setDelegate() {
@@ -60,7 +59,7 @@ final class TabBarController: UITabBarController {
     
     private func setActionSheet() {
         let actionSheet = UIAlertController(title: "사진을 추가하세요", message: nil, preferredStyle: .actionSheet)
-    
+        
         let cameraAction = UIAlertAction(title: "카메라", style: .default) { _ in
             self.openCamera()
         }
@@ -68,7 +67,7 @@ final class TabBarController: UITabBarController {
         let photoLibraryAction = UIAlertAction(title: "사진첩", style: .default) { _ in
             self.openPhotoLibrary()
         }
-
+        
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
         
         actionSheet.addAction(cameraAction)
