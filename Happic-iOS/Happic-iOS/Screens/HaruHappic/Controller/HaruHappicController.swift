@@ -13,6 +13,7 @@ final class HaruHappicController: UIViewController {
     private lazy var addPhotoButton = UIButton(type: .system).then {
         $0.setImage(ImageLiteral.icnAddPhoto, for: .normal)
         $0.tintColor = .white
+        $0.addTarget(self, action: #selector(addPhotoButtonDidTap), for: .touchUpInside)
     }
     
     private lazy var haruHappicViewPager = CustomViewPager(viewControllers: [HaruHappicPhotoController(), HaruHappicTagViewController()], buttonTitles: ["사진", "태그"], barHeight: 34, indicatorWeight: 4, isScrollEnabled: true)
@@ -38,5 +39,12 @@ final class HaruHappicController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    @objc private func addPhotoButtonDidTap() {
+        let createContentsController = CreateContentsController()
+        createContentsController.modalTransitionStyle = .coverVertical
+        createContentsController.modalPresentationStyle = .fullScreen
+        self.present(createContentsController, animated: true)
     }
 }
