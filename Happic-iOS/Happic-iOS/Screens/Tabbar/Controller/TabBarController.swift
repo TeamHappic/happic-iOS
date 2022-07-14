@@ -118,6 +118,7 @@ extension TabBarController: (UIImagePickerControllerDelegate & UINavigationContr
     
     func openPhotoLibrary() {
         picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
         present(picker, animated: false, completion: nil)
     }
     
