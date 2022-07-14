@@ -16,8 +16,6 @@ protocol CustomMonthViewDelegate: AnyObject {
     var isMonthViewEnabled: Bool = false
     
     // MARK: - UI
-    private lazy var customMonthPickerView = CustomMonthPickerView()
-    
     private lazy var monthLabel = UILabel().then {
         $0.text = "2022 . 06"
         $0.textColor = .hpWhite

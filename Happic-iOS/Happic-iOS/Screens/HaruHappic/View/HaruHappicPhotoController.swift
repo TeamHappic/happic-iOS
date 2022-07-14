@@ -11,7 +11,7 @@ final class HaruHappicPhotoController: UIViewController {
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
-    
+    private lazy var customMonthPickerView = CustomMonthPickerView()
     private lazy var containerCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
