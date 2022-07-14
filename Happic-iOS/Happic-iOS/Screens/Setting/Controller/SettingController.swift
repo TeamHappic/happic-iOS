@@ -88,7 +88,10 @@ extension SettingController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            print("popup")
+            let CharacterChangePopUpView = CustomPopUpController()
+            CharacterChangePopUpView.modalTransitionStyle = .crossDissolve
+            CharacterChangePopUpView.modalPresentationStyle = .overFullScreen
+            present(CharacterChangePopUpView, animated: true)
         }
     }
 }
