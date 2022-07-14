@@ -47,7 +47,6 @@ class CustomMonthPickerView: UIView {
         }
         
         yearIndicatorLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
             make.centerX.equalToSuperview()
             make.centerY.equalTo(lastYearSelectorButton)
         }
