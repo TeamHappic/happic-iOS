@@ -42,7 +42,7 @@ protocol CustomMonthViewDelegate: AnyObject {
         monthSelectorArrowImage.snp.makeConstraints { make in
             make.width.height.equalTo(12)
             make.leading.equalTo(monthLabel.snp.trailing).offset(10)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(monthLabel)
         }
     }
     
@@ -63,8 +63,7 @@ protocol CustomMonthViewDelegate: AnyObject {
         addSubviews(monthPickerView, customMonthPickerView)
         
         monthPickerView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().inset(5)
+            make.top.leading.trailing.bottom.equalToSuperview()
         }
         
         customMonthPickerView.snp.makeConstraints { make in
