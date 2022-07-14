@@ -77,7 +77,6 @@ protocol CustomMonthViewDelegate: AnyObject {
     }
     
     private func setCustomPickerView() {
-        
         isMonthViewEnabled.toggle()
         
         if isMonthViewEnabled == true {
