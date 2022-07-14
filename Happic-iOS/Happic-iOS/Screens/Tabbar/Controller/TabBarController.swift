@@ -13,6 +13,7 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBar()
+        setDelegate()
     }
     
     // MARK: - Functions
@@ -52,6 +53,9 @@ final class TabBarController: UITabBarController {
         
     }
     
+    private func setDelegate() {
+        self.delegate = self
+    }
     func templateNavigationController(title: String,
                                       unselectedImage: UIImage,
                                       selectedImage: UIImage,
@@ -63,5 +67,15 @@ final class TabBarController: UITabBarController {
         nav.navigationBar.tintColor = .black
         nav.navigationBar.isHidden = true
         return nav
+    }
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = viewControllers?.firstIndex(of: viewController)
+        if index == 2 {
+            return false
+        }
+        return true
     }
 }
