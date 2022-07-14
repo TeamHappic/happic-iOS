@@ -164,7 +164,8 @@ class CustomMonthPickerView: UIView {
         
         containerStack.snp.makeConstraints { make in
             make.top.equalTo(yearIndicatorLabel.snp.bottom).offset(10)
-            make.leading.trailing.bottom.equalToSuperview().inset(10)
+            make.leading.trailing.equalTo(containerView).inset(10)
+            make.height.equalTo(160)
         }
     }
 
