@@ -11,8 +11,10 @@ protocol CustomMonthViewDelegate: AnyObject {
     func setMonthPickerView(_ isMonthViewEnabled: Bool)
 }
 
+final class CustomMonthView: UIView {
     
     // MARK: - Properties
+    weak var delegate: CustomMonthViewDelegate?
     var isMonthViewEnabled: Bool = false
     
     // MARK: - UI
@@ -64,8 +66,6 @@ protocol CustomMonthViewDelegate: AnyObject {
             make.top.leading.trailing.bottom.equalToSuperview()
         }
     }
-        customMonthPickerView.isHidden = true
-    }
     
     private func setTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
@@ -78,11 +78,6 @@ protocol CustomMonthViewDelegate: AnyObject {
     
     private func setCustomPickerView() {
         isMonthViewEnabled.toggle()
-        
-        if isMonthViewEnabled == true {
-            customMonthPickerView.isHidden = false
-        } else {
-            customMonthPickerView.isHidden = true
-        }
+        delegate?.setMonthPickerView(isMonthViewEnabled)
     }
 }

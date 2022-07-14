@@ -27,6 +27,7 @@ final class HaruHappicPhotoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
         setCollectionView()
     }
     
@@ -52,6 +53,12 @@ final class HaruHappicPhotoController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.height.equalTo(230)
         }
+        customMonthPickerView.isHidden = true
+    }
+    
+    private func setDelegate() {
+        customMonthView.delegate = self
+    }
     
     private func setCollectionView() {
         containerCollectionView.delegate = self
@@ -84,5 +91,15 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 2
+    }
+}
+
+extension HaruHappicPhotoController: CustomMonthViewDelegate {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool) {
+        if isMonthViewEnabled == true {
+            customMonthPickerView.isHidden = false
+        } else {
+            customMonthPickerView.isHidden = true
+        }
     }
 }
