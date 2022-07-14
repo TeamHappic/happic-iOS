@@ -14,6 +14,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         setTabBar()
         setDelegate()
+        setPickerView()
     }
     
     // MARK: - Functions
@@ -61,11 +62,11 @@ final class TabBarController: UITabBarController {
         let actionSheet = UIAlertController(title: "사진을 추가하세요", message: nil, preferredStyle: .actionSheet)
     
         let cameraAction = UIAlertAction(title: "카메라", style: .default) { _ in
-            
+            self.openCamera()
         }
         
         let photoLibraryAction = UIAlertAction(title: "사진첩", style: .default) { _ in
-            
+            self.openPhotoLibrary()
         }
 
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
@@ -100,4 +101,25 @@ extension TabBarController: UITabBarControllerDelegate {
         }
         return true
     }
+}
+
+extension TabBarController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func setPickerView() {
+        picker.delegate = self
+    }
+    
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        } else {
+            print("Camera not available")
+        }
+    }
+    
+    func openPhotoLibrary() {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
+    
 }
