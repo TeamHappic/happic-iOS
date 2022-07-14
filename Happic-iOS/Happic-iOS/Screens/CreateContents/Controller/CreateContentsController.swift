@@ -41,7 +41,6 @@ final class CreateContentsController: UIViewController {
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        
         scrollView.addSubview(contentView)
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(scrollView.contentLayoutGuide)
