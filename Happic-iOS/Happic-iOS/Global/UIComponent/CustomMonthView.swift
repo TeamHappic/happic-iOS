@@ -38,7 +38,7 @@ protocol CustomMonthViewDelegate: AnyObject {
         monthLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-
+        
         monthSelectorArrowImage.snp.makeConstraints { make in
             make.width.height.equalTo(12)
             make.leading.equalTo(monthLabel.snp.trailing).offset(10)
