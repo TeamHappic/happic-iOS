@@ -23,6 +23,10 @@
 		8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21133287E8B9500F53A95 /* CustomMonthView.swift */; };
 		8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
+		CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */; };
+		CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */; };
+		CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028A2880799B009D98EF /* CustomPopUpController.swift */; };
+		CEA4028D2880839F009D98EF /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028C2880839F009D98EF /* UILabel+.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
 		CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE32287309A7008583C3 /* Alamofire */; };
@@ -57,7 +61,6 @@
 		CEF6E0A3287814F600A1636F /* BestHappicMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */; };
 		CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A4287814FC00A1636F /* HappicReportController.swift */; };
 		CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A62878150100A1636F /* tempSettingModel.swift */; };
-		CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0A82878150400A1636F /* tempSettingView.swift */; };
 		CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AA2878150700A1636F /* SettingController.swift */; };
 		CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CEF6E0AD2878973E00A1636F /* Tabman */; };
 		CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */; };
@@ -101,6 +104,10 @@
 		8EB21133287E8B9500F53A95 /* CustomMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthView.swift; sourceTree = "<group>"; };
 		8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthPickerView.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		CEA4028A2880799B009D98EF /* CustomPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpController.swift; sourceTree = "<group>"; };
+		CEA4028C2880839F009D98EF /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBB69D42873087D000EEB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +140,6 @@
 		CEF6E0A2287814F600A1636F /* BestHappicMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestHappicMomentView.swift; sourceTree = "<group>"; };
 		CEF6E0A4287814FC00A1636F /* HappicReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportController.swift; sourceTree = "<group>"; };
 		CEF6E0A62878150100A1636F /* tempSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingModel.swift; sourceTree = "<group>"; };
-		CEF6E0A82878150400A1636F /* tempSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSettingView.swift; sourceTree = "<group>"; };
 		CEF6E0AA2878150700A1636F /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		CEF6E0AF28789F8A00A1636F /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		CEF6E0B128789FFC00A1636F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -194,6 +200,22 @@
 				8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEA4028428806FE8009D98EF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEA40287288074DC009D98EF /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */,
+			);
+			path = SectionHeader;
 			sourceTree = "<group>";
 		};
 		CEBB69C62873087D000EEB8A = {
@@ -301,6 +323,7 @@
 				CEF6E05328780FAA00A1636F /* CustomViewPager.swift */,
 				8EB21133287E8B9500F53A95 /* CustomMonthView.swift */,
 				8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */,
+				CEA4028A2880799B009D98EF /* CustomPopUpController.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -326,6 +349,7 @@
 				CEF6E0B72878A1C200A1636F /* String+.swift */,
 				CEF6E0B92878A21B00A1636F /* UserDefaults+.swift */,
 				CE380B0B2878A3AF0030D51A /* NSObject+.swift */,
+				CEA4028C2880839F009D98EF /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -634,7 +658,8 @@
 		CEF6E0782878147600A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E0A82878150400A1636F /* tempSettingView.swift */,
+				CEA40287288074DC009D98EF /* SectionHeader */,
+				CEA4028428806FE8009D98EF /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -822,8 +847,10 @@
 				CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */,
 				CEFC3C50287E961200F187BE /* MonthHappicRecordController.swift in Sources */,
 				CEFC3C4C287E95F900F187BE /* KeywordRankController.swift in Sources */,
+				CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */,
 				CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */,
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
+				CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */,
 				8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
@@ -850,9 +877,10 @@
 				8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
+				CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */,
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
 				CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */,
-				CEF6E0A92878150400A1636F /* tempSettingView.swift in Sources */,
+				CEA4028D2880839F009D98EF /* UILabel+.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEF6E081287814AF00A1636F /* tempAuthController.swift in Sources */,
 				CEFC3C4E287E960800F187BE /* CategoryRankController.swift in Sources */,
