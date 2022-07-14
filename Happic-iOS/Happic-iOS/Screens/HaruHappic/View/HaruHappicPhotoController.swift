@@ -34,7 +34,7 @@ final class HaruHappicPhotoController: UIViewController {
     private func configureUI() {
         
         view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
-                
+        
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.leading.trailing.equalToSuperview().inset(100)
