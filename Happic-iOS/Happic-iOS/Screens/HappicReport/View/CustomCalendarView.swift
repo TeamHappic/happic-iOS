@@ -12,47 +12,69 @@ class CustomCalendarView: UIView {
     // MARK: - Properties
     var selectedDate = Date()
     var totalSquares = [String]()
+    
+    var collectionViewWidth: CGFloat {
+        return UIScreen.main.bounds.width - 20
+    }
+    var cellWidth: Float {
+        return Float(collectionViewWidth / 7)
+    }
+    
+    var cellHeight: Float {
+        return cellWidth * (32/40)
+    }
+    
+    var collectionViewHeight: Float {
+        return cellHeight * 6 + 10 // 6줄, 총 줄 간격 10
+    }
 
     // MARK: - UI
     private lazy var sundayLabel = UILabel().then {
         $0.text = "일"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var mondayLabel = UILabel().then {
         $0.text = "월"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var tuesdayLabel = UILabel().then {
         $0.text = "화"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var wednesdayLabel = UILabel().then {
         $0.text = "수"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var thursdayLabel = UILabel().then {
         $0.text = "목"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var fridayLabel = UILabel().then {
         $0.text = "금"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
     private lazy var saturdayLabel = UILabel().then {
         $0.text = "토"
         $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
@@ -64,11 +86,11 @@ class CustomCalendarView: UIView {
     private let calendarCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 4
         layout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .blue
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .hpBgBlack2h
         return collectionView
     }()
     
@@ -87,7 +109,7 @@ class CustomCalendarView: UIView {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .darkGray
+        backgroundColor = .hpBgBlack2h
         layer.cornerRadius = 20
         
         addSubview(dayOfWeekStackView)
@@ -98,10 +120,6 @@ class CustomCalendarView: UIView {
         }
         
         addSubview(calendarCollectionView)
-        let collectionViewWidth = UIScreen.main.bounds.width - 20
-        let cellWidth: Float = Float(collectionViewWidth / 7)
-        let cellHeight: Float = cellWidth * (32/40)
-        let collectionViewHeight = cellHeight * 6 - 14 // 6줄, 총 줄 간격 14
         calendarCollectionView.snp.makeConstraints { make in
             make.top.equalTo(dayOfWeekStackView.snp.bottom).offset(10)
             make.trailing.leading.equalToSuperview()
@@ -152,8 +170,6 @@ extension CustomCalendarView: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.className, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
         
         cell.dayLabel.text = totalSquares[indexPath.item]
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
         return cell
     }
 }

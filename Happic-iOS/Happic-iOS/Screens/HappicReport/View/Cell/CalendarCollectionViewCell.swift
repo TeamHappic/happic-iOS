@@ -12,8 +12,12 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     // MARK: - UI
     let dayLabel = UILabel().then {
         $0.text = "1"
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 12)
         $0.textColor = .white
+    }
+    
+    private lazy var uploadCheckView = UIView().then {
+        $0.backgroundColor = .darkGray
     }
     
     // MARK: - Initialization
@@ -28,10 +32,29 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .gray
-        addSubview(dayLabel)
+        backgroundColor = .hpBgBlack2h
+        
+        addSubviews(uploadCheckView, dayLabel)
         dayLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
+        
+        uploadCheckView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.height.equalToSuperview()
+            make.width.equalTo(snp.height)
+        }
+        
+        uploadCheckView.layer.cornerRadius = self.frame.size.height / 2
+        uploadCheckView.clipsToBounds = true
+        uploadCheckView.isHidden = true
+    }
+    
+    func showUploadCheckView() {
+        uploadCheckView.isHidden = false
+    }
+    
+    func hideUploadCheckView() {
+        uploadCheckView.isHidden = true
     }
 }
