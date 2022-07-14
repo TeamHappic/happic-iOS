@@ -38,12 +38,7 @@ class CustomMonthPickerView: UIView {
         $0.backgroundColor = .hpBgBlack2h //알파값주기 0.95
         $0.layer.cornerRadius = 8
         
-        $0.addSubviews(yearIndicatorLabel, lastYearSelectorButton, nextYearSelectorButton)
-        
-        yearIndicatorLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
-            make.centerX.equalToSuperview()
-        }
+        $0.addSubviews(lastYearSelectorButton, yearIndicatorLabel, nextYearSelectorButton)
         
         lastYearSelectorButton.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(34)
@@ -51,10 +46,16 @@ class CustomMonthPickerView: UIView {
             make.width.height.equalTo(48)
         }
         
+        yearIndicatorLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(lastYearSelectorButton)
+        }
+        
         nextYearSelectorButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(34)
-            make.top.equalToSuperview().offset(10)
             make.width.height.equalTo(48)
+            make.centerY.equalTo(lastYearSelectorButton)
         }
     }
     
@@ -62,73 +63,61 @@ class CustomMonthPickerView: UIView {
     private lazy var janButton = UIButton(type: .system).then {
         $0.setTitle("1월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var febButton = UIButton(type: .system).then {
         $0.setTitle("2월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var marButton = UIButton(type: .system).then {
         $0.setTitle("3월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var aprButton = UIButton(type: .system).then {
         $0.setTitle("4월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var mayButton = UIButton(type: .system).then {
         $0.setTitle("5월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var junButton = UIButton(type: .system).then {
         $0.setTitle("6월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var julButton = UIButton(type: .system).then {
         $0.setTitle("7월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var augButton = UIButton(type: .system).then {
         $0.setTitle("8월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var sepButton = UIButton(type: .system).then {
         $0.setTitle("9월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var octButton = UIButton(type: .system).then {
         $0.setTitle("10월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var novButton = UIButton(type: .system).then {
         $0.setTitle("11월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     private lazy var decButton = UIButton(type: .system).then {
         $0.setTitle("12월", for: .normal)
         $0.tintColor = .hpGray2
-        $0.backgroundColor = .green
     }
     
     // MARK: - Initialization
@@ -150,13 +139,30 @@ class CustomMonthPickerView: UIView {
         addSubview(containerView)
         
         containerView.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
             make.edges.equalToSuperview().inset(1)
         }
         
         let stack1 = UIStackView(arrangedSubviews: [janButton, febButton, marButton, aprButton])
-        let stack2 = UIStackView(arrangedSubviews: [marButton, junButton, julButton, ])
-
+        let stack2 = UIStackView(arrangedSubviews: [mayButton, junButton, julButton, augButton])
+        let stack3 = UIStackView(arrangedSubviews: [sepButton, octButton, novButton, decButton])
+        let stacks: [UIStackView] = [stack1, stack2, stack3]
+        
+        for stack in stacks {
+            stack.spacing = 20
+            stack.distribution = .fillEqually
+        }
+        
+        let containerStack = UIStackView(arrangedSubviews: [stack1, stack2, stack3])
+        
+        addSubview(containerStack)
+        containerStack.axis = .vertical
+        containerStack.spacing = 10
+        containerStack.distribution = .fillEqually
+        
+        containerStack.snp.makeConstraints { make in
+            make.top.equalTo(yearIndicatorLabel.snp.bottom).offset(10)
+            make.leading.trailing.bottom.equalToSuperview().inset(10)
+        }
     }
 
     private func sendData() {
