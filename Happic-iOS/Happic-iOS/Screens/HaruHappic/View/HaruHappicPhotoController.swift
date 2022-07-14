@@ -11,7 +11,7 @@ final class HaruHappicPhotoController: UIViewController {
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
-    
+    private lazy var customMonthPickerView = CustomMonthPickerView()
     private lazy var containerCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -27,14 +27,15 @@ final class HaruHappicPhotoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
         setCollectionView()
     }
     
     // MARK: - Functions
     private func configureUI() {
         
-        view.addSubviews(containerCollectionView, customMonthView)
-                
+        view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
+        
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.leading.trailing.equalToSuperview().inset(100)
@@ -46,6 +47,17 @@ final class HaruHappicPhotoController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+        
+        customMonthPickerView.snp.makeConstraints { make in
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.height.equalTo(230)
+        }
+        customMonthPickerView.isHidden = true
+    }
+    
+    private func setDelegate() {
+        customMonthView.delegate = self
     }
     
     private func setCollectionView() {
@@ -79,5 +91,15 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 2
+    }
+}
+
+extension HaruHappicPhotoController: CustomMonthViewDelegate {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool) {
+        if isMonthViewEnabled == true {
+            customMonthPickerView.isHidden = false
+        } else {
+            customMonthPickerView.isHidden = true
+        }
     }
 }

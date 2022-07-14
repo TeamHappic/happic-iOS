@@ -8,10 +8,10 @@
 import UIKit
 
 final class HaruHappicTagViewController: UIViewController {
-
+    
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
-
+    private lazy var customMonthPickerView = CustomMonthPickerView()
     private lazy var containerCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -27,13 +27,14 @@ final class HaruHappicTagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
         setCollectionView()
     }
     
     // MARK: - Functions
     private func configureUI() {
         
-        view.addSubviews(containerCollectionView, customMonthView)
+        view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
         
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
@@ -47,6 +48,17 @@ final class HaruHappicTagViewController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+        
+        customMonthPickerView.snp.makeConstraints { make in
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.height.equalTo(230)
+        }
+        customMonthPickerView.isHidden = true
+    }
+    
+    private func setDelegate() {
+        customMonthView.delegate = self
     }
     
     private func setCollectionView() {
@@ -73,8 +85,18 @@ extension HaruHappicTagViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 75)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+}
+
+extension HaruHappicTagViewController: CustomMonthViewDelegate {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool) {
+        if isMonthViewEnabled == true {
+            customMonthPickerView.isHidden = false
+        } else {
+            customMonthPickerView.isHidden = true
+        }
     }
 }

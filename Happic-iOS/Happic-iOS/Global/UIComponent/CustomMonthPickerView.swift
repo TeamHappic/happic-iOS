@@ -7,15 +7,9 @@
 
 import UIKit
 
-//protocol SendMonthDataDelegate {
-//    func monthData(_data: String)
-//}
-
 class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
-//    var delegate: SendMonthDataDelegate?
-//    var month: String
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
@@ -167,12 +161,5 @@ class CustomMonthPickerView: UIView {
             make.leading.trailing.equalTo(containerView).inset(10)
             make.height.equalTo(160)
         }
-    }
-
-    private func sendData() {
-        // 달 버튼에 대한 클릭 액션 받으면 딜리게이트로 값 상위 뷰에 넘기기
-        
-//        month = month.split(separator: "월")
-//        delegate?.monthData(_data: month)
     }
 }

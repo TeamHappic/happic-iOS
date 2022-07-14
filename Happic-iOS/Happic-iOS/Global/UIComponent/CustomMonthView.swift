@@ -7,17 +7,17 @@
 
 import UIKit
 
-final class CustomMonthView: UIView { // delegate 추가
-//    func monthData(_data: String) {
-//        
-//    }
+protocol CustomMonthViewDelegate: AnyObject {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool)
+}
+
+final class CustomMonthView: UIView {
     
     // MARK: - Properties
+    weak var delegate: CustomMonthViewDelegate?
     var isMonthViewEnabled: Bool = false
     
     // MARK: - UI
-    private lazy var customMonthPickerView = CustomMonthPickerView()
-    
     private lazy var monthLabel = UILabel().then {
         $0.text = "2022 . 06"
         $0.textColor = .hpWhite
@@ -38,11 +38,11 @@ final class CustomMonthView: UIView { // delegate 추가
         monthLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-
+        
         monthSelectorArrowImage.snp.makeConstraints { make in
             make.width.height.equalTo(12)
             make.leading.equalTo(monthLabel.snp.trailing).offset(10)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(monthLabel)
         }
     }
     
@@ -51,7 +51,6 @@ final class CustomMonthView: UIView { // delegate 추가
         super.init(frame: frame)
         configureUI()
         setTapGesture()
-//        delegate?.monthData(_data: <#T##String#>)
     }
     
     required init?(coder: NSCoder) {
@@ -61,20 +60,11 @@ final class CustomMonthView: UIView { // delegate 추가
     // MARK: - Functions
     private func configureUI() {
         
-        addSubviews(monthPickerView, customMonthPickerView)
+        addSubviews(monthPickerView)
         
         monthPickerView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().inset(5)
+            make.top.leading.trailing.bottom.equalToSuperview()
         }
-        
-        customMonthPickerView.snp.makeConstraints { make in
-            make.top.equalTo(monthPickerView.snp.bottom)
-            make.centerX.equalTo(monthPickerView)
-            make.width.equalTo(335)
-            make.height.equalTo(230)
-        }
-        customMonthPickerView.isHidden = true
     }
     
     private func setTapGesture() {
@@ -87,13 +77,7 @@ final class CustomMonthView: UIView { // delegate 추가
     }
     
     private func setCustomPickerView() {
-        
         isMonthViewEnabled.toggle()
-        
-        if isMonthViewEnabled == true {
-            customMonthPickerView.isHidden = false
-        } else {
-            customMonthPickerView.isHidden = true
-        }
+        delegate?.setMonthPickerView(isMonthViewEnabled)
     }
 }
