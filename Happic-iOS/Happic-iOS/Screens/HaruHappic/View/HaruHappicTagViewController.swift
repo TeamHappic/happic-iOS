@@ -8,7 +8,7 @@
 import UIKit
 
 final class HaruHappicTagViewController: UIViewController {
-
+    
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
 
