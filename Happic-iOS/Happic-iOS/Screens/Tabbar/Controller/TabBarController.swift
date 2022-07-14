@@ -102,7 +102,7 @@ extension TabBarController: UITabBarControllerDelegate {
     }
 }
 
-extension TabBarController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension TabBarController: (UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
     func setPickerView() {
         picker.delegate = self
     }
