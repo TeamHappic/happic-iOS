@@ -56,6 +56,27 @@ final class TabBarController: UITabBarController {
     private func setDelegate() {
         self.delegate = self
     }
+    
+    private func setActionSheet() {
+        let actionSheet = UIAlertController(title: "사진을 추가하세요", message: nil, preferredStyle: .actionSheet)
+    
+        let cameraAction = UIAlertAction(title: "카메라", style: .default) { _ in
+            
+        }
+        
+        let photoLibraryAction = UIAlertAction(title: "사진첩", style: .default) { _ in
+            
+        }
+
+        let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(photoLibraryAction)
+        actionSheet.addAction(cancelAction)
+        
+        self.present(actionSheet, animated: true)
+    }
+    
     func templateNavigationController(title: String,
                                       unselectedImage: UIImage,
                                       selectedImage: UIImage,
@@ -74,6 +95,7 @@ extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let index = viewControllers?.firstIndex(of: viewController)
         if index == 2 {
+            setActionSheet()
             return false
         }
         return true
