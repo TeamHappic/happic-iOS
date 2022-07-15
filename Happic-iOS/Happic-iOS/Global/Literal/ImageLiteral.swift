@@ -19,6 +19,9 @@ enum ImageLiteral {
     static var imageDailySample4: UIImage { .load(named: "image_daily_sample4")}
     
     static var icnAlarm: UIImage { .load(named: "icn_alarm") }
+    
+    static var icnCancel: UIImage { .load(named: "icn_cancel") }
+    static var imageCapsule: UIImage { .load(named: "image_capsule") }
 }
 
 extension UIImage {

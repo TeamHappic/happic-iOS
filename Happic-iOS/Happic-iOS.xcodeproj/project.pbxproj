@@ -48,7 +48,7 @@
 		CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */; };
 		CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */; };
 		CEF6E08B287814C400A1636F /* tempHappicCapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08A287814C400A1636F /* tempHappicCapsuleView.swift */; };
-		CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */; };
+		CEF6E08D287814C900A1636F /* HappicCapsuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* HappicCapsuleController.swift */; };
 		CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08E287814CD00A1636F /* tempHomeModel.swift */; };
 		CEF6E091287814D100A1636F /* tempHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E090287814D100A1636F /* tempHomeView.swift */; };
 		CEF6E093287814D500A1636F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E092287814D500A1636F /* HomeController.swift */; };
@@ -127,7 +127,7 @@
 		CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterController.swift; sourceTree = "<group>"; };
 		CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleModel.swift; sourceTree = "<group>"; };
 		CEF6E08A287814C400A1636F /* tempHappicCapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleView.swift; sourceTree = "<group>"; };
-		CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleController.swift; sourceTree = "<group>"; };
+		CEF6E08C287814C900A1636F /* HappicCapsuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicCapsuleController.swift; sourceTree = "<group>"; };
 		CEF6E08E287814CD00A1636F /* tempHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeModel.swift; sourceTree = "<group>"; };
 		CEF6E090287814D100A1636F /* tempHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHomeView.swift; sourceTree = "<group>"; };
 		CEF6E092287814D500A1636F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -511,7 +511,7 @@
 		CEF6E0672878143000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E08C287814C900A1636F /* tempHappicCapsuleController.swift */,
+				CEF6E08C287814C900A1636F /* HappicCapsuleController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -848,7 +848,7 @@
 				CEFC3C50287E961200F187BE /* MonthHappicRecordController.swift in Sources */,
 				CEFC3C4C287E95F900F187BE /* KeywordRankController.swift in Sources */,
 				CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */,
-				CEF6E08D287814C900A1636F /* tempHappicCapsuleController.swift in Sources */,
+				CEF6E08D287814C900A1636F /* HappicCapsuleController.swift in Sources */,
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
 				CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */,
 				8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */,
