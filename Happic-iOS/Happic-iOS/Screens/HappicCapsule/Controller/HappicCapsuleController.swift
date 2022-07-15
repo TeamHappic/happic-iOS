@@ -13,6 +13,7 @@ class HappicCapsuleController: UIViewController {
     private lazy var cancelButton = UIButton(type: .system).then {
         $0.setImage(ImageLiteral.icnCancel, for: .normal)
         $0.tintColor = .hpGray6
+        $0.addTarget(self, action: #selector(handleCancelButtonDidTap(sender:)), for: .touchUpInside)
     }
     
     private lazy var titleLabel = UILabel().then {
@@ -27,6 +28,25 @@ class HappicCapsuleController: UIViewController {
         $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
     }
     
+    private lazy var capsuleImageView = UIImageView().then {
+        $0.image = ImageLiteral.imageCapsule
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = false
+    }
+    
+    private lazy var drawCapsuleButton = UIButton(type: .system).then {
+        $0.setAttributedTitle(NSAttributedString(string: "해픽 캡슐 뽑기",
+                                                 attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]),
+                                                for: .normal)
+        $0.setImage(ImageLiteral.icnArrowNext, for: .normal)
+        $0.tintColor = .hpGray9
+        $0.setTitleColor(.hpGray9, for: .normal)
+        $0.backgroundColor = .hpOrange
+        $0.semanticContentAttribute = .forceRightToLeft
+        $0.layer.cornerRadius = 8
+        $0.addTarget(self, action: #selector(handleDrawButtonDidTap(sender:)), for: .touchUpInside)
+    }
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +56,7 @@ class HappicCapsuleController: UIViewController {
     // MARK: - Functions
     private func configureUI() {
         view.backgroundColor = .hpBgBlack2h
-        view.addSubviews(cancelButton, titleLabel, descriptionLabel)
+        view.addSubviews(cancelButton, titleLabel, descriptionLabel, capsuleImageView, drawCapsuleButton)
         
         cancelButton.snp.makeConstraints { make in
             make.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(5)
@@ -52,5 +72,26 @@ class HappicCapsuleController: UIViewController {
             make.centerX.equalTo(view.safeAreaLayoutGuide)
             make.top.equalTo(titleLabel.snp.bottom).offset(12)
         }
+        
+        capsuleImageView.snp.makeConstraints { make in
+            make.centerX.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(54)
+            make.width.equalTo(220.adjusted)
+            make.height.equalTo(364.adjustedH)
+        }
+        
+        drawCapsuleButton.snp.makeConstraints { make in
+            make.top.equalTo(capsuleImageView.snp.bottom).offset(52)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(44)
+            make.height.equalTo(44)
+        }
+    }
+    
+    @objc func handleCancelButtonDidTap(sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func handleDrawButtonDidTap(sender: UIButton) {
+        print("tap")
     }
 }
