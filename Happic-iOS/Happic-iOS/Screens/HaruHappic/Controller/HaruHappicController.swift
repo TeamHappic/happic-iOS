@@ -43,8 +43,6 @@ final class HaruHappicController: UIViewController {
     
     @objc private func addPhotoButtonDidTap() {
         let createContentsController = CreateContentsController()
-        createContentsController.modalTransitionStyle = .coverVertical
-        createContentsController.modalPresentationStyle = .fullScreen
-        self.present(createContentsController, animated: true)
+        self.navigationController?.pushViewController(createContentsController, animated: true)
     }
 }
