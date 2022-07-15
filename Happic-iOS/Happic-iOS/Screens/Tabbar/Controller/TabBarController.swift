@@ -8,7 +8,11 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-
+    
+    // MARK: - UI
+    let picker = UIImagePickerController()
+//    let pickerImageView = UIImage()
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,4 +126,10 @@ extension TabBarController: (UIImagePickerControllerDelegate & UINavigationContr
         present(picker, animated: false, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+//            pickerImageView.image = image
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }
