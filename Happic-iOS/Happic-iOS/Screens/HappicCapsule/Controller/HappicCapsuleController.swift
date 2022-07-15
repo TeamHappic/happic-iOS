@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HappicCapsuleController: UIViewController {
+final class HappicCapsuleController: UIViewController {
     
     // MARK: - UI
     private lazy var cancelButton = UIButton(type: .system).then {
@@ -47,6 +47,20 @@ class HappicCapsuleController: UIViewController {
         $0.addTarget(self, action: #selector(handleDrawButtonDidTap(sender:)), for: .touchUpInside)
     }
     
+    private lazy var capsuleView = HappicCapsuleView()
+    
+    private lazy var createContentsButton = UIButton(type: .system).then {
+        $0.setAttributedTitle(NSAttributedString(string: "오늘의 행복도 기록하기",
+                                                 attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]),
+                                                for: .normal)
+        $0.setImage(ImageLiteral.icnArrowNext, for: .normal)
+        $0.tintColor = .hpOrange
+        $0.setTitleColor(.hpOrange, for: .normal)
+        $0.backgroundColor = .hpBgBlack1
+        $0.semanticContentAttribute = .forceRightToLeft
+        $0.layer.cornerRadius = 8
+    }
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,8 +95,9 @@ class HappicCapsuleController: UIViewController {
         }
         
         drawCapsuleButton.snp.makeConstraints { make in
-            make.top.equalTo(capsuleImageView.snp.bottom).offset(52)
+            make.top.greaterThanOrEqualTo(capsuleImageView.snp.bottom).offset(10)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(44)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(57)
             make.height.equalTo(44)
         }
     }
@@ -92,6 +107,24 @@ class HappicCapsuleController: UIViewController {
     }
     
     @objc func handleDrawButtonDidTap(sender: UIButton) {
-        print("tap")
+        capsuleImageView.isHidden = true
+        drawCapsuleButton.isHidden = true
+        
+        titleLabel.text = "해픽 캡슐 개봉"
+        descriptionLabel.text = "해픽의 별이 된, 너의 행복한 순간이야"
+        
+        view.addSubviews(capsuleView, createContentsButton)
+        capsuleView.snp.makeConstraints { make in
+            make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(30)
+            make.top.lessThanOrEqualTo(descriptionLabel.snp.bottom).offset(54)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(42)
+        }
+        
+        createContentsButton.snp.makeConstraints { make in
+            make.top.greaterThanOrEqualTo(capsuleView.snp.bottom).offset(10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(44)
+            make.height.equalTo(44)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(57)
+        }
     }
 }
