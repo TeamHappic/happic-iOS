@@ -20,7 +20,7 @@ final class CreateContentsController: UIViewController {
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
     }
     
-    private let dayLabel = UILabel().then {
+    private let dateLabel = UILabel().then {
         $0.text = "06.26 해픽"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
