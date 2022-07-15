@@ -11,8 +11,32 @@ final class CreateContentsController: UIViewController {
     
     // MARK: - UI
     private let scrollView = UIScrollView()
-    private let contentView = UIView()
-
+    private let headerView = UIView()
+    private let containerView = UIView()
+    
+    private let backButton = UIButton(type: .system).then {
+        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.tintColor = .hpWhite
+        $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+    }
+    
+    private let dayLabel = UILabel().then {
+        $0.text = "06.26 해픽"
+        $0.textColor = .hpWhite
+        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+    }
+    
+    private let saveButton = UIButton(type: .system).then {
+        $0.setTitle("저장", for: .normal)
+        $0.setTitleColor(.hpOrange, for: .normal)
+        $0.setTitleColor(.hpGray6, for: .disabled)
+    }
+    
+    private let pickerImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.layer.masksToBounds = true
+    }
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
