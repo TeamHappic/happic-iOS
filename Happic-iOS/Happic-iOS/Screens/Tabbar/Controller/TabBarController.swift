@@ -64,7 +64,7 @@ final class TabBarController: UITabBarController {
             self.openCamera()
         }
         
-        let photoLibraryAction = UIAlertAction(title: "사진첩", style: .default) { _ in
+        let photoLibraryAction = UIAlertAction(title: "갤러리", style: .default) { _ in
             self.openPhotoLibrary()
         }
         
