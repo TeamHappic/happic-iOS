@@ -30,7 +30,7 @@ class CustomMonthPickerView: UIView {
     private lazy var yearIndicatorLabel = UILabel().then {
         $0.text = "2022"
         $0.textColor = .hpGray4
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
     
     private lazy var containerView = UIView().then {
@@ -61,63 +61,51 @@ class CustomMonthPickerView: UIView {
     }
     
     private lazy var janButton = UIButton(type: .system).then {
-        $0.setTitle("1월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "1월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var febButton = UIButton(type: .system).then {
-        $0.setTitle("2월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "2월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var marButton = UIButton(type: .system).then {
-        $0.setTitle("3월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "3월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var aprButton = UIButton(type: .system).then {
-        $0.setTitle("4월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "4월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var mayButton = UIButton(type: .system).then {
-        $0.setTitle("5월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "5월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var junButton = UIButton(type: .system).then {
-        $0.setTitle("6월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "6월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var julButton = UIButton(type: .system).then {
-        $0.setTitle("7월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "7월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var augButton = UIButton(type: .system).then {
-        $0.setTitle("8월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "8월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var sepButton = UIButton(type: .system).then {
-        $0.setTitle("9월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "9월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var octButton = UIButton(type: .system).then {
-        $0.setTitle("10월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "10월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var novButton = UIButton(type: .system).then {
-        $0.setTitle("11월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "11월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var decButton = UIButton(type: .system).then {
-        $0.setTitle("12월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "12월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     // MARK: - Initialization
@@ -175,7 +163,7 @@ class CustomMonthPickerView: UIView {
     }
     
     @objc private func monthButtonDidTap(sender: UIButton) {
-        let month = sender.currentTitle
+        let month = sender.currentAttributedTitle?.string
         if let month = month?.components(separatedBy: "월") {
             delegate?.changeMonthStatus(month[0])
         }
