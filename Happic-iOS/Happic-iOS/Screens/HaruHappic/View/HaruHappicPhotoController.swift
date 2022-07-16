@@ -105,7 +105,6 @@ extension HaruHappicPhotoController: CustomMonthViewDelegate {
     }
 }
 
-
 extension HaruHappicPhotoController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
         if month.count == 1 {
