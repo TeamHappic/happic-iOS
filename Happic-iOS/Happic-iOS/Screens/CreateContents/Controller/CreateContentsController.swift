@@ -10,9 +10,9 @@ import UIKit
 final class CreateContentsController: UIViewController {
     
     // MARK: - UI
-    private let headerView = UIView()
-    private let scrollView = UIScrollView()
-    private let containerView = UIView()
+    private lazy var headerView = UIView()
+    private lazy var scrollView = UIScrollView()
+    private lazy var containerView = UIView()
     
     private lazy var backButton = UIButton(type: .system).then {
         $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
