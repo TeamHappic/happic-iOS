@@ -149,6 +149,12 @@ class CustomMonthPickerView: UIView {
             stack.distribution = .fillEqually
         }
         
+        [janButton, febButton, marButton, aprButton,
+         mayButton, junButton, julButton, augButton,
+         sepButton, octButton, novButton, decButton].forEach {
+            $0.addTarget(self, action: #selector(monthButtonDidTap(sender: )), for: .touchUpInside)
+        }
+        
         let containerStack = UIStackView(arrangedSubviews: [stack1, stack2, stack3])
         
         addSubview(containerStack)
@@ -161,5 +167,9 @@ class CustomMonthPickerView: UIView {
             make.leading.trailing.equalTo(containerView).inset(10)
             make.height.equalTo(160)
         }
+    }
+    
+    @objc private func monthButtonDidTap(sender: UIButton) {
+        print(sender.currentTitle)
     }
 }
