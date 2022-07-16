@@ -172,11 +172,11 @@ final class CustomMonthPickerView: UIView {
     }
     
     private func controlMonthStatus() {
-        let currentMonth = Calendar.current.component(.month, from: Date()) // 현재 월 : int 타입
+        let currentMonth = Calendar.current.component(.month, from: Date())
         [janButton, febButton, marButton, aprButton,
          mayButton, junButton, julButton, augButton,
          sepButton, octButton, novButton, decButton].forEach {
-            let monthStr = $0.currentAttributedTitle?.string.components(separatedBy: "월") // 버튼 월 : string 타입
+            let monthStr = $0.currentAttributedTitle?.string.components(separatedBy: "월")
             guard let month = monthStr?[0],
                   let selectedMonth = Int(month) else { return }
             if currentMonth < selectedMonth {
