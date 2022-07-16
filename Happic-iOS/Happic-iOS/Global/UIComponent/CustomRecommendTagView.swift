@@ -8,10 +8,6 @@
 import UIKit
 
 class CustomRecommendTagView: UIView {
-    // MARK: - Properties
-    //    let tags = ["가나다라마", "가나다라마", "가나다라마",
-    //                "마라다나가", "마라다나가", "마라다나가",
-    //                "가나다라마", "가나다라마", "가나다라마"]
     
     // MARK: - UI
     private lazy var tagLabel = UILabel().then {
