@@ -54,7 +54,36 @@ final class CreateContentsController: UIViewController {
     }
     // MARK: - Functions
     private func configureUI() {
+        setHeaderView()
         setScrollView()
+    }
+    
+    private func setHeaderView() {
+        view.addSubview(headerView)
+        headerView.addSubviews(backButton, dateLabel, saveButton)
+        
+        headerView.backgroundColor = .hpBgBlack2h
+        
+        headerView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(65)
+        }
+        
+        backButton.snp.makeConstraints { make in
+            make.centerY.equalTo(headerView)
+            make.leading.equalTo(headerView.snp.leading).offset(20)
+            make.width.height.equalTo(48)
+        }
+        
+        dateLabel.snp.makeConstraints { make in
+            make.center.equalTo(headerView)
+        }
+        
+        saveButton.snp.makeConstraints { make in
+            make.centerY.equalTo(headerView)
+            make.trailing.equalTo(headerView.snp.trailing).inset(20)
+            make.width.height.equalTo(48)
+        }
     }
     
     private func setScrollView() {
