@@ -52,6 +52,7 @@ final class CreateContentsController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
     }
+    
     // MARK: - Functions
     private func configureUI() {
         setHeaderView()
@@ -87,6 +88,7 @@ final class CreateContentsController: UIViewController {
     }
     
     private func setScrollView() {
+        
         view.addSubview(scrollView)
         
         view.backgroundColor = .yellow
