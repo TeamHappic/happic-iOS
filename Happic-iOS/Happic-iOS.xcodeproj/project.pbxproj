@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */; };
+		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
+		8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */; };
 		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
 		8E367614287D429600326074 /* HaruHappicTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagViewController.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
@@ -89,6 +91,8 @@
 
 /* Begin PBXFileReference section */
 		8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
+		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecommendTagView.swift; sourceTree = "<group>"; };
 		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
 		8E367613287D429600326074 /* HaruHappicTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagViewController.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 				CEF6E05328780FAA00A1636F /* CustomViewPager.swift */,
 				8EB21133287E8B9500F53A95 /* CustomMonthView.swift */,
 				8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */,
+				8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */,
 				CEA4028A2880799B009D98EF /* CustomPopUpController.swift */,
 			);
 			path = UIComponent;
@@ -350,6 +355,7 @@
 				CEF6E0B92878A21B00A1636F /* UserDefaults+.swift */,
 				CE380B0B2878A3AF0030D51A /* NSObject+.swift */,
 				CEA4028C2880839F009D98EF /* UILabel+.swift */,
+				8E2F757C2882A315001025DE /* UIImageView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -841,6 +847,7 @@
 				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
+				8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */,
 				CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */,
 				CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */,
 				CEF6E04328780EDA00A1636F /* tempFoundation.swift in Sources */,
@@ -855,6 +862,7 @@
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
 				CEFC3C53287EA88C00F187BE /* CustomTabPagerButton.swift in Sources */,
+				8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */,
 				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
 				CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */,
 				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
