@@ -10,7 +10,7 @@ import UIKit
 final class TabBarController: UITabBarController {
     
     // MARK: - Properties
-    let picker = UIImagePickerController()
+    private let picker = UIImagePickerController()
 //    let pickerImageView = UIImage()
     
     // MARK: - View Life Cycle
