@@ -34,7 +34,10 @@ class CustomMonthPickerView: UIView {
     }
     
     private lazy var containerView = UIView().then {
-        $0.backgroundColor = .hpBgBlack2h // 알파값주기 0.95
+        
+        $0.backgroundColor = .hpBgBlack2h.withAlphaComponent(0.95)
+        $0.layer.borderColor = UIColor.hpDarkPurple.cgColor
+        $0.layer.borderWidth = 1
         $0.layer.cornerRadius = 8
         
         $0.addSubviews(lastYearSelectorButton, yearIndicatorLabel, nextYearSelectorButton)
@@ -131,13 +134,10 @@ class CustomMonthPickerView: UIView {
     // MARK: - Functions
     private func configureUI() {
         
-        backgroundColor = .hpDarkPurple
-        layer.cornerRadius = 8
-        
         addSubview(containerView)
         
         containerView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(1)
+            make.edges.equalToSuperview()
         }
         
         setMonthButtonStack()
