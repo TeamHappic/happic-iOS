@@ -9,7 +9,7 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    // MARK: - UI
+    // MARK: - Properties
     let picker = UIImagePickerController()
 //    let pickerImageView = UIImage()
     
