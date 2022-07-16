@@ -95,15 +95,23 @@ final class CreateContentsController: UIViewController {
         containerView.backgroundColor = .hpBgBlack1
         
         scrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
-        scrollView.addSubview(contentView)
-        contentView.snp.makeConstraints { make in
+        containerView.snp.makeConstraints { make in
             make.edges.equalTo(scrollView.contentLayoutGuide)
             make.width.equalTo(scrollView.snp.width)
             make.height.greaterThanOrEqualTo(scrollView.snp.height).priority(500)
         }
+        
+        pickerImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(300.adjusted)
+        }
+    }
+    
     @objc private func dismissViewController() {
         self.dismiss(animated: true, completion: nil)
     }
