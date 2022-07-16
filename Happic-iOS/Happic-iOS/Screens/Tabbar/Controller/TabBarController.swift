@@ -126,9 +126,12 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        let createContentsController = CreateContentsController()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             createContentsController.pickerImageView.image = image
-            dismiss(animated: true, completion: nil)
+            picker.dismiss(animated: true, completion: nil)
+            createContentsController.modalPresentationStyle = .fullScreen
+            present(createContentsController, animated: true, completion: nil)
         }
     }
 }
