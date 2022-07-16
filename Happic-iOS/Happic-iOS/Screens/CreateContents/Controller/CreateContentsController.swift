@@ -14,7 +14,7 @@ final class CreateContentsController: UIViewController {
     private let headerView = UIView()
     private let containerView = UIView()
     
-    private let backButton = UIButton(type: .system).then {
+    private lazy var backButton = UIButton(type: .system).then {
         $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
         $0.tintColor = .hpWhite
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
