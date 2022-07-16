@@ -125,7 +125,7 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
         present(picker, animated: false, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             createContentsController.pickerImageView.image = image
             dismiss(animated: true, completion: nil)
