@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol CustomMonthViewDelegate: AnyObject {
     func setMonthPickerView(_ isMonthViewEnabled: Bool)
 }

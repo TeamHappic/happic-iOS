@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol CustomMonthPickerViewDelegate: AnyObject {
     func changeMonthStatus(_ month: String)
 }
