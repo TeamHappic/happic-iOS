@@ -31,7 +31,7 @@ final class CreateContentsController: UIViewController {
         $0.setTitleColor(.hpGray6, for: .normal)
     }
     
-    private let pickerImageView = UIImageView().then {
+    var pickerImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
         $0.layer.masksToBounds = true
     }
