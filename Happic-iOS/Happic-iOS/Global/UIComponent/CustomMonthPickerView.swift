@@ -43,9 +43,9 @@ class CustomMonthPickerView: UIView {
         $0.addSubviews(lastYearSelectorButton, yearIndicatorLabel, nextYearSelectorButton)
         
         lastYearSelectorButton.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(34)
-            make.top.equalToSuperview().offset(10)
-            make.width.height.equalTo(48)
+            make.leading.equalToSuperview().offset(30)
+            make.top.equalToSuperview().offset(24)
+            make.width.height.equalTo(20)
         }
         
         yearIndicatorLabel.snp.makeConstraints { make in
@@ -54,8 +54,8 @@ class CustomMonthPickerView: UIView {
         }
         
         nextYearSelectorButton.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(34)
-            make.width.height.equalTo(48)
+            make.trailing.equalToSuperview().inset(30)
+            make.width.height.equalTo(20)
             make.centerY.equalTo(lastYearSelectorButton)
         }
     }
