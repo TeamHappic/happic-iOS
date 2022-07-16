@@ -18,6 +18,7 @@ final class CreateContentsController: UIViewController {
         $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
         $0.tintColor = .hpWhite
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        $0.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
     }
     
     private let dateLabel = UILabel().then {
@@ -72,5 +73,7 @@ final class CreateContentsController: UIViewController {
             make.width.equalTo(scrollView.snp.width)
             make.height.greaterThanOrEqualTo(scrollView.snp.height).priority(500)
         }
+    @objc private func dismissViewController() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
