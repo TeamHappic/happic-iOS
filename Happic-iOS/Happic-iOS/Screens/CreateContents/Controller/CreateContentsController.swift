@@ -90,9 +90,9 @@ final class CreateContentsController: UIViewController {
     private func setScrollView() {
         
         view.addSubview(scrollView)
-        
-        view.backgroundColor = .yellow
-        scrollView.backgroundColor = .purple
+        scrollView.addSubview(containerView)
+        containerView.addSubviews(pickerImageView)
+        containerView.backgroundColor = .hpBgBlack1
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
