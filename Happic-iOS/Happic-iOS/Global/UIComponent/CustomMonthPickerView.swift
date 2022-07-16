@@ -112,6 +112,7 @@ class CustomMonthPickerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        controlMonthStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -166,6 +167,21 @@ class CustomMonthPickerView: UIView {
         let month = sender.currentAttributedTitle?.string
         if let month = month?.components(separatedBy: "월") {
             delegate?.changeMonthStatus(month[0])
+        }
+    }
+    
+    private func controlMonthStatus() {
+        let currentMonth = Calendar.current.component(.month, from: Date()) // 현재 월 : int 타입
+        [janButton, febButton, marButton, aprButton,
+         mayButton, junButton, julButton, augButton,
+         sepButton, octButton, novButton, decButton].forEach {
+            let month = $0.currentAttributedTitle?.string.components(separatedBy: "월") // 버튼 월 : string 타입
+            if currentMonth < Int(month![0])! {
+                $0.setAttributedTitle(NSAttributedString(string: "\(month![0])월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
+                $0.isEnabled = false
+            } else if currentMonth == Int(month![0])! {
+                $0.setAttributedTitle(NSAttributedString(string: "\(month![0])월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+            }
         }
     }
 }
