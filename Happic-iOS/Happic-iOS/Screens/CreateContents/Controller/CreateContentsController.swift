@@ -32,8 +32,10 @@ final class CreateContentsController: UIViewController {
     }
     
     var pickerImageView = UIImageView().then {
+        $0.image = ImageLiteral.imageDailySample3
         $0.contentMode = .scaleAspectFill
         $0.layer.masksToBounds = true
+        $0.layer.cornerRadius = 12
     }
     
     // MARK: - View Life Cycle
