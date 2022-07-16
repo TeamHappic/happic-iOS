@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomRecommendTagView: UIView {
+final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
     private lazy var tagLabel = UILabel().then {
@@ -47,7 +47,6 @@ class CustomRecommendTagView: UIView {
         
         userTextField.snp.makeConstraints { make in
             make.leading.equalTo(verticalLine.snp.trailing).offset(16)
-            //            make.height.equalTo(24)
             make.centerY.equalToSuperview()
         }
     }
