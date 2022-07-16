@@ -12,7 +12,7 @@ protocol CustomMonthPickerViewDelegate: AnyObject {
     func changeMonthStatus(_ month: String)
 }
 
-class CustomMonthPickerView: UIView {
+final class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
     weak var delegate: CustomMonthPickerViewDelegate?

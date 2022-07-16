@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomRecommendTagView: UIView {
+final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
     private lazy var tagLabel = UILabel().then {
