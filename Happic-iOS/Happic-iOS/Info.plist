@@ -6,6 +6,10 @@
 	<string>하루해픽 게시글을 업로드하기 위해 사진첩 권한을 허용해주세요.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>해픽 앱에서 사용자의 카메라를 사용합니다.</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ko</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GmarketSansBold.otf</string>
