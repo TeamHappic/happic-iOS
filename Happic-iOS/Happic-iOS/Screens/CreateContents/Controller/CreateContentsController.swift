@@ -10,8 +10,8 @@ import UIKit
 final class CreateContentsController: UIViewController {
     
     // MARK: - UI
-    private let scrollView = UIScrollView()
     private let headerView = UIView()
+    private let scrollView = UIScrollView()
     private let containerView = UIView()
     
     private lazy var backButton = UIButton(type: .system).then {
