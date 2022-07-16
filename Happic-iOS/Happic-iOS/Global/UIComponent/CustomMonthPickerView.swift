@@ -146,6 +146,7 @@ class CustomMonthPickerView: UIView {
         
         for stack in stacks {
             stack.spacing = 20
+            stack.axis = .horizontal
             stack.distribution = .fillEqually
         }
         
