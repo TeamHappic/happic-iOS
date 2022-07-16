@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol CustomMonthPickerViewDelegate: AnyObject {
+    func changeMonthStatus(_ month: String)
+}
+
 class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
+    weak var delegate: CustomMonthPickerViewDelegate?
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
@@ -171,6 +176,9 @@ class CustomMonthPickerView: UIView {
     }
     
     @objc private func monthButtonDidTap(sender: UIButton) {
-        print(sender.currentTitle)
+        let month = sender.currentTitle
+        if let month = month?.components(separatedBy: "월") {
+            delegate?.changeMonthStatus(month[0])
+        }
     }
 }
