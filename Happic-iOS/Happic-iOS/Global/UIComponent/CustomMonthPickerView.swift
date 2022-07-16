@@ -60,7 +60,6 @@ class CustomMonthPickerView: UIView {
         }
     }
     
-    // 버튼 addtarget 추가하기
     private lazy var janButton = UIButton(type: .system).then {
         $0.setTitle("1월", for: .normal)
         $0.tintColor = .hpGray2
