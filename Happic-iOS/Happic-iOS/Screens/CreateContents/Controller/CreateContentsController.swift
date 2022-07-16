@@ -27,9 +27,8 @@ final class CreateContentsController: UIViewController {
     }
     
     private let saveButton = UIButton(type: .system).then {
-        $0.setTitle("저장", for: .normal)
-        $0.setTitleColor(.hpOrange, for: .normal)
-        $0.setTitleColor(.hpGray6, for: .disabled)
+        $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]), for: .normal)
+        $0.setTitleColor(.hpGray6, for: .normal)
     }
     
     private let pickerImageView = UIImageView().then {
