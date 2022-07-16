@@ -176,12 +176,14 @@ final class CustomMonthPickerView: UIView {
         [janButton, febButton, marButton, aprButton,
          mayButton, junButton, julButton, augButton,
          sepButton, octButton, novButton, decButton].forEach {
-            let month = $0.currentAttributedTitle?.string.components(separatedBy: "월") // 버튼 월 : string 타입
-            if currentMonth < Int(month![0])! {
-                $0.setAttributedTitle(NSAttributedString(string: "\(month![0])월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
+            let monthStr = $0.currentAttributedTitle?.string.components(separatedBy: "월") // 버튼 월 : string 타입
+            guard let month = monthStr?[0],
+                  let selectedMonth = Int(month) else { return }
+            if currentMonth < selectedMonth {
+                $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
                 $0.isEnabled = false
-            } else if currentMonth == Int(month![0])! {
-                $0.setAttributedTitle(NSAttributedString(string: "\(month![0])월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+            } else if currentMonth == selectedMonth {
+                $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
             }
         }
     }
