@@ -13,6 +13,10 @@ final class CreateContentsController: UIViewController {
     private lazy var headerView = UIView()
     private lazy var scrollView = UIScrollView()
     private lazy var containerView = UIView()
+    private lazy var whenTagView = CustomRecommendTagView()
+    private lazy var whereTagView = CustomRecommendTagView()
+    private lazy var whoTagView = CustomRecommendTagView()
+    private lazy var whatTagView = CustomRecommendTagView()
     
     private lazy var backButton = UIButton(type: .system).then {
         $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
@@ -109,6 +113,18 @@ final class CreateContentsController: UIViewController {
             make.top.equalToSuperview().offset(20)
             make.centerX.equalToSuperview()
             make.width.height.equalTo(300.adjusted)
+        }
+        
+        let tagStacks = UIStackView(arrangedSubviews: [whenTagView, whereTagView, whoTagView, whatTagView])
+        tagStacks.axis = .vertical
+        tagStacks.spacing = 8
+        tagStacks.distribution = .fill
+        
+        containerView.addSubview(tagStacks)
+        tagStacks.snp.makeConstraints { make in
+            make.top.equalTo(pickerImageView.snp.bottom).offset(32)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(100)
         }
     }
     
