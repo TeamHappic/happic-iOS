@@ -170,6 +170,7 @@ final class CustomRecommendTagView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        setDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -193,13 +194,26 @@ final class CustomRecommendTagView: UIView {
         }
     }
     
+    private func setDelegate() {
+        userTextField.delegate = self
+    }
+    
     @objc func tagButtonDidtap(sender: UIButton) {
+        userTextField.resignFirstResponder()
         userTextField.text = sender.currentTitle
     }
 }
 
 // MARK: - Extensions
 extension CustomRecommendTagView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return false }
+        if text.count >= 5 {
+            return false
+        }
+        return true
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         UIView.animate(withDuration: 0.2) {
             self.tagContainerView.isHidden = false
