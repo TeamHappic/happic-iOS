@@ -46,7 +46,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-iV-ehM">
                                 <rect key="frame" x="93.666666666666686" y="157.66666666666663" width="188" height="253.33333333333337"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_splash" translatesAutoresizingMaskIntoConstraints="NO" id="rmW-dA-jam">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp_image_splash" translatesAutoresizingMaskIntoConstraints="NO" id="rmW-dA-jam">
                                         <rect key="frame" x="0.0" y="0.0" width="188" height="155"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rmW-dA-jam" secondAttribute="height" multiplier="188:155" id="UKM-Ph-hNE"/>
@@ -167,7 +167,7 @@
     </scenes>
     <resources>
         <image name="bg_splash" width="375" height="812"/>
-        <image name="icn_splash" width="188" height="155"/>
+        <image name="hp_image_splash" width="188" height="155"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <namedColor name="hp_bgblack2h">
             <color red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

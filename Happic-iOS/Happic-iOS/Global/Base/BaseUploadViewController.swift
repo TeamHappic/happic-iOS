@@ -9,13 +9,16 @@ import UIKit
 
 class BaseUploadViewController: UIViewController {
     
+    // MARK: - Properties
     let picker = UIImagePickerController()
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setPickerView()
     }
     
+    // MARK: - Functions
     func setActionSheet() {
         let actionSheet = UIAlertController(title: "사진을 추가하세요", message: nil, preferredStyle: .actionSheet)
         
@@ -37,6 +40,7 @@ class BaseUploadViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension BaseUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func setPickerView() {
         picker.delegate = self

@@ -8,26 +8,53 @@
 import UIKit
 
 enum ImageLiterals {
-    static var icnAddPhoto: UIImage { .load(named: "icn_addphoto")}
-    static var icnArrowMore: UIImage { .load(named: "icn_arrow_more")}
-    static var icnArrowBack: UIImage { .load(named: "icn_arrow_back")}
-    static var icnArrowNext: UIImage { .load(named: "icn_arrow_next")}
-    
-    static var imageDailySample1: UIImage { .load(named: "image_daily_sample1")}
-    static var imageDailySample2: UIImage { .load(named: "image_daily_sample2")}
-    static var imageDailySample3: UIImage { .load(named: "image_daily_sample3")}
-    static var imageDailySample4: UIImage { .load(named: "image_daily_sample4")}
-    
-    static var icnChat: UIImage { .load(named: "icn_chat") }
 
-    static var imageMoon: UIImage { .load(named: "image_moon")}
-    static var imageCloud: UIImage { .load(named: "image_cloud")}
+    static var bgSplash: UIImage { .load(named: "bg_splash") }
+    static var hpImageSplash: UIImage { .load(named: "hp_image_splash") }
     
-    static var icnAlarm: UIImage { .load(named: "icn_alarm") }
+    static var icnKakao: UIImage { .load(named: "hp_ic_kakao") }
+    static var icnAlert: UIImage { .load(named: "hp_ic_alert") }
+    static var icnCancel: UIImage { .load(named: "hp_ic_cancel") }
+    static var icnTrash: UIImage { .load(named: "hp_ic_trash") }
+    static var icnInfo: UIImage { .load(named: "hp_ic_info") }
+    static var icnPlus: UIImage { .load(named: "hp_ic_plus") }
+    static var icnLeft: UIImage { .load(named: "hp_ic_left") }
+    static var icnRight: UIImage { .load(named: "hp_ic_right") }
+    static var icnUp: UIImage { .load(named: "hp_ic_up") }
+    static var icnDown: UIImage { .load(named: "hp_ic_down") }
+    static var icnUpMini: UIImage { .load(named: "hp_ic_up_mini") }
+    static var icnDownMini: UIImage { .load(named: "hp_ic_down_mini") }
     
-    static var icnCancel: UIImage { .load(named: "icn_cancel") }
+    static var icnHomeOff: UIImage { .load(named: "hp_ic_home_off") }
+    static var icnHomeOn: UIImage { .load(named: "hp_ic_home_on") }
+    static var icnDailyHappicOff: UIImage { .load(named: "hp_ic_dh_off") }
+    static var icnDailyHappicOn: UIImage { .load(named: "hp_ic_dh_on") }
+    static var btnPlus: UIImage { .load(named: "hp_btn_plus") }
+    static var icnHappicReportOff: UIImage { .load(named: "hp_ic_hr_off") }
+    static var icnHappicReportOn: UIImage { .load(named: "hp_ic_hr_on") }
+    static var icnSettingOff: UIImage { .load(named: "hp_ic_set_off") }
+    static var icnSettingOn: UIImage { .load(named: "hp_ic_set_on") }
+    
+    static var imageCloudLv1: UIImage { .load(named: "hp_img_c1") }
+    static var imageCloudLv2: UIImage { .load(named: "hp_img_c2") }
+    static var imageCloudLv3: UIImage { .load(named: "hp_img_c3") }
+    static var imageCloudLv4: UIImage { .load(named: "hp_img_c4") }
+    static var imageMoonLv1: UIImage { .load(named: "hp_img_m1") }
+    static var imageMoonLv2: UIImage { .load(named: "hp_img_m2") }
+    static var imageMoonLv3: UIImage { .load(named: "hp_img_m3") }
+    static var imageMoonLv4: UIImage { .load(named: "hp_img_m4") }
+
+    static var imageStar: UIImage { .load(named: "hp_img_star") }
+    
+    static var imageEmpty: UIImage { .load(named: "hp_img_empty") }
+    static var imageBlankPhoto: UIImage { .load(named: "image_blank_photo") }
     static var imageCapsule: UIImage { .load(named: "image_capsule") }
-    static var imageBlnakPhoto: UIImage { .load(named: "image_blank_photo") }
+
+    /// 샘플 이미지
+    static var imageDailySample1: UIImage { .load(named: "image_daily_sample1") }
+    static var imageDailySample2: UIImage { .load(named: "image_daily_sample2") }
+    static var imageDailySample3: UIImage { .load(named: "image_daily_sample3") }
+    static var imageDailySample4: UIImage { .load(named: "image_daily_sample4") }
 }
 
 extension UIImage {

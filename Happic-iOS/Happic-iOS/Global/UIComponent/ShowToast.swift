@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 extension UIViewController {
     func showToast(message: String) {

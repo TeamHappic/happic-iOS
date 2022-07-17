@@ -25,7 +25,7 @@ final class HappicReportSectionHeader: UIView {
 
     // MARK: - UI
     private let sectionDividerImageView = UIImageView().then {
-        $0.image = UIImage(systemName: "moon")
+        $0.image = ImageLiterals.imageStar
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
         $0.backgroundColor = .black
@@ -39,7 +39,7 @@ final class HappicReportSectionHeader: UIView {
     }
     
     private lazy var showDetailRankViewButton = UIButton(type: .system).then {
-        $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        $0.setImage(ImageLiterals.icnRight, for: .normal)
         $0.tintColor = .hpGray3
         $0.addTarget(self, action: #selector(showDetailRankViewButtonDidTap), for: .touchUpInside)
     }
