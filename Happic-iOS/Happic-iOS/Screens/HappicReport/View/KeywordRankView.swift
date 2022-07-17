@@ -11,6 +11,7 @@ final class KeywordRankView: UIView {
 
     // MARK: - UI
     let headerView = HappicReportSectionHeader(type: .keywordRank)
+    
     private lazy var keywordCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -55,8 +56,7 @@ final class KeywordRankView: UIView {
         addSubview(keywordCollectionView)
         keywordCollectionView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.leading.bottom.trailing.equalToSuperview()
         }
     }
     
