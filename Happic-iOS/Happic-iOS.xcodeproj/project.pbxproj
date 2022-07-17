@@ -24,6 +24,7 @@
 		8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */; };
 		8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21133287E8B9500F53A95 /* CustomMonthView.swift */; };
 		8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */; };
+		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
 		CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */; };
 		CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */; };
@@ -107,6 +108,7 @@
 		8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21133287E8B9500F53A95 /* CustomMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthView.swift; sourceTree = "<group>"; };
 		8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthPickerView.swift; sourceTree = "<group>"; };
+		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
+				8EF3B64A2883AE82008D6B55 /* ShowToast.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
 				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,
 				CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */,
+				8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */,
 				CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */,
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
