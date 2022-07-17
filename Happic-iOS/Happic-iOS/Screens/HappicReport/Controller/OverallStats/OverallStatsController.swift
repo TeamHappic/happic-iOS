@@ -21,6 +21,12 @@ final class OverallStatsController: UIViewController {
     var selectedIndex = 0
     
     // MARK: - UI
+    private lazy var backButton = UIButton(type: .system).then {
+        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.tintColor = .hpWhite
+        $0.addTarget(self, action: #selector(handleBackButtonDidTap), for: .touchUpInside)
+    }
+    
     private let customMonthView = CustomMonthView()
     private let customMonthPickerView = CustomMonthPickerView()
     private lazy var containerView = UIView()
@@ -39,11 +45,17 @@ final class OverallStatsController: UIViewController {
         
     // MARK: - Functions
     private func configureUI() {
-        view.addSubviews(customMonthView, customMonthPickerView, containerView)
+        view.addSubviews(customMonthView, backButton, customMonthPickerView, containerView)
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(65)
+        }
+        
+        backButton.snp.makeConstraints { make in
+            make.leading.equalTo(customMonthView)
+            make.centerY.equalTo(customMonthView)
+            make.width.height.equalTo(48)
         }
         
         customMonthPickerView.snp.makeConstraints { make in
@@ -96,6 +108,10 @@ final class OverallStatsController: UIViewController {
     
     func scrollToIndex(indexOf: Int) {
         viewPager.scrollToPage(.at(index: indexOf), animated: false)
+    }
+    
+    @objc func handleBackButtonDidTap() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
