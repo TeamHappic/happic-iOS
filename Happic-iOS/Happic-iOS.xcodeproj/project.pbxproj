@@ -31,6 +31,7 @@
 		CE479646288420830095ADD4 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE479644288420830095ADD4 /* Storyboarded.swift */; };
 		CE479648288420B30095ADD4 /* AuthView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE479647288420B30095ADD4 /* AuthView.storyboard */; };
 		CE47964A288420C80095ADD4 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE479649288420C80095ADD4 /* AuthViewController.swift */; };
+		CE47964E288435010095ADD4 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47964D288435010095ADD4 /* CALayer+.swift */; };
 		CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */; };
 		CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */; };
 		CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028A2880799B009D98EF /* CustomPopUpController.swift */; };
@@ -118,6 +119,7 @@
 		CE479644288420830095ADD4 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		CE479647288420B30095ADD4 /* AuthView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthView.storyboard; sourceTree = "<group>"; };
 		CE479649288420C80095ADD4 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CE47964D288435010095ADD4 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		CEA4028A2880799B009D98EF /* CustomPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpController.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				CE380B0B2878A3AF0030D51A /* NSObject+.swift */,
 				CEA4028C2880839F009D98EF /* UILabel+.swift */,
 				8E2F757C2882A315001025DE /* UIImageView+.swift */,
+				CE47964D288435010095ADD4 /* CALayer+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
 				CEFC3C55287EF75200F187BE /* CustomCalendarView.swift in Sources */,
+				CE47964E288435010095ADD4 /* CALayer+.swift in Sources */,
 				CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */,
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
