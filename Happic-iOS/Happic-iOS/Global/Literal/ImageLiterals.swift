@@ -48,9 +48,9 @@ enum ImageLiterals {
     
     static var imageEmpty: UIImage { .load(named: "hp_img_empty") }
     static var imageBlankPhoto: UIImage { .load(named: "image_blank_photo") }
-    static var imageCapsule: UIImage { .load(named: "image_capsule") } // 변경 예정
+    static var imageCapsule: UIImage { .load(named: "image_capsule") }
 
-    // 샘플 이미지
+    /// 샘플 이미지
     static var imageDailySample1: UIImage { .load(named: "image_daily_sample1") }
     static var imageDailySample2: UIImage { .load(named: "image_daily_sample2") }
     static var imageDailySample3: UIImage { .load(named: "image_daily_sample3") }

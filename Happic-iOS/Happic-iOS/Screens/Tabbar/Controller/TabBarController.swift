@@ -94,6 +94,7 @@ final class TabBarController: UITabBarController {
     }
 }
 
+// MARK: - Extensions
 extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let index = viewControllers?.firstIndex(of: viewController)
