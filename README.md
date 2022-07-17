@@ -225,7 +225,7 @@ Happic-iOS
   회원가입 | 소셜로그인 |  | 윤수빈
   &nbsp; | 회원가입, 로그인 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
   &nbsp; | 캐릭터 선택 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
-  홈 | 캐릭터 뷰 | 윤수빈 | 
+  홈 | 캐릭터 뷰 |  | 윤수빈 
   하루해픽 | 사진, 태그 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
   &nbsp; | 게시글 작성 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
   &nbsp; | 게시글 상세보기 |  | 윤수빈
