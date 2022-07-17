@@ -21,6 +21,7 @@ final class CustomViewPager: UIView {
     // MARK: - Initialization
     init(viewControllers: [UIViewController],
          buttonTitles: [String],
+         buttonTintColor: UIColor = .white,
          barHeight: Int = 40,
          indicatorWeight: Int = 1,
          isScrollEnabled: Bool
@@ -29,7 +30,7 @@ final class CustomViewPager: UIView {
         self.buttonTitles = buttonTitles
         super.init(frame: .zero)
         configureUI()
-        setViewPager(barHeight: barHeight, indicatorWeight: indicatorWeight, isScrollEnabled: isScrollEnabled)
+        setViewPager(barHeight: barHeight, buttonTintColor: buttonTintColor, indicatorWeight: indicatorWeight, isScrollEnabled: isScrollEnabled)
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +44,7 @@ final class CustomViewPager: UIView {
         tabMan.dataSource = self
     }
     
-    private func setViewPager(barHeight: Int, indicatorWeight: Int, isScrollEnabled: Bool) {
+    private func setViewPager(barHeight: Int, buttonTintColor: UIColor, indicatorWeight: Int, isScrollEnabled: Bool) {
         // Create bar
         let bar = TMBar.ButtonBar()
         bar.layout.transitionStyle = .snap
@@ -52,7 +53,7 @@ final class CustomViewPager: UIView {
         bar.layout.interButtonSpacing = 0
         bar.buttons.customize { button in
             button.backgroundColor = .black
-            button.tintColor = .white
+            button.tintColor = buttonTintColor
             button.selectedTintColor = .orange
             button.heightAnchor.constraint(equalToConstant: CGFloat(barHeight)).isActive = true
         }
