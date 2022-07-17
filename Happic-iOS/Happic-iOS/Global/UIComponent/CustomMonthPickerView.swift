@@ -16,6 +16,7 @@ final class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
     weak var delegate: CustomMonthPickerViewDelegate?
+    private var selectedButton: UIButton?
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
@@ -169,6 +170,9 @@ final class CustomMonthPickerView: UIView {
         if let month = month?.components(separatedBy: "월") {
             delegate?.changeMonthStatus(month[0])
         }
+        selectedButton?.setAttributedTitle(NSAttributedString(string: selectedButton?.currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
+        sender.setAttributedTitle(NSAttributedString(string: sender.currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+        selectedButton = sender
     }
     
     private func controlMonthStatus() {
@@ -183,6 +187,7 @@ final class CustomMonthPickerView: UIView {
                 $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
                 $0.isEnabled = false
             } else if currentMonth == selectedMonth {
+                selectedButton = $0
                 $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
             }
         }
