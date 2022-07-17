@@ -1,5 +1,5 @@
 //
-//  HaruHappicTagViewController.swift
+//  HaruHappicTagController.swift
 //  Happic-iOS
 //
 //  Created by devxsby on 2022/07/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HaruHappicTagViewController: UIViewController {
+final class HaruHappicTagController: UIViewController {
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
@@ -70,7 +70,7 @@ final class HaruHappicTagViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension HaruHappicTagViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
     }
@@ -82,7 +82,7 @@ extension HaruHappicTagViewController: UICollectionViewDelegate, UICollectionVie
     }
 }
 
-extension HaruHappicTagViewController: UICollectionViewDelegateFlowLayout {
+extension HaruHappicTagController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 75)
     }
@@ -92,7 +92,7 @@ extension HaruHappicTagViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension HaruHappicTagViewController: CustomMonthViewDelegate {
+extension HaruHappicTagController: CustomMonthViewDelegate {
     func setMonthPickerView(_ isMonthViewEnabled: Bool) {
         if isMonthViewEnabled == true {
             customMonthPickerView.isHidden = false
@@ -102,7 +102,7 @@ extension HaruHappicTagViewController: CustomMonthViewDelegate {
     }
 }
 
-extension HaruHappicTagViewController: CustomMonthPickerViewDelegate {
+extension HaruHappicTagController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"

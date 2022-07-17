@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HaruHappicController: UIViewController {
+final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - UI
     private lazy var addPhotoButton = UIButton(type: .system).then {
@@ -16,12 +16,13 @@ final class HaruHappicController: UIViewController {
         $0.addTarget(self, action: #selector(addPhotoButtonDidTap), for: .touchUpInside)
     }
     
-    private lazy var haruHappicViewPager = CustomViewPager(viewControllers: [HaruHappicPhotoController(), HaruHappicTagViewController()], buttonTitles: ["사진", "태그"], barHeight: 34, indicatorWeight: 4, isScrollEnabled: true)
+    private lazy var haruHappicViewPager = CustomViewPager(viewControllers: [HaruHappicPhotoController(), HaruHappicTagController()], buttonTitles: ["사진", "태그"], barHeight: 34, indicatorWeight: 4, isScrollEnabled: true)
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+//        showToast(message: "이미 오늘의 해픽을 등록했어요")
     }
     
     // MARK: - Functions
@@ -42,8 +43,6 @@ final class HaruHappicController: UIViewController {
     }
     
     @objc private func addPhotoButtonDidTap() {
-        let createContentsController = CreateContentsController()
-        createContentsController.modalPresentationStyle = .fullScreen
-        self.present(createContentsController, animated: true, completion: nil)
+        setActionSheet()
     }
 }
