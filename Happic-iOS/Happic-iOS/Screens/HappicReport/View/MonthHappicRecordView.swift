@@ -18,15 +18,15 @@ final class MonthHappicRecordView: UIView {
     
     private lazy var monthLabel = UILabel().then {
         $0.text = "6월"
-        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
-        $0.textColor = .white
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.textColor = .hpGray2
         $0.textAlignment = .center
     }
     
     private lazy var countLabel = UILabel().then {
         $0.text = "xx회"
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
-        $0.textColor = .white
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
+        $0.textColor = .hpGray2
         $0.textAlignment = .center
     }
     

@@ -26,6 +26,7 @@ final class CategoryRankController: UIViewController {
         categoryRankView.collectionViewCanScroll(true)
         categoryRankView.snp.makeConstraints { make in
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)        }
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
     }
 }

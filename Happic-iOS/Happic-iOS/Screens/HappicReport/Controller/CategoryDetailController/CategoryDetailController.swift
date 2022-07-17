@@ -65,7 +65,8 @@ class CategoryDetailController: UIViewController {
         view.addSubview(rankCollectionView)
         rankCollectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
-            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
         }
     }
     
@@ -88,13 +89,13 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
                 withReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className, for: indexPath)
                     as? CategoryDetailWithImageCollectionViewCell
             else { return UICollectionViewCell() }
-            cell.setCategoryNameLabel(type: type, index: indexPath.row)
+            cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
             return cell
         }
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
-        cell.setCategoryNameLabel(type: type, index: indexPath.row)
+        cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
         
         return cell
     }

@@ -12,6 +12,8 @@ import Then
 final class HappicReportController: UIViewController {
     
     // MARK: - UI
+    private let customMonthView = CustomMonthView()
+    private let customMonthPickerView = CustomMonthPickerView()
     private let reportScrollView = UIScrollView()
     private let contentView = UIView()
     private let bestHappicMomentView = BestHappicMomentView()
@@ -28,11 +30,28 @@ final class HappicReportController: UIViewController {
     
     // MARK: - Functions
     private func configureUI() {
+        view.addSubviews(customMonthView, customMonthPickerView)
+        customMonthView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(65)
+        }
+        
+        customMonthPickerView.snp.makeConstraints { make in
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(230)
+        }
+        
+        customMonthPickerView.isHidden = true
+        
         setScrollViewLayout()
         setSubViewsLayout()
     }
     
     private func setDelegate() {
+        customMonthView.delegate = self
+        customMonthPickerView.delegate = self
         keywordRankView.headerView.delegate = self
         categoryRankView.headerView.delegate = self
         monthHappicRecordView.headerView.delegate = self
@@ -41,7 +60,8 @@ final class HappicReportController: UIViewController {
     private func setScrollViewLayout() {
         view.addSubviews(reportScrollView)
         reportScrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         
         reportScrollView.addSubview(contentView)
@@ -55,7 +75,7 @@ final class HappicReportController: UIViewController {
     private func setSubViewsLayout() {
         contentView.addSubviews(bestHappicMomentView, keywordRankView, categoryRankView, monthHappicRecordView)
         bestHappicMomentView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(60)
+            make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(292)
         }
@@ -69,7 +89,7 @@ final class HappicReportController: UIViewController {
         categoryRankView.snp.makeConstraints { make in
             make.top.equalTo(keywordRankView.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(525)
+            make.height.equalTo(555)
         }
         
         monthHappicRecordView.snp.makeConstraints { make in
@@ -88,5 +108,26 @@ extension HappicReportController: HappicReportSectionHeaderDelegate {
         let overallStatsController = OverallStatsController()
         overallStatsController.selectedIndex = type.rawValue
         self.navigationController?.pushViewController(overallStatsController, animated: true)
+    }
+}
+
+extension HappicReportController: CustomMonthViewDelegate {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool) {
+        if isMonthViewEnabled {
+            self.view.bringSubviewToFront(customMonthPickerView)
+            customMonthPickerView.isHidden = false
+        } else {
+            customMonthPickerView.isHidden = true
+        }
+    }
+}
+
+extension HappicReportController: CustomMonthPickerViewDelegate {
+    func changeMonthStatus(_ month: String) {
+        if month.count == 1 {
+            customMonthView.monthLabel.text = "2022 . 0\(month)"
+        } else {
+            customMonthView.monthLabel.text = "2022 . \(month)"
+        }
     }
 }

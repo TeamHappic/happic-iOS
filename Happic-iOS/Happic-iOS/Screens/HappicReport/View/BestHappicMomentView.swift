@@ -19,6 +19,12 @@ final class BestHappicMomentView: UIView {
         $0.attributedText = attributedString
     }
     
+    private lazy var characterImageView = UIImageView().then {
+        $0.image = ImageLiteral.imageCloud
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+    }
+    
     private lazy var bestHourLabel = UILabel().then {
         $0.text = "19:00"
         $0.textColor = .white
@@ -113,15 +119,22 @@ final class BestHappicMomentView: UIView {
     // MARK: - Functions
     
     private func configureUI() {
-        addSubviews(titleLabel, containerView)
+        addSubviews(titleLabel, characterImageView, containerView)
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().inset(19)
             make.height.equalTo(24)
         }
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(6)
+            make.top.equalTo(titleLabel.snp.bottom).offset(11)
             make.leading.bottom.trailing.equalToSuperview()
+        }
+        
+        characterImageView.snp.makeConstraints { make in
+            make.leading.greaterThanOrEqualTo(titleLabel.snp.trailing).offset(10)
+            make.trailing.equalTo(containerView.snp.trailing).inset(21)
+            make.bottom.equalTo(containerView.snp.top).inset(24)
+            make.width.height.equalTo(67)
         }
     }
 }

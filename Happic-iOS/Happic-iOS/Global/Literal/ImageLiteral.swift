@@ -27,6 +27,7 @@ enum ImageLiteral {
     
     static var icnCancel: UIImage { .load(named: "icn_cancel") }
     static var imageCapsule: UIImage { .load(named: "image_capsule") }
+    static var imageBlnakPhoto: UIImage { .load(named: "image_blank_photo") }
 }
 
 extension UIImage {
