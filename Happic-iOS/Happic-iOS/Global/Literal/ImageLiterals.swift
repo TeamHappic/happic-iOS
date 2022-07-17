@@ -1,5 +1,5 @@
 //
-//  ImageLiteral.swift
+//  ImageLiterals.swift
 //  Happic-iOS
 //
 //  Created by devxsby on 2022/07/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ImageLiteral {
+enum ImageLiterals {
     static var icnAddPhoto: UIImage { .load(named: "icn_addphoto")}
     static var icnArrowMore: UIImage { .load(named: "icn_arrow_more")}
     static var icnArrowBack: UIImage { .load(named: "icn_arrow_back")}

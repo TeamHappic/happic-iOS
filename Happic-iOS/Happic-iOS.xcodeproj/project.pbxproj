@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */; };
+		8E09E0CB287D4D2A00FB18DD /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */; };
 		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
 		8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */; };
 		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
@@ -17,9 +17,9 @@
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
 		8E8A1CE7287C75480050184F /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE2287C75480050184F /* GmarketSansBold.otf */; };
 		8E8A1CE8287C75480050184F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE3287C75480050184F /* Pretendard-Regular.otf */; };
-		8E8A1CEA287C7C0D0050184F /* FontLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */; };
+		8E8A1CEA287C7C0D0050184F /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE9287C7C0D0050184F /* FontLiterals.swift */; };
 		8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D1640287AD0F400269EA2 /* Colors.xcassets */; };
-		8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* ColorLiteral.swift */; };
+		8E9D1643287AD62300269EA2 /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D1642287AD62300269EA2 /* ColorLiterals.swift */; };
 		8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */; };
 		8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */; };
 		8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21133287E8B9500F53A95 /* CustomMonthView.swift */; };
@@ -94,7 +94,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
+		8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecommendTagView.swift; sourceTree = "<group>"; };
 		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
@@ -104,9 +104,9 @@
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		8E8A1CE2287C75480050184F /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		8E8A1CE3287C75480050184F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiteral.swift; sourceTree = "<group>"; };
+		8E8A1CE9287C7C0D0050184F /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
 		8E9D1640287AD0F400269EA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		8E9D1642287AD62300269EA2 /* ColorLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiteral.swift; sourceTree = "<group>"; };
+		8E9D1642287AD62300269EA2 /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
 		8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21133287E8B9500F53A95 /* CustomMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthView.swift; sourceTree = "<group>"; };
@@ -225,7 +225,6 @@
 		CE479642288420830095ADD4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CE479643288420830095ADD4 /* StoryboardLiterals.swift */,
 				CE479644288420830095ADD4 /* Storyboarded.swift */,
 			);
 			path = Protocols;
@@ -289,6 +288,7 @@
 			children = (
 				CEF6E04C28780F3D00A1636F /* Literal */,
 				8EF3B64C2883DE03008D6B55 /* Base */,
+				CE479642288420830095ADD4 /* Protocols */,
 				CEFC3C42287DCF9900F187BE /* Util */,
 				CEF6E04B28780F3000A1636F /* Extension */,
 				CEF6E04A28780F2000A1636F /* Resource */,
@@ -390,9 +390,10 @@
 		CEF6E04C28780F3D00A1636F /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				8E9D1642287AD62300269EA2 /* ColorLiteral.swift */,
-				8E8A1CE9287C7C0D0050184F /* FontLiteral.swift */,
-				8E09E0CA287D4D2A00FB18DD /* ImageLiteral.swift */,
+				CE479643288420830095ADD4 /* StoryboardLiterals.swift */,
+				8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */,
+				8E9D1642287AD62300269EA2 /* ColorLiterals.swift */,
+				8E8A1CE9287C7C0D0050184F /* FontLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -727,7 +728,6 @@
 		CEFC3C42287DCF9900F187BE /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				CE479642288420830095ADD4 /* Protocols */,
 				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
 			);
 			path = Util;
@@ -909,8 +909,8 @@
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				CEF6E08B287814C400A1636F /* HappicCapsuleView.swift in Sources */,
-				8E9D1643287AD62300269EA2 /* ColorLiteral.swift in Sources */,
-				8E09E0CB287D4D2A00FB18DD /* ImageLiteral.swift in Sources */,
+				8E9D1643287AD62300269EA2 /* ColorLiterals.swift in Sources */,
+				8E09E0CB287D4D2A00FB18DD /* ImageLiterals.swift in Sources */,
 				8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */,
 				8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
@@ -931,7 +931,7 @@
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
 				CEF6E0B028789F8A00A1636F /* Adjusted+.swift in Sources */,
 				CEF6E0BA2878A21B00A1636F /* UserDefaults+.swift in Sources */,
-				8E8A1CEA287C7C0D0050184F /* FontLiteral.swift in Sources */,
+				8E8A1CEA287C7C0D0050184F /* FontLiterals.swift in Sources */,
 				CE479645288420830095ADD4 /* StoryboardLiterals.swift in Sources */,
 				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
 				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,

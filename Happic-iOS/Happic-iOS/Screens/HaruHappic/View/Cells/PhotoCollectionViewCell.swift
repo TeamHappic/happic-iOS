@@ -11,7 +11,7 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private lazy var dailyImage = UIImageView().then {
-        $0.image = ImageLiteral.imageDailySample1
+        $0.image = ImageLiterals.imageDailySample1
         $0.layer.cornerRadius = 8
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
