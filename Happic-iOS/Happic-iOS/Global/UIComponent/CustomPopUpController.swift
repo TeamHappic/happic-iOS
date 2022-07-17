@@ -16,7 +16,7 @@ class CustomPopUpController: UIViewController {
     }
     
     private lazy var notificationImageView = UIImageView().then {
-        $0.image = ImageLiterals.icnAlarm
+        $0.image = ImageLiterals.icnAlert
         $0.tintColor = .hpGray3
     }
     

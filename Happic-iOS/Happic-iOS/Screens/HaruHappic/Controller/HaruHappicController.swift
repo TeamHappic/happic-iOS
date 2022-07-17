@@ -11,7 +11,7 @@ final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - UI
     private lazy var addPhotoButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiterals.icnAddPhoto, for: .normal)
+        $0.setImage(ImageLiterals.icnPlus, for: .normal)
         $0.tintColor = .white
         $0.addTarget(self, action: #selector(addPhotoButtonDidTap), for: .touchUpInside)
     }

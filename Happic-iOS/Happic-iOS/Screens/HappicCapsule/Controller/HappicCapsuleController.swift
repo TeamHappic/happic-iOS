@@ -38,7 +38,7 @@ final class HappicCapsuleController: UIViewController {
         $0.setAttributedTitle(NSAttributedString(string: "해픽 캡슐 뽑기",
                                                  attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]),
                                                 for: .normal)
-        $0.setImage(ImageLiterals.icnArrowNext, for: .normal)
+        $0.setImage(ImageLiterals.icnRight, for: .normal)
         $0.tintColor = .hpGray9
         $0.setTitleColor(.hpGray9, for: .normal)
         $0.backgroundColor = .hpOrange
@@ -53,7 +53,7 @@ final class HappicCapsuleController: UIViewController {
         $0.setAttributedTitle(NSAttributedString(string: "오늘의 행복도 기록하기",
                                                  attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]),
                                                 for: .normal)
-        $0.setImage(ImageLiterals.icnArrowNext, for: .normal)
+        $0.setImage(ImageLiterals.icnRight, for: .normal)
         $0.tintColor = .hpOrange
         $0.setTitleColor(.hpOrange, for: .normal)
         $0.backgroundColor = .hpBgBlack1

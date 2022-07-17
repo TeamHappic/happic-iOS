@@ -19,7 +19,7 @@ final class CreateContentsController: UIViewController {
     private lazy var whatTagView = CustomRecommendTagView()
     
     private lazy var backButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiterals.icnArrowBack, for: .normal)
+        $0.setImage(ImageLiterals.icnLeft, for: .normal)
         $0.tintColor = .hpWhite
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         $0.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
