@@ -29,7 +29,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var firstImageView = UIImageView().then {
-        $0.image = ImageLiterals.imageBlnakPhoto
+        $0.image = ImageLiterals.imageBlankPhoto
         $0.contentMode = .scaleToFill
         $0.clipsToBounds = true
         $0.tintColor = .white
@@ -38,7 +38,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var secondImageView = UIImageView().then {
-        $0.image = ImageLiterals.imageBlnakPhoto
+        $0.image = ImageLiterals.imageBlankPhoto
         $0.contentMode = .scaleToFill
         $0.clipsToBounds = true
         $0.tintColor = .white
@@ -47,7 +47,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     }
     
     private lazy var thirdImageView = UIImageView().then {
-        $0.image = ImageLiterals.imageBlnakPhoto
+        $0.image = ImageLiterals.imageBlankPhoto
         $0.contentMode = .scaleToFill
         $0.clipsToBounds = true
         $0.tintColor = .white
