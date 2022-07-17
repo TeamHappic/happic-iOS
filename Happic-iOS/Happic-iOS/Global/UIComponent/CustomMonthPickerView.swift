@@ -7,9 +7,15 @@
 
 import UIKit
 
-class CustomMonthPickerView: UIView {
+// MARK: - Protocols
+protocol CustomMonthPickerViewDelegate: AnyObject {
+    func changeMonthStatus(_ month: String)
+}
+
+final class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
+    weak var delegate: CustomMonthPickerViewDelegate?
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
@@ -25,19 +31,22 @@ class CustomMonthPickerView: UIView {
     private lazy var yearIndicatorLabel = UILabel().then {
         $0.text = "2022"
         $0.textColor = .hpGray4
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
     
     private lazy var containerView = UIView().then {
-        $0.backgroundColor = .hpBgBlack2h // 알파값주기 0.95
+        
+        $0.backgroundColor = .hpBgBlack2h.withAlphaComponent(0.95)
+        $0.layer.borderColor = UIColor.hpDarkPurple.cgColor
+        $0.layer.borderWidth = 1
         $0.layer.cornerRadius = 8
         
         $0.addSubviews(lastYearSelectorButton, yearIndicatorLabel, nextYearSelectorButton)
         
         lastYearSelectorButton.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(34)
-            make.top.equalToSuperview().offset(10)
-            make.width.height.equalTo(48)
+            make.leading.equalToSuperview().offset(30)
+            make.top.equalToSuperview().offset(24)
+            make.width.height.equalTo(20)
         }
         
         yearIndicatorLabel.snp.makeConstraints { make in
@@ -46,77 +55,65 @@ class CustomMonthPickerView: UIView {
         }
         
         nextYearSelectorButton.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(34)
-            make.width.height.equalTo(48)
+            make.trailing.equalToSuperview().inset(30)
+            make.width.height.equalTo(20)
             make.centerY.equalTo(lastYearSelectorButton)
         }
     }
     
-    // 버튼 addtarget 추가하기
     private lazy var janButton = UIButton(type: .system).then {
-        $0.setTitle("1월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "1월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var febButton = UIButton(type: .system).then {
-        $0.setTitle("2월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "2월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var marButton = UIButton(type: .system).then {
-        $0.setTitle("3월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "3월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var aprButton = UIButton(type: .system).then {
-        $0.setTitle("4월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "4월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var mayButton = UIButton(type: .system).then {
-        $0.setTitle("5월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "5월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var junButton = UIButton(type: .system).then {
-        $0.setTitle("6월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "6월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var julButton = UIButton(type: .system).then {
-        $0.setTitle("7월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "7월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var augButton = UIButton(type: .system).then {
-        $0.setTitle("8월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "8월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var sepButton = UIButton(type: .system).then {
-        $0.setTitle("9월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "9월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var octButton = UIButton(type: .system).then {
-        $0.setTitle("10월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "10월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var novButton = UIButton(type: .system).then {
-        $0.setTitle("11월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "11월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     private lazy var decButton = UIButton(type: .system).then {
-        $0.setTitle("12월", for: .normal)
-        $0.tintColor = .hpGray2
+        $0.setAttributedTitle(NSAttributedString(string: "12월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
     }
     
     // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        controlMonthStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -126,13 +123,10 @@ class CustomMonthPickerView: UIView {
     // MARK: - Functions
     private func configureUI() {
         
-        backgroundColor = .hpDarkPurple
-        layer.cornerRadius = 8
-        
         addSubview(containerView)
         
         containerView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(1)
+            make.edges.equalToSuperview()
         }
         
         setMonthButtonStack()
@@ -146,7 +140,14 @@ class CustomMonthPickerView: UIView {
         
         for stack in stacks {
             stack.spacing = 20
+            stack.axis = .horizontal
             stack.distribution = .fillEqually
+        }
+        
+        [janButton, febButton, marButton, aprButton,
+         mayButton, junButton, julButton, augButton,
+         sepButton, octButton, novButton, decButton].forEach {
+            $0.addTarget(self, action: #selector(monthButtonDidTap(sender: )), for: .touchUpInside)
         }
         
         let containerStack = UIStackView(arrangedSubviews: [stack1, stack2, stack3])
@@ -160,6 +161,30 @@ class CustomMonthPickerView: UIView {
             make.top.equalTo(yearIndicatorLabel.snp.bottom).offset(10)
             make.leading.trailing.equalTo(containerView).inset(10)
             make.height.equalTo(160)
+        }
+    }
+    
+    @objc private func monthButtonDidTap(sender: UIButton) {
+        let month = sender.currentAttributedTitle?.string
+        if let month = month?.components(separatedBy: "월") {
+            delegate?.changeMonthStatus(month[0])
+        }
+    }
+    
+    private func controlMonthStatus() {
+        let currentMonth = Calendar.current.component(.month, from: Date())
+        [janButton, febButton, marButton, aprButton,
+         mayButton, junButton, julButton, augButton,
+         sepButton, octButton, novButton, decButton].forEach {
+            let monthStr = $0.currentAttributedTitle?.string.components(separatedBy: "월")
+            guard let month = monthStr?[0],
+                  let selectedMonth = Int(month) else { return }
+            if currentMonth < selectedMonth {
+                $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
+                $0.isEnabled = false
+            } else if currentMonth == selectedMonth {
+                $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+            }
         }
     }
 }

@@ -58,6 +58,7 @@ final class HaruHappicPhotoController: UIViewController {
     
     private func setDelegate() {
         customMonthView.delegate = self
+        customMonthPickerView.delegate = self
     }
     
     private func setCollectionView() {
@@ -100,6 +101,16 @@ extension HaruHappicPhotoController: CustomMonthViewDelegate {
             customMonthPickerView.isHidden = false
         } else {
             customMonthPickerView.isHidden = true
+        }
+    }
+}
+
+extension HaruHappicPhotoController: CustomMonthPickerViewDelegate {
+    func changeMonthStatus(_ month: String) {
+        if month.count == 1 {
+            customMonthView.monthLabel.text = "2022 . 0\(month)"
+        } else {
+            customMonthView.monthLabel.text = "2022 . \(month)"
         }
     }
 }
