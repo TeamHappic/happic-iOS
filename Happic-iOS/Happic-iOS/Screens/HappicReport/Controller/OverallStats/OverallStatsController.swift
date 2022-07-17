@@ -21,25 +21,57 @@ final class OverallStatsController: UIViewController {
     var selectedIndex = 0
     
     // MARK: - UI
+    private lazy var backButton = UIButton(type: .system).then {
+        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.tintColor = .hpWhite
+        $0.addTarget(self, action: #selector(handleBackButtonDidTap), for: .touchUpInside)
+    }
+    
+    private let customMonthView = CustomMonthView()
+    private let customMonthPickerView = CustomMonthPickerView()
     private lazy var containerView = UIView()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+        setDelegate()
         setViewPager()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = .white
         scrollToIndex(indexOf: selectedIndex)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        
+    // MARK: - Functions
+    private func configureUI() {
+        view.addSubviews(customMonthView, backButton, customMonthPickerView, containerView)
+        customMonthView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(65)
+        }
+        
+        backButton.snp.makeConstraints { make in
+            make.leading.equalTo(customMonthView)
+            make.centerY.equalTo(customMonthView)
+            make.width.height.equalTo(48)
+        }
+        
+        customMonthPickerView.snp.makeConstraints { make in
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(230)
+        }
+        
+        customMonthPickerView.isHidden = true
     }
     
-    // MARK: - Functions
+    private func setDelegate() {
+        customMonthView.delegate = self
+        customMonthPickerView.delegate = self
+    }
+    
     private func setViewPager() {
         setViewPagerLayout()
         setViewPagerBar()
@@ -65,9 +97,9 @@ final class OverallStatsController: UIViewController {
     }
 
     private func setViewPagerLayout() {
-        view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(customMonthView.snp.bottom)
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
         }
 
         viewPager.view.frame = containerView.frame
@@ -76,6 +108,10 @@ final class OverallStatsController: UIViewController {
     
     func scrollToIndex(indexOf: Int) {
         viewPager.scrollToPage(.at(index: indexOf), animated: false)
+    }
+    
+    @objc func handleBackButtonDidTap() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -96,5 +132,26 @@ extension OverallStatsController: PageboyViewControllerDataSource, TMBarDataSour
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         let item = TMBarItem(title: buttonTitles[index])
         return item
+    }
+}
+
+extension OverallStatsController: CustomMonthViewDelegate {
+    func setMonthPickerView(_ isMonthViewEnabled: Bool) {
+        if isMonthViewEnabled {
+            self.view.bringSubviewToFront(customMonthPickerView)
+            customMonthPickerView.isHidden = false
+        } else {
+            customMonthPickerView.isHidden = true
+        }
+    }
+}
+
+extension OverallStatsController: CustomMonthPickerViewDelegate {
+    func changeMonthStatus(_ month: String) {
+        if month.count == 1 {
+            customMonthView.monthLabel.text = "2022 . 0\(month)"
+        } else {
+            customMonthView.monthLabel.text = "2022 . \(month)"
+        }
     }
 }

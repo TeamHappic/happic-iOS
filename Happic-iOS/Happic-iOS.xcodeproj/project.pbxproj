@@ -736,8 +736,8 @@
 		CEFC3C47287E90AB00F187BE /* OverallStats */ = {
 			isa = PBXGroup;
 			children = (
-				CEFC3C4A287E95BB00F187BE /* StatsController */,
 				CEFC3C48287E945000F187BE /* OverallStatsController.swift */,
+				CEFC3C4A287E95BB00F187BE /* StatsController */,
 			);
 			path = OverallStats;
 			sourceTree = "<group>";
