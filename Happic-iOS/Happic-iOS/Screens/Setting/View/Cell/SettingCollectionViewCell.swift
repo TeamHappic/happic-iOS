@@ -40,7 +40,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpGray9
+        backgroundColor = .hpBgBlack0
         
         addSubviews(alarmImageView, settingNameLabel, nextArrowImageView)
         alarmImageView.snp.makeConstraints { make in
