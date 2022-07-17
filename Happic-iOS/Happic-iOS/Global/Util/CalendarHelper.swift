@@ -26,14 +26,14 @@ class CalendarHelper {
     /// e.g.) 15 Jan 2022 -> January
     func monthString(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "LLLL" // "2022"
+        dateFormatter.dateFormat = "LLLL"
         return dateFormatter.string(from: date)
     }
     
     /// e.g.) 15 Jan 2022 -> 2022
     func yearString(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy" // "2022"
+        dateFormatter.dateFormat = "yyyy"
         return dateFormatter.string(from: date)
     }
     
