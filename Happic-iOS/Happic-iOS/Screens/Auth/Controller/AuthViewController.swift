@@ -14,7 +14,6 @@ class AuthViewController: UIViewController {
         // BackGround Color -- R, G, B, Alpha
         startWithKakao.layer.cornerRadius = 8
         startWithKakao.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-        setTapGesture()
         
         let wholeStr = "로그인 시 이용약관과 개인정보 처리 방침에 동의하게 됩니다. "
         let rangeToUnderLine = (wholeStr as NSString).range(of: "이용약관")
@@ -29,19 +28,38 @@ class AuthViewController: UIViewController {
 
         underLineTxt.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: rangeToUnderLine2)
         termsIntroduceLabel.attributedText = underLineTxt
+        
+        setTapGesture()
 
   }
     
     private func setTapGesture() {
         startWithKakao.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(presentCharacterChooseViewController))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(presentCreateCharacterViewController))
+        print("setTapGetsture are started1")
         startWithKakao.addGestureRecognizer(tap)
+        print("setTapGetsture are started2")
     }
 
     @objc
-    private func presentCharacterChooseViewController() {
-//        let nextVC = CharacterChooseViewController.instantiate()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
+    private func presentCreateCharacterViewController() {
+        let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
+                let nextVC = nextSB.instantiateViewController(withIdentifier: "CreateCharacterViewController")
+                let nav = UINavigationController(rootViewController: nextVC)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true)
     }
+    
+    /*
+     let nextVC = CreateCharacterViewController.instantiate()
+     self.navigationController?.pushViewController(nextVC, animated: true)
+     print("presentCreateCharacterViewControlleddddddddddr")
+     */
 
+    
+    /*
+     let nextSB = UIStoryboard(name: "CreateCharacterView", bundle: nil)
+             let nextVC = nextSB.instantiateViewController(withIdentifier: "CreateCharacterViewController")
+             self.navigationController?.pushViewController(nextVC, animated: true)
+     */
 }
