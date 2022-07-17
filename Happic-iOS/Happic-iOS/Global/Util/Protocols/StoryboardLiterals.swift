@@ -5,13 +5,12 @@
 //  Created by Zaid Kang on 2022/07/16.
 //
 
-import Foundation
+
 import UIKit
 
 enum Storyboards: String {
     case CharacterChooseView = "CharacterChooseView"
     case CreateCharacterView = "CreateCharacterView"
-
 }
 
 extension UIStoryboard{

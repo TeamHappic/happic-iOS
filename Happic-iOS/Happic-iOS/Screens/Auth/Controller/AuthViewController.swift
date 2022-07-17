@@ -1,9 +1,3 @@
-//
-//  AuthViewController.swift
-//  Happic-iOS
-//
-//  Created by Zaid Kang on 2022/07/16.
-//
 
 import Foundation
 import UIKit
@@ -48,7 +42,6 @@ class AuthViewController: UIViewController {
     private func presentCharacterChooseViewController() {
 //        let nextVC = CharacterChooseViewController.instantiate()
 //        self.navigationController?.pushViewController(nextVC, animated: true)
-        print("test")
     }
 
 }
