@@ -11,7 +11,7 @@
 		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
 		8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */; };
 		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
-		8E367614287D429600326074 /* HaruHappicTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagViewController.swift */; };
+		8E367614287D429600326074 /* HaruHappicTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagController.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -95,7 +95,7 @@
 		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecommendTagView.swift; sourceTree = "<group>"; };
 		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
-		8E367613287D429600326074 /* HaruHappicTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagViewController.swift; sourceTree = "<group>"; };
+		8E367613287D429600326074 /* HaruHappicTagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagController.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -264,8 +264,8 @@
 		CEF6E03D28780DE900A1636F /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				CEFC3C42287DCF9900F187BE /* Util */,
 				CEF6E04C28780F3D00A1636F /* Literal */,
+				CEFC3C42287DCF9900F187BE /* Util */,
 				CEF6E04B28780F3000A1636F /* Extension */,
 				CEF6E04A28780F2000A1636F /* Resource */,
 				CEF6E04928780F0B00A1636F /* UIComponent */,
@@ -331,6 +331,7 @@
 				8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */,
 				8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */,
 				CEA4028A2880799B009D98EF /* CustomPopUpController.swift */,
+				8EF3B64A2883AE82008D6B55 /* ShowToast.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -577,7 +578,7 @@
 			children = (
 				8EB2112E287D59F700F53A95 /* Cells */,
 				8E367611287D428800326074 /* HaruHappicPhotoController.swift */,
-				8E367613287D429600326074 /* HaruHappicTagViewController.swift */,
+				8E367613287D429600326074 /* HaruHappicTagController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -703,7 +704,6 @@
 			isa = PBXGroup;
 			children = (
 				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
-				8EF3B64A2883AE82008D6B55 /* ShowToast.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -870,7 +870,7 @@
 				CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */,
 				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
 				CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */,
-				8E367614287D429600326074 /* HaruHappicTagViewController.swift in Sources */,
+				8E367614287D429600326074 /* HaruHappicTagController.swift in Sources */,
 				CEF6E0B228789FFC00A1636F /* UIViewController+.swift in Sources */,
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
