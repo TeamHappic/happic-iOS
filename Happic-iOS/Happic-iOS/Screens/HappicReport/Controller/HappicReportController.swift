@@ -24,6 +24,7 @@ final class HappicReportController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setPurpleBackgroundColor()
         configureUI()
         setDelegate()
     }

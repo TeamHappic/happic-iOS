@@ -36,6 +36,7 @@ final class CategoryRankView: UIView {
     
     // MARK: - Functions
     private func configureUI() {
+        backgroundColor = UIColor.clear
         addSubviews(headerView, categoryViewPager)
         headerView.snp.makeConstraints { make in
             make.leading.top.trailing.equalToSuperview()
