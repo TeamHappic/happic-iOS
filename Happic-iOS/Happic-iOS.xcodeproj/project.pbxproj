@@ -390,10 +390,10 @@
 		CEF6E04C28780F3D00A1636F /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				CE479643288420830095ADD4 /* StoryboardLiterals.swift */,
 				8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */,
 				8E9D1642287AD62300269EA2 /* ColorLiterals.swift */,
 				8E8A1CE9287C7C0D0050184F /* FontLiterals.swift */,
+				CE479643288420830095ADD4 /* StoryboardLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
