@@ -28,8 +28,6 @@ final class HappicReportSectionHeader: UIView {
         $0.image = ImageLiterals.imageStar
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.backgroundColor = .black
-        $0.tintColor = .white
     }
     
     private lazy var sectionTitleLabel = UILabel().then {

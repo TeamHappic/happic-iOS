@@ -25,4 +25,34 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    /// 그라데이션을 추가하는 메소드
+    @discardableResult
+    func setGradient(type: CAGradientLayerType,
+                     colors: [CGColor],
+                     locations: [NSNumber] = [0.0, 1.0],
+                     startPoint: CGPoint = CGPoint(x: 0.0, y: 0.0),
+                     endPoint: CGPoint = CGPoint(x: 1.0, y: 0.0)) -> Self {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.type = type
+        gradient.colors = colors
+        gradient.locations = locations
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
+        gradient.frame = self.bounds
+        layer.addSublayer(gradient)
+        return self
+    }
+    
+    @discardableResult
+    func makeShadow(color: UIColor,
+                    opacity: Float,
+                    offset: CGSize,
+                    radius: CGFloat) -> Self {
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        return self
+    }
 }

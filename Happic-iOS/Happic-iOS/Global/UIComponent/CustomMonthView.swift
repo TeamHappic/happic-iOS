@@ -29,8 +29,6 @@ final class CustomMonthView: UIView {
         $0.image = ImageLiterals.icnDownMini
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.backgroundColor = .black
-        $0.tintColor = .white
     }
     
     private lazy var monthPickerView = UIView().then {

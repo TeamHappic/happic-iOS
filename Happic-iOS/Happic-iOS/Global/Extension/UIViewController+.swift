@@ -29,4 +29,18 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func setPurpleBackgroundColor() {
+        self.view.setGradient(type: .radial,
+                              colors: [UIColor.hpDarkPurple.cgColor, UIColor.hpBgBlack1.cgColor],
+                              startPoint: CGPoint(x: 0.5, y: -0.2),
+                              endPoint: CGPoint(x: 1.4, y: 0.3))
+    }
+    
+    func setBlueBackGroundColor() {
+        self.view.setGradient(type: .radial,
+                              colors: [UIColor.hpDarkBlue.cgColor, UIColor.hpBgBlack1.cgColor],
+                              startPoint: CGPoint(x: 1.2, y: -0.6),
+                              endPoint: CGPoint(x: 2.4, y: 0.4))
+    }
 }

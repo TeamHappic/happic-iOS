@@ -57,6 +57,7 @@ final class MonthHappicRecordView: UIView {
     
     // MARK: - Functions
     private func configureUI() {
+        backgroundColor = UIColor.clear
         addSubviews(headerView, containerView)
         headerView.snp.makeConstraints { make in
             make.leading.top.trailing.equalToSuperview()

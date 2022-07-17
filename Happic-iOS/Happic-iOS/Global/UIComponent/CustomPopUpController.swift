@@ -68,13 +68,13 @@ class CustomPopUpController: UIViewController {
         
         notificationImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(24)
             make.top.equalToSuperview().inset(40)
         }
         
         popUpTitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(notificationImageView.snp.bottom).offset(8)
+            make.top.equalTo(notificationImageView.snp.bottom).offset(15)
         }
         
         popUpContentsLabel.snp.makeConstraints { make in

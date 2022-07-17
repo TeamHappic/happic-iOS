@@ -19,6 +19,7 @@ final class KeywordRankView: UIView {
         layout.minimumInteritemSpacing = 8
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
