@@ -22,7 +22,7 @@ final class OverallStatsController: UIViewController {
     
     // MARK: - UI
     private lazy var backButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.setImage(ImageLiterals.icnArrowBack, for: .normal)
         $0.tintColor = .hpWhite
         $0.addTarget(self, action: #selector(handleBackButtonDidTap), for: .touchUpInside)
     }
