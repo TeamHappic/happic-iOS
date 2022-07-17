@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qk-xd-HOO">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Bold.otf">
+            <string>Pretendard-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="E2V-Mz-Bsx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3qk-xd-HOO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IWg-FC-5nv">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PQf-dB-c9N" kind="relationship" relationship="rootViewController" id="usZ-51-Dk0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joV-Ov-ES8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="116.51785714285714"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="0Fu-mq-QZv">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="PQf-dB-c9N" customClass="AuthViewController" customModule="Happic_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rK5-An-tbX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_splash" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-LJ-l2h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-iV-ehM">
+                                <rect key="frame" x="93.666666666666686" y="155.66666666666666" width="188" height="257.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_splash" translatesAutoresizingMaskIntoConstraints="NO" id="rmW-dA-jam">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rmW-dA-jam" secondAttribute="height" multiplier="188:155" id="UKM-Ph-hNE"/>
+                                            <constraint firstAttribute="width" constant="188" id="cCS-C2-3qO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-iT-fKp" userLabel="line">
+                                        <rect key="frame" x="93.333333333333329" y="170.00000000000003" width="1" height="24"/>
+                                        <color key="backgroundColor" name="hp_darkpurple"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="5ZL-JK-fnx"/>
+                                            <constraint firstAttribute="height" constant="24" id="XMC-un-0na"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-2d-CJd">
+                                        <rect key="frame" x="14" y="209.00000000000003" width="160" height="48.333333333333343"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="해픽의 밤하늘에 당신의 행복을 기록하세요">
+                                                <attributes>
+                                                    <color key="NSColor" name="hp_darkblue"/>
+                                                    <font key="NSFont" size="16" name="Pretendard-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W96-9x-RYh">
+                                <rect key="frame" x="60" y="561" width="255" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_chat" translatesAutoresizingMaskIntoConstraints="NO" id="0pQ-N3-rWR">
+                                        <rect key="frame" x="44" y="16" width="15.333333333333336" height="15.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="tintColor" name="hp_bgblack2h"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오로 시작하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nl-jb-SSJ">
+                                        <rect key="frame" x="97.666666666666657" y="15.333333333333371" width="100.33333333333334" height="17"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="0pQ-N3-rWR" firstAttribute="leading" secondItem="W96-9x-RYh" secondAttribute="leading" constant="44" id="1sz-lg-J4u"/>
+                                    <constraint firstItem="4Nl-jb-SSJ" firstAttribute="centerY" secondItem="W96-9x-RYh" secondAttribute="centerY" id="Rh6-Hi-5Cc"/>
+                                    <constraint firstAttribute="height" constant="48" id="XZF-I4-MKD"/>
+                                    <constraint firstItem="0pQ-N3-rWR" firstAttribute="centerY" secondItem="W96-9x-RYh" secondAttribute="centerY" id="dPy-co-g1G"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Nl-jb-SSJ" secondAttribute="trailing" constant="57" id="yy8-Lc-JLs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Be-Qs-aAC">
+                                <rect key="frame" x="167" y="636" width="41.333333333333343" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4dK-Xs-t7j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFq-iV-ehM" firstAttribute="centerX" secondItem="rK5-An-tbX" secondAttribute="centerX" id="2Ou-gd-OZu"/>
+                            <constraint firstItem="mV3-LJ-l2h" firstAttribute="leading" secondItem="4dK-Xs-t7j" secondAttribute="leading" id="6bo-vr-uIY"/>
+                            <constraint firstItem="W96-9x-RYh" firstAttribute="top" secondItem="UFq-iV-ehM" secondAttribute="bottom" constant="148" id="A4y-0S-9Xe"/>
+                            <constraint firstItem="4dK-Xs-t7j" firstAttribute="trailing" secondItem="W96-9x-RYh" secondAttribute="trailing" constant="60" id="LGg-RJ-eXf"/>
+                            <constraint firstItem="4dK-Xs-t7j" firstAttribute="trailing" secondItem="mV3-LJ-l2h" secondAttribute="trailing" id="bmz-Su-tXr"/>
+                            <constraint firstItem="UFq-iV-ehM" firstAttribute="centerY" secondItem="rK5-An-tbX" secondAttribute="centerY" multiplier="0.7" id="cK5-Gb-W3J"/>
+                            <constraint firstItem="W96-9x-RYh" firstAttribute="leading" secondItem="4dK-Xs-t7j" secondAttribute="leading" constant="60" id="fpX-Ta-qUT"/>
+                            <constraint firstAttribute="bottom" secondItem="mV3-LJ-l2h" secondAttribute="bottom" id="g6m-Fb-OyJ"/>
+                            <constraint firstItem="4Be-Qs-aAC" firstAttribute="top" secondItem="W96-9x-RYh" secondAttribute="bottom" constant="27" id="mtP-lw-OVG"/>
+                            <constraint firstItem="4Be-Qs-aAC" firstAttribute="centerX" secondItem="rK5-An-tbX" secondAttribute="centerX" id="qoN-M3-6Lz"/>
+                            <constraint firstItem="mV3-LJ-l2h" firstAttribute="top" secondItem="rK5-An-tbX" secondAttribute="top" id="rI2-Wj-wWD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1NM-7A-ZZI"/>
+                    <connections>
+                        <outlet property="startWithKakao" destination="W96-9x-RYh" id="yQa-Wj-ULX"/>
+                        <outlet property="termsIntroduceLabel" destination="4Be-Qs-aAC" id="vU9-Tu-7dh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw7-08-llv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.60000000000002" y="115.27093596059113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_splash" width="375" height="812"/>
+        <image name="icn_chat" width="15.333333015441895" height="15.666666984558105"/>
+        <image name="icn_splash" width="188" height="155"/>
+        <namedColor name="hp_bgblack2h">
+            <color red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hp_darkblue">
+            <color red="0.41568627450980394" green="0.36862745098039218" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hp_darkpurple">
+            <color red="0.49019607843137253" green="0.35686274509803922" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
