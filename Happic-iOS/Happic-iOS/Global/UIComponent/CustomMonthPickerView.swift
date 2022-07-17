@@ -20,12 +20,12 @@ final class CustomMonthPickerView: UIView {
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.setImage(ImageLiterals.icnArrowBack, for: .normal)
         $0.tintColor = .hpGray5
     }
     
     private lazy var nextYearSelectorButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowNext, for: .normal)
+        $0.setImage(ImageLiterals.icnArrowNext, for: .normal)
         $0.tintColor = .hpGray5
     }
     
@@ -37,7 +37,7 @@ final class CustomMonthPickerView: UIView {
     
     private lazy var containerView = UIView().then {
         
-        $0.backgroundColor = .hpBgBlack2h.withAlphaComponent(0.95)
+        $0.backgroundColor = .hpBgBlack2.withAlphaComponent(0.95)
         $0.layer.borderColor = UIColor.hpDarkPurple.cgColor
         $0.layer.borderWidth = 1
         $0.layer.cornerRadius = 8

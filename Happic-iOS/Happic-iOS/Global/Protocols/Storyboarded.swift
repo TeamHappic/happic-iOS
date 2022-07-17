@@ -1,5 +1,10 @@
+//
+//  Storyboarded.swift
+//  Happic-iOS
+//
+//  Created by Zaid Kang on 2022/07/16.
+//
 
-import Foundation
 import UIKit
 
 protocol Storyboarded {
@@ -14,7 +19,6 @@ extension Storyboarded where Self: UIViewController {
         guard let vc = uiStoryboard.instantiateViewController(withIdentifier: identifier) as? Self else {
             fatalError("Could not find View Controller named \(identifier)")
         }
-
         return vc
     }
 }

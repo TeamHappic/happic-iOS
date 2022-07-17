@@ -16,7 +16,7 @@ class CustomPopUpController: UIViewController {
     }
     
     private lazy var notificationImageView = UIImageView().then {
-        $0.image = ImageLiteral.icnAlarm
+        $0.image = ImageLiterals.icnAlarm
         $0.tintColor = .hpGray3
     }
     
@@ -39,7 +39,7 @@ class CustomPopUpController: UIViewController {
         $0.setTitle("취소", for: .normal)
         $0.setTitleColor(.hpGray4, for: .normal)
         $0.titleLabel?.font = UIFont.font(.pretendardMedium, ofSize: 16)
-        $0.backgroundColor = .hpBgBlack2h
+        $0.backgroundColor = .hpBgBlack2
         $0.layer.cornerRadius = 12
         $0.addTarget(self, action: #selector(handleCancelButtonDidTap), for: .touchUpInside)
     }
@@ -48,7 +48,7 @@ class CustomPopUpController: UIViewController {
         $0.setTitle("캐릭터 변경", for: .normal)
         $0.setTitleColor(.hpOrange, for: .normal)
         $0.titleLabel?.font = UIFont.font(.pretendardBold, ofSize: 16)
-        $0.backgroundColor = .hpBgBlack2h
+        $0.backgroundColor = .hpBgBlack2
         $0.layer.cornerRadius = 12
     }
     

@@ -11,7 +11,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private let alarmImageView = UIImageView().then {
-        $0.image = ImageLiteral.icnAlarm
+        $0.image = ImageLiterals.icnAlarm
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
@@ -23,7 +23,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     }
     
     private let nextArrowImageView = UIImageView().then {
-        $0.image = ImageLiteral.icnArrowNext
+        $0.image = ImageLiterals.icnArrowNext
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }

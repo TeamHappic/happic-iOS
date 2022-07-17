@@ -1,5 +1,5 @@
 //
-//  ColorLiteral.swift
+//  ColorLiterals.swift
 //  Happic-iOS
 //
 //  Created by devxsby on 2022/07/10.
@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     static var hpWhite: UIColor {
-        return UIColor(hex: "#f3f3f3")
+        return UIColor(hex: "#ffffff")
     }
     
     static var hpGray1: UIColor {
@@ -48,11 +48,15 @@ extension UIColor {
         return UIColor(hex: "#2e2e2e")
     }
     
+    static var hpBgBlack0: UIColor {
+        return UIColor(hex: "#1f1f24")
+    }
+    
     static var hpBgBlack1: UIColor {
         return UIColor(hex: "#19191f")
     }
     
-    static var hpBgBlack2h: UIColor {
+    static var hpBgBlack2: UIColor {
         return UIColor(hex: "#0b0b0b")
     }
     

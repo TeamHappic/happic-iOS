@@ -20,7 +20,7 @@ final class BestHappicMomentView: UIView {
     }
     
     private lazy var characterImageView = UIImageView().then {
-        $0.image = ImageLiteral.imageCloud
+        $0.image = ImageLiterals.imageCloud
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }

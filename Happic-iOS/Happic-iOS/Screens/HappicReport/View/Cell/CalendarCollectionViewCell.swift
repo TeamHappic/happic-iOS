@@ -32,7 +32,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpBgBlack2h
+        backgroundColor = .hpBgBlack2
         
         addSubviews(uploadCheckView, dayLabel)
         dayLabel.snp.makeConstraints { make in

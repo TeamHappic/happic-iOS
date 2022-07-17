@@ -19,7 +19,7 @@ final class CreateContentsController: UIViewController {
     private lazy var whatTagView = CustomRecommendTagView()
     
     private lazy var backButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.setImage(ImageLiterals.icnArrowBack, for: .normal)
         $0.tintColor = .hpWhite
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         $0.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
@@ -37,7 +37,7 @@ final class CreateContentsController: UIViewController {
     }
     
     var pickerImageView = UIImageView().then {
-        $0.image = ImageLiteral.imageDailySample3
+        $0.image = ImageLiterals.imageDailySample3
         $0.contentMode = .scaleAspectFill
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 12
@@ -67,7 +67,7 @@ final class CreateContentsController: UIViewController {
         view.addSubview(headerView)
         headerView.addSubviews(backButton, dateLabel, saveButton)
         
-        headerView.backgroundColor = .hpBgBlack2h
+        headerView.backgroundColor = .hpBgBlack2
         
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)

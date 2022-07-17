@@ -115,7 +115,7 @@ final class CustomRecommendTagView: UIView {
     }
     
     private lazy var tagContainerView = UIView().then {
-        $0.backgroundColor = .hpBgBlack2h
+        $0.backgroundColor = .hpBgBlack2
         
         let tagStack1 = UIStackView(arrangedSubviews: [tagButton1, tagButton2, tagButton3])
         let tagStack2 = UIStackView(arrangedSubviews: [tagButton4, tagButton5, tagButton6])
