@@ -19,7 +19,7 @@ final class MonthHappicRecordController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setBlueBackGroundColor()
         configureUI()
     }
     
