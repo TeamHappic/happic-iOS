@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HaruHappicController: UIViewController {
+final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - UI
     private lazy var addPhotoButton = UIButton(type: .system).then {
@@ -42,8 +42,6 @@ final class HaruHappicController: UIViewController {
     }
     
     @objc private func addPhotoButtonDidTap() {
-        let createContentsController = CreateContentsController()
-        createContentsController.modalPresentationStyle = .fullScreen
-        self.present(createContentsController, animated: true, completion: nil)
+        setActionSheet()
     }
 }
