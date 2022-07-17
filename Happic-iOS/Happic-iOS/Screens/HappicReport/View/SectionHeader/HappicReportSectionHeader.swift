@@ -40,7 +40,7 @@ final class HappicReportSectionHeader: UIView {
     
     private lazy var showDetailRankViewButton = UIButton(type: .system).then {
         $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        $0.tintColor = .white
+        $0.tintColor = .hpGray3
         $0.addTarget(self, action: #selector(showDetailRankViewButtonDidTap), for: .touchUpInside)
     }
     
@@ -74,7 +74,7 @@ final class HappicReportSectionHeader: UIView {
         addSubviews(sectionDividerImageView, sectionTitleLabel, showDetailRankViewButton)
         sectionDividerImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
-            make.top.equalToSuperview().inset(16)
+            make.top.equalToSuperview().inset(32)
             make.width.height.equalTo(16)
         }
         

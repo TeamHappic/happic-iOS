@@ -65,7 +65,8 @@ class CategoryDetailController: UIViewController {
         view.addSubview(rankCollectionView)
         rankCollectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
-            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
         }
     }
     

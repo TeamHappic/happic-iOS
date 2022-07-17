@@ -89,7 +89,7 @@ final class HappicReportController: UIViewController {
         categoryRankView.snp.makeConstraints { make in
             make.top.equalTo(keywordRankView.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(525)
+            make.height.equalTo(555)
         }
         
         monthHappicRecordView.snp.makeConstraints { make in
