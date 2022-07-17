@@ -107,6 +107,11 @@ final class HappicReportController: UIViewController {
             make.bottom.equalToSuperview().inset(50)
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bestHappicMomentView.setBackgroundColor()
+    }
 }
 
 // MARK: - Extensions

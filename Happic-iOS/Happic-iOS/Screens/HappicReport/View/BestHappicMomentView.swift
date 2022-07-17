@@ -77,9 +77,14 @@ final class BestHappicMomentView: UIView {
         $0.attributedText = attributedString
     }
     
-    private lazy var containerView = UIView().then {
-        $0.backgroundColor = .gray
+    lazy var backgroundView = UIView().then {
         $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+    
+    lazy var containerView = UIView().then {
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
         
         let bestKeywordStackView = UIStackView(arrangedSubviews: [bestHourLabel, bestWhereLabel, bestWhoLabel, bestWhatLabel])
         bestKeywordStackView.axis = .vertical
@@ -119,22 +124,36 @@ final class BestHappicMomentView: UIView {
     // MARK: - Functions
     
     private func configureUI() {
-        addSubviews(titleLabel, characterImageView, containerView)
+        addSubviews(titleLabel, characterImageView, backgroundView)
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().inset(19)
             make.height.equalTo(24)
         }
-        containerView.snp.makeConstraints { make in
+        backgroundView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(11)
             make.leading.bottom.trailing.equalToSuperview()
         }
-        
         characterImageView.snp.makeConstraints { make in
             make.leading.greaterThanOrEqualTo(titleLabel.snp.trailing).offset(10)
-            make.trailing.equalTo(containerView.snp.trailing).inset(21)
-            make.bottom.equalTo(containerView.snp.top).inset(24)
+            make.trailing.equalTo(backgroundView.snp.trailing).inset(21)
+            make.bottom.equalTo(backgroundView.snp.top).inset(24)
             make.width.height.equalTo(67)
         }
+    }
+    
+    func setBackgroundColor() {
+        backgroundView.setGradient(type: .radial,
+                                   colors: [UIColor.hpDarkBlue.cgColor, UIColor.hpGray9.cgColor],
+                                   startPoint: CGPoint(x: 1.4, y: -0.5),
+                                   endPoint: CGPoint(x: 2.4, y: 0.8))
+        
+        backgroundView.addSubviews(containerView)
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+                
+        backgroundView.layer.applyShadow(color: .black, alpha: 0.25, x: 8, y: 8, blur: 16, spread: 0)
+        backgroundView.clipsToBounds = true
     }
 }
