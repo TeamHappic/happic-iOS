@@ -32,6 +32,13 @@ final class HappicReportController: UIViewController {
     // MARK: - Functions
     private func configureUI() {
         view.addSubviews(customMonthView, customMonthPickerView)
+        customMonthView.layer.masksToBounds = false
+        customMonthView.layer.shadowColor = UIColor.black.cgColor
+        customMonthView.layer.shadowRadius = 4 / 2.0
+        customMonthView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
+        customMonthView.layer.shadowOpacity = 0.25
+        customMonthView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
