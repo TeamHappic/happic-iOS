@@ -12,20 +12,20 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     // MARK: - UI
     private lazy var categoryNameLabel = UILabel().then {
         $0.text = "#who 1"
-        $0.textColor = .gray
-        $0.font = UIFont.font(.pretendardRegular, ofSize: 14)
+        $0.textColor = .hpGray5
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     private lazy var userKeywordLabel = UILabel().then {
         $0.text = "햄식이"
-        $0.textColor = .white
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.textColor = .hpGray2
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
     
     private lazy var countLabel = UILabel().then {
         $0.text = "xx회"
-        $0.textColor = .white
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.textColor = .hpWhite
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 16)
     }
     
     private lazy var firstImageView = UIImageView().then {
@@ -34,6 +34,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
         $0.clipsToBounds = true
         $0.tintColor = .white
         $0.backgroundColor = .black
+        $0.layer.cornerRadius = 8
     }
     
     private lazy var secondImageView = UIImageView().then {
@@ -42,6 +43,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
         $0.clipsToBounds = true
         $0.tintColor = .white
         $0.backgroundColor = .black
+        $0.layer.cornerRadius = 8
     }
     
     private lazy var thirdImageView = UIImageView().then {
@@ -50,6 +52,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
         $0.clipsToBounds = true
         $0.tintColor = .white
         $0.backgroundColor = .black
+        $0.layer.cornerRadius = 8
     }
     
     private lazy var imageStackView = UIStackView(arrangedSubviews: [firstImageView, secondImageView, thirdImageView]).then {
@@ -70,7 +73,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpGray8
+        backgroundColor = .hpGray9
         layer.cornerRadius = 10
         
         addSubviews(categoryNameLabel, userKeywordLabel, countLabel, imageStackView)

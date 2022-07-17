@@ -20,7 +20,9 @@ final class CategoryRankView: UIView {
     
     private lazy var categoryViewPager = CustomViewPager(
         viewControllers: viewControllers,
-        buttonTitles: ["#hour", "#where", "#who", "#what"], isScrollEnabled: false)
+        buttonTitles: ["#when", "#where", "#who", "#what"],
+        buttonTintColor: .hpGray6,
+        isScrollEnabled: false)
 
     // MARK: - Initialization
     override init(frame: CGRect) {

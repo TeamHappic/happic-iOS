@@ -88,13 +88,13 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
                 withReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className, for: indexPath)
                     as? CategoryDetailWithImageCollectionViewCell
             else { return UICollectionViewCell() }
-            cell.setCategoryNameLabel(type: type, index: indexPath.row)
+            cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
             return cell
         }
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
-        cell.setCategoryNameLabel(type: type, index: indexPath.row)
+        cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
         
         return cell
     }
