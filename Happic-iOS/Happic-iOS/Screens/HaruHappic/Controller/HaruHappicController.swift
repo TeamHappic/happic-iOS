@@ -22,6 +22,7 @@ final class HaruHappicController: BaseUploadViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+//        showToast(message: "이미 오늘의 해픽을 등록했어요")
     }
     
     // MARK: - Functions
