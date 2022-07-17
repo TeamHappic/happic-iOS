@@ -164,8 +164,10 @@ Happic-iOS
  ┣ Base.lproj
  ┃ ┗ Main.storyboard
  ┣ Global
- ┃ ┣ Util
  ┃ ┣ Literal
+ ┃ ┣ Base
+ ┃ ┣ Protocols
+ ┃ ┣ Util
  ┃ ┣ Extension
  ┃ ┣ Resource
  ┃ ┃ ┣ Assets.xcassets
