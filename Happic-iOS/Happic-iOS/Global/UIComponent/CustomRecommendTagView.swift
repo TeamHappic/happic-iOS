@@ -114,7 +114,7 @@ final class CustomRecommendTagView: UIView {
         $0.layer.cornerRadius = 18
     }
     
-    private lazy var tagContainerView = UIView().then {
+    lazy var tagContainerView = UIView().then {
         $0.backgroundColor = .hpBgBlack2
         
         let tagStack1 = UIStackView(arrangedSubviews: [tagButton1, tagButton2, tagButton3])
