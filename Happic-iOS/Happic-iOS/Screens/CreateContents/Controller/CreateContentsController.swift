@@ -133,6 +133,19 @@ final class CreateContentsController: UIViewController {
         }
         
         hideKeyboardWhenTappedAround()
+        
+        whenTagView.tagLabel.text = "#when"
+        whenTagView.userTextField.placeholder = "시간을 입력해주세요"
+        whenTagView.tagContainerView.removeFromSuperview()
+        
+        whereTagView.tagLabel.text = "#where"
+        whereTagView.userTextField.placeholder = "장소을 입력해주세요"
+        
+        whoTagView.tagLabel.text = "#who"
+        whoTagView.userTextField.placeholder = "함께한 사람을 입력해주세요"
+        
+        whatTagView.tagLabel.text = "#what"
+        whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
     }
     
     @objc private func dismissViewController() {
