@@ -27,6 +27,9 @@ final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - Functions
     private func configureUI() {
+        
+        setPurpleBackgroundColor()
+        
         view.addSubviews(addPhotoButton, haruHappicViewPager)
 
         addPhotoButton.snp.makeConstraints { make in

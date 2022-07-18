@@ -59,6 +59,7 @@ final class CreateContentsController: UIViewController {
     
     // MARK: - Functions
     private func configureUI() {
+        setPurpleBackgroundColor()
         setHeaderView()
         setScrollView()
     }
