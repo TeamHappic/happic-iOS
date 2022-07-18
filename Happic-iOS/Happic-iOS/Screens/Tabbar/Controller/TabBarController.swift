@@ -130,7 +130,7 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
         let createContentsController = CreateContentsController()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             createContentsController.pickerImageView.image = image
-            picker.dismiss(animated: true, completion: nil)
+            picker.dismiss(animated: true)
             createContentsController.modalPresentationStyle = .fullScreen
             present(createContentsController, animated: true, completion: nil)
         }

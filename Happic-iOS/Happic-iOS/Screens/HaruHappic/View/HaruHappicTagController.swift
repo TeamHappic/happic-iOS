@@ -36,6 +36,8 @@ final class HaruHappicTagController: UIViewController {
         
         view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
         
+        containerCollectionView.backgroundColor = .clear
+        
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.leading.trailing.equalToSuperview().inset(100)

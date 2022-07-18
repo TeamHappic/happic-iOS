@@ -9,10 +9,15 @@ import UIKit
 
 final class CreateContentsController: UIViewController {
     
+    // MARK: - Properties
+    var allMeridiem: [String] = ["오전", "오후"]
+    var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
+    
     // MARK: - UI
     private lazy var headerView = UIView()
     private lazy var scrollView = UIScrollView()
     private lazy var containerView = UIView()
+    private lazy var whenPicker = UIPickerView()
     private lazy var whenTagView = CustomRecommendTagView()
     private lazy var whereTagView = CustomRecommendTagView()
     private lazy var whoTagView = CustomRecommendTagView()
@@ -59,16 +64,17 @@ final class CreateContentsController: UIViewController {
     
     // MARK: - Functions
     private func configureUI() {
+        setPurpleBackgroundColor()
         setHeaderView()
         setScrollView()
+        configPickerView()
     }
     
     private func setHeaderView() {
+        
         view.addSubview(headerView)
         headerView.addSubviews(backButton, dateLabel, saveButton)
-        
-        headerView.backgroundColor = .hpBgBlack2
-        
+                
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(65)
@@ -95,8 +101,7 @@ final class CreateContentsController: UIViewController {
         
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
-        containerView.addSubviews(pickerImageView)
-        containerView.backgroundColor = .hpBgBlack1
+        containerView.addSubview(pickerImageView)
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
@@ -126,9 +131,93 @@ final class CreateContentsController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100)
         }
+        
+        hideKeyboardWhenTappedAround()
+        
+        whenTagView.tagLabel.text = "#when"
+        whenTagView.userTextField.placeholder = "시간을 입력해주세요"
+        
+        whereTagView.tagLabel.text = "#where"
+        whereTagView.userTextField.placeholder = "장소을 입력해주세요"
+        
+        whoTagView.tagLabel.text = "#who"
+        whoTagView.userTextField.placeholder = "함께한 사람을 입력해주세요"
+        
+        whatTagView.tagLabel.text = "#what"
+        whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
     }
     
     @objc private func dismissViewController() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true)
+    }
+}
+
+// MARK: - Extensions
+extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func configPickerView() {
+        whenPicker.delegate = self
+        whenPicker.dataSource = self
+        
+        whenTagView.userTextField.inputView = whenPicker
+        configToolbar()
+    }
+    
+    func configToolbar() {
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.white
+        toolBar.sizeToFit()
+        
+        let doneBT = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(self.donePicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelBT = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(self.cancelPicker))
+        
+        toolBar.setItems([cancelBT, flexibleSpace, doneBT], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        whenTagView.userTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func donePicker() {
+        let row = self.whenPicker.selectedRow(inComponent: 0)
+        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
+        self.whenTagView.userTextField.resignFirstResponder()
+    }
+
+    @objc func cancelPicker() {
+        self.whenTagView.userTextField.text = nil
+        self.whenTagView.userTextField.resignFirstResponder()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch component {
+        case 0:
+            return allMeridiem.count
+        case 1:
+            return allHour.count
+        default:
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch component {
+        case 0:
+            return"\(allMeridiem[row])"
+        case 1:
+            return "\(allHour[row])"
+        default:
+            return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // 에러 수정 필요
+        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
     }
 }

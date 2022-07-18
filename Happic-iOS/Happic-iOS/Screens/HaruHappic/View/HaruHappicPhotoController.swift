@@ -36,6 +36,8 @@ final class HaruHappicPhotoController: UIViewController {
         
         view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
         
+        containerCollectionView.backgroundColor = .clear
+        
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.leading.trailing.equalToSuperview().inset(100)
@@ -87,7 +89,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "hp_img_c4.png",
+      "filename" : "hp_img_monthly0.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hp_img_c4@2x.png",
+      "filename" : "hp_img_monthly0@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "hp_img_c4@3x.png",
+      "filename" : "hp_img_monthly0@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
