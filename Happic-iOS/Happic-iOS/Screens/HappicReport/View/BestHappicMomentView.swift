@@ -93,7 +93,7 @@ final class BestHappicMomentView: UIView {
         bestKeywordStackView.spacing = 24
         $0.addSubview(bestKeywordStackView)
         bestKeywordStackView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(44)
+            make.leading.equalToSuperview().offset(26)
             make.top.equalToSuperview().offset(28)
             make.bottom.equalToSuperview().inset(28)
         }
@@ -106,7 +106,7 @@ final class BestHappicMomentView: UIView {
         keywordStackView.snp.makeConstraints { make in
             make.leading.equalTo(bestKeywordStackView.snp.trailing).offset(19)
             make.top.equalTo(bestKeywordStackView)
-            make.trailing.equalToSuperview().inset(27)
+            make.trailing.equalToSuperview().inset(26)
             make.bottom.equalTo(bestKeywordStackView)
         }
     }

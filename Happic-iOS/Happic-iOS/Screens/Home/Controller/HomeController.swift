@@ -26,7 +26,7 @@ final class HomeController: UIViewController {
         progressViewStyle: .default).then {
             $0.progressTintColor = .hpDarkBlue
             $0.trackTintColor = .hpGray5
-            $0.progress = 0.5
+            $0.progress = 1/6
     }
     
     private lazy var characterImageView = UIImageView().then {
@@ -87,7 +87,7 @@ final class HomeController: UIViewController {
         }
         
         progressLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(48)
             make.centerY.equalTo(levelLabel)
         }
         
@@ -108,9 +108,10 @@ final class HomeController: UIViewController {
         }
         
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).offset(98)
+            make.height.equalTo(184)
+            make.top.greaterThanOrEqualTo(nameLabel.snp.bottom).offset(0)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.bottom.greaterThanOrEqualTo(view.safeAreaLayoutGuide).inset(50)
         }
 
         containerView.addSubview(stackView)
