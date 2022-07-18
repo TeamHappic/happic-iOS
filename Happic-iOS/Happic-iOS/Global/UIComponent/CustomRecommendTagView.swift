@@ -11,7 +11,7 @@ final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
     lazy var tagLabel = UILabel().then {
-        $0.text = "#when"
+        $0.text = "#tag"
         $0.textColor = .hpGray4
         $0.font = UIFont.font(.pretendardBold, ofSize: 14)
     }
@@ -21,8 +21,7 @@ final class CustomRecommendTagView: UIView {
     }
     
     lazy var userTextField = UITextField().then {
-        $0.placeholder = "시간을 입력해주세요"
-        $0.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        $0.attributedPlaceholder = NSAttributedString(string: "tag를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         $0.textColor = .hpGray1
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
         $0.returnKeyType = .done
