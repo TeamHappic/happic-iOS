@@ -57,7 +57,6 @@ final class CustomRecommendTagView: UIView {
     private lazy var tagButton2 = UIButton(type: .system).then {
         $0.backgroundColor = .hpGray9
         $0.setAttributedTitle(NSAttributedString(string: "태그2번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-        $0.layer.cornerRadius = 18
     }
     
     private lazy var tagButton3 = UIButton(type: .system).then {
