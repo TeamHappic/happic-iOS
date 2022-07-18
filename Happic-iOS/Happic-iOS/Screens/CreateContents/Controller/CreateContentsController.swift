@@ -163,7 +163,7 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func configToolbar() {
-        let toolBar = UIToolbar()
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.white
