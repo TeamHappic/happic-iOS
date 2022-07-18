@@ -8,6 +8,7 @@
 import UIKit
 
 final class BestHappicMomentView: UIView {
+    
     // MARK: - UI
     private let titleLabel = UILabel().then {
         let attributedString = NSMutableAttributedString(string: "이번 달 베스트 ", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)])
@@ -108,7 +109,6 @@ final class BestHappicMomentView: UIView {
             make.trailing.equalToSuperview().inset(27)
             make.bottom.equalTo(bestKeywordStackView)
         }
-        
     }
     
     // MARK: - Initialization
@@ -152,8 +152,24 @@ final class BestHappicMomentView: UIView {
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-                
         backgroundView.layer.applyShadow(color: .black, alpha: 0.25, x: 8, y: 8, blur: 16, spread: 0)
         backgroundView.clipsToBounds = true
+    }
+    
+    func showNeedMoreHappicView() {
+        for view in containerView.subviews {
+            view.removeFromSuperview()
+        }
+        
+        let contentLabel = UILabel().then {
+            $0.text = "수집된 해픽이 부족해요"
+            $0.textColor = .hpGray2
+            $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
+        }
+        
+        containerView.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 }
