@@ -52,66 +52,42 @@ final class CustomRecommendTagView: UIView {
     }
     
     private lazy var tagButton1 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕1", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그1번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton2 = UIButton(type: .system).then {
         $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕2", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
+        $0.setAttributedTitle(NSAttributedString(string: "태그2번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
         $0.layer.cornerRadius = 18
     }
     
     private lazy var tagButton3 = UIButton(type: .system).then {
         $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕3", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그3번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton4 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕4", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그4번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton5 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕5", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그5번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton6 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕6", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그6번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton7 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕7", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그7번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton8 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕8", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그8번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     private lazy var tagButton9 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setTitle("안녕9", for: .normal)
-        $0.setTitleColor(.hpGray4, for: .normal)
-        $0.layer.cornerRadius = 18
+        $0.setAttributedTitle(NSAttributedString(string: "태그9번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
     lazy var tagContainerView = UIView().then {
