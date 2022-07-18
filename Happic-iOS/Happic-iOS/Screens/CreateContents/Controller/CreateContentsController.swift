@@ -95,7 +95,7 @@ final class CreateContentsController: UIViewController {
         
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
-        containerView.addSubviews(pickerImageView)
+        containerView.addSubview(pickerImageView)
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
