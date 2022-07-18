@@ -65,11 +65,10 @@ final class CreateContentsController: UIViewController {
     }
     
     private func setHeaderView() {
+        
         view.addSubview(headerView)
         headerView.addSubviews(backButton, dateLabel, saveButton)
-        
-        headerView.backgroundColor = .hpBgBlack2
-        
+                
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(65)
@@ -97,7 +96,6 @@ final class CreateContentsController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
         containerView.addSubviews(pickerImageView)
-        containerView.backgroundColor = .hpBgBlack1
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
