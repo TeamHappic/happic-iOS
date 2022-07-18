@@ -47,9 +47,10 @@ final class HomeController: UIViewController {
     }
     
     private lazy var conversationLabel = UILabel().then {
-        $0.text = "아니 왜 밥 안줌 너 오늘 뭐했는데 바빴다고? 그럼 어쩔 수 없지."
+        $0.text = "아니 왜 밥 안줌\n 너 오늘 뭐했는데\n 바빴다고? 그럼 어쩔 수 없지."
         $0.textColor = .hpGray2
         $0.font = UIFont.font(.pretendardMedium, ofSize: 16)
+        $0.addLabelSpacing(kernValue: 0, lineSpacing: 5)
         $0.textAlignment = .center
         $0.numberOfLines = 0
     }
@@ -58,13 +59,16 @@ final class HomeController: UIViewController {
         $0.setAttributedTitle(NSAttributedString(string: "하루 해픽 등록하기", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray9]), for: .normal)
         $0.setImage(ImageLiterals.icnRight, for: .normal)
         $0.semanticContentAttribute = .forceRightToLeft
+        $0.backgroundColor = .hpOrange
+        $0.layer.cornerRadius = 8
+        $0.tintColor = .hpGray9
     }
     
     private lazy var stackView = UIStackView(arrangedSubviews: [conversationLabel, actionButton]).then {
         $0.axis = .vertical
+        $0.distribution = .fill
         $0.spacing = 24
     }
-    
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -107,6 +111,16 @@ final class HomeController: UIViewController {
             make.top.equalTo(nameLabel.snp.bottom).offset(98)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(52)
+        }
+
+        containerView.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(24)
+        }
+
+        actionButton.snp.makeConstraints { make in
+            make.height.equalTo(44)
         }
     }
 }
