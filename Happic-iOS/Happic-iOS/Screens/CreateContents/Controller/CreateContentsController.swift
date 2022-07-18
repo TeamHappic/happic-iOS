@@ -131,6 +131,8 @@ final class CreateContentsController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100)
         }
+        
+        hideKeyboardWhenTappedAround()
     }
     
     @objc private func dismissViewController() {
