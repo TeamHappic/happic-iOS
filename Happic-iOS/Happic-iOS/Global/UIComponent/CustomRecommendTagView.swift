@@ -17,7 +17,7 @@ final class CustomRecommendTagView: UIView {
     }
     
     private lazy var verticalLine = UIView().then {
-        $0.tintColor = .hpGray7
+        $0.backgroundColor = .hpGray7
     }
     
     lazy var userTextField = UITextField().then {
@@ -35,10 +35,11 @@ final class CustomRecommendTagView: UIView {
         tagLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(25)
             make.centerY.equalToSuperview()
+            make.width.equalTo(50)
         }
         
         verticalLine.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(100)
+            make.leading.equalTo(tagLabel.snp.trailing).offset(18)
             make.centerY.equalToSuperview()
             make.width.equalTo(1)
             make.height.equalTo(24)
