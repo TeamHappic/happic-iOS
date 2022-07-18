@@ -30,6 +30,7 @@ final class CustomRecommendTagView: UIView {
     private lazy var textFieldContainerView = UIView().then {
         $0.backgroundColor = .hpGray9
         $0.addSubviews(tagLabel, verticalLine, userTextField)
+        $0.layer.cornerRadius = 10
         
         tagLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(25)
@@ -199,6 +200,9 @@ extension CustomRecommendTagView: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         UIView.animate(withDuration: 0.2) {
+            self.layer.borderColor = UIColor.hpDarkPurple.cgColor
+            self.layer.borderWidth = 1
+            self.textFieldContainerView.layer.cornerRadius = 0
             self.tagContainerView.isHidden = false
         }
         return true
@@ -206,6 +210,9 @@ extension CustomRecommendTagView: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.2) {
+            self.layer.borderWidth = 0
+            self.textFieldContainerView.layer.cornerRadius = 10
+            self.tagContainerView.layer.cornerRadius = 10
             self.tagContainerView.isHidden = true
         }
     }
