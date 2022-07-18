@@ -177,7 +177,7 @@ final class CustomRecommendTagView: UIView {
     
     @objc func tagButtonDidtap(sender: UIButton) {
         userTextField.resignFirstResponder()
-        userTextField.text = sender.currentTitle
+        userTextField.text = sender.currentAttributedTitle?.string
     }
 }
 
