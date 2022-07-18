@@ -20,7 +20,7 @@ final class CustomMonthView: UIView {
     
     // MARK: - UI
     lazy var monthLabel = UILabel().then {
-        $0.text = "2022 . 06"
+        $0.text = "2022 . 07"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
