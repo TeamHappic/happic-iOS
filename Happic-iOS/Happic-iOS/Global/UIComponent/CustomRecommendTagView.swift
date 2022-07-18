@@ -207,6 +207,13 @@ final class CustomRecommendTagView: UIView {
 // MARK: - Extensions
 extension CustomRecommendTagView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // backspace 허용
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if isBackSpace == -92 {
+                return true
+            }
+        }
         guard let text = textField.text else { return false }
         if text.count >= 5 {
             return false
