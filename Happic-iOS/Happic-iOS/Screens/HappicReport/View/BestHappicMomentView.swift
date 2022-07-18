@@ -25,31 +25,31 @@ final class BestHappicMomentView: UIView {
         $0.clipsToBounds = true
     }
     
-    private lazy var bestHourLabel = UILabel().then {
-        $0.text = "19:00"
+    private lazy var bestWhenLabel = UILabel().then {
+        $0.text = "오후2시"
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhereLabel = UILabel().then {
-        $0.text = "집구석"
+        $0.text = "집구석구석"
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhoLabel = UILabel().then {
-        $0.text = "햄식이"
+        $0.text = "햄식달식이"
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhatLabel = UILabel().then {
-        $0.text = "귀여워"
+        $0.text = "짱짱귀여워"
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
-    private lazy var hourLabel = UILabel().then {
+    private lazy var whenLabel = UILabel().then {
         $0.text = "시에"
         $0.textColor = .white
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
@@ -86,7 +86,7 @@ final class BestHappicMomentView: UIView {
         $0.layer.cornerRadius = 10
         $0.clipsToBounds = true
         
-        let bestKeywordStackView = UIStackView(arrangedSubviews: [bestHourLabel, bestWhereLabel, bestWhoLabel, bestWhatLabel])
+        let bestKeywordStackView = UIStackView(arrangedSubviews: [bestWhenLabel, bestWhereLabel, bestWhoLabel, bestWhatLabel])
         bestKeywordStackView.axis = .vertical
         bestKeywordStackView.distribution = .fillEqually
         bestKeywordStackView.spacing = 24
@@ -97,7 +97,7 @@ final class BestHappicMomentView: UIView {
             make.bottom.equalToSuperview().inset(28)
         }
         
-        let keywordStackView = UIStackView(arrangedSubviews: [hourLabel, whereLabel, whoLabel, whatLabel])
+        let keywordStackView = UIStackView(arrangedSubviews: [whenLabel, whereLabel, whoLabel, whatLabel])
         keywordStackView.axis = .vertical
         keywordStackView.spacing = 24
         keywordStackView.distribution = .fillEqually
