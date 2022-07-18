@@ -24,6 +24,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     
     private let nextArrowImageView = UIImageView().then {
         $0.image = ImageLiterals.icnRight
+        $0.tintColor = .hpGray3
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
