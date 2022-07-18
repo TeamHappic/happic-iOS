@@ -10,7 +10,7 @@ import UIKit
 final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
-    private lazy var tagLabel = UILabel().then {
+    lazy var tagLabel = UILabel().then {
         $0.text = "#when"
         $0.textColor = .hpGray4
         $0.font = UIFont.font(.pretendardBold, ofSize: 14)
@@ -20,7 +20,7 @@ final class CustomRecommendTagView: UIView {
         $0.tintColor = .hpGray7
     }
     
-    private lazy var userTextField = UITextField().then {
+    lazy var userTextField = UITextField().then {
         $0.placeholder = "시간을 입력해주세요"
         $0.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         $0.textColor = .hpGray1
