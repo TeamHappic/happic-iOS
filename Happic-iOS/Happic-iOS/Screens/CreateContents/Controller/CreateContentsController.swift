@@ -136,7 +136,10 @@ final class CreateContentsController: UIViewController {
     }
     
     @objc private func dismissViewController() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true)
+    }
+}
+
 // MARK: - Extensions
 extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource {
     func configPickerView() {
