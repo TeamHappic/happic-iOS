@@ -109,9 +109,8 @@ final class HomeController: UIViewController {
         
         containerView.snp.makeConstraints { make in
             make.height.equalTo(184)
-            make.top.greaterThanOrEqualTo(nameLabel.snp.bottom).offset(0)
+            make.centerY.equalTo(view.safeAreaLayoutGuide).multipliedBy(1.5)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
-            make.bottom.greaterThanOrEqualTo(view.safeAreaLayoutGuide).inset(50)
         }
 
         containerView.addSubview(stackView)
