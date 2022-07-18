@@ -29,7 +29,7 @@ final class HappicCapsuleController: UIViewController {
     }
     
     private lazy var capsuleImageView = UIImageView().then {
-        $0.image = ImageLiterals.imageCapsule
+        $0.image = ImageLiterals.imageCapsuleMachine
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = false
     }
