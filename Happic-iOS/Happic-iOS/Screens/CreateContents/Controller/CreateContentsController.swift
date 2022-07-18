@@ -9,7 +9,7 @@ import UIKit
 
 final class CreateContentsController: UIViewController {
     
-//    // MARK: - Properties
+    // MARK: - Properties
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
     
