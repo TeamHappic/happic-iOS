@@ -25,7 +25,6 @@ final class CustomRecommendTagView: UIView {
         $0.textColor = .hpGray1
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
         $0.returnKeyType = .done
-        $0.delegate = self
     }
     
     private lazy var textFieldContainerView = UIView().then {
