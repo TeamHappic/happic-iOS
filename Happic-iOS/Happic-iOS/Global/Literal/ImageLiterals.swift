@@ -45,10 +45,12 @@ enum ImageLiterals {
     static var imageMoonLv4: UIImage { .load(named: "hp_img_m4") }
 
     static var imageStar: UIImage { .load(named: "hp_img_star") }
-    
     static var imageEmpty: UIImage { .load(named: "hp_img_empty") }
     static var imageBlankPhoto: UIImage { .load(named: "image_blank_photo") }
-    static var imageCapsule: UIImage { .load(named: "image_capsule") }
+    static var imageMonthlyZero: UIImage { .load(named: "hp_img_monthly0") }
+    static var imageMonthlyCount: UIImage { .load(named: "hp_img_monthlycount") }
+    static var imageCalenderPoint: UIImage { .load(named: "hp_img_calenderpoint") }
+    static var imageCapsuleMachine: UIImage { .load(named: "hp_img_capsulemachine") }
 
     /// 샘플 이미지
     static var imageDailySample1: UIImage { .load(named: "image_daily_sample1") }
