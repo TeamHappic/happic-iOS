@@ -166,6 +166,8 @@ final class CustomRecommendTagView: UIView {
         }
         
         [tagButton1, tagButton2, tagButton3, tagButton4, tagButton5, tagButton6, tagButton7, tagButton8, tagButton9].forEach {
+            $0.layer.cornerRadius = 18
+            $0.backgroundColor = .hpGray9
             $0.addTarget(self, action: #selector(tagButtonDidtap(sender: )), for: .touchUpInside)
         }
     }
