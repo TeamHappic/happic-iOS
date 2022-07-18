@@ -12,6 +12,7 @@
 		8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */; };
 		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
 		8E367614287D429600326074 /* HaruHappicTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagController.swift */; };
+		8E4245072885DA640063368C /* HaruHappicDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4245062885DA640063368C /* HaruHappicDetailController.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -103,6 +104,7 @@
 		8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecommendTagView.swift; sourceTree = "<group>"; };
 		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
 		8E367613287D429600326074 /* HaruHappicTagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagController.swift; sourceTree = "<group>"; };
+		8E4245062885DA640063368C /* HaruHappicDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicDetailController.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF6E098287814E100A1636F /* HaruHappicController.swift */,
+				8E4245062885DA640063368C /* HaruHappicDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */,
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
+				8E4245072885DA640063368C /* HaruHappicDetailController.swift in Sources */,
 				CE47965428848A450095ADD4 /* BaseResponse.swift in Sources */,
 				CEF6E08B287814C400A1636F /* HappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* ColorLiterals.swift in Sources */,
