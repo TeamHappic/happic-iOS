@@ -89,7 +89,7 @@ final class CustomRecommendTagView: UIView {
         $0.setAttributedTitle(NSAttributedString(string: "태그9번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
     }
     
-    lazy var tagContainerView = UIView().then {
+    private lazy var tagContainerView = UIView().then {
         $0.backgroundColor = .hpBgBlack2
         
         let tagStack1 = UIStackView(arrangedSubviews: [tagButton1, tagButton2, tagButton3])
@@ -203,7 +203,9 @@ extension CustomRecommendTagView: UITextFieldDelegate {
             self.layer.borderColor = UIColor.hpDarkPurple.cgColor
             self.layer.borderWidth = 1
             self.textFieldContainerView.layer.cornerRadius = 0
-            self.tagContainerView.isHidden = false
+            if self.tagLabel.text != "#when" {
+                self.tagContainerView.isHidden = false
+            }
         }
         return true
     }

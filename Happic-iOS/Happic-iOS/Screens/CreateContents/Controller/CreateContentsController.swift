@@ -136,7 +136,6 @@ final class CreateContentsController: UIViewController {
         
         whenTagView.tagLabel.text = "#when"
         whenTagView.userTextField.placeholder = "시간을 입력해주세요"
-        whenTagView.tagContainerView.removeFromSuperview()
         
         whereTagView.tagLabel.text = "#where"
         whereTagView.userTextField.placeholder = "장소을 입력해주세요"
