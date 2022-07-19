@@ -25,6 +25,7 @@ final class HaruHappicController: BaseUploadViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
 //        showToast(message: "이미 오늘의 해픽을 등록했어요")
     }
     
@@ -50,5 +51,18 @@ final class HaruHappicController: BaseUploadViewController {
     
     @objc private func addPhotoButtonDidTap() {
         setActionSheet()
+    }
+    
+    private func setDelegate() {
+        haruHappicPhotoController.delegate = self
+        haruHappicTagController.delegate = self
+    }
+}
+
+// MARK: - Extensions
+extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTagControllerDelegate {
+    func showDetailView(_ id: String) {
+        let detailViewController = HaruHappicDetailController()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
