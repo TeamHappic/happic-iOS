@@ -11,7 +11,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private lazy var dailyLabel = UILabel().then {
-        $0.text = "26 일"
+        $0.text = "20 수"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
