@@ -76,6 +76,8 @@ final class CreateContentsController: UIViewController {
         whereTagView.delegate = self
         whoTagView.delegate = self
         whatTagView.delegate = self
+        
+        scrollView.delegate = self
     }
     
     private func setHeaderView() {
@@ -236,5 +238,22 @@ extension CreateContentsController: CustomRecommendTagViewDelgegate {
         let height = view.frame.size.height
         let offset = CGPoint(x: 0, y: view.frame.origin.y + height)
         scrollView.setContentOffset(offset, animated: true)
+    }
+}
+
+extension CreateContentsController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 50 {
+            UIView.animate(withDuration: 0.3) {
+                self.pickerImageView.transform = CGAffineTransform.identity
+                self.whenTagView.superview?.transform = CGAffineTransform.identity
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.pickerImageView.transform = CGAffineTransform(scaleX: 1/3, y: 1/3)
+                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -((self.whenTagView.superview?.frame.origin.y)! - self.pickerImageView.frame.origin.y - self.pickerImageView.frame.size.height) + 50)
+            }
+        }
+        
     }
 }
