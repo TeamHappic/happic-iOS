@@ -157,6 +157,11 @@ class CustomCalendarView: UIView {
         
         calendarCollectionView.reloadData()
     }
+    
+    func changeMonth(monthGap: Int) {
+        selectedDate = CalendarHelper.shared.changeMonth(date: selectedDate, monthGap: monthGap)
+        setMonthView()
+    }
 }
 
 // MARK: - Extensions

@@ -61,7 +61,7 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
     func setCategoryNameLabel(type: CategoryType, index: Int) {
         switch type {
-        case .hourCategory:
+        case .whenCategory:
             categoryNameLabel.attributedText = makeCategoryString(category: "#when ", index: index)
         case .whereCategory:
             categoryNameLabel.attributedText = makeCategoryString(category: "#where ", index: index)
