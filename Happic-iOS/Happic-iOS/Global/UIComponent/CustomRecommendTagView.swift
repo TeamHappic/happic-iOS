@@ -7,7 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol CustomRecommendTagViewDelgegate: AnyObject {
+    func scrollUp(_ view: CustomRecommendTagView)
+}
+
 final class CustomRecommendTagView: UIView {
+    
+    // MARK: - Properties
+    weak var delegate: CustomRecommendTagViewDelgegate?
     
     // MARK: - UI
     lazy var tagLabel = UILabel().then {
@@ -207,6 +215,7 @@ extension CustomRecommendTagView: UITextFieldDelegate {
                 self.tagContainerView.isHidden = false
             }
         }
+        delegate?.scrollUp(self)
         return true
     }
     

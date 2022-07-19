@@ -52,6 +52,7 @@ final class CreateContentsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +69,13 @@ final class CreateContentsController: UIViewController {
         setHeaderView()
         setScrollView()
         configPickerView()
+    }
+    
+    private func setDelegate() {
+        whenTagView.delegate = self
+        whereTagView.delegate = self
+        whoTagView.delegate = self
+        whatTagView.delegate = self
     }
     
     private func setHeaderView() {
@@ -219,5 +227,14 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // 에러 수정 필요
         self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
+    }
+}
+
+// MARK: - Extensions
+extension CreateContentsController: CustomRecommendTagViewDelgegate {
+    func scrollUp(_ view: CustomRecommendTagView) {
+        let height = view.frame.size.height
+        let offset = CGPoint(x: 0, y: view.frame.origin.y + height)
+        scrollView.setContentOffset(offset, animated: true)
     }
 }
