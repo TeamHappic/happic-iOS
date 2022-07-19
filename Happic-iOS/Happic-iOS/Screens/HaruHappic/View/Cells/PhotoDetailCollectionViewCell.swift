@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoDetailCollectionViewCell: UICollectionViewCell {
+final class PhotoDetailCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private lazy var dailyImage = UIImageView().then {
