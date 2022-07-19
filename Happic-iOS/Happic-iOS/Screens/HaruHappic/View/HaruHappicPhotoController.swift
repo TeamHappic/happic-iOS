@@ -78,7 +78,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.className, for: indexPath)
-                as? PhotoCollectionViewCell else { return UICollectionViewCell()}
+                as? PhotoCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
 }

@@ -79,7 +79,7 @@ extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.className, for: indexPath)
-                as? TagCollectionViewCell else { return UICollectionViewCell()}
+                as? TagCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
 }
