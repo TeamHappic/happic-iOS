@@ -13,6 +13,7 @@
 		8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367611287D428800326074 /* HaruHappicPhotoController.swift */; };
 		8E367614287D429600326074 /* HaruHappicTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagController.swift */; };
 		8E4245072885DA640063368C /* HaruHappicDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4245062885DA640063368C /* HaruHappicDetailController.swift */; };
+		8E42450928868C200063368C /* PhotoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42450828868C200063368C /* PhotoDetailCollectionViewCell.swift */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -105,6 +106,7 @@
 		8E367611287D428800326074 /* HaruHappicPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoController.swift; sourceTree = "<group>"; };
 		8E367613287D429600326074 /* HaruHappicTagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagController.swift; sourceTree = "<group>"; };
 		8E4245062885DA640063368C /* HaruHappicDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicDetailController.swift; sourceTree = "<group>"; };
+		8E42450828868C200063368C /* PhotoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				8EB2112F287D5A1400F53A95 /* PhotoCollectionViewCell.swift */,
 				8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */,
+				8E42450828868C200063368C /* PhotoDetailCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -918,6 +921,7 @@
 				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
 				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
+				8E42450928868C200063368C /* PhotoDetailCollectionViewCell.swift in Sources */,
 				CE4796502884878C0095ADD4 /* APIConstants.swift in Sources */,
 				CEFC3C55287EF75200F187BE /* CustomCalendarView.swift in Sources */,
 				CE47964E288435010095ADD4 /* CALayer+.swift in Sources */,
