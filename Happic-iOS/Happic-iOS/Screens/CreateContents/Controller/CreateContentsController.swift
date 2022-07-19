@@ -139,7 +139,7 @@ final class CreateContentsController: UIViewController {
         tagStacks.snp.makeConstraints { make in
             make.top.equalTo(pickerImageView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().inset(100)
+            make.bottom.equalToSuperview().inset(400)
         }
         
         hideKeyboardWhenTappedAround()
@@ -244,16 +244,15 @@ extension CreateContentsController: CustomRecommendTagViewDelgegate {
 extension CreateContentsController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y < 50 {
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 self.pickerImageView.transform = CGAffineTransform.identity
                 self.whenTagView.superview?.transform = CGAffineTransform.identity
             }
         } else {
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 self.pickerImageView.transform = CGAffineTransform(scaleX: 1/3, y: 1/3)
-                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -((self.whenTagView.superview?.frame.origin.y)! - self.pickerImageView.frame.origin.y - self.pickerImageView.frame.size.height) + 50)
+                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -100)
             }
         }
-        
     }
 }
