@@ -55,4 +55,31 @@ extension UIView {
         layer.shadowRadius = radius
         return self
     }
+    
+    func showNoneKeywordView() {
+        for view in subviews {
+            view.removeFromSuperview()
+        }
+        
+        let containerView = UIView().then {
+            $0.backgroundColor = .hpGray9
+        }
+        
+        let contentLabel = UILabel().then {
+            $0.text = "수집된 키워드가 부족해요"
+            $0.textColor = .hpGray2
+            $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
+        }
+        
+        addSubview(containerView)
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        containerView.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+    }
 }

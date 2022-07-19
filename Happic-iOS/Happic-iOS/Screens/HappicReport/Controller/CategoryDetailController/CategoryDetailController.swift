@@ -1,5 +1,5 @@
 //
-//  HourCategoryDetailController.swift
+//  CategoryDetailController.swift
 //  Happic-iOS
 //
 //  Created by sejin on 2022/07/12.
@@ -8,7 +8,7 @@
 import UIKit
 
 enum CategoryType {
-    case hourCategory
+    case whenCategory
     case whereCategory
     case whoCategory
     case whatCategory
@@ -17,7 +17,7 @@ enum CategoryType {
 class CategoryDetailController: UIViewController {
     
     // MARK: - Properties
-    var type: CategoryType = .hourCategory
+    var type: CategoryType = .whenCategory
     
     // MARK: - UI
     private lazy var rankCollectionView: UICollectionView = {
