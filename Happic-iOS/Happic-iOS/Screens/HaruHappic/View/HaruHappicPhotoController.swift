@@ -7,7 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol HaruHappicPhotoControllerDelegate: AnyObject {
+    func showDetailView(_ id: String)
+}
+
 final class HaruHappicPhotoController: UIViewController {
+    
+    // MARK: - Properties
+    weak var delegate: HaruHappicPhotoControllerDelegate?
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
@@ -78,8 +86,12 @@ extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.className, for: indexPath)
-                as? PhotoCollectionViewCell else { return UICollectionViewCell()}
+                as? PhotoCollectionViewCell else { return UICollectionViewCell() }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showDetailView("")
     }
 }
 

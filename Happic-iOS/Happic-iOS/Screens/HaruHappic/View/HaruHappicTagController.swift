@@ -7,7 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol HaruHappicTagControllerDelegate: AnyObject {
+    func showDetailView(_ id: String)
+}
+
 final class HaruHappicTagController: UIViewController {
+    
+    // MARK: - Properties
+    weak var delegate: HaruHappicTagControllerDelegate?
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
@@ -79,8 +87,12 @@ extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.className, for: indexPath)
-                as? TagCollectionViewCell else { return UICollectionViewCell()}
+                as? TagCollectionViewCell else { return UICollectionViewCell() }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showDetailView("")
     }
 }
 
