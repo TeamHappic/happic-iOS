@@ -12,6 +12,8 @@ import Pageboy
 final class OverallStatsController: UIViewController {
 
     // MARK: - Properties
+    private var selectedMonth = Calendar.current.component(.month, from: Date())
+    
     private let viewPager = TabmanViewController()
     private let keywordRankViewController = KeywordRankController()
     private let categoryRankController = CategoryRankController()
@@ -149,6 +151,10 @@ extension OverallStatsController: CustomMonthViewDelegate {
 
 extension OverallStatsController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
+        let monthGap = Int(month)! - selectedMonth
+        monthHappicRecordController.changeCalendarMonth(monthGap: monthGap)
+        selectedMonth = Int(month)!
+        
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {

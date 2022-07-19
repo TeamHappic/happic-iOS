@@ -64,5 +64,9 @@ final class MonthHappicRecordController: UIViewController {
             make.bottom.equalToSuperview().inset(100)
         }
     }
+    
+    func changeCalendarMonth(monthGap: Int) {
+        calendarView.changeMonth(monthGap: monthGap)
+    }
 
 }
