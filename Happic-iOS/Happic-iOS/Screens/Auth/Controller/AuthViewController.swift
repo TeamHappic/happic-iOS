@@ -43,7 +43,7 @@ class AuthViewController: UIViewController {
 
     @objc
     private func presentCreateCharacterViewController() {
-        let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
+        let nextSB = UIStoryboard(name: "CreateCharacterView", bundle: nil)
                 let nextVC = nextSB.instantiateViewController(withIdentifier: "CreateCharacterViewController")
                 let nav = UINavigationController(rootViewController: nextVC)
                 nav.modalPresentationStyle = .fullScreen
