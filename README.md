@@ -8,9 +8,7 @@
 > 서비스 한 줄 소개: 하루 한 컷의 사진과 키워드 추출을 통해 찾아가는 매일의 행복
 >
 > SOPT 30th APP JAM <br>
-> 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
-
-`추후 릴리즈 예정 `
+> 프로젝트 기간 : 2021.07.02 ~
 
 <br>
 
@@ -72,7 +70,6 @@
 - **Code Review Rule**
     - 코드 리뷰는 최대한 빨리 한다.
     - 코드 리뷰는 최대한 정성껏 한다.
-    - [코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/#:~:text=%EC%BD%94%EB%93%9C%20%EB%A6%AC%EB%B7%B0%EB%9E%80%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EA)를 참고하여 우선순위 라벨을 사용한다.
    
  <br>
 
