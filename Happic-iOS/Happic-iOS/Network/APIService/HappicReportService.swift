@@ -35,6 +35,4 @@ struct HappicReportService {
             }
         }
     }
-    
-    
 }
