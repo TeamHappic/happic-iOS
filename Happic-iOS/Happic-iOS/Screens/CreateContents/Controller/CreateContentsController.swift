@@ -39,6 +39,7 @@ final class CreateContentsController: UIViewController {
     private let saveButton = UIButton(type: .system).then {
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpOrange]), for: .normal)
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray6]), for: .disabled)
+        $0.isEnabled = false
     }
     
     var pickerImageView = UIImageView().then {
@@ -220,11 +221,13 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
         let row = self.whenPicker.selectedRow(inComponent: 0)
         self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
         self.whenTagView.userTextField.resignFirstResponder()
+        validateCheck()
     }
 
     @objc func cancelPicker() {
         self.whenTagView.userTextField.text = nil
         self.whenTagView.userTextField.resignFirstResponder()
+        validateCheck()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -261,6 +264,13 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
 
 // MARK: - Extensions
 extension CreateContentsController: CustomRecommendTagViewDelgegate {
+    func validateCheck() {
+        let hasText = [whenTagView, whereTagView, whoTagView, whatTagView].allSatisfy {
+            $0.hasText
+        }
+        saveButton.isEnabled = hasText
+    }
+    
     func scrollUp(_ view: CustomRecommendTagView) {
         let height = view.frame.size.height
         let offset = CGPoint(x: 0, y: view.frame.origin.y + height)

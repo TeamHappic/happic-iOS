@@ -10,11 +10,15 @@ import UIKit
 // MARK: - Protocols
 protocol CustomRecommendTagViewDelgegate: AnyObject {
     func scrollUp(_ view: CustomRecommendTagView)
+    func validateCheck()
 }
 
 final class CustomRecommendTagView: UIView {
     
     // MARK: - Properties
+    var hasText: Bool {
+        return userTextField.hasText
+    }
     weak var delegate: CustomRecommendTagViewDelgegate?
     
     // MARK: - UI
@@ -32,6 +36,7 @@ final class CustomRecommendTagView: UIView {
         $0.attributedPlaceholder = NSAttributedString(string: "tag를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         $0.textColor = .hpGray1
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.addTarget(self, action: #selector(handleTextFieldEditing(sender:)), for: .editingChanged)
         $0.returnKeyType = .done
     }
     
@@ -183,15 +188,23 @@ final class CustomRecommendTagView: UIView {
         userTextField.delegate = self
     }
     
+    @objc private func handleTextFieldEditing(sender: UITextField) {
+        delegate?.validateCheck()
+    }
+    
     @objc func tagButtonDidtap(sender: UIButton) {
         userTextField.resignFirstResponder()
         userTextField.text = sender.currentAttributedTitle?.string
+        delegate?.validateCheck()
     }
 }
 
 // MARK: - Extensions
 extension CustomRecommendTagView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        handleTextFieldEditing(sender: textField)
+        
         // backspace 허용
         if let char = string.cString(using: String.Encoding.utf8) {
             let isBackSpace = strcmp(char, "\\b")
