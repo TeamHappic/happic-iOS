@@ -14,6 +14,9 @@
 		8E367614287D429600326074 /* HaruHappicTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E367613287D429600326074 /* HaruHappicTagController.swift */; };
 		8E4245072885DA640063368C /* HaruHappicDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4245062885DA640063368C /* HaruHappicDetailController.swift */; };
 		8E42450928868C200063368C /* PhotoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42450828868C200063368C /* PhotoDetailCollectionViewCell.swift */; };
+		8E6D976B2887E29E0010B9E5 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6D976A2887E29E0010B9E5 /* KakaoSDKAuth */; };
+		8E6D976D2887E29E0010B9E5 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6D976C2887E29E0010B9E5 /* KakaoSDKCommon */; };
+		8E6D97702887E7AB0010B9E5 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6D976F2887E7AB0010B9E5 /* KakaoSDKUser */; };
 		8E8A1CE4287C75480050184F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CDF287C75480050184F /* Pretendard-Bold.otf */; };
 		8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE0287C75480050184F /* Pretendard-Medium.otf */; };
 		8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A1CE1287C75480050184F /* Pretendard-ExtraBold.otf */; };
@@ -195,16 +198,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */,
+				8E6D976D2887E29E0010B9E5 /* KakaoSDKCommon in Frameworks */,
 				CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */,
 				CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */,
+				8E6D97702887E7AB0010B9E5 /* KakaoSDKUser in Frameworks */,
 				CEA4BE2D2873094C008583C3 /* Then in Frameworks */,
 				CEA4BE302873096C008583C3 /* SnapKit in Frameworks */,
+				8E6D976B2887E29E0010B9E5 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6D976E2887E7AB0010B9E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E8A1CDE287C750D0050184F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +277,7 @@
 			children = (
 				CEBB69D12873087D000EEB8A /* Happic-iOS */,
 				CEBB69D02873087D000EEB8A /* Products */,
+				8E6D976E2887E7AB0010B9E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -801,6 +815,9 @@
 				CEA4BE32287309A7008583C3 /* Alamofire */,
 				CEA4BE35287309D5008583C3 /* Kingfisher */,
 				CEF6E0AD2878973E00A1636F /* Tabman */,
+				8E6D976A2887E29E0010B9E5 /* KakaoSDKAuth */,
+				8E6D976C2887E29E0010B9E5 /* KakaoSDKCommon */,
+				8E6D976F2887E7AB0010B9E5 /* KakaoSDKUser */,
 			);
 			productName = "Happic-iOS";
 			productReference = CEBB69CF2873087D000EEB8A /* Happic-iOS.app */;
@@ -836,6 +853,7 @@
 				CEA4BE31287309A7008583C3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */,
+				8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = CEBB69D02873087D000EEB8A /* Products */;
 			projectDirPath = "";
@@ -1109,6 +1127,8 @@
 				DEVELOPMENT_TEAM = 9K86FQHDLU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happic-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "해픽 앱에서 사용자의 카메라를 사용합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "하루해픽 게시글을 업로드하기 위해 사진첩 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1139,6 +1159,8 @@
 				DEVELOPMENT_TEAM = 9K86FQHDLU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happic-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "해픽 앱에서 사용자의 카메라를 사용합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "하루해픽 게시글을 업로드하기 위해 사진첩 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1182,6 +1204,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CEA4BE2B2873094C008583C3 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -1225,6 +1255,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E6D976A2887E29E0010B9E5 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		8E6D976C2887E29E0010B9E5 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		8E6D976F2887E7AB0010B9E5 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
 		CEA4BE2C2873094C008583C3 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEA4BE2B2873094C008583C3 /* XCRemoteSwiftPackageReference "Then" */;
