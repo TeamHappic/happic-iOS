@@ -12,6 +12,8 @@ final class CreateContentsController: UIViewController {
     // MARK: - Properties
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
+    var leftPickerValue: String = "오전"
+    var rightPickerValue: String = "1시"
     
     // MARK: - UI
     private lazy var headerView = UIView()
@@ -218,9 +220,8 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     @objc func donePicker() {
-        let row = self.whenPicker.selectedRow(inComponent: 0)
-        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
         self.whenTagView.userTextField.resignFirstResponder()
+        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
         validateCheck()
     }
 
@@ -257,8 +258,16 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // 에러 수정 필요
-        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
+        
+        switch component {
+        case 0:
+            leftPickerValue = self.allMeridiem[row]
+        case 1:
+            rightPickerValue = self.allHour[row]
+        default:
+            print(component)
+        }
+        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
     }
 }
 
