@@ -74,6 +74,7 @@ final class HaruHappicDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
     }
     
     // MARK: - Functions
@@ -82,6 +83,11 @@ final class HaruHappicDetailController: UIViewController {
         setHeaderView()
         setImageCollectionView()
         setBottomTagView()
+    }
+    
+    private func setDelegate() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
     }
     
     private func setHeaderView() {
@@ -114,8 +120,6 @@ final class HaruHappicDetailController: UIViewController {
     
     private func setImageCollectionView() {
         
-        photoCollectionView.delegate = self
-        photoCollectionView.dataSource = self
         photoCollectionView.register(PhotoDetailCollectionViewCell.self, forCellWithReuseIdentifier: PhotoDetailCollectionViewCell.className)
         
         view.addSubview(photoCollectionView)
