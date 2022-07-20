@@ -28,7 +28,7 @@ final class HaruHappicDetailController: UIViewController {
     private lazy var deleteButton = UIButton(type: .system).then {
         $0.setImage(ImageLiterals.icnTrash, for: .normal)
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        //        $0.addTarget(self, action: #selector(), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(showAlertPopUp), for: .touchUpInside)
     }
     
     private lazy var dateLabel = UILabel().then {
@@ -156,6 +156,13 @@ final class HaruHappicDetailController: UIViewController {
     
     @objc private func popViewController() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func showAlertPopUp() {
+        let CharacterChangePopUpView = CustomPopUpController()
+        CharacterChangePopUpView.modalTransitionStyle = .crossDissolve
+        CharacterChangePopUpView.modalPresentationStyle = .overFullScreen
+        present(CharacterChangePopUpView, animated: true)
     }
 }
 
