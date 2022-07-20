@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GmarketSansBold.otf">
+            <string>GmarketSansBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--CreateCharacterView-->
         <scene sceneID="s0d-6b-0kx">
@@ -25,23 +30,16 @@
                             </label>
                             <view contentMode="scaleToFill" restorationIdentifier="CharacterIntroduceView" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-6O-BGX" customClass="CharacterIntroduceView" customModule="Happic_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="862" width="414" height="510"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="510" id="bhr-LO-5po"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Qe-a0j">
-                                <rect key="frame" x="28" y="256" width="358" height="284"/>
+                                <rect key="frame" x="28" y="297" width="358" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 할 길잡이를 선택해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-z0-vUp">
-                                        <rect key="frame" x="91.5" y="0.0" width="175" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nga-kV-bhk">
-                                        <rect key="frame" x="0.0" y="84" width="152" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_moon" translatesAutoresizingMaskIntoConstraints="NO" id="TEq-We-COH">
                                                 <rect key="frame" x="19" y="38" width="114" height="124"/>
@@ -57,11 +55,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="B4b-WF-dek"/>
                                             <constraint firstAttribute="width" constant="152" id="sXW-SM-niU"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7T-Fm-MDr">
-                                        <rect key="frame" x="206" y="84" width="152" height="200"/>
+                                        <rect key="frame" x="206" y="0.0" width="152" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_cloud" translatesAutoresizingMaskIntoConstraints="NO" id="l15-OX-jrF">
                                                 <rect key="frame" x="19" y="38" width="114" height="124"/>
@@ -84,28 +83,32 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="284" id="5gS-M9-cep"/>
-                                    <constraint firstItem="CHT-z0-vUp" firstAttribute="centerX" secondItem="fEn-Qe-a0j" secondAttribute="centerX" id="A2q-Uc-zoF"/>
-                                    <constraint firstItem="M7T-Fm-MDr" firstAttribute="top" secondItem="CHT-z0-vUp" secondAttribute="bottom" constant="60" id="Ulk-sw-Rbz"/>
+                                    <constraint firstAttribute="height" constant="200" id="5gS-M9-cep"/>
                                     <constraint firstAttribute="trailing" secondItem="M7T-Fm-MDr" secondAttribute="trailing" id="aUS-hI-g9y"/>
                                     <constraint firstItem="Nga-kV-bhk" firstAttribute="leading" secondItem="fEn-Qe-a0j" secondAttribute="leading" id="gDm-Zs-EyE"/>
                                     <constraint firstAttribute="bottom" secondItem="Nga-kV-bhk" secondAttribute="bottom" id="ghW-ez-nnS"/>
-                                    <constraint firstItem="Nga-kV-bhk" firstAttribute="top" secondItem="CHT-z0-vUp" secondAttribute="bottom" constant="60" id="hmG-iD-g7B"/>
                                     <constraint firstAttribute="bottom" secondItem="M7T-Fm-MDr" secondAttribute="bottom" id="pm9-mH-4vL"/>
-                                    <constraint firstItem="CHT-z0-vUp" firstAttribute="top" secondItem="fEn-Qe-a0j" secondAttribute="top" id="s3w-tP-DKn"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 할 길잡이를 선택해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-z0-vUp">
+                                <rect key="frame" x="115.5" y="237" width="183" height="16"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aZM-5P-wWH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="4Uh-B9-hQR"/>
+                            <constraint firstItem="CHT-z0-vUp" firstAttribute="top" secondItem="aZM-5P-wWH" secondAttribute="bottom" constant="136" id="Bjh-jN-pyN"/>
                             <constraint firstItem="fEn-Qe-a0j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="Wmk-Qi-iRS"/>
                             <constraint firstItem="aZM-5P-wWH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XLw-qX-k93"/>
-                            <constraint firstItem="fEn-Qe-a0j" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="256" id="ZzR-Vz-M5A"/>
+                            <constraint firstItem="fEn-Qe-a0j" firstAttribute="top" secondItem="CHT-z0-vUp" secondAttribute="top" constant="60" id="ZzR-Vz-M5A"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fEn-Qe-a0j" secondAttribute="trailing" constant="28" id="cQf-cB-Wht"/>
                             <constraint firstItem="SNA-6O-BGX" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eFB-vE-Scz"/>
                             <constraint firstItem="SNA-6O-BGX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="510" id="jtC-KA-V72"/>
+                            <constraint firstItem="CHT-z0-vUp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pgT-TD-Zp8"/>
                             <constraint firstItem="SNA-6O-BGX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ycv-xU-nR4"/>
                         </constraints>
                     </view>
@@ -115,6 +118,7 @@
                         <outlet property="MoonAndCloudUIView" destination="fEn-Qe-a0j" id="g6U-CF-4L0"/>
                         <outlet property="MoonUIView" destination="Nga-kV-bhk" id="Gvk-Uc-UWb"/>
                         <outlet property="bottomViewHeight" destination="bhr-LO-5po" id="Zcj-6F-JCD"/>
+                        <outlet property="chooseLabel" destination="CHT-z0-vUp" id="Dmc-iy-fUA"/>
                         <outlet property="recordLabel" destination="aZM-5P-wWH" id="5T9-5D-wXH"/>
                     </connections>
                 </viewController>
