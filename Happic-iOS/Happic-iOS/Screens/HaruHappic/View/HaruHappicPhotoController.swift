@@ -111,11 +111,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
 
 extension HaruHappicPhotoController: CustomMonthViewDelegate {
     func setMonthPickerView(_ isMonthViewEnabled: Bool) {
-        if isMonthViewEnabled == true {
-            customMonthPickerView.isHidden = false
-        } else {
-            customMonthPickerView.isHidden = true
-        }
+        customMonthPickerView.isHidden = isMonthViewEnabled ? false : true
     }
 }
 
