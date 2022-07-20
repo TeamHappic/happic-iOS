@@ -99,7 +99,7 @@ class CustomPopUpController: UIViewController {
         
         view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
-            make.centerY.equalTo(view.safeAreaLayoutGuide)
+            make.centerY.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(300)
         }

@@ -28,7 +28,7 @@ final class HaruHappicDetailController: UIViewController {
     private lazy var deleteButton = UIButton(type: .system).then {
         $0.setImage(ImageLiterals.icnTrash, for: .normal)
         $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        //        $0.addTarget(self, action: #selector(), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(showAlertPopUp), for: .touchUpInside)
     }
     
     private lazy var dateLabel = UILabel().then {
@@ -44,7 +44,6 @@ final class HaruHappicDetailController: UIViewController {
         layout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = true
-        collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
@@ -75,6 +74,7 @@ final class HaruHappicDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
     }
     
     // MARK: - Functions
@@ -85,6 +85,11 @@ final class HaruHappicDetailController: UIViewController {
         setBottomTagView()
     }
     
+    private func setDelegate() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+    }
+    
     private func setHeaderView() {
         
         view.addSubview(headerView)
@@ -92,48 +97,44 @@ final class HaruHappicDetailController: UIViewController {
         
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(65)
+            make.height.equalTo(150)
         }
         
         backButton.snp.makeConstraints { make in
-            make.centerY.equalTo(headerView)
+            make.top.equalTo(headerView).offset(10)
             make.leading.equalTo(headerView.snp.leading).offset(20)
             make.width.height.equalTo(48)
         }
         
         dateLabel.snp.makeConstraints { make in
-            make.center.equalTo(headerView)
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10)
         }
         
         deleteButton.snp.makeConstraints { make in
-            make.centerY.equalTo(headerView)
-            make.trailing.equalTo(headerView.snp.trailing).inset(20)
+            make.centerY.equalTo(dateLabel)
+            make.trailing.equalToSuperview().inset(20)
             make.width.height.equalTo(48)
         }
     }
     
     private func setImageCollectionView() {
         
-        photoCollectionView.delegate = self
-        photoCollectionView.dataSource = self
         photoCollectionView.register(PhotoDetailCollectionViewCell.self, forCellWithReuseIdentifier: PhotoDetailCollectionViewCell.className)
         
         view.addSubview(photoCollectionView)
         photoCollectionView.backgroundColor = .clear
         
         photoCollectionView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerY.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(300)
         }
         
         photoCollectionView.contentInsetAdjustmentBehavior = .never
         let cellWidth: CGFloat = floor(cellSize.width)
-        print(cellWidth)
         let insetX = (view.frame.width - cellWidth) / 2.0
-        print(insetX)
         photoCollectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
-        print(photoCollectionView.contentInset)
         photoCollectionView.decelerationRate = .fast
     }
     
@@ -155,6 +156,17 @@ final class HaruHappicDetailController: UIViewController {
     
     @objc private func popViewController() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func showAlertPopUp() {
+        let alartPopUpView = CustomPopUpController()
+        alartPopUpView.setPopUpText(title: "해픽 삭제",
+                                    contents: "사진 삭제시 사진과 태그가 모두 지워집니다.\n또한 해당 내용은 복구가 불가능합니다.\n삭제하시겠습니까?",
+                                    firstButtonTitle: "취소",
+                                    secondButtonTitle: "삭제하기")
+        alartPopUpView.modalTransitionStyle = .crossDissolve
+        alartPopUpView.modalPresentationStyle = .overFullScreen
+        present(alartPopUpView, animated: true)
     }
 }
 
@@ -224,28 +236,23 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         if Int(roundedIndex) < previousIndex {
             let preIndexPath = IndexPath(item: previousIndex-2, section: 0)
             let nextIndexPath = IndexPath(item: previousIndex, section: 0)
-            print(preIndexPath, previousIndex, nextIndexPath)
             if let preCell = photoCollectionView.cellForItem(at: preIndexPath),
                let nextCell = photoCollectionView.cellForItem(at: nextIndexPath) {
                 animateZoomforCellremove(zoomCell: preCell)
                 animateZoomforCellremove(zoomCell: nextCell)
             }
             previousIndex = indexPath.item
-            print(previousIndex)
         }
         
         if Int(roundedIndex) > previousIndex {
             let preIndexPath = IndexPath(item: previousIndex, section: 0)
             let nextIndexPath = IndexPath(item: previousIndex+2, section: 0)
-            print(preIndexPath, previousIndex, nextIndexPath)
             if let preCell = photoCollectionView.cellForItem(at: preIndexPath),
                let nextCell = photoCollectionView.cellForItem(at: nextIndexPath) {
                 animateZoomforCellremove(zoomCell: preCell)
                 animateZoomforCellremove(zoomCell: nextCell)
             }
-            
             previousIndex = indexPath.item
-            print(previousIndex)
         }
     }
     

@@ -15,7 +15,6 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         $0.layer.cornerRadius = 8
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.backgroundColor = .black
     }
     
     private lazy var dailyLabel = UILabel().then {
