@@ -56,11 +56,16 @@ final class CreateContentsController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObserver()
         tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Functions
@@ -139,7 +144,7 @@ final class CreateContentsController: UIViewController {
         tagStacks.snp.makeConstraints { make in
             make.top.equalTo(pickerImageView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().inset(400)
+            make.bottom.equalToSuperview().inset(100.adjustedH)
         }
         
         whenTagView.tagLabel.text = "#when"
@@ -153,6 +158,23 @@ final class CreateContentsController: UIViewController {
         
         whatTagView.tagLabel.text = "#what"
         whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
+    }
+    
+    private func addKeyboardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardUp(notification: NSNotification) {
+        whenTagView.superview?.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(160.adjustedH)
+        }
+    }
+    
+    @objc func keyboardDown() {
+        whenTagView.superview?.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(100.adjustedH)
+        }
     }
     
     @objc private func dismissViewController() {
@@ -244,12 +266,14 @@ extension CreateContentsController: UIScrollViewDelegate {
         if scrollView.contentOffset.y < 50 {
             UIView.animate(withDuration: 0.5) {
                 self.pickerImageView.transform = CGAffineTransform.identity
+                self.pickerImageView.superview?.transform = CGAffineTransform.identity
                 self.whenTagView.superview?.transform = CGAffineTransform.identity
             }
         } else {
             UIView.animate(withDuration: 0.5) {
-                self.pickerImageView.transform = CGAffineTransform(scaleX: 1/3, y: 1/3)
-                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -100)
+                self.pickerImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+                self.pickerImageView.superview?.transform = CGAffineTransform(translationX: 0, y: -40.adjustedH)
+                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -110.adjustedH)
             }
         }
     }
