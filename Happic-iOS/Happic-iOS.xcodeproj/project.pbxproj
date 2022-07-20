@@ -57,6 +57,7 @@
 		CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */; };
 		CECD7F3328884EC400FD1420 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3228884EC400FD1420 /* FirebaseAnalytics */; };
 		CECD7F3528884EC400FD1420 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3428884EC400FD1420 /* FirebaseMessaging */; };
+		CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
@@ -151,6 +152,7 @@
 		CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOSRelease.entitlements"; sourceTree = "<group>"; };
 		CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOS.entitlements"; sourceTree = "<group>"; };
+		CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF6E04428780EE100A1636F /* tempAPIService.swift */,
+				CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */,
 				CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */,
 				CE479646288420830095ADD4 /* Storyboarded.swift in Sources */,
+				CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */,
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
 				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,

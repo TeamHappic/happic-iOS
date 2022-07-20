@@ -13,4 +13,7 @@ struct APIConstants {
     
     // MARK: - Auth
     // 예시: static let signURL = baseURL + "/user/sign"
+    
+    // MARK: - 푸시 유저 등록
+    static let pushUserRegisterURL = baseURL + "/user/push"
 }
