@@ -150,6 +150,7 @@
 		CEBB69E02873087F000EEB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOSRelease.entitlements"; sourceTree = "<group>"; };
+		CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOS.entitlements"; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
@@ -299,6 +300,7 @@
 		CEBB69D12873087D000EEB8A /* Happic-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */,
 				CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */,
 				CEF6E03C28780DE000A1636F /* Network */,
 				CEF6E03D28780DE900A1636F /* Global */,
@@ -1134,6 +1136,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Happic-iOS/Happic-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
