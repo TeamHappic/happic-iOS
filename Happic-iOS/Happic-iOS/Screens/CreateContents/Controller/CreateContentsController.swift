@@ -12,6 +12,8 @@ final class CreateContentsController: UIViewController {
     // MARK: - Properties
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
+    var leftPickerValue: String = "오전"
+    var rightPickerValue: String = "1시"
     
     // MARK: - UI
     private lazy var headerView = UIView()
@@ -37,8 +39,9 @@ final class CreateContentsController: UIViewController {
     }
     
     private let saveButton = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]), for: .normal)
-        $0.setTitleColor(.hpGray6, for: .normal)
+        $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpOrange]), for: .normal)
+        $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray6]), for: .disabled)
+        $0.isEnabled = false
     }
     
     var pickerImageView = UIImageView().then {
@@ -52,14 +55,20 @@ final class CreateContentsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObserver()
         tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Functions
@@ -68,6 +77,15 @@ final class CreateContentsController: UIViewController {
         setHeaderView()
         setScrollView()
         configPickerView()
+    }
+    
+    private func setDelegate() {
+        whenTagView.delegate = self
+        whereTagView.delegate = self
+        whoTagView.delegate = self
+        whatTagView.delegate = self
+        
+        scrollView.delegate = self
     }
     
     private func setHeaderView() {
@@ -95,6 +113,13 @@ final class CreateContentsController: UIViewController {
             make.trailing.equalTo(headerView.snp.trailing).inset(20)
             make.width.height.equalTo(48)
         }
+        
+        headerView.layer.masksToBounds = false
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowRadius = 4 / 2.0
+        headerView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
+        headerView.layer.shadowOpacity = 0.25
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     private func setScrollView() {
@@ -120,19 +145,17 @@ final class CreateContentsController: UIViewController {
             make.width.height.equalTo(300.adjusted)
         }
         
-        let tagStacks = UIStackView(arrangedSubviews: [whenTagView, whereTagView, whoTagView, whatTagView])
-        tagStacks.axis = .vertical
-        tagStacks.spacing = 8
-        tagStacks.distribution = .fill
+        let tagStackView = UIStackView(arrangedSubviews: [whenTagView, whereTagView, whoTagView, whatTagView])
+        tagStackView.axis = .vertical
+        tagStackView.spacing = 8
+        tagStackView.distribution = .fill
         
-        containerView.addSubview(tagStacks)
-        tagStacks.snp.makeConstraints { make in
+        containerView.addSubview(tagStackView)
+        tagStackView.snp.makeConstraints { make in
             make.top.equalTo(pickerImageView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().inset(100)
+            make.bottom.equalToSuperview().inset(100.adjustedH)
         }
-        
-        hideKeyboardWhenTappedAround()
         
         whenTagView.tagLabel.text = "#when"
         whenTagView.userTextField.placeholder = "시간을 입력해주세요"
@@ -145,6 +168,23 @@ final class CreateContentsController: UIViewController {
         
         whatTagView.tagLabel.text = "#what"
         whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
+    }
+    
+    private func addKeyboardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardUp(notification: NSNotification) {
+        whenTagView.superview?.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(160.adjustedH)
+        }
+    }
+    
+    @objc func keyboardDown() {
+        whenTagView.superview?.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(100.adjustedH)
+        }
     }
     
     @objc private func dismissViewController() {
@@ -180,14 +220,15 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     @objc func donePicker() {
-        let row = self.whenPicker.selectedRow(inComponent: 0)
-        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
         self.whenTagView.userTextField.resignFirstResponder()
+        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
+        validateCheck()
     }
 
     @objc func cancelPicker() {
         self.whenTagView.userTextField.text = nil
         self.whenTagView.userTextField.resignFirstResponder()
+        validateCheck()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -217,7 +258,49 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // 에러 수정 필요
-        self.whenTagView.userTextField.text = self.allMeridiem[row] + self.allHour[row]
+        
+        switch component {
+        case 0:
+            leftPickerValue = self.allMeridiem[row]
+        case 1:
+            rightPickerValue = self.allHour[row]
+        default:
+            print(component)
+        }
+        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
+    }
+}
+
+// MARK: - Extensions
+extension CreateContentsController: CustomRecommendTagViewDelgegate {
+    func validateCheck() {
+        let hasText = [whenTagView, whereTagView, whoTagView, whatTagView].allSatisfy {
+            $0.hasText
+        }
+        saveButton.isEnabled = hasText
+    }
+    
+    func scrollUp(_ view: CustomRecommendTagView) {
+        let height = view.frame.size.height
+        let offset = CGPoint(x: 0, y: view.frame.origin.y + height)
+        scrollView.setContentOffset(offset, animated: true)
+    }
+}
+
+extension CreateContentsController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 50 {
+            UIView.animate(withDuration: 0.5) {
+                self.pickerImageView.transform = CGAffineTransform.identity
+                self.pickerImageView.superview?.transform = CGAffineTransform.identity
+                self.whenTagView.superview?.transform = CGAffineTransform.identity
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.pickerImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+                self.pickerImageView.superview?.transform = CGAffineTransform(translationX: 0, y: -40.adjustedH)
+                self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -110.adjustedH)
+            }
+        }
     }
 }
