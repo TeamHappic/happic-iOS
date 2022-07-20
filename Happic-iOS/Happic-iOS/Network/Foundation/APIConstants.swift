@@ -19,4 +19,5 @@ struct APIConstants {
     
     // MARK: - 해픽 레포트
     static let happicReportSummaryURL = baseURL + "/mypage"
+    static let happicReportKeywordRankURL = baseURL + "/mypage/keyword"
 }
