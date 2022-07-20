@@ -25,28 +25,28 @@ final class TabBarController: UITabBarController {
         view.backgroundColor = .black
         
         let homeController = templateNavigationController(title: "홈",
-                                                          unselectedImage: UIImage(systemName: "house")!,
-                                                          selectedImage: UIImage(systemName: "house")!,
+                                                          unselectedImage: ImageLiterals.icnHomeOff,
+                                                          selectedImage: ImageLiterals.icnHomeOn,
                                                           rootViewController: HomeController())
         
         let haruHappicController = templateNavigationController(title: "하루해픽",
-                                                                unselectedImage: UIImage(systemName: "calendar")!,
-                                                                selectedImage: UIImage(systemName: "calendar")!,
+                                                                unselectedImage: ImageLiterals.icnDailyHappicOff,
+                                                                selectedImage: ImageLiterals.icnDailyHappicOn,
                                                                 rootViewController: HaruHappicController())
         
         let createContentsController = templateNavigationController(title: "",
-                                                                    unselectedImage: UIImage(systemName: "plus.circle")!,
-                                                                    selectedImage: UIImage(systemName: "plus.circle")!,
+                                                                    unselectedImage: ImageLiterals.btnPlus,
+                                                                    selectedImage: ImageLiterals.btnPlus,
                                                                     rootViewController: CreateContentsController())
         
         let happicReportController = templateNavigationController(title: "해픽레포트",
-                                                                  unselectedImage: UIImage(systemName: "doc")!,
-                                                                  selectedImage: UIImage(systemName: "doc")!,
+                                                                  unselectedImage: ImageLiterals.icnHappicReportOff,
+                                                                  selectedImage: ImageLiterals.icnHappicReportOn,
                                                                   rootViewController: HappicReportController())
         
         let settingController = templateNavigationController(title: "설정",
-                                                             unselectedImage: UIImage(systemName: "gearshape")!,
-                                                             selectedImage: UIImage(systemName: "gearshape")!,
+                                                             unselectedImage: ImageLiterals.icnSettingOff,
+                                                             selectedImage: ImageLiterals.icnSettingOn,
                                                              rootViewController: SettingController())
         
         viewControllers = [homeController, haruHappicController, createContentsController, happicReportController, settingController]
@@ -94,6 +94,7 @@ final class TabBarController: UITabBarController {
     }
 }
 
+// MARK: - Extensions
 extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let index = viewControllers?.firstIndex(of: viewController)
@@ -129,7 +130,7 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
         let createContentsController = CreateContentsController()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             createContentsController.pickerImageView.image = image
-            picker.dismiss(animated: true, completion: nil)
+            picker.dismiss(animated: true)
             createContentsController.modalPresentationStyle = .fullScreen
             present(createContentsController, animated: true, completion: nil)
         }

@@ -25,11 +25,9 @@ final class HappicReportSectionHeader: UIView {
 
     // MARK: - UI
     private let sectionDividerImageView = UIImageView().then {
-        $0.image = UIImage(systemName: "moon")
+        $0.image = ImageLiterals.imageStar
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.backgroundColor = .black
-        $0.tintColor = .white
     }
     
     private lazy var sectionTitleLabel = UILabel().then {
@@ -39,8 +37,8 @@ final class HappicReportSectionHeader: UIView {
     }
     
     private lazy var showDetailRankViewButton = UIButton(type: .system).then {
-        $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        $0.tintColor = .white
+        $0.setImage(ImageLiterals.icnRight, for: .normal)
+        $0.tintColor = .hpGray3
         $0.addTarget(self, action: #selector(showDetailRankViewButtonDidTap), for: .touchUpInside)
     }
     
@@ -74,18 +72,20 @@ final class HappicReportSectionHeader: UIView {
         addSubviews(sectionDividerImageView, sectionTitleLabel, showDetailRankViewButton)
         sectionDividerImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
-            make.top.equalToSuperview().inset(16)
+            make.top.equalToSuperview().inset(32)
+            make.width.height.equalTo(16)
         }
         
         sectionTitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalTo(sectionDividerImageView.snp.bottom).offset(11)
-            make.bottom.equalToSuperview().inset(7)
+            make.bottom.equalToSuperview().inset(12)
         }
         
         showDetailRankViewButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview()
             make.centerY.equalTo(sectionTitleLabel)
+            make.width.height.equalTo(48)
         }
     }
     

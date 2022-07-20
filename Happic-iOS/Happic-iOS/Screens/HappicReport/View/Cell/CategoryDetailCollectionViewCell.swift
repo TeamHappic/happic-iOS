@@ -11,20 +11,20 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     // MARK: - UI
     private lazy var categoryNameLabel = UILabel().then {
         $0.text = "#who 1"
-        $0.textColor = .gray
-        $0.font = UIFont.font(.pretendardRegular, ofSize: 14)
+        $0.textColor = .hpGray5
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     private lazy var userKeywordLabel = UILabel().then {
         $0.text = "햄식이"
-        $0.textColor = .white
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.textColor = .hpGray2
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
     
     private lazy var countLabel = UILabel().then {
         $0.text = "xx회"
-        $0.textColor = .white
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.textColor = .hpWhite
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 16)
     }
     
     // MARK: - Initialization
@@ -39,7 +39,7 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpGray8
+        backgroundColor = .hpGray9
         layer.cornerRadius = 10
 
         addSubviews(categoryNameLabel, userKeywordLabel, countLabel)
@@ -61,8 +61,8 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
     func setCategoryNameLabel(type: CategoryType, index: Int) {
         switch type {
-        case .hourCategory:
-            categoryNameLabel.attributedText = makeCategoryString(category: "#hour ", index: index)
+        case .whenCategory:
+            categoryNameLabel.attributedText = makeCategoryString(category: "#when ", index: index)
         case .whereCategory:
             categoryNameLabel.attributedText = makeCategoryString(category: "#where ", index: index)
         case .whoCategory:

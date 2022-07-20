@@ -7,7 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol HaruHappicPhotoControllerDelegate: AnyObject {
+    func showDetailView(_ id: String)
+}
+
 final class HaruHappicPhotoController: UIViewController {
+    
+    // MARK: - Properties
+    weak var delegate: HaruHappicPhotoControllerDelegate?
     
     // MARK: - UI
     private lazy var customMonthView = CustomMonthView()
@@ -35,6 +43,8 @@ final class HaruHappicPhotoController: UIViewController {
     private func configureUI() {
         
         view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
+        
+        containerCollectionView.backgroundColor = .clear
         
         customMonthView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
@@ -76,8 +86,12 @@ extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.className, for: indexPath)
-                as? PhotoCollectionViewCell else { return UICollectionViewCell()}
+                as? PhotoCollectionViewCell else { return UICollectionViewCell() }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showDetailView("")
     }
 }
 
@@ -87,7 +101,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

@@ -7,25 +7,33 @@
 
 import UIKit
 
-final class HaruHappicController: UIViewController {
+final class HaruHappicController: BaseUploadViewController {
+    
+    // MARK: - Properties
+    private lazy var haruHappicPhotoController = HaruHappicPhotoController()
+    private lazy var haruHappicTagController = HaruHappicTagController()
     
     // MARK: - UI
     private lazy var addPhotoButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnAddPhoto, for: .normal)
-        $0.tintColor = .white
+        $0.setImage(ImageLiterals.icnPlus, for: .normal)
         $0.addTarget(self, action: #selector(addPhotoButtonDidTap), for: .touchUpInside)
     }
     
-    private lazy var haruHappicViewPager = CustomViewPager(viewControllers: [HaruHappicPhotoController(), HaruHappicTagViewController()], buttonTitles: ["사진", "태그"], barHeight: 34, indicatorWeight: 4, isScrollEnabled: true)
+    private lazy var haruHappicViewPager = CustomViewPager(viewControllers: [haruHappicPhotoController, haruHappicTagController], buttonTitles: ["사진", "태그"], buttonFontSize: 16, barHeight: 34, indicatorWeight: 4, isScrollEnabled: true)
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setDelegate()
+//        showToast(message: "이미 오늘의 해픽을 등록했어요")
     }
     
     // MARK: - Functions
     private func configureUI() {
+        
+        setPurpleBackgroundColor()
+        
         view.addSubviews(addPhotoButton, haruHappicViewPager)
 
         addPhotoButton.snp.makeConstraints { make in
@@ -42,8 +50,19 @@ final class HaruHappicController: UIViewController {
     }
     
     @objc private func addPhotoButtonDidTap() {
-        let createContentsController = CreateContentsController()
-        createContentsController.modalPresentationStyle = .fullScreen
-        self.present(createContentsController, animated: true, completion: nil)
+        setActionSheet()
+    }
+    
+    private func setDelegate() {
+        haruHappicPhotoController.delegate = self
+        haruHappicTagController.delegate = self
+    }
+}
+
+// MARK: - Extensions
+extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTagControllerDelegate {
+    func showDetailView(_ id: String) {
+        let detailViewController = HaruHappicDetailController()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

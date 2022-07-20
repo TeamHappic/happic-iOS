@@ -11,7 +11,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private let alarmImageView = UIImageView().then {
-        $0.image = ImageLiteral.icnAlarm
+        $0.image = ImageLiterals.icnInfo
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
@@ -23,7 +23,8 @@ class SettingCollectionViewCell: UICollectionViewCell {
     }
     
     private let nextArrowImageView = UIImageView().then {
-        $0.image = ImageLiteral.icnArrowNext
+        $0.image = ImageLiterals.icnRight
+        $0.tintColor = .hpGray3
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
@@ -40,7 +41,7 @@ class SettingCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpGray9
+        backgroundColor = .hpBgBlack0
         
         addSubviews(alarmImageView, settingNameLabel, nextArrowImageView)
         alarmImageView.snp.makeConstraints { make in

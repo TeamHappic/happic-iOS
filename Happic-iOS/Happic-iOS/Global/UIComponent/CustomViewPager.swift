@@ -21,6 +21,8 @@ final class CustomViewPager: UIView {
     // MARK: - Initialization
     init(viewControllers: [UIViewController],
          buttonTitles: [String],
+         buttonTintColor: UIColor = .white,
+         buttonFontSize: Int = 14,
          barHeight: Int = 40,
          indicatorWeight: Int = 1,
          isScrollEnabled: Bool
@@ -29,7 +31,7 @@ final class CustomViewPager: UIView {
         self.buttonTitles = buttonTitles
         super.init(frame: .zero)
         configureUI()
-        setViewPager(barHeight: barHeight, indicatorWeight: indicatorWeight, isScrollEnabled: isScrollEnabled)
+        setViewPager(barHeight: barHeight, buttonTintColor: buttonTintColor, buttonFontSize: buttonFontSize, indicatorWeight: indicatorWeight, isScrollEnabled: isScrollEnabled)
     }
     
     required init?(coder: NSCoder) {
@@ -43,17 +45,21 @@ final class CustomViewPager: UIView {
         tabMan.dataSource = self
     }
     
-    private func setViewPager(barHeight: Int, indicatorWeight: Int, isScrollEnabled: Bool) {
+    private func setViewPager(barHeight: Int, buttonTintColor: UIColor, buttonFontSize: Int, indicatorWeight: Int, isScrollEnabled: Bool) {
         // Create bar
         let bar = TMBar.ButtonBar()
+        let systemBar = bar.systemBar()
+        systemBar.bar.backgroundColor = UIColor.clear
+        bar.backgroundColor = UIColor.clear
         bar.layout.transitionStyle = .snap
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
         bar.layout.interButtonSpacing = 0
         bar.buttons.customize { button in
-            button.backgroundColor = .black
-            button.tintColor = .white
+            button.backgroundColor = UIColor.clear
+            button.tintColor = buttonTintColor
             button.selectedTintColor = .orange
+            button.font = UIFont.font(.pretendardBold, ofSize: 14)
             button.heightAnchor.constraint(equalToConstant: CGFloat(barHeight)).isActive = true
         }
         
@@ -63,6 +69,18 @@ final class CustomViewPager: UIView {
         // Add to view
         tabMan.addBar(bar, dataSource: self, at: .top)
         tabMan.isScrollEnabled = isScrollEnabled
+        
+        // unselected 상태의 인디케이터 바 추가
+        let indicatorView = UIView().then {
+            $0.backgroundColor = .hpGray6
+        }
+        addSubview(indicatorView)
+        sendSubviewToBack(indicatorView)
+        indicatorView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(indicatorWeight)
+            make.top.equalTo(bar.snp.bottom).inset(indicatorWeight)
+        }
     }
     
     func scrollToIndex(indexOf: Int) {

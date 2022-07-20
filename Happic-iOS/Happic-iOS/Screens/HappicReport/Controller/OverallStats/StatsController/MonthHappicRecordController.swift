@@ -19,7 +19,7 @@ final class MonthHappicRecordController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setBlueBackGroundColor()
         configureUI()
     }
     
@@ -63,6 +63,10 @@ final class MonthHappicRecordController: UIViewController {
             make.trailing.leading.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100)
         }
+    }
+    
+    func changeCalendarMonth(monthGap: Int) {
+        calendarView.changeMonth(monthGap: monthGap)
     }
 
 }

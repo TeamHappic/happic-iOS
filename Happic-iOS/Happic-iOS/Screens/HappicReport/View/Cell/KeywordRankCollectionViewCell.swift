@@ -45,7 +45,7 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpGray8
+        backgroundColor = .hpGray9
         layer.cornerRadius = 10
         
         addSubviews(rankLabel, userKeywordLabel, keywordNameLabel, countLabel)

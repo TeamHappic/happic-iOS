@@ -20,17 +20,16 @@ final class CustomMonthView: UIView {
     
     // MARK: - UI
     lazy var monthLabel = UILabel().then {
-        $0.text = "2022 . 06"
+        $0.text = "2022 . 07"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
     
     private lazy var monthSelectorArrowImage = UIImageView().then {
-        $0.image = ImageLiteral.icnArrowMore
+        $0.image = ImageLiterals.icnDownMini
+        $0.tintColor = .hpWhite
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.backgroundColor = .black
-        $0.tintColor = .white
     }
     
     private lazy var monthPickerView = UIView().then {

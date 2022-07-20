@@ -9,7 +9,7 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     
     
     
-    static var storyboard: Storyboards = .CreateCharacterView
+    static var storyboard: Storyboards = .createCharacterView
     @IBOutlet weak var recordLabel: UILabel!
     @IBOutlet weak var MoonUIView: UIView!
     @IBOutlet weak var CloudUIView: UIView!
@@ -59,17 +59,16 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     @objc
     private func raiseCharacterChooseView() {
         UIView.animate(withDuration: 1.0, animations: { [self] in
-            self.CharacterIntroduceUIView.transform = CGAffineTransform(translationX: 0, y: -310)
+            self.MoonAndCloudUIView.transform = CGAffineTransform(translationX: 30, y: -1610)
         })
     }
 //
     
 
-    
     @objc
     private func scaleDownCreateCharacterView() {
         raiseCharacterIntroduceView()
-        raiseCharacterChooseView()
+//        raiseCharacterChooseView()
         UIView.animate(withDuration: 1.0, animations: {
             self.MoonAndCloudUIView.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
         } , completion: { _ in UIView.animate(withDuration: 1.0){

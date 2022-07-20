@@ -1,5 +1,5 @@
 //
-//  HourCategoryDetailController.swift
+//  CategoryDetailController.swift
 //  Happic-iOS
 //
 //  Created by sejin on 2022/07/12.
@@ -8,7 +8,7 @@
 import UIKit
 
 enum CategoryType {
-    case hourCategory
+    case whenCategory
     case whereCategory
     case whoCategory
     case whatCategory
@@ -17,7 +17,7 @@ enum CategoryType {
 class CategoryDetailController: UIViewController {
     
     // MARK: - Properties
-    var type: CategoryType = .hourCategory
+    var type: CategoryType = .whenCategory
     
     // MARK: - UI
     private lazy var rankCollectionView: UICollectionView = {
@@ -27,6 +27,7 @@ class CategoryDetailController: UIViewController {
         layout.minimumInteritemSpacing = 8
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
@@ -65,7 +66,8 @@ class CategoryDetailController: UIViewController {
         view.addSubview(rankCollectionView)
         rankCollectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
-            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
         }
     }
     
@@ -88,13 +90,13 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
                 withReuseIdentifier: CategoryDetailWithImageCollectionViewCell.className, for: indexPath)
                     as? CategoryDetailWithImageCollectionViewCell
             else { return UICollectionViewCell() }
-            cell.setCategoryNameLabel(type: type, index: indexPath.row)
+            cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
             return cell
         }
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
-        cell.setCategoryNameLabel(type: type, index: indexPath.row)
+        cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
         
         return cell
     }

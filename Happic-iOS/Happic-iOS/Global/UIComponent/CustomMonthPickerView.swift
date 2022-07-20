@@ -16,15 +16,16 @@ final class CustomMonthPickerView: UIView {
     
     // MARK: - Properties
     weak var delegate: CustomMonthPickerViewDelegate?
+    private var selectedButton: UIButton?
     
     // MARK: - UI
     private lazy var lastYearSelectorButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowBack, for: .normal)
+        $0.setImage(ImageLiterals.icnLeft, for: .normal)
         $0.tintColor = .hpGray5
     }
     
     private lazy var nextYearSelectorButton = UIButton(type: .system).then {
-        $0.setImage(ImageLiteral.icnArrowNext, for: .normal)
+        $0.setImage(ImageLiterals.icnRight, for: .normal)
         $0.tintColor = .hpGray5
     }
     
@@ -36,7 +37,7 @@ final class CustomMonthPickerView: UIView {
     
     private lazy var containerView = UIView().then {
         
-        $0.backgroundColor = .hpBgBlack2h.withAlphaComponent(0.95)
+        $0.backgroundColor = .hpBgBlack2.withAlphaComponent(0.95)
         $0.layer.borderColor = UIColor.hpDarkPurple.cgColor
         $0.layer.borderWidth = 1
         $0.layer.cornerRadius = 8
@@ -169,6 +170,9 @@ final class CustomMonthPickerView: UIView {
         if let month = month?.components(separatedBy: "월") {
             delegate?.changeMonthStatus(month[0])
         }
+        selectedButton?.setAttributedTitle(NSAttributedString(string: selectedButton?.currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
+        sender.setAttributedTitle(NSAttributedString(string: sender.currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+        selectedButton = sender
     }
     
     private func controlMonthStatus() {
@@ -183,6 +187,7 @@ final class CustomMonthPickerView: UIView {
                 $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)
                 $0.isEnabled = false
             } else if currentMonth == selectedMonth {
+                selectedButton = $0
                 $0.setAttributedTitle(NSAttributedString(string: "\(selectedMonth)월", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
             }
         }

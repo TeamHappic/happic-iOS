@@ -8,19 +8,29 @@
 import UIKit
 
 final class CategoryRankView: UIView {
-    // MARK: - UI
-    let headerView = HappicReportSectionHeader(type: .categoryRank)
-    // ViewPager에 들어갈 카테고리 별 ViewController 처리
-    private lazy var hourViewController = CategoryDetailController(type: .hourCategory)
+    
+    // MARK: - Properties
+    private lazy var whenViewController = CategoryDetailController(type: .whenCategory)
     private lazy var whereViewController = CategoryDetailController(type: .whereCategory)
     private lazy var whoViewController = CategoryDetailController(type: .whoCategory)
     private lazy var whatViewController = CategoryDetailController(type: .whatCategory)
     
-    private lazy var viewControllers = [hourViewController, whereViewController, whoViewController, whatViewController]
+    // ViewPager에 들어갈 카테고리 별 ViewController 처리
+    private lazy var viewControllers = [whenViewController, whereViewController, whoViewController, whatViewController]
+    
+    // MARK: - UI
+    let headerView = HappicReportSectionHeader(type: .categoryRank)
+       
+    private let containerView = UIView().then {
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
     
     private lazy var categoryViewPager = CustomViewPager(
         viewControllers: viewControllers,
-        buttonTitles: ["#hour", "#where", "#who", "#what"], isScrollEnabled: false)
+        buttonTitles: ["#when", "#where", "#who", "#what"],
+        buttonTintColor: .hpGray6,
+        isScrollEnabled: false)
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -34,15 +44,23 @@ final class CategoryRankView: UIView {
     
     // MARK: - Functions
     private func configureUI() {
-        addSubviews(headerView, categoryViewPager)
+        backgroundColor = UIColor.clear
+        
+        addSubviews(headerView, containerView)
         headerView.snp.makeConstraints { make in
             make.leading.top.trailing.equalToSuperview()
         }
         
-        categoryViewPager.snp.makeConstraints { make in
+        containerView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+        
+        containerView.addSubview(categoryViewPager)
+        
+        categoryViewPager.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
     

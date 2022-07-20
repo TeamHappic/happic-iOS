@@ -11,15 +11,15 @@ final class TagCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private lazy var dailyLabel = UILabel().then {
-        $0.text = "26 일"
+        $0.text = "20 수"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardExtraBold, ofSize: 16)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
     
     private lazy var whenLabel = UILabel().then {
         $0.text = "오후2시"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
     }
     
     private lazy var whenView = UIView().then {
@@ -31,6 +31,12 @@ final class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    private lazy var whereLabel = UILabel().then {
+        $0.text = "집구석구석"
+        $0.textColor = .hpWhite
+        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
+    }
+    
     private lazy var whereView = UIView().then {
         $0.layer.cornerRadius = 10
         $0.backgroundColor = .hpGray9
@@ -40,10 +46,10 @@ final class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private lazy var whereLabel = UILabel().then {
-        $0.text = "집구석구석"
+    private lazy var whoLabel = UILabel().then {
+        $0.text = "햄식달식이"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
     }
     
     private lazy var whoView = UIView().then {
@@ -55,10 +61,10 @@ final class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private lazy var whoLabel = UILabel().then {
-        $0.text = "햄식달식이"
+    private lazy var whatLabel = UILabel().then {
+        $0.text = "짱짱귀여워"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
     }
     
     private lazy var whatView = UIView().then {
@@ -68,12 +74,6 @@ final class TagCollectionViewCell: UICollectionViewCell {
         whatLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-    }
-    
-    private lazy var whatLabel = UILabel().then {
-        $0.text = "짱짱귀여워"
-        $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
     
     // MARK: - Initialization

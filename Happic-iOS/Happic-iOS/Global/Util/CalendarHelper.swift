@@ -13,6 +13,11 @@ class CalendarHelper {
     
     let calendar = Calendar.current
     
+    /// monthGap에 새로 선택된 달과 현재 달의 차이값을 입력하면 새로 선택된 달 date를 리턴
+    func changeMonth(date: Date, monthGap: Int) -> Date {
+        return calendar.date(byAdding: .month, value: monthGap, to: date)!
+    }
+    
     /// e.g.) 15 Jan 2022 -> 15 Feb 2022
     func plusMonth(date: Date) -> Date {
         return calendar.date(byAdding: .month, value: 1, to: date)!
@@ -26,14 +31,14 @@ class CalendarHelper {
     /// e.g.) 15 Jan 2022 -> January
     func monthString(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "LLLL" // "2022"
+        dateFormatter.dateFormat = "LLLL"
         return dateFormatter.string(from: date)
     }
     
     /// e.g.) 15 Jan 2022 -> 2022
     func yearString(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy" // "2022"
+        dateFormatter.dateFormat = "yyyy"
         return dateFormatter.string(from: date)
     }
     

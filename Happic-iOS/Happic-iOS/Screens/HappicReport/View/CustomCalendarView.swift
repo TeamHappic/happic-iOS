@@ -90,7 +90,7 @@ class CustomCalendarView: UIView {
         layout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
-        collectionView.backgroundColor = .hpBgBlack2h
+        collectionView.backgroundColor = .hpBgBlack2
         return collectionView
     }()
     
@@ -109,7 +109,7 @@ class CustomCalendarView: UIView {
     
     // MARK: - Functions
     private func configureUI() {
-        backgroundColor = .hpBgBlack2h
+        backgroundColor = .hpBgBlack2
         layer.cornerRadius = 20
         
         addSubview(dayOfWeekStackView)
@@ -156,6 +156,11 @@ class CustomCalendarView: UIView {
         }
         
         calendarCollectionView.reloadData()
+    }
+    
+    func changeMonth(monthGap: Int) {
+        selectedDate = CalendarHelper.shared.changeMonth(date: selectedDate, monthGap: monthGap)
+        setMonthView()
     }
 }
 

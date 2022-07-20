@@ -11,6 +11,12 @@ final class KeywordRankView: UIView {
 
     // MARK: - UI
     let headerView = HappicReportSectionHeader(type: .keywordRank)
+    
+    private let containerView = UIView().then {
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+
     private lazy var keywordCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -18,6 +24,7 @@ final class KeywordRankView: UIView {
         layout.minimumInteritemSpacing = 8
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
@@ -52,11 +59,15 @@ final class KeywordRankView: UIView {
     }
     
     private func setCollectionViewLayout() {
-        addSubview(keywordCollectionView)
-        keywordCollectionView.snp.makeConstraints { make in
+        addSubview(containerView)
+        containerView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.leading.bottom.trailing.equalToSuperview()
+        }
+        
+        containerView.addSubview(keywordCollectionView)
+        keywordCollectionView.snp.makeConstraints { make in
+            make.leading.top.bottom.trailing.equalToSuperview()
         }
     }
     

@@ -25,4 +25,61 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    /// 그라데이션을 추가하는 메소드
+    @discardableResult
+    func setGradient(type: CAGradientLayerType,
+                     colors: [CGColor],
+                     locations: [NSNumber] = [0.0, 1.0],
+                     startPoint: CGPoint = CGPoint(x: 0.0, y: 0.0),
+                     endPoint: CGPoint = CGPoint(x: 1.0, y: 0.0)) -> Self {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.type = type
+        gradient.colors = colors
+        gradient.locations = locations
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
+        gradient.frame = self.bounds
+        layer.addSublayer(gradient)
+        return self
+    }
+    
+    @discardableResult
+    func makeShadow(color: UIColor,
+                    opacity: Float,
+                    offset: CGSize,
+                    radius: CGFloat) -> Self {
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        return self
+    }
+    
+    func showNoneKeywordView() {
+        for view in subviews {
+            view.removeFromSuperview()
+        }
+        
+        let containerView = UIView().then {
+            $0.backgroundColor = .hpGray9
+        }
+        
+        let contentLabel = UILabel().then {
+            $0.text = "수집된 키워드가 부족해요"
+            $0.textColor = .hpGray2
+            $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
+        }
+        
+        addSubview(containerView)
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        containerView.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+    }
 }
