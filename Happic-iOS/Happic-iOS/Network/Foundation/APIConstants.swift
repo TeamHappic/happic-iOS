@@ -16,4 +16,7 @@ struct APIConstants {
     
     // MARK: - 푸시 유저 등록
     static let pushUserRegisterURL = baseURL + "/user/push"
+    
+    // MARK: - 해픽 레포트
+    static let happicReportSummaryURL = baseURL + "/mypage"
 }
