@@ -26,9 +26,9 @@
 ## Development Environment and Using Library
 - Development Environment
 <p align="left">
-<img src ="https://img.shields.io/badge/Swift-5.0-ff69b4">
-<img src ="https://img.shields.io/badge/Xcode-13.4-blue">
-<img src ="https://img.shields.io/badge/iOS-14.0-blue">
+<img src ="https://img.shields.io/badge/Swift-5.5-orange?logo=swift">
+<img src ="https://img.shields.io/badge/Xcode-13.4-blue?logo=xcode">
+<img src ="https://img.shields.io/badge/iOS-14.0-green.svg">
 
 <br>
 <br>
