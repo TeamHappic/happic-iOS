@@ -142,8 +142,6 @@ final class CreateContentsController: UIViewController {
             make.bottom.equalToSuperview().inset(400)
         }
         
-        hideKeyboardWhenTappedAround()
-        
         whenTagView.tagLabel.text = "#when"
         whenTagView.userTextField.placeholder = "시간을 입력해주세요"
         
