@@ -258,14 +258,13 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         switch component {
         case 0:
             leftPickerValue = self.allMeridiem[row]
         case 1:
             rightPickerValue = self.allHour[row]
         default:
-            print(component)
+            break
         }
         self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
     }

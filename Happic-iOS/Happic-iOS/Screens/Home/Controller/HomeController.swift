@@ -47,7 +47,7 @@ final class HomeController: BaseUploadViewController {
     }
     
     private lazy var conversationLabel = UILabel().then {
-        $0.text = "아니 왜 밥 안줌\n 너 오늘 뭐했는데\n 바빴다고? 그럼 어쩔 수 없지."
+        $0.text = "아니 왜 밥 안줌\n너 오늘 뭐했는데\n바빴다고? 그럼 어쩔 수 없지."
         $0.textColor = .hpGray2
         $0.font = UIFont.font(.pretendardMedium, ofSize: 16)
         $0.addLabelSpacing(kernValue: 0, lineSpacing: 5)

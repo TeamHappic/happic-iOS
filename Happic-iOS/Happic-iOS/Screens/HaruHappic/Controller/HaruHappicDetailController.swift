@@ -130,11 +130,8 @@ final class HaruHappicDetailController: UIViewController {
         
         photoCollectionView.contentInsetAdjustmentBehavior = .never
         let cellWidth: CGFloat = floor(cellSize.width)
-        print(cellWidth)
         let insetX = (view.frame.width - cellWidth) / 2.0
-        print(insetX)
         photoCollectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
-        print(photoCollectionView.contentInset)
         photoCollectionView.decelerationRate = .fast
     }
     
@@ -236,28 +233,23 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         if Int(roundedIndex) < previousIndex {
             let preIndexPath = IndexPath(item: previousIndex-2, section: 0)
             let nextIndexPath = IndexPath(item: previousIndex, section: 0)
-            print(preIndexPath, previousIndex, nextIndexPath)
             if let preCell = photoCollectionView.cellForItem(at: preIndexPath),
                let nextCell = photoCollectionView.cellForItem(at: nextIndexPath) {
                 animateZoomforCellremove(zoomCell: preCell)
                 animateZoomforCellremove(zoomCell: nextCell)
             }
             previousIndex = indexPath.item
-            print(previousIndex)
         }
         
         if Int(roundedIndex) > previousIndex {
             let preIndexPath = IndexPath(item: previousIndex, section: 0)
             let nextIndexPath = IndexPath(item: previousIndex+2, section: 0)
-            print(preIndexPath, previousIndex, nextIndexPath)
             if let preCell = photoCollectionView.cellForItem(at: preIndexPath),
                let nextCell = photoCollectionView.cellForItem(at: nextIndexPath) {
                 animateZoomforCellremove(zoomCell: preCell)
                 animateZoomforCellremove(zoomCell: nextCell)
             }
-            
             previousIndex = indexPath.item
-            print(previousIndex)
         }
     }
     
