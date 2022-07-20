@@ -92,22 +92,23 @@ final class HaruHappicDetailController: UIViewController {
         
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(65)
+            make.height.equalTo(150)
         }
         
         backButton.snp.makeConstraints { make in
-            make.centerY.equalTo(headerView)
+            make.top.equalTo(headerView).offset(10)
             make.leading.equalTo(headerView.snp.leading).offset(20)
             make.width.height.equalTo(48)
         }
         
         dateLabel.snp.makeConstraints { make in
-            make.center.equalTo(headerView)
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10)
         }
         
         deleteButton.snp.makeConstraints { make in
-            make.centerY.equalTo(headerView)
-            make.trailing.equalTo(headerView.snp.trailing).inset(20)
+            make.centerY.equalTo(dateLabel)
+            make.trailing.equalToSuperview().inset(20)
             make.width.height.equalTo(48)
         }
     }
