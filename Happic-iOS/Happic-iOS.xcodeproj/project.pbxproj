@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B9172888864900D52581 /* KakaoLoginService.swift */; };
 		8E09E0CB287D4D2A00FB18DD /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */; };
 		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
 		8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */; };
@@ -29,6 +30,7 @@
 		8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */; };
 		8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21133287E8B9500F53A95 /* CustomMonthView.swift */; };
 		8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */; };
+		8EC8748A28888E2100974ACE /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8748928888E2100974ACE /* PushUserRegisterService.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -57,12 +59,9 @@
 		CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */; };
 		CECD7F3328884EC400FD1420 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3228884EC400FD1420 /* FirebaseAnalytics */; };
 		CECD7F3528884EC400FD1420 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3428884EC400FD1420 /* FirebaseMessaging */; };
-		CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */; };
 		CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */; };
 		CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3D2888817D00FD1420 /* HappicReportService.swift */; };
 		CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */; };
-		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
-		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
 		CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */; };
@@ -110,6 +109,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E09B9172888864900D52581 /* KakaoLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
 		8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		8E2F75802882A6DD001025DE /* CustomRecommendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecommendTagView.swift; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 		8EB21131287D5A1C00F53A95 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB21133287E8B9500F53A95 /* CustomMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthView.swift; sourceTree = "<group>"; };
 		8EB21135287E9C3D00F53A95 /* CustomMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMonthPickerView.swift; sourceTree = "<group>"; };
+		8EC8748928888E2100974ACE /* PushUserRegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -155,12 +156,9 @@
 		CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOSRelease.entitlements"; sourceTree = "<group>"; };
 		CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOS.entitlements"; sourceTree = "<group>"; };
-		CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSummaryModel.swift; sourceTree = "<group>"; };
 		CECD7F3D2888817D00FD1420 /* HappicReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportService.swift; sourceTree = "<group>"; };
 		CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankModel.swift; sourceTree = "<group>"; };
-		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
-		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
 		CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterModel.swift; sourceTree = "<group>"; };
@@ -256,6 +254,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8EC8748B28888E6100974ACE /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				8E09B9172888864900D52581 /* KakaoLoginService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
 		8EF3B64C2883DE03008D6B55 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +345,7 @@
 		CECD7F42288888B400FD1420 /* PushAlarmService */ = {
 			isa = PBXGroup;
 			children = (
-				CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */,
+				8EC8748928888E2100974ACE /* PushUserRegisterService.swift */,
 			);
 			path = PushAlarmService;
 			sourceTree = "<group>";
@@ -389,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				CECD7F3A28887F2100FD1420 /* HappicReportModel */,
-				CEF6E04628780EE800A1636F /* tempModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,9 +402,9 @@
 		CEF6E04028780E7000A1636F /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				8EC8748B28888E6100974ACE /* AuthService */,
 				CECD7F42288888B400FD1420 /* PushAlarmService */,
 				CECD7F41288888A500FD1420 /* HappicReportService */,
-				CEF6E04428780EE100A1636F /* tempAPIService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -963,6 +968,7 @@
 				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
+				8EC8748A28888E2100974ACE /* PushUserRegisterService.swift in Sources */,
 				CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */,
 				CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */,
 				8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */,
@@ -980,7 +986,6 @@
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
 				CEFC3C53287EA88C00F187BE /* CustomTabPagerButton.swift in Sources */,
 				8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */,
-				CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */,
 				CEF6E099287814E100A1636F /* HaruHappicController.swift in Sources */,
 				CEF6E093287814D500A1636F /* HomeController.swift in Sources */,
 				CEF6E0AB2878150700A1636F /* SettingController.swift in Sources */,
@@ -989,7 +994,7 @@
 				8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */,
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
-				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
+				8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */,
 				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
 				8E42450928868C200063368C /* PhotoDetailCollectionViewCell.swift in Sources */,
@@ -1035,7 +1040,6 @@
 				8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */,
 				CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */,
 				CE479646288420830095ADD4 /* Storyboarded.swift in Sources */,
-				CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */,
 				CEF6E0B62878A0C900A1636F /* UIView+.swift in Sources */,
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
 				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,
