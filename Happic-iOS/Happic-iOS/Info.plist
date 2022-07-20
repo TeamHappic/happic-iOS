@@ -2,13 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>하루해픽 게시글을 업로드하기 위해 사진첩 권한을 허용해주세요.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>해픽 앱에서 사용자의 카메라를 사용합니다.</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>ko</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao87cf2952b41116b741f021967c8add1f</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
@@ -35,5 +42,12 @@
 			</array>
 		</dict>
 	</dict>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <!-- 카카오톡으로 로그인 -->
+        <string>kakaokompassauth</string>
+        <!-- 카카오링크 -->
+        <string>kakaolink</string>
+    </array>
 </dict>
 </plist>

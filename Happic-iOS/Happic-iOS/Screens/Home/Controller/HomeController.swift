@@ -75,6 +75,11 @@ final class HomeController: UIViewController {
         super.viewDidLoad()
         setPurpleBackgroundColor()
         configureUI()
+//        let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
+//        let nextVC = nextSB.instantiateViewController(withIdentifier: "AuthViewController")
+//        let nav = UINavigationController(rootViewController: nextVC)
+//        nav.modalPresentationStyle = .fullScreen
+//        self.present(nav, animated: true)
     }
 
     // MARK: - Functions
