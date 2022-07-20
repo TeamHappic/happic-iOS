@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKCommon
 import KakaoSDKAuth
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         KakaoSDK.initSDK(appKey: "87cf2952b41116b741f021967c8add1f")
+        FirebaseApp.configure()
         return true
     }
 
