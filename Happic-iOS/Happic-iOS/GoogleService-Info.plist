@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>170533526269-ha8tuur9uf2n451c5im36q2p1sn4lead.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.170533526269-ha8tuur9uf2n451c5im36q2p1sn4lead</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABlyXq1Ry0d49eSlFCho4aw5Je47-h86M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>170533526269</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.happic.Happic-iOS</string>
+	<key>PROJECT_ID</key>
+	<string>happic-kiki</string>
+	<key>STORAGE_BUCKET</key>
+	<string>happic-kiki.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:170533526269:ios:66ea2d8ee43230819a3c94</string>
+</dict>
+</plist>

@@ -54,6 +54,9 @@
 		CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB69D62873087D000EEB8A /* TabBarController.swift */; };
 		CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DB2873087F000EEB8A /* Assets.xcassets */; };
 		CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB69DD2873087F000EEB8A /* LaunchScreen.storyboard */; };
+		CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */; };
+		CECD7F3328884EC400FD1420 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3228884EC400FD1420 /* FirebaseAnalytics */; };
+		CECD7F3528884EC400FD1420 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3428884EC400FD1420 /* FirebaseMessaging */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
@@ -145,6 +148,9 @@
 		CEBB69DB2873087F000EEB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBB69DE2873087F000EEB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBB69E02873087F000EEB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOSRelease.entitlements"; sourceTree = "<group>"; };
+		CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOS.entitlements"; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
@@ -199,12 +205,14 @@
 			files = (
 				CEF6E0AE2878973E00A1636F /* Tabman in Frameworks */,
 				8E6D976D2887E29E0010B9E5 /* KakaoSDKCommon in Frameworks */,
+				CECD7F3528884EC400FD1420 /* FirebaseMessaging in Frameworks */,
 				CEA4BE36287309D5008583C3 /* Kingfisher in Frameworks */,
 				CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */,
 				8E6D97702887E7AB0010B9E5 /* KakaoSDKUser in Frameworks */,
 				CEA4BE2D2873094C008583C3 /* Then in Frameworks */,
 				CEA4BE302873096C008583C3 /* SnapKit in Frameworks */,
 				8E6D976B2887E29E0010B9E5 /* KakaoSDKAuth in Frameworks */,
+				CECD7F3328884EC400FD1420 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +300,13 @@
 		CEBB69D12873087D000EEB8A /* Happic-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */,
+				CECD7F362888508E00FD1420 /* Happic-iOSRelease.entitlements */,
 				CEF6E03C28780DE000A1636F /* Network */,
 				CEF6E03D28780DE900A1636F /* Global */,
 				CEF6E03E28780DEF00A1636F /* Screens */,
 				CEBB69E02873087F000EEB8A /* Info.plist */,
+				CECD7F2F28884D9B00FD1420 /* GoogleService-Info.plist */,
 			);
 			path = "Happic-iOS";
 			sourceTree = "<group>";
@@ -818,6 +829,8 @@
 				8E6D976A2887E29E0010B9E5 /* KakaoSDKAuth */,
 				8E6D976C2887E29E0010B9E5 /* KakaoSDKCommon */,
 				8E6D976F2887E7AB0010B9E5 /* KakaoSDKUser */,
+				CECD7F3228884EC400FD1420 /* FirebaseAnalytics */,
+				CECD7F3428884EC400FD1420 /* FirebaseMessaging */,
 			);
 			productName = "Happic-iOS";
 			productReference = CEBB69CF2873087D000EEB8A /* Happic-iOS.app */;
@@ -854,6 +867,7 @@
 				CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */,
 				8E6D97692887E29E0010B9E5 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CECD7F3128884EC400FD1420 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CEBB69D02873087D000EEB8A /* Products */;
 			projectDirPath = "";
@@ -876,6 +890,7 @@
 				8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */,
 				8E8A1CE8287C75480050184F /* Pretendard-Regular.otf in Resources */,
 				8E8A1CE7287C75480050184F /* GmarketSansBold.otf in Resources */,
+				CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */,
 				CE479648288420B30095ADD4 /* AuthView.storyboard in Resources */,
 				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
 			);
@@ -1121,6 +1136,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Happic-iOS/Happic-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1153,6 +1169,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Happic-iOS/Happic-iOSRelease.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1244,6 +1261,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		CECD7F3128884EC400FD1420 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		CEF6E0AC2878973E00A1636F /* XCRemoteSwiftPackageReference "Tabman" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/uias/Tabman";
@@ -1289,6 +1314,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEA4BE34287309D5008583C3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CECD7F3228884EC400FD1420 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECD7F3128884EC400FD1420 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CECD7F3428884EC400FD1420 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECD7F3128884EC400FD1420 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		CEF6E0AD2878973E00A1636F /* Tabman */ = {
 			isa = XCSwiftPackageProductDependency;
