@@ -86,6 +86,9 @@ final class CreateContentsController: UIViewController {
         whatTagView.delegate = self
         
         scrollView.delegate = self
+        
+        whenPicker.delegate = self
+        whenPicker.dataSource = self
     }
     
     private func setHeaderView() {
@@ -195,9 +198,6 @@ final class CreateContentsController: UIViewController {
 // MARK: - Extensions
 extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource {
     func configPickerView() {
-        whenPicker.delegate = self
-        whenPicker.dataSource = self
-        
         whenTagView.userTextField.inputView = whenPicker
         configToolbar()
     }
