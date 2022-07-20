@@ -60,6 +60,7 @@
 		CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */; };
 		CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */; };
 		CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3D2888817D00FD1420 /* HappicReportService.swift */; };
+		CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
@@ -157,6 +158,7 @@
 		CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSummaryModel.swift; sourceTree = "<group>"; };
 		CECD7F3D2888817D00FD1420 /* HappicReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportService.swift; sourceTree = "<group>"; };
+		CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankModel.swift; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
@@ -321,8 +323,25 @@
 			isa = PBXGroup;
 			children = (
 				CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */,
+				CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */,
 			);
 			path = HappicReportModel;
+			sourceTree = "<group>";
+		};
+		CECD7F41288888A500FD1420 /* HappicReportService */ = {
+			isa = PBXGroup;
+			children = (
+				CECD7F3D2888817D00FD1420 /* HappicReportService.swift */,
+			);
+			path = HappicReportService;
+			sourceTree = "<group>";
+		};
+		CECD7F42288888B400FD1420 /* PushAlarmService */ = {
+			isa = PBXGroup;
+			children = (
+				CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */,
+			);
+			path = PushAlarmService;
 			sourceTree = "<group>";
 		};
 		CEF6E03C28780DE000A1636F /* Network */ = {
@@ -378,9 +397,9 @@
 		CEF6E04028780E7000A1636F /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				CECD7F42288888B400FD1420 /* PushAlarmService */,
+				CECD7F41288888A500FD1420 /* HappicReportService */,
 				CEF6E04428780EE100A1636F /* tempAPIService.swift */,
-				CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */,
-				CECD7F3D2888817D00FD1420 /* HappicReportService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -944,6 +963,7 @@
 				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
+				CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */,
 				CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */,
 				8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */,
 				CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */,
