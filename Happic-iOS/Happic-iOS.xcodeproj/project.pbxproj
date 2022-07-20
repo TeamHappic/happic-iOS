@@ -59,6 +59,7 @@
 		CECD7F3528884EC400FD1420 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CECD7F3428884EC400FD1420 /* FirebaseMessaging */; };
 		CECD7F392888768D00FD1420 /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */; };
 		CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */; };
+		CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3D2888817D00FD1420 /* HappicReportService.swift */; };
 		CEF6E04528780EE100A1636F /* tempAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04428780EE100A1636F /* tempAPIService.swift */; };
 		CEF6E04728780EE800A1636F /* tempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E04628780EE800A1636F /* tempModel.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
@@ -155,6 +156,7 @@
 		CECD7F372888666A00FD1420 /* Happic-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happic-iOS.entitlements"; sourceTree = "<group>"; };
 		CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSummaryModel.swift; sourceTree = "<group>"; };
+		CECD7F3D2888817D00FD1420 /* HappicReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportService.swift; sourceTree = "<group>"; };
 		CEF6E04428780EE100A1636F /* tempAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAPIService.swift; sourceTree = "<group>"; };
 		CEF6E04628780EE800A1636F /* tempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempModel.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			children = (
 				CEF6E04428780EE100A1636F /* tempAPIService.swift */,
 				CECD7F382888768D00FD1420 /* PushUserRegisterService.swift */,
+				CECD7F3D2888817D00FD1420 /* HappicReportService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -997,6 +1000,7 @@
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
 				CE47964A288420C80095ADD4 /* AuthViewController.swift in Sources */,
 				CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */,
+				CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */,
 				CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */,
 				8E367612287D428800326074 /* HaruHappicPhotoController.swift in Sources */,
 				CEFC3C2E287D285700F187BE /* HappicReportSectionHeader.swift in Sources */,
