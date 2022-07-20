@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeController: UIViewController {
+final class HomeController: BaseUploadViewController {
     
     // MARK: - UI
     private lazy var levelLabel = UILabel().then {
@@ -62,6 +62,7 @@ final class HomeController: UIViewController {
         $0.backgroundColor = .hpOrange
         $0.layer.cornerRadius = 8
         $0.tintColor = .hpGray9
+        $0.addTarget(self, action: #selector(handleActionButtonDidTap(sender:)), for: .touchUpInside)
     }
     
     private lazy var stackView = UIStackView(arrangedSubviews: [conversationLabel, actionButton]).then {
@@ -127,5 +128,9 @@ final class HomeController: UIViewController {
         actionButton.snp.makeConstraints { make in
             make.height.equalTo(44)
         }
+    }
+    
+    @objc private func handleActionButtonDidTap(sender: UIButton) {
+        setActionSheet()
     }
 }
