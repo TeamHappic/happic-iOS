@@ -123,7 +123,7 @@ final class HaruHappicDetailController: UIViewController {
         photoCollectionView.backgroundColor = .clear
         
         photoCollectionView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerY.equalToSuperview()
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(300)
         }
