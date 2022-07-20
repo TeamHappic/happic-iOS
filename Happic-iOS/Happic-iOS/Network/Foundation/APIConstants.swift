@@ -8,11 +8,24 @@
 import Foundation
 
 struct APIConstants {
+    
     // MARK: - Base URL
     static let baseURL = "http://3.39.169.83:5001"
     
-    // MARK: - Auth
-    // 예시: static let signURL = baseURL + "/user/sign"
+    // MARK: - 소셜 로그인
+    static let kakaoLoginURL = baseURL + "/user/signin"
+    
+    // MARK: - 하루 해픽
+    static let haruHappicPhotoURL = baseURL + "/daily"
+    static let haruHappicTagURL = baseURL + "/daily/title"
+    static let haruHappicDetailURL = baseURL + "/daily/"
+    
+    // MARK: - 게시글 생성
+    static let isPostedURL = baseURL + "/daily/posted"
+    static let uploadImageURL = baseURL + "/file/upload"
+    static let recommendTagURL = baseURL + "/daily/keyword"
+    static let createContentsURL = baseURL + "/daily"
+    static let deleteContentsURL = baseURL + "/daily/"
     
     // MARK: - 푸시 유저 등록
     static let pushUserRegisterURL = baseURL + "/user/push"
