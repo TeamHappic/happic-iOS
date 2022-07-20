@@ -135,13 +135,13 @@ final class CreateContentsController: UIViewController {
             make.width.height.equalTo(300.adjusted)
         }
         
-        let tagStacks = UIStackView(arrangedSubviews: [whenTagView, whereTagView, whoTagView, whatTagView])
-        tagStacks.axis = .vertical
-        tagStacks.spacing = 8
-        tagStacks.distribution = .fill
+        let tagStackView = UIStackView(arrangedSubviews: [whenTagView, whereTagView, whoTagView, whatTagView])
+        tagStackView.axis = .vertical
+        tagStackView.spacing = 8
+        tagStackView.distribution = .fill
         
-        containerView.addSubview(tagStacks)
-        tagStacks.snp.makeConstraints { make in
+        containerView.addSubview(tagStackView)
+        tagStackView.snp.makeConstraints { make in
             make.top.equalTo(pickerImageView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100.adjustedH)
