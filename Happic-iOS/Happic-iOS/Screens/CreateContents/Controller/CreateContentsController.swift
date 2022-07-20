@@ -110,6 +110,13 @@ final class CreateContentsController: UIViewController {
             make.trailing.equalTo(headerView.snp.trailing).inset(20)
             make.width.height.equalTo(48)
         }
+        
+        headerView.layer.masksToBounds = false
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowRadius = 4 / 2.0
+        headerView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
+        headerView.layer.shadowOpacity = 0.25
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     private func setScrollView() {
