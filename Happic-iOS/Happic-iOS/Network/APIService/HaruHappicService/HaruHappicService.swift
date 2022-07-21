@@ -75,5 +75,4 @@ struct HaruHappicService {
             }
         }
     }
-
 }
