@@ -16,7 +16,7 @@ struct CreateContentsService {
     /// 오늘 하루해픽 게시글 작성 여부 조회
     func getPostStatus(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.isPostedURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
