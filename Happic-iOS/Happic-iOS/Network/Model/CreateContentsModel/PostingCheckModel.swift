@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - PostingCheckModel
+struct PostingCheckModel: Codable {
+    let isPosted: Bool
+}
