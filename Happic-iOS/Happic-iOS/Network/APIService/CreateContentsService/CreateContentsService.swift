@@ -14,7 +14,7 @@ struct CreateContentsService {
     private init() {}
     
     /// 오늘 하루해픽 게시글 작성 여부 조회
-    func getPostingStatus(completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getPostStatus(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.isPostedURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
         
@@ -25,7 +25,7 @@ struct CreateContentsService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: PostingStatusModel.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: PostStatusModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
