@@ -21,6 +21,7 @@ final class MonthHappicRecordController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
+        getMonthlyData(month: "7")
     }
     
     // MARK: - Functions
@@ -68,5 +69,20 @@ final class MonthHappicRecordController: UIViewController {
     func changeCalendarMonth(monthGap: Int) {
         calendarView.changeMonth(monthGap: monthGap)
     }
+}
 
+// MARK: - Network
+extension MonthHappicRecordController {
+    func getMonthlyData(year: String = "2022", month: String) {
+        HappicReportService.shared.getMonthlyCount(year: year, month: month) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? MonthlyCountModel else { return }
+                self.monthHappicRecordView.setData(model: data)
+                self.calendarView.setData(model: data)
+            default:
+                break
+            }
+        }
+    }
 }

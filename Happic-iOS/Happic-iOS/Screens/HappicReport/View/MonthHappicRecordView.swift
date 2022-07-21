@@ -14,6 +14,8 @@ final class MonthHappicRecordView: UIView {
         didSet {
             if count < 2 {
                 countImageView.image = ImageLiterals.imageMonthlyZero
+            } else {
+                countImageView.image = ImageLiterals.imageMonthlyCount
             }
             
             countImageView.snp.updateConstraints { make in
@@ -84,6 +86,12 @@ final class MonthHappicRecordView: UIView {
     }
     
     func setData(model: Rank4S) {
+        self.count = model.count
+        monthLabel.text = "\(model.month)월"
+        countLabel.text = "\(count)회"
+    }
+    
+    func setData(model: MonthlyCountModel) {
         self.count = model.count
         monthLabel.text = "\(model.month)월"
         countLabel.text = "\(count)회"

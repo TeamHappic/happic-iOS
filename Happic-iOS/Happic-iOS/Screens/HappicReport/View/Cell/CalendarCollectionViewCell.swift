@@ -18,6 +18,18 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     private lazy var uploadCheckView = UIView().then {
         $0.backgroundColor = .darkGray
+        $0.clipsToBounds = true
+        
+        let uploadCheckImageView = UIImageView().then {
+            $0.image = ImageLiterals.imageCalenderPoint
+            $0.contentMode = .scaleToFill
+            $0.clipsToBounds = true
+        }
+        
+        $0.addSubview(uploadCheckImageView)
+        uploadCheckImageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     // MARK: - Initialization
