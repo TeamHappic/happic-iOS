@@ -80,7 +80,7 @@ struct HappicReportService {
     }
     
     /// 월별 하루 해픽 조회
-    func getMonthlyCount(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getMonthlyCount(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportMonthlyURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let parameters: Parameters = ["year": year, "month": month]

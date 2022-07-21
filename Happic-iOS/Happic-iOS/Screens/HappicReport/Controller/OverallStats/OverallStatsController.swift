@@ -126,6 +126,7 @@ final class OverallStatsController: UIViewController {
     func fetchNewData(year: String = "2022", month: String) {
         keywordRankViewController.getKeyworkRank(year: year, month: month)
         categoryRankController.getCategoryRank(year: year, month: month)
+        monthHappicRecordController.getMonthlyData(year: year, month: month)
     }
     
     func scrollToIndex(indexOf: Int) {
