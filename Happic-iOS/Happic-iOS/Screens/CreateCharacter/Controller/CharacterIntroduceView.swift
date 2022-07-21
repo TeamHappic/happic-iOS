@@ -53,6 +53,8 @@ class CharacterIntroduceView: UIView {
             continueButton.setTitle("함께하기", for: .normal)
             continueButton.setTitleColor(UIColor.white, for: .normal)
             continueButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+            continueButton.layer.cornerRadius = 8
+            continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
 
 
         }else {
@@ -64,6 +66,16 @@ class CharacterIntroduceView: UIView {
             continueButton.setTitle("함께하기", for: .normal)
             continueButton.setTitleColor(UIColor.white, for: .normal)
             continueButton.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            continueButton.layer.cornerRadius = 8
+            continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+            
+            /*
+             MoonUIView.layer.cornerRadius = 20
+                MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+
+                CloudUIView.layer.cornerRadius = 20
+                CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+             */
         }
     }
 }
