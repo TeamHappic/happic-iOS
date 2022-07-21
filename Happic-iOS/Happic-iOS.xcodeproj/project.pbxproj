@@ -262,6 +262,13 @@
 			path = AuthService;
 			sourceTree = "<group>";
 		};
+		8EC8749028892E2D00974ACE /* HaruHappicService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HaruHappicService;
+			sourceTree = "<group>";
+		};
 		8EF3B64C2883DE03008D6B55 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC8748B28888E6100974ACE /* AuthService */,
+				8EC8749028892E2D00974ACE /* HaruHappicService */,
 				CECD7F42288888B400FD1420 /* PushAlarmService */,
 				CECD7F41288888A500FD1420 /* HappicReportService */,
 			);
