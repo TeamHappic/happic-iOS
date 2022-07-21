@@ -20,7 +20,7 @@ struct APIConstants {
     static let haruHappicTagURL = baseURL + "/daily/title"
     static let haruHappicDetailURL = baseURL + "/daily/"
     
-    // MARK: - 게시글 생성
+    // MARK: - 게시글 생성 및 삭제
     static let isPostedURL = baseURL + "/daily/posted"
     static let uploadImageURL = baseURL + "/file/upload"
     static let recommendTagURL = baseURL + "/daily/keyword"

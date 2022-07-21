@@ -56,7 +56,7 @@ struct HaruHappicService {
     }
     
     /// 하루해픽 상세보기 뷰 조회
-    func getHaruHappicDetail(filmId: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getHaruHappicDetail(filmId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.haruHappicDetailURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
         let parameters: Parameters = ["filmId": filmId]
