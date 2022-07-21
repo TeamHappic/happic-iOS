@@ -63,6 +63,7 @@
 		CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028A2880799B009D98EF /* CustomPopUpController.swift */; };
 		CEA4028D2880839F009D98EF /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028C2880839F009D98EF /* UILabel+.swift */; };
 		CEA47C4F288934FC008DF7CF /* MonthlyCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA47C4E288934FC008DF7CF /* MonthlyCountModel.swift */; };
+		CEA47C512889F418008DF7CF /* CategoryRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA47C502889F418008DF7CF /* CategoryRankModel.swift */; };
 		CEA4BE2D2873094C008583C3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2C2873094C008583C3 /* Then */; };
 		CEA4BE302873096C008583C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE2F2873096C008583C3 /* SnapKit */; };
 		CEA4BE33287309A7008583C3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEA4BE32287309A7008583C3 /* Alamofire */; };
@@ -176,6 +177,7 @@
 		CEA4028A2880799B009D98EF /* CustomPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpController.swift; sourceTree = "<group>"; };
 		CEA4028C2880839F009D98EF /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CEA47C4E288934FC008DF7CF /* MonthlyCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyCountModel.swift; sourceTree = "<group>"; };
+		CEA47C502889F418008DF7CF /* CategoryRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRankModel.swift; sourceTree = "<group>"; };
 		CEBB69CF2873087D000EEB8A /* Happic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB69D22873087D000EEB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBB69D42873087D000EEB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */,
 				CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */,
+				CEA47C502889F418008DF7CF /* CategoryRankModel.swift */,
 				CEA47C4E288934FC008DF7CF /* MonthlyCountModel.swift */,
 			);
 			path = HappicReportModel;
@@ -1061,6 +1064,7 @@
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
 				CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */,
 				8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */,
+				CEA47C512889F418008DF7CF /* CategoryRankModel.swift in Sources */,
 				8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
