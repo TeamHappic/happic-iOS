@@ -33,6 +33,28 @@ struct CreateContentsService {
         }
     }
     
+    /// 이미지 데이터 서버로 업로드
+    func uploadImage(imageData: UIImage?, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let url = APIConstants.uploadImageURL
+        let header: HTTPHeaders = ["Content-Type": "multipart/form-data"]
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            if let image = imageData?.pngData() {
+                multipartFormData.append(image, withName: "image", fileName: "\(image).png", mimeType: "image/png")
+            }
+        }, to: url, usingThreshold: UInt64.init(), method: .post, headers: header).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: UploadImageModel.self)
+                completion(networkResult)
+            case .failure:
+                completion(.networkFail)
+            }
+        }
+    }
+    
     /// 게시글 작성 시 최다 태그 추천
     func getRecommendTag(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.isPostedURL
