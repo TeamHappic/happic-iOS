@@ -317,8 +317,8 @@ extension CreateContentsController {
         CreateContentsService.shared.uploadImage(imageData: image) { response in
             switch response {
             case .success(let result):
-                print(result)
                 guard let data = result as? UploadImageModel else { return }
+                print(data)
             default:
                 break
             }
