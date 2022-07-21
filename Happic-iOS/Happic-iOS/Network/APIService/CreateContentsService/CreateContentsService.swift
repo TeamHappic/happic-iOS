@@ -14,7 +14,7 @@ struct CreateContentsService {
     private init() {}
     
     /// 오늘 하루해픽 게시글 작성 여부 조회
-    func getTodayPosting(completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getPostingStatus(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.isPostedURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
         
