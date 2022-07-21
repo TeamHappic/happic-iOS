@@ -101,7 +101,9 @@
                         <constraint firstAttribute="height" constant="48" id="x9a-T1-PDq"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                        <fontDescription key="titleFontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="16"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="continueDidTap:" destination="-1" eventType="touchUpInside" id="yZb-qn-Krz"/>
                     </connections>

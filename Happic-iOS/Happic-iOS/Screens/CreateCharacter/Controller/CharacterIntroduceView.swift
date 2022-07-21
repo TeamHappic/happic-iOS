@@ -61,7 +61,6 @@ class CharacterIntroduceView: UIView {
             firstAnswerLabel.clipsToBounds = true
             firstAnswerLabel.layer.cornerRadius = 8
             firstAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
             
             secondAnswerLabel.text = "조용히 일기에 걱정거리를 적어"
             secondAnswerLabelWidth.constant = 209
@@ -71,7 +70,6 @@ class CharacterIntroduceView: UIView {
             secondAnswerLabel.layer.cornerRadius = 8
             secondAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
-            
             thirdQuestionLabel.text = "Q. 고마울 때 어떻게 표현해?"
 
             thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"
@@ -81,16 +79,15 @@ class CharacterIntroduceView: UIView {
             thirdAnswerLabel.clipsToBounds = true
             thirdAnswerLabel.layer.cornerRadius = 8
             thirdAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
-            continueButton.setTitle("함께하기", for: .normal)
-            continueButton.setTitleColor(UIColor.white, for: .normal)
-            continueButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+//
+//            continueButton.setTitle("함께하기", for: .normal)
+//            continueButton.setTitleColor(UIColor.white, for: .normal)
+            continueButton.setAttributedTitle(NSAttributedString(string: "함께하기", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)
+            continueButton.backgroundColor = UIColor.hpDarkBlue
             continueButton.layer.cornerRadius = 8
-            continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+            continueButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
         } else {
-            //cloudVersion Label 변경
-            firstAnswerLabel.text = "내가 한 일이 완벽하게 끝나는거!"
             firstAnswerLabelWidth.constant = 217
             firstAnswerLabel.textAlignment = .center
             firstAnswerLabel.font = UIFont.font(.pretendardBold, ofSize: 14)
@@ -106,7 +103,6 @@ class CharacterIntroduceView: UIView {
             secondAnswerLabel.layer.cornerRadius = 8
             secondAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
-            
             thirdQuestionLabel.text = "Q. 위로는 어떻게 해줘?"
             
             thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"
@@ -117,12 +113,12 @@ class CharacterIntroduceView: UIView {
             thirdAnswerLabel.layer.cornerRadius = 8
             thirdAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             
-
-            continueButton.setTitle("함께하기", for: .normal)
-            continueButton.setTitleColor(UIColor.white, for: .normal)
-            continueButton.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+//            continueButton.setTitle("함께하기", for: .normal)
+//            continueButton.setTitleColor(UIColor.white, for: .normal)
+            continueButton.setAttributedTitle(NSAttributedString(string: "함께하기", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)
+            continueButton.backgroundColor = UIColor.hpDarkPurple
             continueButton.layer.cornerRadius = 8
-            continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+            continueButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             
         }
     }

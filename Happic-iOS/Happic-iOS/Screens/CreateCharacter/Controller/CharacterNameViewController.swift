@@ -8,6 +8,8 @@ class CharacterNameViewController: UIViewController{
         }
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
         namingCharacterLabel.numberOfLines = 0
+        namingCharacterLabel.textAlignment = .center
+
         
         let attributedStr = NSMutableAttributedString(string: namingCharacterLabel.text!)
         
