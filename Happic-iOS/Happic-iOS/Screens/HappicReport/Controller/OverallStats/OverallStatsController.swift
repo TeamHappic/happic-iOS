@@ -9,10 +9,23 @@ import UIKit
 import Tabman
 import Pageboy
 
+// MARK: - Protocol
+protocol OverallStatsControllerDelegate: AnyObject {
+    func sendCurrentMonth(month: String)
+}
+
 final class OverallStatsController: UIViewController {
 
     // MARK: - Properties
+    weak var delegate: OverallStatsControllerDelegate?
+    
     private var selectedMonth = Calendar.current.component(.month, from: Date())
+    var currentMonth: String = "7" {
+        didSet {
+            setCustomMonthViewText(month: currentMonth)
+            setCustomMonthPickerViewSelected(month: currentMonth)
+        }
+    }
     
     private let viewPager = TabmanViewController()
     private let keywordRankViewController = KeywordRankController()
@@ -114,6 +127,7 @@ final class OverallStatsController: UIViewController {
     }
     
     @objc func handleBackButtonDidTap() {
+        delegate?.sendCurrentMonth(month: currentMonth)
         navigationController?.popViewController(animated: true)
     }
 }
@@ -151,14 +165,23 @@ extension OverallStatsController: CustomMonthViewDelegate {
 
 extension OverallStatsController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
+        currentMonth = month
         let monthGap = Int(month)! - selectedMonth
         monthHappicRecordController.changeCalendarMonth(monthGap: monthGap)
-        selectedMonth = Int(month)!
-        
+        selectedMonth = Int(month)!        
+    }
+    
+    func setCustomMonthViewText(month: String) {
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {
             customMonthView.monthLabel.text = "2022 . \(month)"
+        }
+    }
+    
+    func setCustomMonthPickerViewSelected(month: String) {
+        if let currentMonth = Int(month) {
+            customMonthPickerView.setButtonStatus(month: currentMonth)
         }
     }
 }

@@ -192,4 +192,13 @@ final class CustomMonthPickerView: UIView {
             }
         }
     }
+    
+    func setButtonStatus(month: Int) {
+        let buttons = [janButton, febButton, marButton, aprButton,
+                       mayButton, junButton, julButton, augButton,
+                       sepButton, octButton, novButton, decButton]
+        selectedButton?.setAttributedTitle(NSAttributedString(string: selectedButton?.currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 16), .foregroundColor: UIColor.hpGray2]), for: .normal)
+        buttons[month-1].setAttributedTitle(NSAttributedString(string: buttons[month-1].currentAttributedTitle?.string ?? "", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpDarkPurple]), for: .normal)
+        selectedButton = buttons[month-1]
+    }
 }

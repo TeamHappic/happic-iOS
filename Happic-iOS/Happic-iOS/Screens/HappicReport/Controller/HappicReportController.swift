@@ -10,6 +10,14 @@ import SnapKit
 import Then
 
 final class HappicReportController: UIViewController {
+    // MARK: - Properties
+    var currentMonth: String = "7" {
+        didSet {
+            setCustomMonthViewText(month: currentMonth)
+            setCustomMonthPickerViewSelected(month: currentMonth)
+        }
+    }
+    
     
     // MARK: - UI
     private let customMonthView = CustomMonthView()
@@ -122,6 +130,8 @@ extension HappicReportController: HappicReportSectionHeaderDelegate {
     func showOverallStatsController(type: HappicReportSectionType) {
         let overallStatsController = OverallStatsController()
         overallStatsController.selectedIndex = type.rawValue
+        overallStatsController.currentMonth = currentMonth
+        overallStatsController.delegate = self
         self.navigationController?.pushViewController(overallStatsController, animated: true)
     }
 }
@@ -139,11 +149,27 @@ extension HappicReportController: CustomMonthViewDelegate {
 
 extension HappicReportController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
+        currentMonth = month
+    }
+    
+    func setCustomMonthViewText(month: String) {
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {
             customMonthView.monthLabel.text = "2022 . \(month)"
         }
+    }
+    
+    func setCustomMonthPickerViewSelected(month: String) {
+        if let currentMonth = Int(month) {
+            customMonthPickerView.setButtonStatus(month: currentMonth)
+        }
+    }
+}
+
+extension HappicReportController: OverallStatsControllerDelegate {
+    func sendCurrentMonth(month: String) {
+        currentMonth = month
     }
 }
 
@@ -164,3 +190,4 @@ extension HappicReportController {
         }
     }
 }
+
