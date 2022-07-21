@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HaruHappicTagModel {
+struct HaruHappicTagModel: Codable {
     let id, date, when, place, who, what: String
 
     enum CodingKeys: String, CodingKey {
