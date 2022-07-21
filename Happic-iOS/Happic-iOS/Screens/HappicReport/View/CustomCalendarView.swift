@@ -12,6 +12,7 @@ class CustomCalendarView: UIView {
     // MARK: - Properties
     var selectedDate = Date()
     var totalSquares = [String]()
+    var postedDays = [String]()
     
     var collectionViewWidth: CGFloat {
         return UIScreen.main.bounds.width - 20
@@ -160,7 +161,13 @@ class CustomCalendarView: UIView {
     
     func changeMonth(monthGap: Int) {
         selectedDate = CalendarHelper.shared.changeMonth(date: selectedDate, monthGap: monthGap)
+        postedDays.removeAll()
         setMonthView()
+    }
+    
+    func setData(model: MonthlyCountModel) {
+        postedDays = model.dates.map({ String($0) })
+        calendarCollectionView.reloadData()
     }
 }
 
@@ -175,6 +182,11 @@ extension CustomCalendarView: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.className, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
         
         cell.dayLabel.text = totalSquares[indexPath.item]
+        if postedDays.contains(totalSquares[indexPath.item]) {
+            cell.showUploadCheckView()
+        } else {
+            cell.hideUploadCheckView()
+        }
         return cell
     }
 }

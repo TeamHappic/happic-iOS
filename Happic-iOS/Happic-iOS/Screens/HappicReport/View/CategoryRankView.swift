@@ -76,4 +76,21 @@ final class CategoryRankView: UIView {
         whoViewController.setData(model: model.who)
         whatViewController.setData(model: model.what)
     }
+    
+    func setWhenData(model: [KeywordModel]) {
+        whenViewController.setData(model: model)
+    }
+    
+    func setWhereData(model: [KeywordModel]) {
+        whereViewController.setData(model: model)
+    }
+    
+    func setWhoData(model: [KeywordModel]) {
+        whoViewController.setData(model: model)
+    }
+    
+    func setWhatData(model: [KeywordModel]) {
+        whatViewController.setData(model: model)
+    }
+    
 }

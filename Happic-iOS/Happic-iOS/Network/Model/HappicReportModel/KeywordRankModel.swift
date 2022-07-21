@@ -9,6 +9,5 @@ import Foundation
 
 // MARK: - KeywordRankModel
 struct KeywordRankModel: Codable {
-    let content, category: String
-    let count: Int
+    let ranks: [Rank2]
 }
