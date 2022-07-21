@@ -72,6 +72,19 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.list, .badge, .sound, .banner])
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        guard let userInfo = response.notification.request.content.userInfo as? [String: Any] else { return }
+        print(userInfo)
+        if let clickAction = userInfo["click_action"] as? String {
+            if clickAction  == "1" {
+                let capsuleViewController = HappicCapsuleController()
+                UIApplication.shared.windows.first?.rootViewController?.present(capsuleViewController, animated: false, completion: nil)
+            }
+        }
+        
+        completionHandler()
+    }
 }
 
 extension AppDelegate: MessagingDelegate {
