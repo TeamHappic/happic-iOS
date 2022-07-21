@@ -17,10 +17,7 @@ struct HaruHappicService {
     func getHaruHappicPhotoView(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.haruHappicPhotoURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
-        let parameters: Parameters = [
-            "year": year,
-            "month": month
-        ]
+        let parameters: Parameters = ["year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
         
@@ -41,10 +38,7 @@ struct HaruHappicService {
     func getHaruHappicTagView(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.haruHappicPhotoURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
-        let parameters: Parameters = [
-            "year": year,
-            "month": month
-        ]
+        let parameters: Parameters = ["year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
         
