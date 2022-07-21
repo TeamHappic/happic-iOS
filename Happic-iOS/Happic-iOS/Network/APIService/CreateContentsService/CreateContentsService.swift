@@ -40,7 +40,7 @@ struct CreateContentsService {
         
         AF.upload(multipartFormData: { multipartFormData in
             if let image = imageData?.pngData() {
-                multipartFormData.append(image, withName: "image", fileName: "\(image).png", mimeType: "image/png")
+                multipartFormData.append(image, withName: "file", fileName: "\(image).png", mimeType: "image/png")
             }
         }, to: url, usingThreshold: UInt64.init(), method: .post, headers: header).responseData { response in
             switch response.result {
