@@ -38,7 +38,7 @@ final class CreateContentsController: UIViewController {
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
     
-    private let saveButton = UIButton(type: .system).then {
+    private lazy var saveButton = UIButton(type: .system).then {
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpOrange]), for: .normal)
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray6]), for: .disabled)
         $0.isEnabled = false
