@@ -132,7 +132,8 @@ final class HomeController: BaseUploadViewController {
     }
     
     @objc private func handleActionButtonDidTap(sender: UIButton) {
-        checkPostStatus()
+//        checkPostStatus()
+        setActionSheet()
     }
 }
 
