@@ -43,6 +43,7 @@
 		8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */; };
 		8ECAD2BD28896E7E00B2CEF0 /* RecommendTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */; };
 		8ECAD2C1288975CC00B2CEF0 /* CreateContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */; };
+		8EE207482889939400D0080C /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE207472889939400D0080C /* UploadImageModel.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -153,6 +154,7 @@
 		8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsService.swift; sourceTree = "<group>"; };
 		8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTagModel.swift; sourceTree = "<group>"; };
 		8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsModel.swift; sourceTree = "<group>"; };
+		8EE207472889939400D0080C /* UploadImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				8ECAD2B728894D1C00B2CEF0 /* PostStatusModel.swift */,
+				8EE207472889939400D0080C /* UploadImageModel.swift */,
 				8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */,
 				8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */,
 			);
@@ -1066,7 +1069,6 @@
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				8EC8749228892F2600974ACE /* HaruHappicService.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
-				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
 				6BB885152887E10D00832D00 /* CreateCharacterViewController.swift in Sources */,
 				8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */,
 				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
@@ -1093,6 +1095,7 @@
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
 				CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */,
 				CEA4028D2880839F009D98EF /* UILabel+.swift in Sources */,
+				8EE207482889939400D0080C /* UploadImageModel.swift in Sources */,
 				6BB885172887F24400832D00 /* CharacterIntroduceView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEFC3C4E287E960800F187BE /* CategoryRankController.swift in Sources */,
