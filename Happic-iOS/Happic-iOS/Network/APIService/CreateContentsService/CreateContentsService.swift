@@ -33,7 +33,7 @@ struct CreateContentsService {
         }
     }
     
-    /// 게시글 생성 시 최다 태그 추천
+    /// 게시글 작성 시 최다 태그 추천
     func getRecommendTag(completion: @escaping (NetworkResult<Any>) -> Void) {
     let url = APIConstants.isPostedURL
     let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
