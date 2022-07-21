@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - UploadImageModel
+struct UploadImageModel: Codable {
+    let id, link: String
+}
