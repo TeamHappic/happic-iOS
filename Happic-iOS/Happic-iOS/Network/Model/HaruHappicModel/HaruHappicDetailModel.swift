@@ -8,13 +8,12 @@
 import Foundation
 
 struct HaruHappicDetailModel: Codable {
-    let id, leftId, rightId: String
+    let id, leftId, rightId, photo, place, who, what: String
     let date: Date
-    let photo: String
     let when: Int
-    let place, who, what: String
-
+    
     enum CodingKeys: String, CodingKey {
+        case id, leftId, rightId, photo, who, what, date, when
         case place = "where"
     }
 }
