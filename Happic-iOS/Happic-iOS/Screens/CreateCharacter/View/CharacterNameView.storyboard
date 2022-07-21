@@ -1,51 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Bold.otf">
+            <string>Pretendard-Bold</string>
+        </array>
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Character Name View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="CharacterNameViewController" id="Y6W-OH-hqX" customClass="CharacterNameViewController" customModule="Happic_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pni-ml-T0F">
-                                <rect key="frame" x="173" y="213" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길잡이의 이름을 지어주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pni-ml-T0F">
+                                <rect key="frame" x="100.66666666666667" y="204" width="173.66666666666663" height="19"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTo-Y0-TVc">
-                                <rect key="frame" x="74" y="333" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTo-Y0-TVc">
+                                <rect key="frame" x="111.66666666666669" y="241" width="152" height="172"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B1t-Nl-UnI">
+                                        <rect key="frame" x="35.333333333333329" y="42" width="81" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80.900000000000006" id="XxB-yX-aGU"/>
+                                            <constraint firstAttribute="height" constant="88" id="h6b-jz-v6L"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="5oQ-Iq-fmK"/>
+                                    <constraint firstAttribute="height" constant="172" id="GMX-xT-UOd"/>
+                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="leading" secondItem="HTo-Y0-TVc" secondAttribute="leading" constant="35.5" id="XrT-pt-SWp"/>
+                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="top" secondItem="HTo-Y0-TVc" secondAttribute="top" constant="42" id="tkf-Vo-j8E"/>
+                                </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1t-Nl-UnI">
-                                <rect key="frame" x="87" y="424" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-Hd-mfL">
+                                <rect key="frame" x="130" y="461" width="115" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="9wo-MD-dhL"/>
+                                    <constraint firstAttribute="height" constant="24" id="Rti-4P-m6w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exw-rp-JGG">
+                                <rect key="frame" x="109.66666666666669" y="492" width="156" height="1"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="sIW-Fx-HBj"/>
+                                    <constraint firstAttribute="height" constant="1" id="svw-cG-GwQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoa-qz-lXe">
+                                <rect key="frame" x="39" y="93" width="20" height="20"/>
+                                <color key="tintColor" name="hp_white"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="hp_ic_left">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="완료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yic-r4-ovT">
+                                <rect key="frame" x="314.33333333333331" y="91" width="27.666666666666686" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Exw-rp-JGG" firstAttribute="top" secondItem="bNO-Hd-mfL" secondAttribute="bottom" constant="7" id="4Tk-To-KhS"/>
+                            <constraint firstItem="Yic-r4-ovT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="47" id="GU2-ZZ-dAK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Yic-r4-ovT" secondAttribute="trailing" constant="33" id="KiM-ow-abY"/>
+                            <constraint firstItem="Eoa-qz-lXe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="49" id="N2Q-pn-5Jz"/>
+                            <constraint firstItem="bNO-Hd-mfL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QEG-UY-3KE"/>
+                            <constraint firstItem="Exw-rp-JGG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="S7x-pV-Xs1"/>
+                            <constraint firstItem="bNO-Hd-mfL" firstAttribute="top" secondItem="HTo-Y0-TVc" secondAttribute="bottom" constant="48" id="Tez-S3-oof"/>
+                            <constraint firstItem="pni-ml-T0F" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="YLJ-QP-Gn5"/>
+                            <constraint firstItem="Eoa-qz-lXe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="39" id="c0Q-bT-g10"/>
+                            <constraint firstItem="pni-ml-T0F" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="ehV-VL-rtL"/>
+                            <constraint firstItem="HTo-Y0-TVc" firstAttribute="top" secondItem="pni-ml-T0F" secondAttribute="bottom" constant="18" id="mZo-qV-LLL"/>
+                            <constraint firstItem="HTo-Y0-TVc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="p6r-8B-fKd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterImage" destination="B1t-Nl-UnI" id="poL-2d-52W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="89"/>
+            <point key="canvasLocation" x="121.73913043478262" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hp_ic_left" width="20" height="20"/>
+        <namedColor name="hp_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
