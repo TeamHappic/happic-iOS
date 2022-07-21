@@ -165,16 +165,16 @@ final class CreateContentsController: UIViewController {
         }
         
         whenTagView.tagLabel.text = "#when"
-        whenTagView.userTextField.placeholder = "시간을 입력해주세요"
+        whenTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "시간을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whereTagView.tagLabel.text = "#where"
-        whereTagView.userTextField.placeholder = "장소을 입력해주세요"
+        whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whoTagView.tagLabel.text = "#who"
-        whoTagView.userTextField.placeholder = "함께한 사람을 입력해주세요"
+        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whatTagView.tagLabel.text = "#what"
-        whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
+        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     private func addKeyboardObserver() {
