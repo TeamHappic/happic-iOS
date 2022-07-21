@@ -11,4 +11,3 @@ import Foundation
 struct CreateContentsModel: Codable {
     let id: String
 }
-
