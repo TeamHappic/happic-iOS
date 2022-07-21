@@ -35,9 +35,10 @@
 		8EC874952889327400974ACE /* HaruHappicPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */; };
 		8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */; };
 		8ECAD2B52889460900B2CEF0 /* HaruHappicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */; };
-		8ECAD2B828894D1C00B2CEF0 /* PostingStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B728894D1C00B2CEF0 /* PostingStatusModel.swift */; };
+		8ECAD2B828894D1C00B2CEF0 /* PostStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B728894D1C00B2CEF0 /* PostStatusModel.swift */; };
 		8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */; };
 		8ECAD2BD28896E7E00B2CEF0 /* RecommendTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */; };
+		8ECAD2C1288975CC00B2CEF0 /* CreateContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -142,9 +143,10 @@
 		8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoModel.swift; sourceTree = "<group>"; };
 		8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagModel.swift; sourceTree = "<group>"; };
 		8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicDetailModel.swift; sourceTree = "<group>"; };
-		8ECAD2B728894D1C00B2CEF0 /* PostingStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStatusModel.swift; sourceTree = "<group>"; };
+		8ECAD2B728894D1C00B2CEF0 /* PostStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStatusModel.swift; sourceTree = "<group>"; };
 		8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsService.swift; sourceTree = "<group>"; };
 		8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTagModel.swift; sourceTree = "<group>"; };
+		8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsModel.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -299,8 +301,9 @@
 		8ECAD2B628894B9C00B2CEF0 /* CreateContentsModel */ = {
 			isa = PBXGroup;
 			children = (
-				8ECAD2B728894D1C00B2CEF0 /* PostingStatusModel.swift */,
+				8ECAD2B728894D1C00B2CEF0 /* PostStatusModel.swift */,
 				8ECAD2BC28896E7E00B2CEF0 /* RecommendTagModel.swift */,
+				8ECAD2C0288975CC00B2CEF0 /* CreateContentsModel.swift */,
 			);
 			path = CreateContentsModel;
 			sourceTree = "<group>";
@@ -1066,7 +1069,7 @@
 				CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */,
 				CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */,
 				8E4245072885DA640063368C /* HaruHappicDetailController.swift in Sources */,
-				8ECAD2B828894D1C00B2CEF0 /* PostingStatusModel.swift in Sources */,
+				8ECAD2B828894D1C00B2CEF0 /* PostStatusModel.swift in Sources */,
 				CE47965428848A450095ADD4 /* BaseResponse.swift in Sources */,
 				CEF6E08B287814C400A1636F /* HappicCapsuleView.swift in Sources */,
 				8E9D1643287AD62300269EA2 /* ColorLiterals.swift in Sources */,
@@ -1076,6 +1079,7 @@
 				8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */,
 				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
+				8ECAD2C1288975CC00B2CEF0 /* CreateContentsModel.swift in Sources */,
 				CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */,
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
 				CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */,
