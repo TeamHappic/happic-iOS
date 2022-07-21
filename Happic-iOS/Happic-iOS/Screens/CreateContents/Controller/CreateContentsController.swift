@@ -86,6 +86,9 @@ final class CreateContentsController: UIViewController {
         whatTagView.delegate = self
         
         scrollView.delegate = self
+        
+        whenPicker.delegate = self
+        whenPicker.dataSource = self
     }
     
     private func setHeaderView() {
@@ -195,9 +198,6 @@ final class CreateContentsController: UIViewController {
 // MARK: - Extensions
 extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource {
     func configPickerView() {
-        whenPicker.delegate = self
-        whenPicker.dataSource = self
-        
         whenTagView.userTextField.inputView = whenPicker
         configToolbar()
     }
@@ -258,14 +258,13 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         switch component {
         case 0:
             leftPickerValue = self.allMeridiem[row]
         case 1:
             rightPickerValue = self.allHour[row]
         default:
-            print(component)
+            break
         }
         self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
     }

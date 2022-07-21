@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HappicCapsuleController: UIViewController {
+final class HappicCapsuleController: BaseUploadViewController {
     
     // MARK: - UI
     private lazy var cancelButton = UIButton(type: .system).then {
@@ -59,6 +59,7 @@ final class HappicCapsuleController: UIViewController {
         $0.backgroundColor = .hpBgBlack1
         $0.semanticContentAttribute = .forceRightToLeft
         $0.layer.cornerRadius = 8
+        $0.addTarget(self, action: #selector(handleCreateContentsButtonDidTap(sender:)), for: .touchUpInside)
     }
     
     // MARK: - View Life Cycle
@@ -126,5 +127,9 @@ final class HappicCapsuleController: UIViewController {
             make.height.equalTo(44)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(57)
         }
+    }
+    
+    @objc func handleCreateContentsButtonDidTap(sender: UIButton) {
+        setActionSheet()
     }
 }

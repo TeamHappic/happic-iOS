@@ -45,7 +45,7 @@ final class HaruHappicController: BaseUploadViewController {
         haruHappicViewPager.snp.makeConstraints { make in
             make.top.equalTo(addPhotoButton.snp.bottom).offset(24)
             make.leading.trailing.equalToSuperview().inset(10)
-            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
     

@@ -8,12 +8,9 @@
 > 서비스 한 줄 소개: 하루 한 컷의 사진과 키워드 추출을 통해 찾아가는 매일의 행복
 >
 > SOPT 30th APP JAM <br>
-> 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
-
-`추후 릴리즈 예정 `
+> 프로젝트 기간 : 2021.07.02 ~
 
 <br>
-
 <br>
 
 ##  Team happic iOS Developers
@@ -28,9 +25,9 @@
 ## Development Environment and Using Library
 - Development Environment
 <p align="left">
-<img src ="https://img.shields.io/badge/Swift-5.0-ff69b4">
-<img src ="https://img.shields.io/badge/Xcode-13.4-blue">
-<img src ="https://img.shields.io/badge/iOS-14.0-blue">
+<img src ="https://img.shields.io/badge/Swift-5.5-orange?logo=swift">
+<img src ="https://img.shields.io/badge/Xcode-13.4-blue?logo=xcode">
+<img src ="https://img.shields.io/badge/iOS-14.0-green.svg">
 
 <br>
 <br>
@@ -72,7 +69,6 @@
 - **Code Review Rule**
     - 코드 리뷰는 최대한 빨리 한다.
     - 코드 리뷰는 최대한 정성껏 한다.
-    - [코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/#:~:text=%EC%BD%94%EB%93%9C%20%EB%A6%AC%EB%B7%B0%EB%9E%80%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EA)를 참고하여 우선순위 라벨을 사용한다.
    
  <br>
 
@@ -86,15 +82,14 @@
  ---
  
  ```
-1. 작업 단위별 Issue 생성 : 담당자, 라벨(Scene 지정, 담당자 지정 등), 프로젝트 칸반 보드 연결 
+1. 작업 단위별 Issue 생성 : 담당자, 라벨, 프로젝트 연결 
 
 2. Fork 받은 로컬 레포에서 develop 브랜치 최신화 : git pull (origin develop) 
 
-3. Branch 생성 : git switch -c Prefix/IssueNumber-description 
+3. Branch 생성 : git switch -c Prefix/#IssueNumber-description 
+   > 예시) chore/#3-Project-Setting
 
 4. 로컬 환경에서 작업 후 Add -> Commit -> Push -> Pull Request의 과정을 거친다.
-   commit template 사용하여 이슈 번호를 쓴다.
-   > 예시) chore/#3-Project-Setting
    
    Prefix의 의미
    > [Feat] : 새로운 기능 구현
@@ -107,7 +102,7 @@
    > [Test] : 테스트 모드, 리펙토링 테스트 코드 추가
 
 5. Pull Request 작성 
-   - closed : #IssueNumber로 이슈 연결, 프로젝트 연결, 리뷰어 지정
+   - closed : #IssueNumber로 이슈 연결, 리뷰어 지정
 
 6. Code Review 완료 후 Pull Request 작성자가 develop Branch로 merge하기
    - Develop Branch protection rules : Merge 전 최소 1 Approve 필요
@@ -222,15 +217,15 @@ Happic-iOS
 :---------:|---------|:----------:|:---------:
  온보딩 | 런치스크린 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
  &nbsp; | 온보딩 | - | 윤수빈
-  회원가입 | 소셜로그인 |  | 윤수빈
+  회원가입 | 소셜로그인 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
   &nbsp; | 회원가입, 로그인 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
   &nbsp; | 캐릭터 선택 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 강승현
   홈 | 캐릭터 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   하루해픽 | 사진, 태그 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
   &nbsp; | 게시글 작성 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
-  &nbsp; | 게시글 상세보기 |  | 윤수빈
+  &nbsp; | 게시글 상세보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 윤수빈
   해픽캡슐 | 캡슐뽑기 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
-  &nbsp; | 푸시 알림 |  | 이세진
+  &nbsp; | 푸시 알림 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   해픽레포트 | 전체보기 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 키워드 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png>  | 이세진
   &nbsp; | 카테고리 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진

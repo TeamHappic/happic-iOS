@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class AuthViewController: UIViewController {
     
@@ -26,9 +28,39 @@ class AuthViewController: UIViewController {
         startWithKakaoView.addGestureRecognizer(tap)
     }
     
+    // TO DO : 함수 이름 바꾸기
     @objc private func presentCharacterChooseViewController() {
         let createCharacterStoryBoard = UIStoryboard(name: "CreateCharacterView", bundle: nil)
         let creatCharacterViewController = createCharacterStoryBoard.instantiateViewController(withIdentifier: "CreateCharacterViewController")
         self.navigationController?.pushViewController(creatCharacterViewController, animated: true)
+
+        loginWithKakao()
+    }
+    
+    private func loginWithKakao() {
+        // 카카오톡 로그인
+        if UserApi.isKakaoTalkLoginAvailable() {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                } else {
+                    print("loginWithKakaoTalk() success.")
+                    if let accessToken = oauthToken?.accessToken {
+                        print("\(accessToken)")
+                    }
+                }
+            }
+        } else {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+               if let error = error {
+                 print(error)
+               } else {
+                print("loginWithKakaoAccount() success.")
+                   if let accessToken = oauthToken?.accessToken {
+                       print("\(accessToken)")
+                   }
+               }
+            }
+        }
     }
 }

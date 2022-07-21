@@ -18,58 +18,42 @@ final class TagCollectionViewCell: UICollectionViewCell {
     
     private lazy var whenLabel = UILabel().then {
         $0.text = "오후2시"
-        $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
+    }
+    
+    private lazy var whereLabel = UILabel().then {
+        $0.text = "집구석구석"
+    }
+    
+    private lazy var whoLabel = UILabel().then {
+        $0.text = "햄식달식이"
+    }
+    
+    private lazy var whatLabel = UILabel().then {
+        $0.text = "짱짱귀여워"
     }
     
     private lazy var whenView = UIView().then {
-        $0.layer.cornerRadius = 10
-        $0.backgroundColor = .hpGray9
         $0.addSubview(whenLabel)
         whenLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
     
-    private lazy var whereLabel = UILabel().then {
-        $0.text = "집구석구석"
-        $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
-    }
-    
     private lazy var whereView = UIView().then {
-        $0.layer.cornerRadius = 10
-        $0.backgroundColor = .hpGray9
         $0.addSubview(whereLabel)
         whereLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
     
-    private lazy var whoLabel = UILabel().then {
-        $0.text = "햄식달식이"
-        $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
-    }
-    
     private lazy var whoView = UIView().then {
-        $0.layer.cornerRadius = 10
-        $0.backgroundColor = .hpGray9
         $0.addSubview(whoLabel)
         whoLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
     
-    private lazy var whatLabel = UILabel().then {
-        $0.text = "짱짱귀여워"
-        $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 13)
-    }
-    
     private lazy var whatView = UIView().then {
-        $0.layer.cornerRadius = 10
-        $0.backgroundColor = .hpGray9
         $0.addSubview(whatLabel)
         whatLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -92,6 +76,16 @@ final class TagCollectionViewCell: UICollectionViewCell {
         addSubview(dailyLabel)
         dailyLabel.snp.makeConstraints { make in
             make.top.leading.equalToSuperview()
+        }
+        
+        [whenLabel, whereLabel, whoLabel, whatLabel].forEach {
+            $0.textColor = .hpWhite
+            $0.font = UIFont.font(.pretendardBold, ofSize: 13)
+        }
+        
+        [whenView, whereView, whoView, whatView].forEach {
+            $0.layer.cornerRadius = 10
+            $0.backgroundColor = .hpGray9
         }
         
         let stack = UIStackView(arrangedSubviews: [whenView, whereView, whoView, whatView])
