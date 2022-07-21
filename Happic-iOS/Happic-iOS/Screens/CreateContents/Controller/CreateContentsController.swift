@@ -57,6 +57,7 @@ final class CreateContentsController: UIViewController {
         super.viewDidLoad()
         configureUI()
         setDelegate()
+        uploadImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -304,6 +305,26 @@ extension CreateContentsController: UIScrollViewDelegate {
                 self.pickerImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
                 self.pickerImageView.superview?.transform = CGAffineTransform(translationX: 0, y: -40.adjustedH)
                 self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -110.adjustedH)
+            }
+        }
+    }
+}
+
+// MARK: - Network
+extension CreateContentsController {
+    func uploadImage() {
+        print("dddd")
+        guard let image = self.pickerImageView.image else { return }
+        CreateContentsService.shared.uploadImage(imageData: image) { response in
+            switch response {
+            case .success(let result):
+                print(result)
+                guard let data = result as? UploadImageModel else { return }
+                print("성공 \(data.id)")
+            default:
+                print("실패ㅐㅐㅐㅐ")
+                print(response)
+                break
             }
         }
     }
