@@ -38,14 +38,15 @@ final class CreateContentsController: UIViewController {
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
     
-    private let saveButton = UIButton(type: .system).then {
+    private lazy var saveButton = UIButton(type: .system).then {
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpOrange]), for: .normal)
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray6]), for: .disabled)
+        $0.addTarget(self, action: #selector(saveButtonDidTap), for: .touchUpInside)
         $0.isEnabled = false
     }
     
     var pickerImageView = UIImageView().then {
-        $0.image = ImageLiterals.imageDailySample3
+//        $0.image = ImageLiterals.imageDailySample3
         $0.contentMode = .scaleAspectFill
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 12
@@ -56,6 +57,7 @@ final class CreateContentsController: UIViewController {
         super.viewDidLoad()
         configureUI()
         setDelegate()
+        uploadImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -193,6 +195,10 @@ final class CreateContentsController: UIViewController {
     @objc private func dismissViewController() {
         self.dismiss(animated: true)
     }
+    
+    @objc private func saveButtonDidTap() {
+
+    }
 }
 
 // MARK: - Extensions
@@ -299,6 +305,26 @@ extension CreateContentsController: UIScrollViewDelegate {
                 self.pickerImageView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
                 self.pickerImageView.superview?.transform = CGAffineTransform(translationX: 0, y: -40.adjustedH)
                 self.whenTagView.superview?.transform = CGAffineTransform(translationX: 0, y: -110.adjustedH)
+            }
+        }
+    }
+}
+
+// MARK: - Network
+extension CreateContentsController {
+    func uploadImage() {
+        print("dddd")
+        guard let image = self.pickerImageView.image else { return }
+        CreateContentsService.shared.uploadImage(imageData: image) { response in
+            switch response {
+            case .success(let result):
+                print(result)
+                guard let data = result as? UploadImageModel else { return }
+                print("성공 \(data.id)")
+            default:
+                print("실패ㅐㅐㅐㅐ")
+                print(response)
+                break
             }
         }
     }
