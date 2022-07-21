@@ -193,6 +193,22 @@ final class CreateContentsController: UIViewController {
         }
     }
     
+    private func setCurrentDateLabel() {
+        let date = Date()
+        let todayMonth = Calendar.current.dateComponents([.month], from: date)
+        let todayDay = Calendar.current.dateComponents([.day], from: date)
+        
+        guard let month = todayMonth.month,
+              let day = todayDay.day else { return }
+        
+        var monthStr = String(month)
+        let dayStr = String(day)
+        if monthStr.count == 1 {
+            monthStr = "0\(monthStr)"
+        }
+        self.dateLabel.text = "\(monthStr).\(dayStr) 해픽"
+    }
+    
     @objc private func dismissViewController() {
         self.dismiss(animated: true)
     }
