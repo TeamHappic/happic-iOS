@@ -190,4 +190,3 @@ extension HappicReportController {
         }
     }
 }
-

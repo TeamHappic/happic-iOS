@@ -17,6 +17,7 @@ final class KeywordRankController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
+        getKeyworkRank(year: "2022", month: "7")
     }
     
     // MARK: - Functions
@@ -37,8 +38,8 @@ extension KeywordRankController {
         HappicReportService.shared.getKeywordRank(year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? [Rank2] else { return }
-                self.keywordRankView.setData(model: data)
+                guard let data = result as? KeywordRankModel else { return }
+                self.keywordRankView.setData(model: data.ranks)
             default:
                 break
             }

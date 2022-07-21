@@ -24,6 +24,7 @@ final class OverallStatsController: UIViewController {
         didSet {
             setCustomMonthViewText(month: currentMonth)
             setCustomMonthPickerViewSelected(month: currentMonth)
+            fetchNewData(month: currentMonth)
         }
     }
     
@@ -122,6 +123,10 @@ final class OverallStatsController: UIViewController {
         containerView.addSubview(viewPager.view)
     }
     
+    func fetchNewData(year: String = "2022", month: String) {
+        keywordRankViewController.getKeyworkRank(year: year, month: month)
+    }
+    
     func scrollToIndex(indexOf: Int) {
         viewPager.scrollToPage(.at(index: indexOf), animated: false)
     }
@@ -168,7 +173,7 @@ extension OverallStatsController: CustomMonthPickerViewDelegate {
         currentMonth = month
         let monthGap = Int(month)! - selectedMonth
         monthHappicRecordController.changeCalendarMonth(monthGap: monthGap)
-        selectedMonth = Int(month)!        
+        selectedMonth = Int(month)!
     }
     
     func setCustomMonthViewText(month: String) {
