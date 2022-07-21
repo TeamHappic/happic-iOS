@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BB8850E2887E0F300832D00 /* CreateCharacterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8850C2887E0F300832D00 /* CreateCharacterView.storyboard */; };
+		6BB885152887E10D00832D00 /* CreateCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */; };
+		6BB885172887F24400832D00 /* CharacterIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB885162887F24400832D00 /* CharacterIntroduceView.swift */; };
+		6BB885192887F28E00832D00 /* CharacterIntroduceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */; };
 		8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B9172888864900D52581 /* KakaoLoginService.swift */; };
 		8E09E0CB287D4D2A00FB18DD /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */; };
 		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
@@ -74,8 +78,6 @@
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
 		CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */; };
-		CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */; };
-		CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */; };
 		CEF6E089287814BF00A1636F /* tempHappicCapsuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */; };
 		CEF6E08B287814C400A1636F /* HappicCapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08A287814C400A1636F /* HappicCapsuleView.swift */; };
 		CEF6E08D287814C900A1636F /* HappicCapsuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E08C287814C900A1636F /* HappicCapsuleController.swift */; };
@@ -118,6 +120,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BB8850C2887E0F300832D00 /* CreateCharacterView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateCharacterView.storyboard; sourceTree = "<group>"; };
+		6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCharacterViewController.swift; sourceTree = "<group>"; };
+		6BB885162887F24400832D00 /* CharacterIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterIntroduceView.swift; sourceTree = "<group>"; };
+		6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterIntroduceView.xib; sourceTree = "<group>"; };
 		8E09B9172888864900D52581 /* KakaoLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
 		8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -180,8 +186,6 @@
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
 		CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterModel.swift; sourceTree = "<group>"; };
-		CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterView.swift; sourceTree = "<group>"; };
-		CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterController.swift; sourceTree = "<group>"; };
 		CEF6E088287814BF00A1636F /* tempHappicCapsuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempHappicCapsuleModel.swift; sourceTree = "<group>"; };
 		CEF6E08A287814C400A1636F /* HappicCapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicCapsuleView.swift; sourceTree = "<group>"; };
 		CEF6E08C287814C900A1636F /* HappicCapsuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicCapsuleController.swift; sourceTree = "<group>"; };
@@ -663,7 +667,8 @@
 		CEF6E0642878142000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E086287814BA00A1636F /* tempCreateCharacterController.swift */,
+				6BB885162887F24400832D00 /* CharacterIntroduceView.swift */,
+				6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -671,7 +676,8 @@
 		CEF6E0652878142500A1636F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E084287814B700A1636F /* tempCreateCharacterView.swift */,
+				6BB8850C2887E0F300832D00 /* CreateCharacterView.storyboard */,
+				6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -983,6 +989,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB885192887F28E00832D00 /* CharacterIntroduceView.xib in Resources */,
 				CEBB69DF2873087F000EEB8A /* LaunchScreen.storyboard in Resources */,
 				8E8A1CE5287C75480050184F /* Pretendard-Medium.otf in Resources */,
 				8E8A1CE6287C75480050184F /* Pretendard-ExtraBold.otf in Resources */,
@@ -993,6 +1000,7 @@
 				CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */,
 				CE479648288420B30095ADD4 /* AuthView.storyboard in Resources */,
 				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
+				6BB8850E2887E0F300832D00 /* CreateCharacterView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,6 +1066,8 @@
 				CEFC3C2C287D27FF00F187BE /* KeywordRankView.swift in Sources */,
 				8EC8749228892F2600974ACE /* HaruHappicService.swift in Sources */,
 				CEFC3C32287D374100F187BE /* KeywordRankCollectionViewCell.swift in Sources */,
+				CEF6E04728780EE800A1636F /* tempModel.swift in Sources */,
+				6BB885152887E10D00832D00 /* CreateCharacterViewController.swift in Sources */,
 				8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */,
 				CEFC3C57287EFA4D00F187BE /* CalendarCollectionViewCell.swift in Sources */,
 				CEF6E095287814DA00A1636F /* tempHaruHappicModel.swift in Sources */,
@@ -1077,13 +1087,13 @@
 				CE479652288489F60095ADD4 /* NetworkResult.swift in Sources */,
 				8EB21132287D5A1C00F53A95 /* TagCollectionViewCell.swift in Sources */,
 				8EB21134287E8B9500F53A95 /* CustomMonthView.swift in Sources */,
-				CEF6E087287814BA00A1636F /* tempCreateCharacterController.swift in Sources */,
 				CEFC3C34287D4ABF00F187BE /* CategoryRankView.swift in Sources */,
 				8ECAD2C1288975CC00B2CEF0 /* CreateContentsModel.swift in Sources */,
 				CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */,
 				CEFC3C3F287D5B8D00F187BE /* CategoryDetailCollectionViewCell.swift in Sources */,
 				CEFC3C46287DF5A000F187BE /* MonthHappicRecordView.swift in Sources */,
 				CEA4028D2880839F009D98EF /* UILabel+.swift in Sources */,
+				6BB885172887F24400832D00 /* CharacterIntroduceView.swift in Sources */,
 				CEF6E09F287814ED00A1636F /* CreateContentsController.swift in Sources */,
 				CEFC3C4E287E960800F187BE /* CategoryRankController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
@@ -1102,7 +1112,6 @@
 				CE479645288420830095ADD4 /* StoryboardLiterals.swift in Sources */,
 				CEF6E09B287814E600A1636F /* tempCreateContentsModel.swift in Sources */,
 				CEF6E0A72878150100A1636F /* tempSettingModel.swift in Sources */,
-				CEF6E085287814B700A1636F /* tempCreateCharacterView.swift in Sources */,
 				CE47965628848B4F0095ADD4 /* NetworkHelper.swift in Sources */,
 				8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */,
 				CEFC3C37287D4D4800F187BE /* CategoryDetailController.swift in Sources */,

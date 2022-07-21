@@ -30,6 +30,10 @@ class AuthViewController: UIViewController {
     
     // TO DO : 함수 이름 바꾸기
     @objc private func presentCharacterChooseViewController() {
+        let createCharacterStoryBoard = UIStoryboard(name: "CreateCharacterView", bundle: nil)
+        let creatCharacterViewController = createCharacterStoryBoard.instantiateViewController(withIdentifier: "CreateCharacterViewController")
+        self.navigationController?.pushViewController(creatCharacterViewController, animated: true)
+
         loginWithKakao()
     }
     
