@@ -77,4 +77,25 @@ struct CreateContentsService {
             }
         }
     }
+    
+    // 하루해픽 게시글 삭제
+    func deleteHaruHappic(filmId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let url = APIConstants.createContentsURL
+        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let parameters: Parameters = ["filmId": filmId]
+        
+        let dataRequest = AF.request(url, method: .delete, parameters: parameters, encoding: URLEncoding.default, headers: header)
+        
+        dataRequest.responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: BlankData.self)
+                completion(networkResult)
+            case .failure:
+                completion(.networkFail)
+            }
+        }
+    }
 }
