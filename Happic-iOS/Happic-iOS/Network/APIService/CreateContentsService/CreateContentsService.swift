@@ -57,7 +57,7 @@ struct CreateContentsService {
     
     /// 게시글 작성 시 최다 태그 추천
     func getRecommendTag(completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.isPostedURL
+        let url = APIConstants.recommendTagURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
