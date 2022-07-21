@@ -313,17 +313,13 @@ extension CreateContentsController: UIScrollViewDelegate {
 // MARK: - Network
 extension CreateContentsController {
     func uploadImage() {
-        print("dddd")
         guard let image = self.pickerImageView.image else { return }
         CreateContentsService.shared.uploadImage(imageData: image) { response in
             switch response {
             case .success(let result):
-                print(result)
                 guard let data = result as? UploadImageModel else { return }
-                print("성공 \(data.id)")
+                print(data)
             default:
-                print("실패ㅐㅐㅐㅐ")
-                print(response)
                 break
             }
         }

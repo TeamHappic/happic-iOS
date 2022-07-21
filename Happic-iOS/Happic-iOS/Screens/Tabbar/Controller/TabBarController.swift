@@ -99,7 +99,7 @@ extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let index = viewControllers?.firstIndex(of: viewController)
         if index == 2 {
-            setActionSheet()
+            checkPostStatus()
             return false
         }
         return true
@@ -133,6 +133,26 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
             picker.dismiss(animated: true)
             createContentsController.modalPresentationStyle = .fullScreen
             present(createContentsController, animated: true, completion: nil)
+        }
+    }
+}
+
+// MARK: - Network
+extension TabBarController {
+    func checkPostStatus() {
+        CreateContentsService.shared.getPostStatus { response in
+            print(response)
+            switch response {
+            case .success(let result):
+                guard let data = result as? PostStatusModel else { return }
+                if data.isPosted {
+                    self.showToast(message: "이미 오늘의 해픽을 등록했어요")
+                } else {
+                    self.setActionSheet()
+                }
+            default:
+                break
+            }
         }
     }
 }
