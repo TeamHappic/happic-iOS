@@ -34,6 +34,7 @@
 		8EC8749228892F2600974ACE /* HaruHappicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8749128892F2600974ACE /* HaruHappicService.swift */; };
 		8EC874952889327400974ACE /* HaruHappicPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */; };
 		8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */; };
+		8ECAD2B52889460900B2CEF0 /* HaruHappicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -137,6 +138,7 @@
 		8EC8749128892F2600974ACE /* HaruHappicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicService.swift; sourceTree = "<group>"; };
 		8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoModel.swift; sourceTree = "<group>"; };
 		8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagModel.swift; sourceTree = "<group>"; };
+		8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicDetailModel.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */,
 				8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */,
+				8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */,
 			);
 			path = HaruHappicModel;
 			sourceTree = "<group>";
@@ -1076,6 +1079,7 @@
 				CEF6E0A1287814F200A1636F /* tempHappicReportModel.swift in Sources */,
 				CEF6E08F287814CD00A1636F /* tempHomeModel.swift in Sources */,
 				CEF6E0A3287814F600A1636F /* BestHappicMomentView.swift in Sources */,
+				8ECAD2B52889460900B2CEF0 /* HaruHappicDetailModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
