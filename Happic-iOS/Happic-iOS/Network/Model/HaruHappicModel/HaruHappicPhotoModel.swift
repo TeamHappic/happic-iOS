@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct HaruHappicPhotoModel: Codable {
+    let id, day: String
+    let thumbnail: String
+}
