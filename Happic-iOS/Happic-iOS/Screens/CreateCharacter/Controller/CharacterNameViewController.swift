@@ -17,10 +17,9 @@ class CharacterNameViewController: UIViewController{
         
         namingCharacterLabel.attributedText = attributedStr
         
-        
-        
-        
+        self.dismiss(animated: true)
     }
+    
     @IBAction func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -40,13 +39,19 @@ class CharacterNameViewController: UIViewController{
         super.viewDidLoad()
         setPurpleBackgroundColor()
         if flag == 0 {
-            characterImage.image=UIImage(named:"hp_img_m1")
-        }
-        else {
-            characterImage.image=UIImage(named:"hp_img_c1")
+            characterImage.image = UIImage(named: "hp_img_m1")
+            characterImageUIView.setDarkBlue()
+            characterImageUIView.clipsToBounds = true
+        } else {
+            characterImage.image = UIImage(named: "hp_img_c1")
+            characterImageUIView.setDarkPurple()
+            characterImageUIView.clipsToBounds = true
         }
         characterImageUIView.layer.cornerRadius = 8
-        characterImageUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+        characterImageUIView.layer.maskedCorners = [.layerMinXMinYCorner,
+                                                    .layerMinXMaxYCorner,
+                                                    .layerMaxXMinYCorner,
+                                                    .layerMaxXMaxYCorner]
         completeButton.isEnabled = false
         completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
         characterNameTextField.delegate = self
@@ -75,6 +80,7 @@ extension CharacterNameViewController: UITextFieldDelegate {
         }
         guard let text = textField.text else { return false }
         if text.count >= 5 {
+            showToast(message: "5글자 이내로 입력해주세요", yInsetFromSuperView: Int(370.adjustedH))
             return false
         }
         return true

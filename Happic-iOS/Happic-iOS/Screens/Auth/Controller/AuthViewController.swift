@@ -34,7 +34,7 @@ class AuthViewController: UIViewController {
         let creatCharacterViewController = createCharacterStoryBoard.instantiateViewController(withIdentifier: "CreateCharacterViewController")
         self.navigationController?.pushViewController(creatCharacterViewController, animated: true)
 
-        loginWithKakao()
+        // loginWithKakao()
     }
     
     private func loginWithKakao() {

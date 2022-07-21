@@ -15,8 +15,8 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
-          super.viewDidLoad()
-        
+        super.viewDidLoad()
+        bottomViewHeight.constant = 510.adjustedH
         setPurpleBackgroundColor()
 
         CharacterIntroduceUIView.delegate = self
@@ -28,12 +28,15 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
         recordLabel.textColor = UIColor.hpGray3
         recordLabel.textAlignment = .center
         
+        MoonUIView.setDarkBlue()
+        MoonUIView.clipsToBounds = true
         MoonUIView.layer.cornerRadius = 8
         MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
+        CloudUIView.setDarkPurple()
+        CloudUIView.clipsToBounds = true
         CloudUIView.layer.cornerRadius = 8
         CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-        
         
         setTapGesture()
     }
@@ -62,7 +65,7 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
     @objc
     private func raiseCharacterIntroduceView() {
         UIView.animate(withDuration: 1.0, animations: { [self] in
-            self.CharacterIntroduceUIView.transform = CGAffineTransform(translationX: 0, y: -490)
+            self.CharacterIntroduceUIView.transform = CGAffineTransform(translationX: 0, y: -510)
         })
 
     }
@@ -76,8 +79,7 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
             MoonUIView.layer.borderColor = UIColor.hpDarkBlue.cgColor
             MoonUIView.layer.borderWidth = 2
             CloudUIView.layer.borderWidth = 0
-        }
-        else {
+        } else {
             CloudUIView.layer.borderColor = UIColor.hpDarkPurple.cgColor
             CloudUIView.layer.borderWidth = 2
             MoonUIView.layer.borderWidth = 0
@@ -88,10 +90,10 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
         chooseLabel.text = "어떤 길잡이와 함께 하실래요?"
         UIView.animate(withDuration: 1.0) {
             let scale = CGAffineTransform(scaleX: 0.6, y: 0.6)
-            let move = CGAffineTransform(translationX: 0, y: -200)
+            let move = CGAffineTransform(translationX: 0, y: -230)
             let combine = scale.concatenating(move)
             self.MoonAndCloudUIView.transform = combine
-            self.chooseLabel.transform = CGAffineTransform(translationX: 0, y: -150)
+            self.chooseLabel.transform = CGAffineTransform(translationX: 0, y: -180)
         }
 
     }
