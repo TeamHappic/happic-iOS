@@ -11,7 +11,7 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     @IBOutlet weak var recordLabel: UILabel!
     @IBOutlet weak var MoonUIView: UIView!
     @IBOutlet weak var CloudUIView: UIView!
-    @IBOutlet weak var CharacterIntroduceUIView: UIView!
+    @IBOutlet weak var CharacterIntroduceUIView: CharacterIntroduceView!
     @IBOutlet weak var MoonAndCloudUIView: UIView!
     @IBOutlet weak var chooseLabel: UILabel!
     
@@ -35,12 +35,17 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
 
     private func setTapGesture() {
         MoonUIView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(scaleDownCreateCharacterView))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(scaleDownCreateCharacterView(sender:)))
         MoonUIView.addGestureRecognizer(tap)
-        
+        /*
+         CreateIntroduceView 에 Flag 0 을 전달
+         MoonUIView 에 하이라이트
+        */
         CloudUIView.isUserInteractionEnabled = true
-        let tap2 = UITapGestureRecognizer(target: self, action: #selector(scaleDownCreateCharacterView))
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(scaleDownCreateCharacterView(sender:)))
         CloudUIView.addGestureRecognizer(tap2)
+        // CreateIntroduceView 에 Flag 1를 전달
+        // cloudUIView 에 하이라이트
     }
 
 //    @objc
@@ -57,7 +62,11 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     }
 
     @objc
-    private func scaleDownCreateCharacterView() {
+    private func scaleDownCreateCharacterView(sender: UITapGestureRecognizer) {
+        if let tag = sender.view?.tag {
+            CharacterIntroduceUIView.mooonCloudFlag = tag
+            print(CharacterIntroduceUIView.mooonCloudFlag)
+        }
         raiseCharacterIntroduceView()
         recordLabel.isHidden = true
         chooseLabel.text = "어떤 길잡이와 함께 하실래요?"
