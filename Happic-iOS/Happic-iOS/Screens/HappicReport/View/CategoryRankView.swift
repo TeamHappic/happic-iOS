@@ -69,4 +69,11 @@ final class CategoryRankView: UIView {
             $0.collectionViewCanScroll(isScrollEnabled)
         }
     }
+    
+    func setData(model: Rank3S) {
+        whenViewController.setData(model: model.when)
+        whereViewController.setData(model: model.place)
+        whoViewController.setData(model: model.who)
+        whatViewController.setData(model: model.what)
+    }
 }

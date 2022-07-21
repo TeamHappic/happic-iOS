@@ -8,6 +8,10 @@
 import UIKit
 
 final class CategoryDetailCollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - Properties
+    var type: CategoryType = .whenCategory
+    
     // MARK: - UI
     private lazy var categoryNameLabel = UILabel().then {
         $0.text = "#who 1"
@@ -60,6 +64,8 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     }
     
     func setCategoryNameLabel(type: CategoryType, index: Int) {
+        self.type = type
+        
         switch type {
         case .whenCategory:
             categoryNameLabel.attributedText = makeCategoryString(category: "#when ", index: index)
@@ -80,5 +86,14 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
                                                    attributes: [.font: UIFont.font(.pretendardBold, ofSize: 14),
                                                     .foregroundColor: UIColor.gray]))
         return attributedString
+    }
+    
+    func setData(model: KeywordModel) {
+        if type == .whenCategory {
+            userKeywordLabel.text = model.content.timeFormatted
+        } else {
+            userKeywordLabel.text = model.content
+        }
+        countLabel.text = "\(model.count)회"
     }
 }

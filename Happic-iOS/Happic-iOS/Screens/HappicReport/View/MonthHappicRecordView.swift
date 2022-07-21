@@ -82,4 +82,10 @@ final class MonthHappicRecordView: UIView {
             make.leading.bottom.trailing.equalToSuperview()
         }
     }
+    
+    func setData(model: Rank4S) {
+        self.count = model.count
+        monthLabel.text = "\(model.month)월"
+        countLabel.text = "\(count)회"
+    }
 }
