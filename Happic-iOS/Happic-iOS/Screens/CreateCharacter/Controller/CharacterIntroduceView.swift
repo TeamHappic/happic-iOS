@@ -88,6 +88,7 @@ class CharacterIntroduceView: UIView {
             continueButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
         } else {
+            firstAnswerLabel.text = "내가 한 일이 완벽하게 끝나는거!"
             firstAnswerLabelWidth.constant = 217
             firstAnswerLabel.textAlignment = .center
             firstAnswerLabel.font = UIFont.font(.pretendardBold, ofSize: 14)
