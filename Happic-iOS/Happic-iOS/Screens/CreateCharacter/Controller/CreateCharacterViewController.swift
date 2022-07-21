@@ -21,6 +21,7 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
           super.viewDidLoad()
         
         CharacterIntroduceUIView.frame.size.height = 0
+        CharacterIntroduceUIView.isHidden = true
         recordLabel.text = "해픽의 밤하늘에 \n 당신의 행복을 기록하세요 "
         recordLabel.numberOfLines = 0
         recordLabel.textColor = UIColor.purple
@@ -68,6 +69,7 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
             print(CharacterIntroduceUIView.mooonCloudFlag)
         }
         raiseCharacterIntroduceView()
+        self.CharacterIntroduceUIView.isHidden=false
         recordLabel.isHidden = true
         chooseLabel.text = "어떤 길잡이와 함께 하실래요?"
         UIView.animate(withDuration: 1.0) {
