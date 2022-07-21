@@ -11,6 +11,8 @@
 		6BB885152887E10D00832D00 /* CreateCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */; };
 		6BB885172887F24400832D00 /* CharacterIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB885162887F24400832D00 /* CharacterIntroduceView.swift */; };
 		6BB885192887F28E00832D00 /* CharacterIntroduceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */; };
+		6BB8851B288992A500832D00 /* CharacterNameView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB8851A288992A500832D00 /* CharacterNameView.storyboard */; };
+		6BB8851D288992BB00832D00 /* CharacterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB8851C288992BB00832D00 /* CharacterNameViewController.swift */; };
 		8E09B9182888864900D52581 /* KakaoLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09B9172888864900D52581 /* KakaoLoginService.swift */; };
 		8E09E0CB287D4D2A00FB18DD /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */; };
 		8E2F757D2882A315001025DE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F757C2882A315001025DE /* UIImageView+.swift */; };
@@ -125,6 +127,8 @@
 		6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCharacterViewController.swift; sourceTree = "<group>"; };
 		6BB885162887F24400832D00 /* CharacterIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterIntroduceView.swift; sourceTree = "<group>"; };
 		6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterIntroduceView.xib; sourceTree = "<group>"; };
+		6BB8851A288992A500832D00 /* CharacterNameView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CharacterNameView.storyboard; sourceTree = "<group>"; };
+		6BB8851C288992BB00832D00 /* CharacterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNameViewController.swift; sourceTree = "<group>"; };
 		8E09B9172888864900D52581 /* KakaoLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
 		8E09E0CA287D4D2A00FB18DD /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		8E2F757C2882A315001025DE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -672,6 +676,7 @@
 			children = (
 				6BB885162887F24400832D00 /* CharacterIntroduceView.swift */,
 				6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */,
+				6BB8851C288992BB00832D00 /* CharacterNameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 			children = (
 				6BB8850C2887E0F300832D00 /* CreateCharacterView.storyboard */,
 				6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */,
+				6BB8851A288992A500832D00 /* CharacterNameView.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1000,6 +1006,7 @@
 				8E9D1641287AD0F400269EA2 /* Colors.xcassets in Resources */,
 				8E8A1CE8287C75480050184F /* Pretendard-Regular.otf in Resources */,
 				8E8A1CE7287C75480050184F /* GmarketSansBold.otf in Resources */,
+				6BB8851B288992A500832D00 /* CharacterNameView.storyboard in Resources */,
 				CECD7F3028884D9B00FD1420 /* GoogleService-Info.plist in Resources */,
 				CE479648288420B30095ADD4 /* AuthView.storyboard in Resources */,
 				CEBB69DC2873087F000EEB8A /* Assets.xcassets in Resources */,
@@ -1101,6 +1108,7 @@
 				CEFC3C4E287E960800F187BE /* CategoryRankController.swift in Sources */,
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */,
+				6BB8851D288992BB00832D00 /* CharacterNameViewController.swift in Sources */,
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
 				8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */,
 				CE47964A288420C80095ADD4 /* AuthViewController.swift in Sources */,

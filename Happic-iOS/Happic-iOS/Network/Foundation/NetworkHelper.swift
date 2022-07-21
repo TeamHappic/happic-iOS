@@ -17,8 +17,8 @@ struct NetworkHelper {
         guard let decodedData = try? decoder.decode(BaseResponse<T>.self, from: data) else { return .pathErr("pathErr") }
         
         switch statusCode {
-        case 200..<300: return .success(decodedData)
-        case 400..<500: return .requestErr(decodedData)
+        case 200..<300: return .success(decodedData.data)
+        case 400..<500: return .requestErr(decodedData.data)
         case 500..<600: return .serverErr
         default: return .networkFail
         }

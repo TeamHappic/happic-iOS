@@ -8,13 +8,13 @@
 import UIKit
 
 extension UIViewController {
-    func showToast(message: String) {
-        Toast.show(message: message, controller: self)
+    func showToast(message: String, yInsetFromSuperView: Int = 100) {
+        Toast.show(message: message, controller: self, yInsetFromSuperView: yInsetFromSuperView)
     }
 }
 
 final class Toast {
-    static func show(message: String, controller: UIViewController) {
+    static func show(message: String, controller: UIViewController, yInsetFromSuperView: Int) {
         
         let toastContainer = UIView()
         let toastLabel = UILabel()
@@ -37,7 +37,7 @@ final class Toast {
         controller.view.addSubview(toastContainer)
         
         toastContainer.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(100)
+            $0.bottom.equalToSuperview().inset(yInsetFromSuperView)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(toastLabel.frame.width + 35)
             $0.height.equalTo(toastLabel.frame.height + 25)

@@ -16,7 +16,7 @@ struct HappicReportService {
     /// 해픽 레포트 조회
     func getHappicReportSummary(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportSummaryURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let parameters: Parameters = [
             "year": year,
             "month": month

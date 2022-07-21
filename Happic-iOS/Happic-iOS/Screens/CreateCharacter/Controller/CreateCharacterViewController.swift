@@ -20,12 +20,14 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     override func viewDidLoad() {
           super.viewDidLoad()
         
+        CharacterIntroduceUIView.delegate = self
         CharacterIntroduceUIView.frame.size.height = 0
         CharacterIntroduceUIView.isHidden = true
         recordLabel.text = "해픽의 밤하늘에 \n 당신의 행복을 기록하세요 "
         recordLabel.numberOfLines = 0
         recordLabel.textColor = UIColor.purple
         recordLabel.textAlignment = .center          // 중앙 정렬.
+        
         
         setTapGesture()
     }
@@ -81,4 +83,13 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
 
     }
 
+}
+
+extension CreateCharacterViewController: CharacterIntroduceViewDelegate {
+    func pushCharaterNameController(flag: Int) {
+        let characterNameStoryBoard = UIStoryboard(name: "CharacterNameView", bundle: nil)
+        guard let characterNameViewController = characterNameStoryBoard.instantiateViewController(withIdentifier: "CharacterNameViewController") as? CharacterNameViewController else { return }
+        characterNameViewController.flag = flag
+        self.navigationController?.pushViewController(characterNameViewController, animated: true)
+    }
 }
