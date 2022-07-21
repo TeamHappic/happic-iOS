@@ -15,7 +15,7 @@ struct PushUserRegisterService {
     
     func registerUserWithFcmToken(token: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.pushUserRegisterURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let body: Parameters = [
             "fcmToken": token
         ]

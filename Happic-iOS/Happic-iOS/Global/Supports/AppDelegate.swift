@@ -43,6 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("FCM 등록토큰 가져오기 오류: \(error.localizedDescription)")
             } else if let token = token {
                 print("FCM 등록토큰 : \(token)")
+                PushUserRegisterService.shared.registerUserWithFcmToken(token: token) { response in
+                    switch response {
+                    case .success(_):
+                        print("token 전달 성공")
+                    default:
+                        print("token 전달 실패")
+                        break
+                    }
+                }
             }
         }
         
@@ -91,5 +100,14 @@ extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         guard let token = fcmToken else { return }
         print("FCM 등록토큰 갱신: \(token)")
+        PushUserRegisterService.shared.registerUserWithFcmToken(token: token) { response in
+            switch response {
+            case .success(_):
+                print("token 전달 성공")
+            default:
+                print("token 전달 실패")
+                break
+            }
+        }
     }
 }
