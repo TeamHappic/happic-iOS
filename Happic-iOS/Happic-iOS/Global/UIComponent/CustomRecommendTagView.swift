@@ -158,6 +158,13 @@ final class CustomRecommendTagView: UIView {
         userTextField.delegate = self
     }
     
+    func setData(tags: [String]) {
+        let buttons = [tagButton1, tagButton2, tagButton3, tagButton4, tagButton5, tagButton6, tagButton7, tagButton8, tagButton9]
+        for i in 0..<tags.count {
+            buttons[i].setAttributedTitle(NSAttributedString(string: tags[i], attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
+        }
+    }
+    
     @objc private func handleTextFieldEditing(sender: UITextField) {
         delegate?.validateCheck()
     }
