@@ -57,6 +57,7 @@ final class CreateContentsController: UIViewController {
         configureUI()
         setDelegate()
         uploadImage()
+        getRecommendTag()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -336,6 +337,20 @@ extension CreateContentsController {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
                 print(data)
+            default:
+                break
+            }
+        }
+    }
+    
+    func getRecommendTag() {
+        CreateContentsService.shared.getRecommendTag { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? RecommendTagModel else { return }
+                self.whereTagView.setData(tags: data.place)
+                self.whoTagView.setData(tags: data.who)
+                self.whatTagView.setData(tags: data.what)
             default:
                 break
             }
