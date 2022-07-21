@@ -290,6 +290,13 @@
 			path = HaruHappicModel;
 			sourceTree = "<group>";
 		};
+		8ECAD2B628894B9C00B2CEF0 /* CreateContentsModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateContentsModel;
+			sourceTree = "<group>";
+		};
 		8EF3B64C2883DE03008D6B55 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC874932889322600974ACE /* HaruHappicModel */,
+				8ECAD2B628894B9C00B2CEF0 /* CreateContentsModel */,
 				CECD7F3A28887F2100FD1420 /* HappicReportModel */,
 			);
 			path = Model;
