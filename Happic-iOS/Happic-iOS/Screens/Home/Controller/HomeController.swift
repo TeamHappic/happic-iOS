@@ -82,6 +82,7 @@ final class HomeController: BaseUploadViewController {
         nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true)
 
+
     }
 
     // MARK: - Functions
@@ -132,6 +133,27 @@ final class HomeController: BaseUploadViewController {
     }
     
     @objc private func handleActionButtonDidTap(sender: UIButton) {
+//        checkPostStatus()
         setActionSheet()
+    }
+}
+
+// MARK: - Network
+extension HomeController {
+    func checkPostStatus() {
+        CreateContentsService.shared.getPostStatus { response in
+            print(response)
+            switch response {
+            case .success(let result):
+                guard let data = result as? PostStatusModel else { return }
+                if data.isPosted {
+                    self.showToast(message: "이미 오늘의 해픽을 등록했어요")
+                } else {
+                    self.setActionSheet()
+                }
+            default:
+                break
+            }
+        }
     }
 }
