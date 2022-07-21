@@ -28,8 +28,11 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
         recordLabel.textColor = UIColor.hpGray3
         recordLabel.textAlignment = .center
         
-        MoonAndCloudUIView.layer.cornerRadius = 8
-        MoonAndCloudUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+        MoonUIView.layer.cornerRadius = 8
+        MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+        
+        CloudUIView.layer.cornerRadius = 8
+        CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
         
         
         setTapGesture()
