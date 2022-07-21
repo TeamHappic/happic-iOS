@@ -142,7 +142,6 @@ final class HomeController: BaseUploadViewController {
 extension HomeController {
     func checkPostStatus() {
         CreateContentsService.shared.getPostStatus { response in
-            print(response)
             switch response {
             case .success(let result):
                 guard let data = result as? PostStatusModel else { return }

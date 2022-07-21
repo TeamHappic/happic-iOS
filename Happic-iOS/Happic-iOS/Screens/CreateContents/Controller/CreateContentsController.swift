@@ -33,7 +33,6 @@ final class CreateContentsController: UIViewController {
     }
     
     private let dateLabel = UILabel().then {
-        $0.text = "07.20 해픽"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
@@ -46,7 +45,6 @@ final class CreateContentsController: UIViewController {
     }
     
     var pickerImageView = UIImageView().then {
-//        $0.image = ImageLiterals.imageDailySample3
         $0.contentMode = .scaleAspectFill
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 12
@@ -58,6 +56,7 @@ final class CreateContentsController: UIViewController {
         configureUI()
         setDelegate()
         uploadImage()
+        getRecommendTag()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,6 +96,9 @@ final class CreateContentsController: UIViewController {
         
         view.addSubview(headerView)
         headerView.addSubviews(backButton, dateLabel, saveButton)
+        
+        setCurrentDateLabel()
+        setHeaderViewShadow()
                 
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
@@ -118,13 +120,6 @@ final class CreateContentsController: UIViewController {
             make.trailing.equalTo(headerView.snp.trailing).inset(20)
             make.width.height.equalTo(48)
         }
-        
-        headerView.layer.masksToBounds = false
-        headerView.layer.shadowColor = UIColor.black.cgColor
-        headerView.layer.shadowRadius = 4 / 2.0
-        headerView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
-        headerView.layer.shadowOpacity = 0.25
-        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
     private func setScrollView() {
@@ -132,6 +127,8 @@ final class CreateContentsController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
         containerView.addSubview(pickerImageView)
+        
+        setTagLabel()
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
@@ -161,18 +158,6 @@ final class CreateContentsController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100.adjustedH)
         }
-        
-        whenTagView.tagLabel.text = "#when"
-        whenTagView.userTextField.placeholder = "시간을 입력해주세요"
-        
-        whereTagView.tagLabel.text = "#where"
-        whereTagView.userTextField.placeholder = "장소을 입력해주세요"
-        
-        whoTagView.tagLabel.text = "#who"
-        whoTagView.userTextField.placeholder = "함께한 사람을 입력해주세요"
-        
-        whatTagView.tagLabel.text = "#what"
-        whatTagView.userTextField.placeholder = "무엇을 했는지 입력해주세요"
     }
     
     private func addKeyboardObserver() {
@@ -190,6 +175,45 @@ final class CreateContentsController: UIViewController {
         whenTagView.superview?.snp.updateConstraints { make in
             make.bottom.equalToSuperview().inset(100.adjustedH)
         }
+    }
+    
+    private func setCurrentDateLabel() {
+        let date = Date()
+        let todayMonth = Calendar.current.dateComponents([.month], from: date)
+        let todayDay = Calendar.current.dateComponents([.day], from: date)
+        
+        guard let month = todayMonth.month,
+              let day = todayDay.day else { return }
+        
+        var monthStr = String(month)
+        let dayStr = String(day)
+        if monthStr.count == 1 {
+            monthStr = "0\(monthStr)"
+        }
+        self.dateLabel.text = "\(monthStr).\(dayStr) 해픽"
+    }
+    
+    private func setHeaderViewShadow() {
+        headerView.layer.masksToBounds = false
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowRadius = 4 / 2.0
+        headerView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
+        headerView.layer.shadowOpacity = 0.25
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
+    }
+    
+    private func setTagLabel() {
+        whenTagView.tagLabel.text = "#when"
+        whenTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "시간을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whereTagView.tagLabel.text = "#where"
+        whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whoTagView.tagLabel.text = "#who"
+        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whatTagView.tagLabel.text = "#what"
+        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     @objc private func dismissViewController() {
@@ -319,6 +343,20 @@ extension CreateContentsController {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
                 print(data)
+            default:
+                break
+            }
+        }
+    }
+    
+    func getRecommendTag() {
+        CreateContentsService.shared.getRecommendTag { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? RecommendTagModel else { return }
+                self.whereTagView.setData(tags: data.place)
+                self.whoTagView.setData(tags: data.who)
+                self.whatTagView.setData(tags: data.what)
             default:
                 break
             }

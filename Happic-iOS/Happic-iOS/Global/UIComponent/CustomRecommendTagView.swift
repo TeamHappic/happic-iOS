@@ -23,7 +23,6 @@ final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
     lazy var tagLabel = UILabel().then {
-        $0.text = "#tag"
         $0.textColor = .hpGray4
         $0.font = UIFont.font(.pretendardBold, ofSize: 14)
     }
@@ -33,7 +32,6 @@ final class CustomRecommendTagView: UIView {
     }
     
     lazy var userTextField = UITextField().then {
-        $0.attributedPlaceholder = NSAttributedString(string: "tag를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         $0.textColor = .hpGray1
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
         $0.addTarget(self, action: #selector(handleTextFieldEditing(sender:)), for: .editingChanged)
@@ -64,43 +62,15 @@ final class CustomRecommendTagView: UIView {
         }
     }
     
-    private lazy var tagButton1 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그1번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton2 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setAttributedTitle(NSAttributedString(string: "태그2번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton3 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setAttributedTitle(NSAttributedString(string: "태그3번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton4 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그4번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton5 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그5번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton6 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그6번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton7 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그7번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton8 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그8번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton9 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그9번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
+    private lazy var tagButton1 = UIButton(type: .system)
+    private lazy var tagButton2 = UIButton(type: .system)
+    private lazy var tagButton3 = UIButton(type: .system)
+    private lazy var tagButton4 = UIButton(type: .system)
+    private lazy var tagButton5 = UIButton(type: .system)
+    private lazy var tagButton6 = UIButton(type: .system)
+    private lazy var tagButton7 = UIButton(type: .system)
+    private lazy var tagButton8 = UIButton(type: .system)
+    private lazy var tagButton9 = UIButton(type: .system)
     
     private lazy var tagContainerView = UIView().then {
         $0.backgroundColor = .hpBgBlack2
@@ -186,6 +156,13 @@ final class CustomRecommendTagView: UIView {
     
     private func setDelegate() {
         userTextField.delegate = self
+    }
+    
+    func setData(tags: [String]) {
+        let buttons = [tagButton1, tagButton2, tagButton3, tagButton4, tagButton5, tagButton6, tagButton7, tagButton8, tagButton9]
+        for i in 0..<tags.count {
+            buttons[i].setAttributedTitle(NSAttributedString(string: tags[i], attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
+        }
     }
     
     @objc private func handleTextFieldEditing(sender: UITextField) {
