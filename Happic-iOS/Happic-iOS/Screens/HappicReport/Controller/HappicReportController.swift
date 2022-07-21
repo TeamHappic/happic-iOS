@@ -157,6 +157,7 @@ extension HappicReportController {
                 self.bestHappicMomentView.setData(model: data.rank1S)
                 self.keywordRankView.setData(model: data.rank2S)
                 self.categoryRankView.setData(model: data.rank3S)
+                self.monthHappicRecordView.setData(model: data.rank4S)
             default:
                 break
             }
