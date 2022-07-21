@@ -135,6 +135,8 @@ final class CreateContentsController: UIViewController {
         scrollView.addSubview(containerView)
         containerView.addSubview(pickerImageView)
         
+        setTagLabel()
+        
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
@@ -163,18 +165,6 @@ final class CreateContentsController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(100.adjustedH)
         }
-        
-        whenTagView.tagLabel.text = "#when"
-        whenTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "시간을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
-        
-        whereTagView.tagLabel.text = "#where"
-        whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
-        
-        whoTagView.tagLabel.text = "#who"
-        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
-        
-        whatTagView.tagLabel.text = "#what"
-        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     private func addKeyboardObserver() {
@@ -208,6 +198,20 @@ final class CreateContentsController: UIViewController {
             monthStr = "0\(monthStr)"
         }
         self.dateLabel.text = "\(monthStr).\(dayStr) 해픽"
+    }
+    
+    private func setTagLabel() {
+        whenTagView.tagLabel.text = "#when"
+        whenTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "시간을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whereTagView.tagLabel.text = "#where"
+        whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whoTagView.tagLabel.text = "#who"
+        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        
+        whatTagView.tagLabel.text = "#what"
+        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     @objc private func dismissViewController() {
