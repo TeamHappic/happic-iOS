@@ -9,7 +9,7 @@ import Foundation
 
 struct HaruHappicTagModel: Codable {
     let id, date, when, place, who, what: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, date, when, who, what
         case place = "where"
