@@ -1,11 +1,8 @@
-
 import UIKit
 
-class CreateCharacterViewController: UIViewController , Storyboarded{
+class CreateCharacterViewController: UIViewController, Storyboarded{
 
-    
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
-    
     
     static var storyboard: Storyboards = .createCharacterView
     @IBOutlet weak var recordLabel: UILabel!
@@ -15,20 +12,27 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     @IBOutlet weak var MoonAndCloudUIView: UIView!
     @IBOutlet weak var chooseLabel: UILabel!
     
-    let screenSize:CGRect = UIScreen.main.bounds
+    let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        
         setPurpleBackgroundColor()
 
-        
         CharacterIntroduceUIView.delegate = self
         CharacterIntroduceUIView.frame.size.height = 0
         CharacterIntroduceUIView.isHidden = true
         recordLabel.text = "해픽의 밤하늘에 \n 당신의 행복을 기록하세요 "
         recordLabel.numberOfLines = 0
-        recordLabel.textColor = UIColor.purple
-        recordLabel.textAlignment = .center          // 중앙 정렬.
+        recordLabel.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        recordLabel.textColor = UIColor.hpGray3
+        recordLabel.textAlignment = .center
+        
+        MoonUIView.layer.cornerRadius = 8
+        MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        
+        CloudUIView.layer.cornerRadius = 8
+        CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         
         setTapGesture()
@@ -46,18 +50,15 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
          CreateIntroduceView 에 Flag 0 을 전달
          MoonUIView 에 하이라이트
         */
+        MoonUIView.layer.borderColor = UIColor.hpDarkPurple.cgColor
+        
         CloudUIView.isUserInteractionEnabled = true
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(scaleDownCreateCharacterView(sender:)))
         CloudUIView.addGestureRecognizer(tap2)
-        // CreateIntroduceView 에 Flag 1를 전달
-        // cloudUIView 에 하이라이트
+        CloudUIView.layer.borderColor = UIColor.hpDarkPurple.cgColor
+
     }
 
-//    @objc
-//    private func presentCharacterChooseViewController() {
-////        let nextVC = CharacterChooseViewController.instantiate()
-//    }
-//
     @objc
     private func raiseCharacterIntroduceView() {
         UIView.animate(withDuration: 1.0, animations: { [self] in
@@ -70,6 +71,16 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     private func scaleDownCreateCharacterView(sender: UITapGestureRecognizer) {
         if let tag = sender.view?.tag {
             CharacterIntroduceUIView.mooonCloudFlag = tag
+        }
+        if CharacterIntroduceUIView.mooonCloudFlag == 0 {
+            MoonUIView.layer.borderColor = UIColor.hpDarkBlue.cgColor
+            MoonUIView.layer.borderWidth = 2
+            CloudUIView.layer.borderWidth = 0
+        }
+        else {
+            CloudUIView.layer.borderColor = UIColor.hpDarkPurple.cgColor
+            CloudUIView.layer.borderWidth = 2
+            MoonUIView.layer.borderWidth = 0
         }
         raiseCharacterIntroduceView()
         self.CharacterIntroduceUIView.isHidden=false
