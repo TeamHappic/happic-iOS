@@ -17,7 +17,6 @@ final class KeywordRankController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
-        
     }
     
     // MARK: - Functions
@@ -28,6 +27,21 @@ final class KeywordRankController: UIViewController {
         keywordRankView.snp.makeConstraints { make in
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+    }
+}
+
+// MARK: - Network
+extension KeywordRankController {
+    func getKeyworkRank(year: String, month: String) {
+        HappicReportService.shared.getKeywordRank(year: year, month: month) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? [Rank2] else { return }
+                self.keywordRankView.setData(model: data)
+            default:
+                break
+            }
         }
     }
 }
