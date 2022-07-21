@@ -36,6 +36,7 @@
 		8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */; };
 		8ECAD2B52889460900B2CEF0 /* HaruHappicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */; };
 		8ECAD2B828894D1C00B2CEF0 /* PostingCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B728894D1C00B2CEF0 /* PostingCheckModel.swift */; };
+		8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -141,6 +142,7 @@
 		8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagModel.swift; sourceTree = "<group>"; };
 		8ECAD2B42889460900B2CEF0 /* HaruHappicDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicDetailModel.swift; sourceTree = "<group>"; };
 		8ECAD2B728894D1C00B2CEF0 /* PostingCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingCheckModel.swift; sourceTree = "<group>"; };
+		8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentsService.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		8ECAD2B928894D7000B2CEF0 /* CreateContentsService */ = {
 			isa = PBXGroup;
 			children = (
+				8ECAD2BA28894D9700B2CEF0 /* CreateContentsService.swift */,
 			);
 			path = CreateContentsService;
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */,
 				CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */,
 				8EB21130287D5A1400F53A95 /* PhotoCollectionViewCell.swift in Sources */,
+				8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
 				CEFC3C53287EA88C00F187BE /* CustomTabPagerButton.swift in Sources */,
