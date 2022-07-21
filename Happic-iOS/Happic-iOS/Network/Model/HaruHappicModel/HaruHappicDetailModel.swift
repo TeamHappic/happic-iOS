@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct HaruHappicDetailModel: Codable {
+    let id, leftId, rightId: String
+    let date: Date
+    let photo: String
+    let when: Int
+    let place, who, what: String
+
+    enum CodingKeys: String, CodingKey {
+        case place = "where"
+    }
+}
