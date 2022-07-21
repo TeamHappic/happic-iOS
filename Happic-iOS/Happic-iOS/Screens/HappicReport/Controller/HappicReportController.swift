@@ -154,8 +154,9 @@ extension HappicReportController {
             switch response {
             case .success(let result):
                 guard let data = result as? HappicReportSummaryModel else { return }
-                //print(data.rank1S)
+                print(data.rank2S)
                 self.bestHappicMomentView.setData(model: data.rank1S)
+                self.keywordRankView.setData(model: data.rank2S)
             default:
                 break
             }
