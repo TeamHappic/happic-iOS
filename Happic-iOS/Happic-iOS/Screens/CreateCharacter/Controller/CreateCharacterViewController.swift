@@ -19,6 +19,8 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        setPurpleBackgroundColor()
+
         
         CharacterIntroduceUIView.delegate = self
         CharacterIntroduceUIView.frame.size.height = 0

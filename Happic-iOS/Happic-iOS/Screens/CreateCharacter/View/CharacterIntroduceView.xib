@@ -96,7 +96,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="681-pV-zaO" firstAttribute="top" secondItem="Aq1-JR-093" secondAttribute="bottom" constant="40" id="23A-0V-WW2"/>
                 <constraint firstItem="uLy-nc-U6G" firstAttribute="top" secondItem="681-pV-zaO" secondAttribute="bottom" constant="12" id="9Mn-IH-Tw0"/>
@@ -126,9 +126,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

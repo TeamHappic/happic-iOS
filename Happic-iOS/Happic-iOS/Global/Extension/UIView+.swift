@@ -40,7 +40,8 @@ extension UIView {
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
         gradient.frame = self.bounds
-        layer.addSublayer(gradient)
+        layer.insertSublayer(gradient, at: 0)
+        //layer.addSublayer(gradient)
         return self
     }
     
