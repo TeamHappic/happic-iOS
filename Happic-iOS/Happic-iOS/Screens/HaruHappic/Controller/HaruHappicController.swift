@@ -26,7 +26,6 @@ final class HaruHappicController: BaseUploadViewController {
         super.viewDidLoad()
         configureUI()
         setDelegate()
-        // showToast(message: "이미 오늘의 해픽을 등록했어요")
     }
     
     // MARK: - Functions
