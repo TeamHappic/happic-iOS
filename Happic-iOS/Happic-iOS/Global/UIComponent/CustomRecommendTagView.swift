@@ -62,43 +62,15 @@ final class CustomRecommendTagView: UIView {
         }
     }
     
-    private lazy var tagButton1 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그1번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton2 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setAttributedTitle(NSAttributedString(string: "태그2번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton3 = UIButton(type: .system).then {
-        $0.backgroundColor = .hpGray9
-        $0.setAttributedTitle(NSAttributedString(string: "태그3번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton4 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그4번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton5 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그5번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton6 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그6번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton7 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그7번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton8 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그8번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
-    
-    private lazy var tagButton9 = UIButton(type: .system).then {
-        $0.setAttributedTitle(NSAttributedString(string: "태그9번임", attributes: [.font: UIFont.font(.pretendardMedium, ofSize: 14), .foregroundColor: UIColor.hpGray4]), for: .normal)
-    }
+    private lazy var tagButton1 = UIButton(type: .system)
+    private lazy var tagButton2 = UIButton(type: .system)
+    private lazy var tagButton3 = UIButton(type: .system)
+    private lazy var tagButton4 = UIButton(type: .system)
+    private lazy var tagButton5 = UIButton(type: .system)
+    private lazy var tagButton6 = UIButton(type: .system)
+    private lazy var tagButton7 = UIButton(type: .system)
+    private lazy var tagButton8 = UIButton(type: .system)
+    private lazy var tagButton9 = UIButton(type: .system)
     
     private lazy var tagContainerView = UIView().then {
         $0.backgroundColor = .hpBgBlack2
