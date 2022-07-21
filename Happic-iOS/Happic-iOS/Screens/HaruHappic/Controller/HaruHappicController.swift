@@ -34,7 +34,7 @@ final class HaruHappicController: BaseUploadViewController {
         setPurpleBackgroundColor()
         
         view.addSubviews(addPhotoButton, haruHappicViewPager)
-
+        
         addPhotoButton.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.trailing.equalToSuperview().inset(30)
