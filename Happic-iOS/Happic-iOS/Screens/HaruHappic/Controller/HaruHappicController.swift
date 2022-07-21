@@ -49,7 +49,7 @@ final class HaruHappicController: BaseUploadViewController {
     }
     
     @objc private func addPhotoButtonDidTap() {
-        setActionSheet()
+        checkPostStatus()
     }
     
     private func setDelegate() {
@@ -63,5 +63,24 @@ extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTag
     func showDetailView(_ id: String) {
         let detailViewController = HaruHappicDetailController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
+// MARK: - Network
+extension HaruHappicController {
+    func checkPostStatus() {
+        CreateContentsService.shared.getPostStatus() { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? PostStatusModel else { return }
+                if data.isPosted {
+                    self.showToast(message: "이미 오늘의 해픽을 등록했어요")
+                } else {
+                    self.setActionSheet()
+                }
+            default:
+                break
+            }
+        }
     }
 }
