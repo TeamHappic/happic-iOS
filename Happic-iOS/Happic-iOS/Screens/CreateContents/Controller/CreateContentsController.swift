@@ -96,6 +96,8 @@ final class CreateContentsController: UIViewController {
         
         view.addSubview(headerView)
         headerView.addSubviews(backButton, dateLabel, saveButton)
+        
+        setCurrentDateLabel()
                 
         headerView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
@@ -124,20 +126,6 @@ final class CreateContentsController: UIViewController {
         headerView.layer.shadowPath = CGPath.init(rect: CGRect.init(x: 0, y: 65, width: UIScreen.main.bounds.width, height: 4), transform: nil)
         headerView.layer.shadowOpacity = 0.25
         headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        
-        let date = Date()
-        let todayMonth = Calendar.current.dateComponents([.month], from: date)
-        let todayDay = Calendar.current.dateComponents([.day], from: date)
-        
-        guard let month = todayMonth.month,
-              let day = todayDay.day else { return }
-        
-        var monthStr = String(month)
-        let dayStr = String(day)
-        if monthStr.count == 1 {
-            monthStr = "0\(monthStr)"
-        }
-        self.dateLabel.text = "\(monthStr).\(dayStr) 해픽"
     }
     
     private func setScrollView() {
