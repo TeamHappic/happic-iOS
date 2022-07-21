@@ -25,7 +25,7 @@ struct CreateContentsService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: PostingCheckModel.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: PostingStatusModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
