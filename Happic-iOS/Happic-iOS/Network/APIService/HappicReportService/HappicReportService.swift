@@ -78,4 +78,25 @@ struct HappicReportService {
             }
         }
     }
+    
+    /// 월별 하루 해픽 조회
+    func getMonthlyCount(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let url = APIConstants.happicReportMonthlyURL
+        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let parameters: Parameters = ["year": year, "month": month]
+        
+        let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
+        
+        dataRequest.responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: MonthlyCountModel.self)
+                completion(networkResult)
+            case .failure:
+                completion(.networkFail)
+            }
+        }
+    }
 }
