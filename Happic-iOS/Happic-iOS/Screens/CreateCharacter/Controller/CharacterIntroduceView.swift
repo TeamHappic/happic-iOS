@@ -69,13 +69,7 @@ class CharacterIntroduceView: UIView {
             continueButton.layer.cornerRadius = 8
             continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
             
-            /*
-             MoonUIView.layer.cornerRadius = 20
-                MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
-
-                CloudUIView.layer.cornerRadius = 20
-                CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
-             */
+      
         }
     }
 }

@@ -66,7 +66,6 @@ class CreateCharacterViewController: UIViewController , Storyboarded{
     private func scaleDownCreateCharacterView(sender: UITapGestureRecognizer) {
         if let tag = sender.view?.tag {
             CharacterIntroduceUIView.mooonCloudFlag = tag
-            print(CharacterIntroduceUIView.mooonCloudFlag)
         }
         raiseCharacterIntroduceView()
         self.CharacterIntroduceUIView.isHidden=false
