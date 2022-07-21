@@ -16,6 +16,7 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        
         setPurpleBackgroundColor()
 
         CharacterIntroduceUIView.delegate = self
@@ -23,8 +24,13 @@ class CreateCharacterViewController: UIViewController, Storyboarded{
         CharacterIntroduceUIView.isHidden = true
         recordLabel.text = "해픽의 밤하늘에 \n 당신의 행복을 기록하세요 "
         recordLabel.numberOfLines = 0
-        recordLabel.textColor = UIColor.purple
+        recordLabel.font = UIFont.font(.pretendardMedium, ofSize: 14)
+        recordLabel.textColor = UIColor.hpGray3
         recordLabel.textAlignment = .center
+        
+        MoonUIView.layer.cornerRadius = 8
+        MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
+        
         
         setTapGesture()
     }
