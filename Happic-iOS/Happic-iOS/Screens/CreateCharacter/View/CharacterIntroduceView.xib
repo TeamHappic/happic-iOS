@@ -4,7 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,8 +13,11 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="A7x-Ml-Z54"/>
                 <outlet property="continueButton" destination="AOG-Vo-qy7" id="K5U-wk-ted"/>
                 <outlet property="firstAnswerLabel" destination="lQr-ct-3GO" id="FkG-ur-ZKB"/>
+                <outlet property="firstAnswerLabelWidth" destination="W2g-Da-9Tt" id="3Uh-RL-0VS"/>
                 <outlet property="secondAnswerLabel" destination="Aq1-JR-093" id="x8Y-xh-Dqg"/>
+                <outlet property="secondAnswerLabelWidth" destination="hgs-yH-5KS" id="r1M-Xp-pf7"/>
                 <outlet property="thirdAnswerLabel" destination="KWU-kD-3VU" id="ILJ-Ef-ZMD"/>
+                <outlet property="thirdAnswerLabelWidth" destination="anq-td-UEI" id="qHq-cy-2h3"/>
                 <outlet property="thirdQuestionLabel" destination="681-pV-zaO" id="k9U-Ju-ZoH"/>
             </connections>
         </placeholder>
@@ -30,53 +33,69 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q. 걱정이 생기면 어떻게 해?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-DH-SWI">
-                    <rect key="frame" x="20" y="135.5" width="190" height="21"/>
+                    <rect key="frame" x="20" y="154.5" width="190" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="681-pV-zaO">
-                    <rect key="frame" x="20" y="246.5" width="23" height="21"/>
+                    <rect key="frame" x="20" y="284.5" width="23" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQr-ct-3GO">
-                    <rect key="frame" x="20" y="74.5" width="42" height="21"/>
+                    <rect key="frame" x="20" y="74.5" width="100" height="40"/>
+                    <color key="backgroundColor" name="hp_gray9"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="W2g-Da-9Tt"/>
+                        <constraint firstAttribute="height" constant="40" id="Y2K-Dp-5Ut"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq1-JR-093">
-                    <rect key="frame" x="20" y="185.5" width="42" height="21"/>
+                    <rect key="frame" x="20" y="204.5" width="100" height="40"/>
+                    <color key="backgroundColor" name="hp_gray9"/>
+                    <color key="tintColor" name="hp_gray9"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="hgs-yH-5KS"/>
+                        <constraint firstAttribute="height" constant="40" id="whY-ir-Fsz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQw-LV-hq5">
-                    <rect key="frame" x="20" y="168.5" width="335" height="1"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="20" y="187.5" width="335" height="1"/>
+                    <color key="backgroundColor" name="hp_gray7"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="P4F-mz-BDL"/>
                         <constraint firstAttribute="width" constant="335" id="sHJ-p9-Gk7"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-nc-U6G">
-                    <rect key="frame" x="20" y="279.5" width="335" height="1"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="20" y="317.5" width="335" height="1"/>
+                    <color key="backgroundColor" name="hp_gray7"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="AAP-Tt-rFc"/>
                         <constraint firstAttribute="width" constant="335" id="uhK-VQ-yU0"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWU-kD-3VU">
-                    <rect key="frame" x="20" y="296.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="20" y="334.5" width="224" height="40"/>
+                    <color key="backgroundColor" name="hp_gray9"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="HQt-la-YQt"/>
+                        <constraint firstAttribute="width" constant="224" id="anq-td-UEI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOG-Vo-qy7">
-                    <rect key="frame" x="20" y="417.5" width="335" height="48"/>
+                    <rect key="frame" x="20" y="444.5" width="335" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="335" id="DLm-Lu-bP3"/>
                         <constraint firstAttribute="height" constant="48" id="x9a-T1-PDq"/>
@@ -89,7 +108,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyt-Ki-5uL">
                     <rect key="frame" x="20" y="57.5" width="335" height="1"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="hp_gray7"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="JPI-8y-MWL"/>
                         <constraint firstAttribute="width" constant="335" id="RSg-gC-PiK"/>
@@ -114,7 +133,7 @@
                 <constraint firstItem="jTf-rI-ih3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="l3N-s3-Kz5"/>
                 <constraint firstItem="Qgf-DH-SWI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="nfi-bS-uQu"/>
                 <constraint firstItem="jTf-rI-ih3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="oax-YN-eUr"/>
-                <constraint firstItem="AOG-Vo-qy7" firstAttribute="top" secondItem="KWU-kD-3VU" secondAttribute="bottom" constant="100" id="pdY-eA-CnI"/>
+                <constraint firstItem="AOG-Vo-qy7" firstAttribute="top" secondItem="KWU-kD-3VU" secondAttribute="bottom" constant="70" id="pdY-eA-CnI"/>
                 <constraint firstItem="681-pV-zaO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="rlK-MS-mzn"/>
                 <constraint firstItem="KWU-kD-3VU" firstAttribute="top" secondItem="uLy-nc-U6G" secondAttribute="bottom" constant="16" id="uXn-fD-Tt7"/>
                 <constraint firstItem="Vyt-Ki-5uL" firstAttribute="top" secondItem="jTf-rI-ih3" secondAttribute="bottom" constant="12" id="vIS-N7-QP0"/>
@@ -124,8 +143,11 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="hp_gray7">
+            <color red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hp_gray9">
+            <color red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
