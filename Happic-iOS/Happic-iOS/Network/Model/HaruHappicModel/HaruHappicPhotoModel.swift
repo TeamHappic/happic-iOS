@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - HaruHappicPhotoModel
 struct HaruHappicPhotoModel: Codable {
     let id, day: String
     let thumbnail: String

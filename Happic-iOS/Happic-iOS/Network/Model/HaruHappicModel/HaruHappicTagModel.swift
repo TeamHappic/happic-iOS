@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - HaruHappicTagModel
 struct HaruHappicTagModel: Codable {
     let id, date, when, place, who, what: String
     

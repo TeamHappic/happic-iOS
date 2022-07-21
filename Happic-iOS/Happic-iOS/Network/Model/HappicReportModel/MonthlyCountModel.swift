@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - MonthlyCountModel
 struct MonthlyCountModel: Codable {
     let month, count: Int
     let dates: [Int]
