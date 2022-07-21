@@ -80,7 +80,7 @@ final class HomeController: BaseUploadViewController {
         let nextVC = nextSB.instantiateViewController(withIdentifier: "AuthViewController")
         let nav = UINavigationController(rootViewController: nextVC)
         nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: true)
+        //self.present(nav, animated: true)
 
     }
 

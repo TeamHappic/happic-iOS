@@ -27,6 +27,8 @@ final class HappicReportController: UIViewController {
         setPurpleBackgroundColor()
         configureUI()
         setDelegate()
+        
+        getHappicReportSummary(year: "2022", month: "7")
     }
     
     // MARK: - Functions
@@ -141,6 +143,22 @@ extension HappicReportController: CustomMonthPickerViewDelegate {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {
             customMonthView.monthLabel.text = "2022 . \(month)"
+        }
+    }
+}
+
+// MARK: - Network
+extension HappicReportController {
+    func getHappicReportSummary(year: String, month: String) {
+        HappicReportService.shared.getHappicReportSummary(year: year, month: month) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? HappicReportSummaryModel else { return }
+                //print(data.rank1S)
+                self.bestHappicMomentView.setData(model: data.rank1S)
+            default:
+                break
+            }
         }
     }
 }
