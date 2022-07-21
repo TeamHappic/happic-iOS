@@ -18,6 +18,7 @@ class CategoryDetailController: UIViewController {
     
     // MARK: - Properties
     var type: CategoryType = .whenCategory
+    var models = [KeywordModel]()
     
     // MARK: - UI
     private lazy var rankCollectionView: UICollectionView = {
@@ -80,7 +81,7 @@ class CategoryDetailController: UIViewController {
 
 extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,14 +92,20 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
                     as? CategoryDetailWithImageCollectionViewCell
             else { return UICollectionViewCell() }
             cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
+            cell.setData(model: models[indexPath.row])
             return cell
         }
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryDetailCollectionViewCell.className, for: indexPath)
                 as? CategoryDetailCollectionViewCell else { return UICollectionViewCell() }
         cell.setCategoryNameLabel(type: type, index: indexPath.row + 1)
-        
+        cell.setData(model: models[indexPath.row])
         return cell
+    }
+    
+    func setData(model: [KeywordModel]) {
+        models = model
+        rankCollectionView.reloadData()
     }
 }
 
