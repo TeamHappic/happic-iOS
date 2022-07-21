@@ -41,6 +41,7 @@ final class CreateContentsController: UIViewController {
     private lazy var saveButton = UIButton(type: .system).then {
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpOrange]), for: .normal)
         $0.setAttributedTitle(NSAttributedString(string: "저장", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray6]), for: .disabled)
+        $0.addTarget(self, action: #selector(saveButtonDidTap), for: .touchUpInside)
         $0.isEnabled = false
     }
     
@@ -192,6 +193,10 @@ final class CreateContentsController: UIViewController {
     
     @objc private func dismissViewController() {
         self.dismiss(animated: true)
+    }
+    
+    @objc private func saveButtonDidTap() {
+
     }
 }
 
