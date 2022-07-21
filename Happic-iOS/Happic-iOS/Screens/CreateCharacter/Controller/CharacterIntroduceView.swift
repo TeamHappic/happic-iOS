@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CharacterIntroduceViewDelegate: AnyObject {
+    func pushCharaterNameController(flag: Int)
+}
+
 class CharacterIntroduceView: UIView {
+    
+    weak var delegate: CharacterIntroduceViewDelegate?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var firstAnswerLabel: UILabel!
@@ -15,6 +21,7 @@ class CharacterIntroduceView: UIView {
     @IBOutlet weak var thirdQuestionLabel: UILabel!
     @IBOutlet weak var thirdAnswerLabel: UILabel!
     @IBAction func continueDidTap(_ sender: Any) {
+        delegate?.pushCharaterNameController(flag: mooonCloudFlag)
     }
     @IBOutlet weak var continueButton: UIButton!
     
