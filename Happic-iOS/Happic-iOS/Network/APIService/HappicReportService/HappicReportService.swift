@@ -58,7 +58,7 @@ struct HappicReportService {
     }
     
     /// 해픽 레포트 카테고리별 순위 조회
-    func getCagegoryRank(option: String, year: Int, month: Int,
+    func getCategoryRank(option: String, year: String, month: String,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportCategoryRankURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
@@ -71,7 +71,7 @@ struct HappicReportService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: [KeywordModel].self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: CategoryRankModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
