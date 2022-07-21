@@ -33,7 +33,6 @@ final class CreateContentsController: UIViewController {
     }
     
     private let dateLabel = UILabel().then {
-        $0.text = "07.20 해픽"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }

@@ -23,7 +23,6 @@ final class CustomRecommendTagView: UIView {
     
     // MARK: - UI
     lazy var tagLabel = UILabel().then {
-        $0.text = "#tag"
         $0.textColor = .hpGray4
         $0.font = UIFont.font(.pretendardBold, ofSize: 14)
     }
@@ -33,7 +32,6 @@ final class CustomRecommendTagView: UIView {
     }
     
     lazy var userTextField = UITextField().then {
-        $0.attributedPlaceholder = NSAttributedString(string: "tag를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         $0.textColor = .hpGray1
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
         $0.addTarget(self, action: #selector(handleTextFieldEditing(sender:)), for: .editingChanged)
