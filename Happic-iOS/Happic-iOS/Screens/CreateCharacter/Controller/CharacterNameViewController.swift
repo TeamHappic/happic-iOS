@@ -2,6 +2,15 @@ import UIKit
 
 class CharacterNameViewController: UIViewController{
     @IBOutlet weak var characterImage: UIImageView!
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+        
+    }
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        
+    }
+    @IBOutlet weak var completeButton: UIButton!
+    
+    @IBOutlet weak var characterNameTextField: UITextField!
     
     var flag: Int = 0 {
         didSet {
@@ -17,6 +26,10 @@ class CharacterNameViewController: UIViewController{
         else {
             characterImage.image=UIImage(named:"hp_img_c1")
         }
+        completeButton.isEnabled = false
+        completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
+        
+        
     }
     
     
@@ -50,5 +63,14 @@ class CharacterNameViewController: UIViewController{
    
      }
      */
+    @IBAction func textFieldIsEditing(_ sender: UITextField) {
+        if sender.hasText {
+            completeButton.isEnabled = true
+            completeButton.setTitleColor(UIColor.hpWhite, for: .normal)
+        } else {
+            completeButton.isEnabled = false
+            completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
+        }
+    }
     
 }
