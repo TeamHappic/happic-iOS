@@ -33,6 +33,7 @@
 		8EC8748A28888E2100974ACE /* PushUserRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8748928888E2100974ACE /* PushUserRegisterService.swift */; };
 		8EC8749228892F2600974ACE /* HaruHappicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8749128892F2600974ACE /* HaruHappicService.swift */; };
 		8EC874952889327400974ACE /* HaruHappicPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */; };
+		8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */; };
 		8EEEED542883DEC800EBE1A9 /* BaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */; };
 		8EF3B64B2883AE82008D6B55 /* ShowToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B64A2883AE82008D6B55 /* ShowToast.swift */; };
 		CE380B0C2878A3AF0030D51A /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380B0B2878A3AF0030D51A /* NSObject+.swift */; };
@@ -135,6 +136,7 @@
 		8EC8748928888E2100974ACE /* PushUserRegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushUserRegisterService.swift; sourceTree = "<group>"; };
 		8EC8749128892F2600974ACE /* HaruHappicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicService.swift; sourceTree = "<group>"; };
 		8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicPhotoModel.swift; sourceTree = "<group>"; };
+		8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruHappicTagModel.swift; sourceTree = "<group>"; };
 		8EEEED532883DEC800EBE1A9 /* BaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadViewController.swift; sourceTree = "<group>"; };
 		8EF3B64A2883AE82008D6B55 /* ShowToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToast.swift; sourceTree = "<group>"; };
 		CE380B0B2878A3AF0030D51A /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC874942889327400974ACE /* HaruHappicPhotoModel.swift */,
+				8ECAD2B228893A6200B2CEF0 /* HaruHappicTagModel.swift */,
 			);
 			path = HaruHappicModel;
 			sourceTree = "<group>";
@@ -1051,6 +1054,7 @@
 				CEF6E09D287814E900A1636F /* tempCreateContentsView.swift in Sources */,
 				8EB21136287E9C3D00F53A95 /* CustomMonthPickerView.swift in Sources */,
 				CEFC3C41287D621B00F187BE /* CategoryDetailWithImageCollectionViewCell.swift in Sources */,
+				8ECAD2B328893A6200B2CEF0 /* HaruHappicTagModel.swift in Sources */,
 				CE47964A288420C80095ADD4 /* AuthViewController.swift in Sources */,
 				CEFC3C44287DCFF600F187BE /* CalendarHelper.swift in Sources */,
 				CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */,
