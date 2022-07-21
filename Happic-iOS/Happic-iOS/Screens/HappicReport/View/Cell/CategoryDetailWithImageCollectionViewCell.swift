@@ -8,7 +8,9 @@
 import UIKit
 
 final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
- 
+    // MARK: - Properties
+    var type: CategoryType = .whenCategory
+    
     // MARK: - UI
     private lazy var categoryNameLabel = UILabel().then {
         $0.text = "#who 1"
@@ -102,6 +104,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     }
     
     func setCategoryNameLabel(type: CategoryType, index: Int) {
+        self.type = type
         switch type {
         case .whenCategory:
             categoryNameLabel.attributedText = makeCategoryString(category: "#when ", index: index)
@@ -122,5 +125,20 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
                                                    attributes: [.font: UIFont.font(.pretendardBold, ofSize: 14),
                                                     .foregroundColor: UIColor.gray]))
         return attributedString
+    }
+    
+    func setData(model: KeywordModel) {
+        if type == .whenCategory {
+            userKeywordLabel.text = model.content.timeFormatted
+        } else {
+            userKeywordLabel.text = model.content
+        }
+        countLabel.text = "\(model.count)회"
+        
+        let imageViews = [firstImageView, secondImageView, thirdImageView]
+
+        for i in 0..<model.images.count {
+            imageViews[i].setImage(with: model.images[i])
+        }
     }
 }

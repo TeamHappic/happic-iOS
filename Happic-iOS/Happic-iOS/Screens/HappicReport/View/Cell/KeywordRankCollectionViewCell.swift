@@ -69,4 +69,11 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
             make.centerY.equalToSuperview()
         }
     }
+
+    func setData(rank: Int, model: Rank2) {
+        rankLabel.text = "\(rank)"
+        userKeywordLabel.text = model.content
+        keywordNameLabel.text = "#\(model.category)"
+        countLabel.text = "\(model.count)회"
+    }
 }

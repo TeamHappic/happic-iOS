@@ -27,25 +27,25 @@ final class BestHappicMomentView: UIView {
     }
     
     private lazy var bestWhenLabel = UILabel().then {
-        $0.text = "오후2시"
+        $0.text = ""
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhereLabel = UILabel().then {
-        $0.text = "집구석구석"
+        $0.text = ""
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhoLabel = UILabel().then {
-        $0.text = "햄식달식이"
+        $0.text = ""
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
     
     private lazy var bestWhatLabel = UILabel().then {
-        $0.text = "짱짱귀여워"
+        $0.text = ""
         $0.textColor = .white
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
     }
@@ -171,5 +171,12 @@ final class BestHappicMomentView: UIView {
         contentLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
+    }
+    
+    func setData(model: [Rank1]) {
+        bestWhenLabel.text = model[0].content.timeFormatted
+        bestWhereLabel.text = model[1].content
+        bestWhoLabel.text = model[2].content
+        bestWhatLabel.text = model[3].content
     }
 }

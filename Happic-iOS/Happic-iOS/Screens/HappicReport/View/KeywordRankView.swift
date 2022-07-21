@@ -8,6 +8,8 @@
 import UIKit
 
 final class KeywordRankView: UIView {
+    // MARK: - Properties
+    var models = [Rank2]()
 
     // MARK: - UI
     let headerView = HappicReportSectionHeader(type: .keywordRank)
@@ -74,19 +76,24 @@ final class KeywordRankView: UIView {
     func collectionViewCanScroll(_ isScrollEnabled: Bool) {
         keywordCollectionView.isScrollEnabled = isScrollEnabled
     }
+    
+    func setData(model: [Rank2]) {
+        models = model
+        keywordCollectionView.reloadData()
+    }
 }
 
 // MARK: - Extensions
 
 extension KeywordRankView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeywordRankCollectionViewCell.className, for: indexPath)
                 as? KeywordRankCollectionViewCell else { return UICollectionViewCell()}
-        
+        cell.setData(rank: indexPath.row + 1, model: models[indexPath.row])
         return cell
     }
 }
