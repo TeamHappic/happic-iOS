@@ -3,10 +3,10 @@ import UIKit
 class CharacterNameViewController: UIViewController{
     @IBOutlet weak var characterImage: UIImageView!
     @IBAction func completeButtonDidTap(_ sender: Any) {
-        
+//        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: true)
     }
     @IBAction func backButtonDidTap(_ sender: Any) {
-        
+        navigationController?.popViewController(animated: true)
     }
     @IBOutlet weak var completeButton: UIButton!
     
@@ -34,35 +34,7 @@ class CharacterNameViewController: UIViewController{
     
     
     
-    /*
-     if flag == 0 {
-         //moonVersion Label 변경
-         firstAnswerLabel.text = "내가 좋아하는 사람들이 행복하다고 말하는거!!"
-         secondAnswerLabel.text = "조용히 일기에 걱정거리를 적어"
-         thirdQuestionLabel.text = "고마울 때 어떻게 표현해?"
-         thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"
-         continueButton.setTitle("함께하기", for: .normal)
-         continueButton.setTitleColor(UIColor.white, for: .normal)
-         continueButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
-         continueButton.layer.cornerRadius = 8
-         continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
-
-
-     }else {
-         //cloudVersion Label 변경
-         firstAnswerLabel.text = "내가 한 일이 완벽하게 끝나는거!"
-         secondAnswerLabel.text = "걱정해서 뭐하지라고 생각하면서 그냥 잊어!"
-         thirdQuestionLabel.text = "위로는 어떻게 해줘?"
-         thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"
-         continueButton.setTitle("함께하기", for: .normal)
-         continueButton.setTitleColor(UIColor.white, for: .normal)
-         continueButton.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-         continueButton.layer.cornerRadius = 8
-         continueButton.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
-         
-   
-     }
-     */
+ 
     @IBAction func textFieldIsEditing(_ sender: UITextField) {
         if sender.hasText {
             completeButton.isEnabled = true
