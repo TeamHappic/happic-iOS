@@ -78,9 +78,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         print(userInfo)
         if let clickAction = userInfo["click_action"] as? String {
             if clickAction  == "1" {
-                let rootVC = UIApplication.shared.keyWindow?.rootViewController
-                let capsuleVC = HappicCapsuleController()
-                rootVC?.present(capsuleVC, animated: true)
+                let capsuleViewController = HappicCapsuleController()
+                UIApplication.shared.windows.first?.rootViewController?.present(capsuleViewController, animated: false, completion: nil)
             }
         }
         
