@@ -43,9 +43,12 @@ struct CreateContentsService {
                 multipartFormData.append(image, withName: "file", fileName: "\(image).png", mimeType: "image/png")
             }
         }, to: url, usingThreshold: UInt64.init(), method: .post, headers: header).responseData { response in
+            print("3jllje")
             switch response.result {
+            
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
+                print(statusCode)
                 guard let value = response.value else { return }
                 let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: UploadImageModel.self)
                 completion(networkResult)
