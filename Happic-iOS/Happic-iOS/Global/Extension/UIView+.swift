@@ -83,4 +83,12 @@ extension UIView {
             make.center.equalToSuperview()
         }
     }
+    
+    func setDarkBlue() {
+        setGradient(type: .axial, colors: [UIColor.hpDarkBlue.cgColor, UIColor.hpBgBlack0.cgColor], startPoint: CGPoint(x: 1.4, y: 1.4), endPoint: CGPoint(x: 0.7, y: 0.7))
+    }
+    
+    func setDarkPurple() {
+        setGradient(type: .axial, colors: [UIColor.hpDarkPurple.cgColor, UIColor.hpBgBlack0.cgColor], startPoint: CGPoint(x: 1.4, y: 1.4), endPoint: CGPoint(x: 0.7, y: 0.7))
+    }
 }
