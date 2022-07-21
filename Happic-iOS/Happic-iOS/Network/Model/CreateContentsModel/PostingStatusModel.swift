@@ -1,5 +1,5 @@
 //
-//  PostingCheckModel.swift
+//  PostingStatusModel.swift
 //  Happic-iOS
 //
 //  Created by devxsby on 2022/07/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - PostingCheckModel
-struct PostingCheckModel: Codable {
+// MARK: - PostingStatusModel
+struct PostingStatusModel: Codable {
     let isPosted: Bool
 }
