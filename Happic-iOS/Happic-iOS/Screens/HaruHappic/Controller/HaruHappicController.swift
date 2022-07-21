@@ -69,7 +69,8 @@ extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTag
 // MARK: - Network
 extension HaruHappicController {
     func checkPostStatus() {
-        CreateContentsService.shared.getPostStatus() { response in
+        CreateContentsService.shared.getPostStatus { response in
+            print(response)
             switch response {
             case .success(let result):
                 guard let data = result as? PostStatusModel else { return }
