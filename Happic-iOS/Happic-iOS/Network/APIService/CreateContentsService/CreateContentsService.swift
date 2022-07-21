@@ -78,7 +78,7 @@ struct CreateContentsService {
         }
     }
     
-    // 하루해픽 게시글 삭제
+    /// 하루해픽 게시글 삭제
     func deleteHaruHappic(filmId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.createContentsURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
