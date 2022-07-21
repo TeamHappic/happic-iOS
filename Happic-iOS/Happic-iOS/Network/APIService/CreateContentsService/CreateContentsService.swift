@@ -54,7 +54,7 @@ struct CreateContentsService {
     }
     
     // 하루해픽 게시글 생성
-    func postHaruHappic(photo: String, when: String, place: String, who: String, what: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func createHaruHappic(photo: String, when: String, place: String, who: String, what: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.createContentsURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
         let body: Parameters = ["photo": photo,
