@@ -62,6 +62,7 @@ struct CreateContentsService {
                                 "where": place,
                                 "who": who,
                                 "what": what]
+        
         let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { response in
