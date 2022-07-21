@@ -40,7 +40,7 @@ struct HappicReportService {
     /// 해픽 레포트 키워드 전체 순위 조회
     func getKeywordRank(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportKeywordRankURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let parameters: Parameters = ["year": year, "month": month]
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
         
@@ -49,7 +49,7 @@ struct HappicReportService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: [Rank2].self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: KeywordRankModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
@@ -61,7 +61,7 @@ struct HappicReportService {
     func getCagegoryRank(option: String, year: Int, month: Int,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportCategoryRankURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let parameters: Parameters = ["option": option, "year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
@@ -82,7 +82,7 @@ struct HappicReportService {
     /// 월별 하루 해픽 조회
     func getMonthlyCount(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportMonthlyURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "x-auth-token": "jwt token"]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         let parameters: Parameters = ["year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
