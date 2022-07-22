@@ -10,9 +10,9 @@ import UIKit
 final class HaruHappicDetailController: UIViewController {
     
     // MARK: - Properties
+    var models = [HaruHappicModel]()
     let cellSize = CGSize(width: 300, height: 300)
     var minItemSpacing: CGFloat = 5
-    let cellCount = 5
     var previousIndex: Int = 0
     
     // MARK: - UI
@@ -160,26 +160,49 @@ final class HaruHappicDetailController: UIViewController {
     
     @objc private func showAlertPopUp() {
         let alartPopUpView = CustomPopUpController()
+        alartPopUpView.id = models[previousIndex].id
         alartPopUpView.setPopUpText(title: "해픽 삭제",
                                     contents: "사진 삭제시 사진과 태그가 모두 지워집니다.\n또한 해당 내용은 복구가 불가능합니다.\n삭제하시겠습니까?",
                                     firstButtonTitle: "취소",
                                     secondButtonTitle: "삭제하기")
-        alartPopUpView.setConfirmButtonAction()
         alartPopUpView.modalTransitionStyle = .crossDissolve
         alartPopUpView.modalPresentationStyle = .overFullScreen
         present(alartPopUpView, animated: true)
+    }
+    
+    func setData(models: [HaruHappicModel], index: Int) {
+        self.models = models
+        photoCollectionView.reloadData()
+        photoCollectionView.layoutIfNeeded()
+        
+        DispatchQueue.main.async {
+            if let _ = self.photoCollectionView.dataSource?.collectionView(self.photoCollectionView, cellForItemAt: IndexPath(row: 0, section: 0)) {
+                self.photoCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
+            }
+        }
+        dateLabel.text = "2022." + "07." + "\(models[index].day)"
+
+        whenLabel.text = "#" + "\(models[index].when)".timeFormatted
+        whereLabel.text = "#" + models[index].place
+        whoLabel.text = "#" + models[index].who
+        whatLabel.text = "#" + models[index].what
+        
+        if models[index].day < 10 {
+            dateLabel.text = "2022." + "07.0" + "\(models[index].day)"
+        }
     }
 }
 
 // MARK: - Extensions
 extension HaruHappicDetailController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellCount
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoDetailCollectionViewCell.className, for: indexPath)
                 as? PhotoDetailCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(model: models[indexPath.row])
         if indexPath.row == 1 {
             animateZoomforCellremove(zoomCell: cell)
         }
@@ -224,9 +247,9 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
             }
         }
         
-        if Int(roundedIndex) == cellCount - 1 {
-            let lastCellPath = IndexPath(item: cellCount - 1, section: 0)
-            let preCellPath = IndexPath(item: cellCount - 2, section: 0)
+        if Int(roundedIndex) == models.count - 1 {
+            let lastCellPath = IndexPath(item: models.count - 1, section: 0)
+            let preCellPath = IndexPath(item: models.count - 2, section: 0)
             if let cell = photoCollectionView.cellForItem(at: lastCellPath),
                let preCell = photoCollectionView.cellForItem(at: preCellPath) {
                 animateZoomforCellremove(zoomCell: preCell)

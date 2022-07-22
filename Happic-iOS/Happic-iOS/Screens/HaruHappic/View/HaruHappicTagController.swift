@@ -9,12 +9,13 @@ import UIKit
 
 // MARK: - Protocols
 protocol HaruHappicTagControllerDelegate: AnyObject {
-    func showDetailView(_ id: String)
+    func showDetailView(index: Int)
 }
 
 final class HaruHappicTagController: UIViewController {
     
     // MARK: - Properties
+    var models = [HaruHappicModel]()
     weak var delegate: HaruHappicTagControllerDelegate?
     
     // MARK: - UI
@@ -75,22 +76,28 @@ final class HaruHappicTagController: UIViewController {
         containerCollectionView.dataSource = self
         containerCollectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.className)
     }
+    
+    func setData(models: [HaruHappicModel]) {
+        self.models = models
+        containerCollectionView.reloadData()
+    }
 }
 
 // MARK: - Extensions
 extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.className, for: indexPath)
                 as? TagCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(model: models[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailView("")
+        delegate?.showDetailView(index: indexPath.row)
     }
 }
 

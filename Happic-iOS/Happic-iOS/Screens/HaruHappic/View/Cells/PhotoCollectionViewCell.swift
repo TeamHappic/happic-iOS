@@ -11,7 +11,6 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     private lazy var dailyImage = UIImageView().then {
-        $0.image = ImageLiterals.imageDailySample1
         $0.layer.cornerRadius = 8
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
@@ -47,6 +46,20 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         dailyLabel.snp.makeConstraints { make in
             make.top.equalTo(dailyImage.snp.bottom).offset(5)
             make.centerX.equalToSuperview()
+        }
+    }
+    
+    func setData(model: HaruHappicModel) {
+        let date = Date()
+        let todayDay = Calendar.current.dateComponents([.day], from: date)
+        
+        dailyImage.setImage(with: model.thumbnail)
+        dailyLabel.text = "\(model.day)"
+        
+        if Int(dailyLabel.text!) == todayDay.day {
+            dailyImage.layer.borderColor = UIColor.hpOrange.cgColor
+            dailyImage.layer.borderWidth = 1
+            dailyLabel.textColor = .hpOrange
         }
     }
 }

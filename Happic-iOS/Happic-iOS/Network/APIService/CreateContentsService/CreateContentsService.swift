@@ -102,12 +102,9 @@ struct CreateContentsService {
     
     /// 하루해픽 게시글 삭제
     func deleteHaruHappic(filmId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.createContentsURL
+        let url = APIConstants.deleteContentsURL + filmId
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
-        let parameters: Parameters = ["filmId": filmId]
-        
-        let dataRequest = AF.request(url, method: .delete, parameters: parameters, encoding: URLEncoding.default, headers: header)
-        
+        let dataRequest = AF.request(url, method: .delete, encoding: URLEncoding.default, headers: header)
         dataRequest.responseData { response in
             switch response.result {
             case .success:

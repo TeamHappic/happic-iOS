@@ -8,6 +8,9 @@
 import UIKit
 
 class CustomPopUpController: UIViewController {
+    
+    // MARK: - Properties
+    var id: String = ""
 
     // MARK: - UI
     private lazy var containerView = UIView().then {
@@ -134,14 +137,15 @@ class CustomPopUpController: UIViewController {
 // MARK: - Network
 extension CustomPopUpController {
     func deleteContents() {
-        CreateContentsService.shared.deleteHaruHappic(filmId: "수정") { response in
+        CreateContentsService.shared.deleteHaruHappic(filmId: id) { response in
             switch response {
             case .success:
-                print("삭제 성공")
-//                self.showToast(message: "게시글이 삭제되었습니다.")
+                self.dismiss(animated: true) {
+                    self.tabBarController?.selectedIndex = 1
+                }
+                self.showToast(message: "게시글이 삭제되었습니다.")
             default:
-                print("삭제 실패")
-//                self.showToast(message: "게시글이 삭제실패.")
+                break
             }
         }
     }

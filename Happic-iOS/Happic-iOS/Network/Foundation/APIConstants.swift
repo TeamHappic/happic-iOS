@@ -16,9 +16,7 @@ struct APIConstants {
     static let kakaoLoginURL = baseURL + "/user/signin"
     
     // MARK: - 하루 해픽
-    static let haruHappicPhotoURL = baseURL + "/daily"
-    static let haruHappicTagURL = baseURL + "/daily/title"
-    static let haruHappicDetailURL = baseURL + "/daily/"
+    static let haruHappicURL = baseURL + "/daily"
     
     // MARK: - 게시글 생성 및 삭제
     static let isPostedURL = baseURL + "/daily/posted"
