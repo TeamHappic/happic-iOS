@@ -35,4 +35,12 @@ struct APIConstants {
     static let happicReportKeywordRankURL = baseURL + "/mypage/keyword"
     static let happicReportCategoryRankURL = baseURL + "/mypage/category"
     static let happicReportMonthlyURL = baseURL + "/mypage/monthly"
+    
+    // MARK: - 메인 화면
+    static let homeURL = baseURL + "/home"
+    static let happicCapsuleURL = baseURL + "/home/capsule"
+    
+    
+    // MARK: - 회원 가입
+    static let signUpURL = baseURL + "/user/signup"
 }
