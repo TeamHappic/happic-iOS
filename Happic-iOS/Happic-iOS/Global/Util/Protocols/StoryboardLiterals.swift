@@ -13,8 +13,8 @@ enum Storyboards: String {
     case CharacterIntroduceView = "CharacterIntroduceView"
 }
 
-extension UIStoryboard{
-    static func list(_ name : Storyboards) -> UIStoryboard{
+extension UIStoryboard {
+    static func list(_ name: Storyboards) -> UIStoryboard {
         return UIStoryboard(name: name.rawValue, bundle: nil)
     }
 }
