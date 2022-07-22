@@ -58,6 +58,7 @@ final class CustomRecommendTagView: UIView {
         
         userTextField.snp.makeConstraints { make in
             make.leading.equalTo(verticalLine.snp.trailing).offset(16)
+            make.trailing.equalToSuperview().inset(10)
             make.centerY.equalToSuperview()
         }
     }
