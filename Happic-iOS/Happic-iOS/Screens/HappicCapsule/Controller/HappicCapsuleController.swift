@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class HappicCapsuleController: BaseUploadViewController {
     
@@ -133,3 +134,24 @@ final class HappicCapsuleController: BaseUploadViewController {
         setActionSheet()
     }
 }
+
+
+// MARK: - Network
+extension HappicCapsuleController {
+    func getHappicCapsule() {
+        HomeService.shared.getHappicCapsule { [weak self] response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? HappicCapsuleModel else { return }
+                self?.capsuleImageView.setImage(with: data.photo)
+                self?.
+            default:
+                break
+            }
+        }
+    }
+}
+
+
+
+

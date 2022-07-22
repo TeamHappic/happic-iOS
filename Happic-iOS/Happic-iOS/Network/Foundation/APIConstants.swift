@@ -38,4 +38,5 @@ struct APIConstants {
     
     // MARK: - 메인 화면
     static let homeURL = baseURL + "/home"
+    static let happicCapsuleURL = baseURL + "/home/capsule"
 }
