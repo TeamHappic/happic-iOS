@@ -99,4 +99,12 @@ final class TagCollectionViewCell: UICollectionViewCell {
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
+    
+    func setData(model: HaruHappicModel) {
+        dailyLabel.text = "\(model.day)"
+        whenLabel.text = "\(model.when)".timeFormatted
+        whereLabel.text = model.place
+        whoLabel.text = model.who
+        whatLabel.text = model.what
+    }
 }
