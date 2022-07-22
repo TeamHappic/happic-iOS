@@ -73,6 +73,9 @@ final class KeywordRankCollectionViewCell: UICollectionViewCell {
     func setData(rank: Int, model: Rank2) {
         rankLabel.text = "\(rank)"
         userKeywordLabel.text = model.content
+        if model.category == "when" {
+            userKeywordLabel.text = model.content.timeFormatted
+        }
         keywordNameLabel.text = "#\(model.category)"
         countLabel.text = "\(model.count)회"
     }

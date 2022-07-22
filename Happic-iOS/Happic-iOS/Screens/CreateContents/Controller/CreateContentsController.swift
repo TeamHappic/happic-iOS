@@ -18,9 +18,9 @@ final class CreateContentsController: UIViewController {
     weak var delegate: CreateContentsControllerDelegate?
     private var photoURL: String?
     var allMeridiem: [String] = ["오전", "오후"]
-    var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
+    var allHour: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     var leftPickerValue: String = "오전"
-    var rightPickerValue: String = "1시"
+    var rightPickerValue: Int = 1
     
     // MARK: - UI
     private lazy var headerView = UIView()
@@ -258,7 +258,7 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
     
     @objc func donePicker() {
         self.whenTagView.userTextField.resignFirstResponder()
-        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
+        self.whenTagView.userTextField.text = leftPickerValue + "\(rightPickerValue)시"
         validateCheck()
     }
 
@@ -288,7 +288,7 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
         case 0:
             return"\(allMeridiem[row])"
         case 1:
-            return "\(allHour[row])"
+            return "\(allHour[row])시"
         default:
             return ""
         }
@@ -303,7 +303,7 @@ extension CreateContentsController: UIPickerViewDelegate, UIPickerViewDataSource
         default:
             break
         }
-        self.whenTagView.userTextField.text = leftPickerValue + rightPickerValue
+        self.whenTagView.userTextField.text = leftPickerValue + "\(rightPickerValue)시"
     }
 }
 
@@ -349,7 +349,6 @@ extension CreateContentsController {
             switch response {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
-                print(data)
                 self.photoURL = data.id
             default:
                 break
@@ -373,11 +372,21 @@ extension CreateContentsController {
     
     func createHaruHappic() {
         guard let photo = photoURL,
-              let when = whenTagView.userTextField.text,
               let place = whereTagView.userTextField.text,
               let who = whoTagView.userTextField.text,
               let what = whatTagView.userTextField.text else { return }
-        CreateContentsService.shared.createHaruHappic(photo: photo, when: when, place: place, who: who, what: what) { response in
+        
+        var hour = 0
+        if leftPickerValue == "오전" {
+            hour = rightPickerValue
+        } else {
+            hour = rightPickerValue + 12
+            if hour == 24 {
+                hour = 0
+            }
+        }
+        
+        CreateContentsService.shared.createHaruHappic(photo: photo, when: hour, place: place, who: who, what: what) { response in
             switch response {
             case .success:
                 self.dismissViewController()
