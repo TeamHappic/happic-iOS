@@ -50,7 +50,16 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
     }
     
     func setData(model: HaruHappicModel) {
+        let date = Date()
+        let todayDay = Calendar.current.dateComponents([.day], from: date)
+        
         dailyImage.setImage(with: model.thumbnail)
         dailyLabel.text = "\(model.day)"
+        
+        if Int(dailyLabel.text!) == todayDay.day {
+            dailyImage.layer.borderColor = UIColor.hpOrange.cgColor
+            dailyImage.layer.borderWidth = 1
+            dailyLabel.textColor = .hpOrange
+        }
     }
 }
