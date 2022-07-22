@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Protocols
 protocol HaruHappicPhotoControllerDelegate: AnyObject {
-    func showDetailView(_ id: String)
+    func showDetailView(index: Int)
 }
 
 final class HaruHappicPhotoController: UIViewController {
@@ -96,7 +96,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailView("")
+        delegate?.showDetailView(index: indexPath.row)
     }
 }
 

@@ -62,8 +62,9 @@ final class HaruHappicController: BaseUploadViewController {
 
 // MARK: - Extensions
 extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTagControllerDelegate {
-    func showDetailView(_ id: String) {
+    func showDetailView(index: Int) {
         let detailViewController = HaruHappicDetailController()
+        detailViewController.setData(models: models, index: index)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

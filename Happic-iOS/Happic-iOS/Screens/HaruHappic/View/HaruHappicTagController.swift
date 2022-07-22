@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Protocols
 protocol HaruHappicTagControllerDelegate: AnyObject {
-    func showDetailView(_ id: String)
+    func showDetailView(index: Int)
 }
 
 final class HaruHappicTagController: UIViewController {
@@ -97,7 +97,7 @@ extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailView("")
+        delegate?.showDetailView(index: indexPath.row)
     }
 }
 
