@@ -22,82 +22,11 @@
 <br>
 <br>
 
-# 역할 분담
-<br>
+## 역할 분담 및 느낀점
 
-## 세진
+![Group 2326@3x](https://user-images.githubusercontent.com/80062632/180464057-ddb72484-fced-4672-9c6b-7bd75e357bf2.png)
 
-- 프로젝트 초기 세팅
- - 라이브러리 추가 (SPM)
- - 폴더링
- - TabBarController 세팅
- - 애플 팀 계정 세팅
- - 익스텐션 세팅
-- UI
- - SnapKit, Then 을 사용하여 코드로 UI 구현
- - 홈 화면 UI 구현
- - 뷰에 그라데이션 적용
- - 해픽 레포트 뷰 UI 구현
-     - SubView들을 UIView를 상속받는 커스텀 뷰로 분리하여 구현 → ViewController의 규모 최소화
-     - TabMan를 커스텀하여 ViewPager 적용
-     - 중복되는 cell, view들을 재사용 할 수 있도록 구현
- - 설정 뷰 UI 구현
-     - 팝업 뷰 구현
-- 기능
- - FCM을 통한 Push Notification 구현
- - CollectionView를 이용해 캘린더 구현
- - 해픽 레포트 뷰의 서버통신 구현
- 
- 
- ## 수빈
- 
- 하루해픽
-
-- CollectionViewCell과 ViewPager를 활용하여 사진 뷰, 태그 뷰 구현
-
-하루해픽 게시글 작성 뷰
-
-- BaseUploadViewController, TabBarController
-- 스크롤 뷰 및 컬렉션 뷰 구현
-- 이미지 및 뷰 올리는 애니메이션 및 Notification center 적용
-- When 태그를 위한 커스텀 UIPickerView활용
-- Where, Who, What 태그 추천을 위한  CustomRecommendTagView 재사용
-
-하루해픽 상세보기 뷰
-
-- 캐로셀 뷰 구현 및 해당 월 무한 스크롤
-
-UIComponent
-
-- 월별 이동을 위한 커스텀 뷰 구현(CustomMonthView, CustomMonthPickerView)
-- 태그 추천을 위한 커스텀 뷰 구현 (CustomRecommendTagView)
-- 사진 업로드를 위한 베이스 뷰 컨트롤러 구현 (BaseUploadViewController)
-
-기타
-
-- 깃허브 세팅(올가니, 레포, 라벨, 컨벤션 규칙 세팅, 리드미, 템플릿 등 작성)
-- 프로젝트 세팅(폰트, 이미지, 런치스크린 등 Resource파일 및 , Info, AppDelegate 파일)
-- 카카오 소셜로그인 기능 구현
-- SwiftLint 룰 세팅
-- 서버 통신
- 
- 
- ## 승현
- 
-- 로그인 화면 UI 구현
-  - 카카오 소셜 로그인 화면 연결 뷰 구현
-- 캐릭터 선택 뷰 UI 구현
-  - xib 파일로 캐릭터 선택 뷰의 대화 화면을 분리 구현
-  - CGAffineTransform를 사용하여 애니메이션 구현
-      - CharacterIntroduceView 의 position 전환 애니메이션 적용
-      - 캐릭터 선택 뷰의 position 및 scale 변환 애니메이션 적용
-  - Flag를 이용한 분기 처리로 두개의 캐릭터 선택 뷰를 한 파일을 재활용하여 구현
-  - Protocol-Delegate 패턴을 이용하여 데이터 전달 및 화면 전환 구현
-- 캐릭터 이름 입력 뷰 UI 구현
-  - UITextFieldDelegate를 통해 캐릭터 이름 입력 여부에 따른 버튼 enable 처리 구현
-- 캐릭터 선택 API 통신 구현
-- 홈 화면 정보 API 통신 구현
-- 캐릭터 변경 API 통신 구현
+![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180464075-08025ba6-2634-4266-bb86-c13999dc151d.png)
 
 
 ## Development Environment and Using Library
