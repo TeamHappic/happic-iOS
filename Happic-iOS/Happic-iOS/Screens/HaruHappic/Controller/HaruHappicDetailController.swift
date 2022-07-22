@@ -180,6 +180,10 @@ final class HaruHappicDetailController: UIViewController {
         whereLabel.text = "#" + models[index].place
         whoLabel.text = "#" + models[index].who
         whatLabel.text = "#" + models[index].what
+        
+        if models[index].day < 10 {
+            dateLabel.text = "2022." + "07.0" + "\(models[index].day)"
+        }
     }
 }
 
