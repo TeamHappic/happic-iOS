@@ -82,6 +82,7 @@ extension CharacterNameViewController: UITextFieldDelegate {
             showToast(message: "5글자 이내로 입력해주세요", yInsetFromSuperView: Int(370.adjustedH))
             return false
         }
+        if string == " " { return false }
         return true
     }
     
