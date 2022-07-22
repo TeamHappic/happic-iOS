@@ -54,7 +54,7 @@ class CharacterNameViewController: UIViewController {
         completeButton.isEnabled = false
         completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
         characterNameTextField.delegate = self
-        
+        characterNameTextField.becomeFirstResponder()
     }
     
     @IBAction func textFieldIsEditing(_ sender: UITextField) {
@@ -83,5 +83,9 @@ extension CharacterNameViewController: UITextFieldDelegate {
             return false
         }
         return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

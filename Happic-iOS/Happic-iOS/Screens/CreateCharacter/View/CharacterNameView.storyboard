@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="24" id="Rti-4P-m6w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldIsEditing:" destination="Y6W-OH-hqX" eventType="editingChanged" id="rGz-oP-vyo"/>
                                 </connections>
