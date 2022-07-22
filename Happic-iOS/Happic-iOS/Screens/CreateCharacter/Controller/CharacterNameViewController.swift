@@ -52,7 +52,7 @@ class CharacterNameViewController: UIViewController {
                                                     .layerMaxXMinYCorner,
                                                     .layerMaxXMaxYCorner]
         completeButton.isEnabled = false
-        completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
+        completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)
         characterNameTextField.delegate = self
         characterNameTextField.becomeFirstResponder()
     }
@@ -60,11 +60,9 @@ class CharacterNameViewController: UIViewController {
     @IBAction func textFieldIsEditing(_ sender: UITextField) {
         if sender.hasText {
             completeButton.isEnabled = true
-            completeButton.setTitleColor(UIColor.hpWhite, for: .normal)
-        } else {
+            completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)        } else {
             completeButton.isEnabled = false
-            completeButton.setTitleColor(UIColor.hpGray7, for: .normal)
-        }
+                completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)        }
     }
     
 }
