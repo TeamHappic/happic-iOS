@@ -36,4 +36,8 @@ final class PhotoDetailCollectionViewCell: UICollectionViewCell {
             make.edges.equalToSuperview()
         }
     }
+    
+    func setData(model: HaruHappicModel) {
+        dailyImage.setImage(with: model.photo)
+    }
 }
