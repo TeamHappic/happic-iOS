@@ -175,7 +175,7 @@ final class BestHappicMomentView: UIView {
         } else {
             containerView.isHidden = false
             needHappicLabel.isHidden = true
-            bestWhenLabel.text = model[0].content
+            bestWhenLabel.text = model[0].content.timeFormatted
             bestWhereLabel.text = model[1].content
             bestWhoLabel.text = model[2].content
             bestWhatLabel.text = model[3].content
