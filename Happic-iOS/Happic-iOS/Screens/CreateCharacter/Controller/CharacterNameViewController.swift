@@ -6,6 +6,9 @@ class CharacterNameViewController: UIViewController {
         guard let userName = characterNameTextField.text else {
             return
         }
+        
+        signUp()
+        
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
         namingCharacterLabel.numberOfLines = 0
         namingCharacterLabel.textAlignment = .center
@@ -89,3 +92,24 @@ extension CharacterNameViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
     }
 }
+
+
+
+// MARK: - Network
+extension CharacterNameViewController {
+    func signUp() { //수정 api post JSonEncoding
+        guard let characterId = self.flag
+        guard let characterName = self.characterNameTextField.text else {return}
+        SignUpService.shared.signUp(social: "kakao", characterId: characterId, characterName: characterName, accessToken: "모르겠음" { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? SignUpModel else { return }
+            default:
+                break
+            }
+        }
+    }
+}
+
+
+    

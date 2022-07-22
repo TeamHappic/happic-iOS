@@ -144,7 +144,11 @@ extension HappicCapsuleController {
             case .success(let result):
                 guard let data = result as? HappicCapsuleModel else { return }
                 self?.capsuleImageView.setImage(with: data.photo)
-                self?.
+                self?.capsuleView.dateLabel.text = "#\(data.hour)".timeFormatted
+                self?.capsuleView.whoLabel.text = "#\(data.who)"
+                self?.capsuleView.whatLabel.text = "#\(data.what)"
+                self?.capsuleView.whereLabel.text = "#\(data.place)"
+
             default:
                 break
             }

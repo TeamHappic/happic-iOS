@@ -10,48 +10,48 @@ import UIKit
 final class HappicCapsuleView: UIView {
     
     // MARK: - UI
-    private lazy var happicImageView = UIImageView().then {
+     lazy var happicImageView = UIImageView().then {
         $0.image = UIImage(named: "AppIcon")
         $0.layer.cornerRadius = 10
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
     
-    private lazy var dateLabel = UILabel().then {
+    lazy var dateLabel = UILabel().then {
         $0.text = "2022.06.26"
         $0.textColor = .hpGray3
         $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
     
-    private lazy var whenLabel = UILabel().then {
+    lazy var whenLabel = UILabel().then {
         $0.text = "#오후8시"
         $0.textColor = .hpGray3
         $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
-    private lazy var whereLabel = UILabel().then {
+    lazy var whereLabel = UILabel().then {
         $0.text = "#집구석"
         $0.textColor = .hpGray3
         $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
-    private lazy var whoLabel = UILabel().then {
+    lazy var whoLabel = UILabel().then {
         $0.text = "#햄식이"
         $0.textColor = .hpGray3
         $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
-    private lazy var whatLabel = UILabel().then {
+    lazy var whatLabel = UILabel().then {
         $0.text = "#귀여워요오"
         $0.textColor = .hpGray3
         $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
         $0.textAlignment = .center
     }
     
-    private lazy var tagContainerStackView = UIStackView(
+    lazy var tagContainerStackView = UIStackView(
         arrangedSubviews: [whenLabel, whereLabel, whoLabel, whatLabel]).then {
             $0.axis = .horizontal
             $0.distribution = .fillEqually

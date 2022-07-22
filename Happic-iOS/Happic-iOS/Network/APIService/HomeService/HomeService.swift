@@ -15,10 +15,9 @@ struct HomeService {
     
     func homeViewLoad(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.homeURL
-        let header: HTTPHeaders = ["Content-Type": "application/json"]
-        let body: Parameters = [:]  //빈배열 표시
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         
-        let dataRequest = AF.request(url, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
+        let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
         dataRequest.responseData { response in
             switch response.result {
@@ -26,7 +25,7 @@ struct HomeService {
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: BlankData.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: HomeModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
@@ -37,10 +36,9 @@ struct HomeService {
     
     func getHappicCapsule(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.homeURL
-        let header: HTTPHeaders = ["Content-Type": "application/json"]
-        let body: Parameters = [:]  //빈배열 표시
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         
-        let dataRequest = AF.request(url, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
+        let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
         dataRequest.responseData { response in
             switch response.result {
@@ -48,7 +46,7 @@ struct HomeService {
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: BlankData.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: HappicCapsuleModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
