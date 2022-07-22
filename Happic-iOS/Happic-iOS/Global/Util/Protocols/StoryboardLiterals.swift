@@ -8,9 +8,9 @@
 import UIKit
 
 enum Storyboards: String {
-    case CharacterChooseView = "CharacterChooseView"
-    case CreateCharacterView = "CreateCharacterView"
-    case CharacterIntroduceView = "CharacterIntroduceView"
+    case characterChooseView = "CharacterChooseView"
+    case createCharacterView = "CreateCharacterView"
+    case characterIntroduceView = "CharacterIntroduceView"
 }
 
 extension UIStoryboard {
