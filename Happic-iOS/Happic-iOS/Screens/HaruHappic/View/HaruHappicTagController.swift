@@ -117,5 +117,6 @@ extension HaruHappicTagController: CustomMonthPickerViewDelegate {
         } else {
             customMonthView.monthLabel.text = "2022 . \(month)"
         }
+        customMonthPickerView.isHidden = true
     }
 }
