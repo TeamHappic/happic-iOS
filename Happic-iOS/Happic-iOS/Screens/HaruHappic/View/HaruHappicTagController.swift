@@ -81,6 +81,14 @@ final class HaruHappicTagController: UIViewController {
         self.models = models
         containerCollectionView.reloadData()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first,
+           touch.view == self.view || touch.view == containerCollectionView {
+            customMonthPickerView.isHidden = true
+        }
+    }
 }
 
 // MARK: - Extensions
@@ -97,7 +105,11 @@ extension HaruHappicTagController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailView(index: indexPath.row)
+        if customMonthPickerView.isHidden {
+            delegate?.showDetailView(index: indexPath.row)
+        } else {
+            customMonthPickerView.isHidden = true
+        }
     }
 }
 
