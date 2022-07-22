@@ -10,6 +10,7 @@ import UIKit
 final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - Properties
+    var models = [HaruHappicModel]()
     private lazy var haruHappicPhotoController = HaruHappicPhotoController()
     private lazy var haruHappicTagController = HaruHappicTagController()
     
@@ -26,6 +27,7 @@ final class HaruHappicController: BaseUploadViewController {
         super.viewDidLoad()
         configureUI()
         setDelegate()
+        getHaruHappicPhoto(year: 2022, month: 7)
     }
     
     // MARK: - Functions
@@ -78,6 +80,24 @@ extension HaruHappicController {
                 } else {
                     self.setActionSheet()
                 }
+            default:
+                break
+            }
+        }
+    }
+}
+
+// MARK: - Extensions
+extension HaruHappicController {
+    func getHaruHappicPhoto(year: Int, month: Int) {
+        HaruHappicService.shared.getHaruHappic(year: year, month: month) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? [HaruHappicModel] else { return }
+                self.models = data
+                self.haruHappicPhotoController.setData(models: self.models)
+                self.haruHappicTagController.setData(models: self.models)
+//                print(self.models)
             default:
                 break
             }
