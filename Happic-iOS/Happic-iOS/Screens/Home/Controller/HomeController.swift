@@ -81,8 +81,6 @@ final class HomeController: BaseUploadViewController {
         let nav = UINavigationController(rootViewController: nextVC)
         nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true)
-
-
     }
 
     // MARK: - Functions

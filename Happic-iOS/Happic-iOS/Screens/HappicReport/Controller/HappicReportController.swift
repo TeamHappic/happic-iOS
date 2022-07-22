@@ -17,8 +17,7 @@ final class HappicReportController: UIViewController {
             setCustomMonthPickerViewSelected(month: currentMonth)
         }
     }
-    
-    
+
     // MARK: - UI
     private let customMonthView = CustomMonthView()
     private let customMonthPickerView = CustomMonthPickerView()

@@ -41,7 +41,7 @@ extension UIView {
         gradient.endPoint = endPoint
         gradient.frame = self.bounds
         layer.insertSublayer(gradient, at: 0)
-        //layer.addSublayer(gradient)
+        // layer.addSublayer(gradient)
         return self
     }
     
@@ -82,5 +82,13 @@ extension UIView {
         contentLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
+    }
+    
+    func setDarkBlue() {
+        setGradient(type: .axial, colors: [UIColor.hpDarkBlue.cgColor, UIColor.hpBgBlack0.cgColor], startPoint: CGPoint(x: 1.4, y: 1.4), endPoint: CGPoint(x: 0.7, y: 0.7))
+    }
+    
+    func setDarkPurple() {
+        setGradient(type: .axial, colors: [UIColor.hpDarkPurple.cgColor, UIColor.hpBgBlack0.cgColor], startPoint: CGPoint(x: 1.4, y: 1.4), endPoint: CGPoint(x: 0.7, y: 0.7))
     }
 }
