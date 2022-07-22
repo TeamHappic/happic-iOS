@@ -379,14 +379,12 @@ extension CreateContentsController {
               let what = whatTagView.userTextField.text else { return }
         CreateContentsService.shared.createHaruHappic(photo: photo, when: when, place: place, who: who, what: what) { response in
             switch response {
-            case .success(let result):
-                guard let data = result as? CreateContentsModel else { return }
+            case .success:
                 self.dismissViewController()
                 self.delegate?.showToastAfterCreating("오늘의 해픽을 등록했어요")
             default:
                 self.dismissViewController()
                 self.delegate?.showToastAfterCreating("\(response)")
-                break
             }
         }
     }
