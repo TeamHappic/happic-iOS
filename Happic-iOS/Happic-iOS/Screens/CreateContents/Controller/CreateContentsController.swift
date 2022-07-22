@@ -222,7 +222,7 @@ final class CreateContentsController: UIViewController {
     }
     
     @objc private func saveButtonDidTap() {
-
+        createHaruHappic()
     }
 }
 
@@ -359,6 +359,26 @@ extension CreateContentsController {
                 self.whoTagView.setData(tags: data.who)
                 self.whatTagView.setData(tags: data.what)
             default:
+                break
+            }
+        }
+    }
+    
+    func createHaruHappic() {
+        guard let photo = photoURL,
+              let when = whenTagView.userTextField.text,
+              let place = whereTagView.userTextField.text,
+              let who = whoTagView.userTextField.text,
+              let what = whatTagView.userTextField.text else { return }
+        CreateContentsService.shared.createHaruHappic(photo: photo, when: when, place: place, who: who, what: what) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? CreateContentsModel else { return }
+                print(data)
+                self.showToast(message: "오늘의 해픽을 등록했어요")
+                // 주황색 코드 넣기
+            default:
+                print(response)
                 break
             }
         }
