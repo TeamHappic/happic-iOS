@@ -160,11 +160,11 @@ final class HaruHappicDetailController: UIViewController {
     
     @objc private func showAlertPopUp() {
         let alartPopUpView = CustomPopUpController()
+        alartPopUpView.id = models[previousIndex].id
         alartPopUpView.setPopUpText(title: "해픽 삭제",
                                     contents: "사진 삭제시 사진과 태그가 모두 지워집니다.\n또한 해당 내용은 복구가 불가능합니다.\n삭제하시겠습니까?",
                                     firstButtonTitle: "취소",
                                     secondButtonTitle: "삭제하기")
-//        alartPopUpView.setConfirmButtonAction()
         alartPopUpView.modalTransitionStyle = .crossDissolve
         alartPopUpView.modalPresentationStyle = .overFullScreen
         present(alartPopUpView, animated: true)
@@ -175,6 +175,11 @@ final class HaruHappicDetailController: UIViewController {
         photoCollectionView.reloadData()
         photoCollectionView.layoutIfNeeded()
         
+        DispatchQueue.main.async {
+            if let _ = self.photoCollectionView.dataSource?.collectionView(self.photoCollectionView, cellForItemAt: IndexPath(row: 0, section: 0)) {
+                self.photoCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
+            }
+        }
         dateLabel.text = "2022." + "07." + "\(models[index].day)"
 
         whenLabel.text = "#" + "\(models[index].when)".timeFormatted
