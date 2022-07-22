@@ -7,12 +7,10 @@
 
 import Foundation
 
-
 // MARK: - HomeModel
-struct SignUpModel: Codable {
-    let characterId : Int
-    let social, characterName, accessToken : String
-    let isPosted : Bool
-    
 
+struct SignUpModel: Codable {
+    let characterId: Int
+    let social, characterName, accessToken: String
+    let isPosted: Bool
 }

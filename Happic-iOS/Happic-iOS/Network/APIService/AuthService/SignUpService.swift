@@ -19,8 +19,8 @@ struct SignUpService {
         let body: Parameters = [
             "social": social,
             "characterId": characterId,
-            "characterName" : characterName,
-            "accesToken" :  accessToken
+            "characterName": characterName,
+            "accesToken": accessToken
         ]
         
         let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
@@ -38,5 +38,25 @@ struct SignUpService {
             }
         }
     }
+    
+    func changeCharacter(characterId: Int, characterName: String,
+                         completion: @escaping (NetworkResult<Any>) -> Void) {
+        let url = APIConstants.characterChangeURL
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let parameters: Parameters = ["year": characterId, "characterName": characterName]
+        
+        let dataRequest = AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding.default, headers: header)
+        
+        dataRequest.responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: BlankData.self)
+                completion(networkResult)
+            case .failure:
+                completion(.networkFail)
+            }
+        }
+    }
 }
-

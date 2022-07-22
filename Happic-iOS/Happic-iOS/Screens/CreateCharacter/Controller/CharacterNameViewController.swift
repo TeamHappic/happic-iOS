@@ -7,7 +7,9 @@ class CharacterNameViewController: UIViewController {
             return
         }
         
-        signUp()
+        if let name = characterNameTextField.text {
+            characterChange(characterId: flag, characterName: name)
+        }
         
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
         namingCharacterLabel.numberOfLines = 0
@@ -64,7 +66,7 @@ class CharacterNameViewController: UIViewController {
         if sender.hasText {
             completeButton.isEnabled = true
             completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)        } else {
-            completeButton.isEnabled = false
+                completeButton.isEnabled = false
                 completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)        }
     }
     
@@ -92,23 +94,17 @@ extension CharacterNameViewController: UITextFieldDelegate {
     }
 }
 
-
-
 // MARK: - Network
 extension CharacterNameViewController {
-    func signUp() { //수정 api post JSonEncoding
-        guard let characterId = self.flag
-        guard let characterName = self.characterNameTextField.text else {return}
-        SignUpService.shared.signUp(social: "kakao", characterId: characterId, characterName: characterName, accessToken: "모르겠음" { response in
+
+    func characterChange(characterId: Int, characterName: String) {
+        SignUpService.shared.changeCharacter(characterId: characterId, characterName: characterName) { response in
             switch response {
-            case .success(let result):
-                guard let data = result as? SignUpModel else { return }
+            case .success:
+                print("변경 성공")
             default:
-                break
+                print("캐릭터 변경 실패")
             }
         }
     }
 }
-
-
-    

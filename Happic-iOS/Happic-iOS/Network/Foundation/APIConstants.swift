@@ -40,7 +40,9 @@ struct APIConstants {
     static let homeURL = baseURL + "/home"
     static let happicCapsuleURL = baseURL + "/home/capsule"
     
-    
     // MARK: - 회원 가입
     static let signUpURL = baseURL + "/user/signup"
+    
+    // MARK: - 캐릭터 변경
+    static let characterChangeURL = baseURL + "/setting"
 }

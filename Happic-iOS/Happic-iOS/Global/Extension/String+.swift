@@ -42,7 +42,8 @@ extension String {
     /// 서버에서 들어온 Date String을 UI에 적용 가능한 String 타입으로 반환하는 메서드
     func serverTimeToString(forUse: TimeStringCase) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yy/MM/dd"
+        // dateFormatter.dateFormat = "yy/MM/dd"
+        dateFormatter.dateFormat = "yyyy.MM.dd"
         
         let currentTime = Int(Date().timeIntervalSince1970)
         
