@@ -101,7 +101,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
     }
     
     func setData(model: HaruHappicModel) {
-        dailyLabel.text = "\(model.day)"
+        dailyLabel.text = "\(model.day) " + model.dayOfWeek
         whenLabel.text = "\(model.when)".timeFormatted
         whereLabel.text = model.place
         whoLabel.text = model.who
