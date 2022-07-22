@@ -12,7 +12,6 @@ final class HaruHappicDetailController: UIViewController {
     // MARK: - Properties
     let cellSize = CGSize(width: 300, height: 300)
     var minItemSpacing: CGFloat = 5
-    let cellCount = 5
     var previousIndex: Int = 0
     
     // MARK: - UI
@@ -174,7 +173,7 @@ final class HaruHappicDetailController: UIViewController {
 // MARK: - Extensions
 extension HaruHappicDetailController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellCount
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -224,9 +223,9 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
             }
         }
         
-        if Int(roundedIndex) == cellCount - 1 {
-            let lastCellPath = IndexPath(item: cellCount - 1, section: 0)
-            let preCellPath = IndexPath(item: cellCount - 2, section: 0)
+        if Int(roundedIndex) == models.count - 1 {
+            let lastCellPath = IndexPath(item: models.count - 1, section: 0)
+            let preCellPath = IndexPath(item: models.count - 2, section: 0)
             if let cell = photoCollectionView.cellForItem(at: lastCellPath),
                let preCell = photoCollectionView.cellForItem(at: preCellPath) {
                 animateZoomforCellremove(zoomCell: preCell)
