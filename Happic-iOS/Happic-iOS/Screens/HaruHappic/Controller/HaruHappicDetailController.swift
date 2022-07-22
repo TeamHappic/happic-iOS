@@ -173,6 +173,7 @@ final class HaruHappicDetailController: UIViewController {
     func setData(models: [HaruHappicModel], index: Int) {
         self.models = models
         photoCollectionView.reloadData()
+        photoCollectionView.layoutIfNeeded()
         
         dateLabel.text = "2022." + "07." + "\(models[index].day)"
 
