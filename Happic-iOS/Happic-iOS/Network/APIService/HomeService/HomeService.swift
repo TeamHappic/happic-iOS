@@ -33,9 +33,8 @@ struct HomeService {
         }
     }
     
-    
     func getHappicCapsule(completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.homeURL
+        let url = APIConstants.happicCapsuleURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
@@ -54,4 +53,3 @@ struct HomeService {
         }
     }
 }
-

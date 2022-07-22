@@ -83,6 +83,9 @@ final class HomeController: BaseUploadViewController {
         let nav = UINavigationController(rootViewController: nextVC)
         nav.modalPresentationStyle = .fullScreen
         // self.present(nav, animated: true)
+        let cap = HappicCapsuleController()
+        let navi = UINavigationController(rootViewController: cap)
+        self.present(navi, animated: true)
     }
 
     // MARK: - Functions

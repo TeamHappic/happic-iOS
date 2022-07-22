@@ -109,6 +109,9 @@ final class HappicCapsuleController: BaseUploadViewController {
     }
     
     @objc func handleDrawButtonDidTap(sender: UIButton) {
+        getHappicCapsule()
+        canPost()
+        
         capsuleImageView.isHidden = true
         drawCapsuleButton.isHidden = true
         
@@ -135,27 +138,35 @@ final class HappicCapsuleController: BaseUploadViewController {
     }
 }
 
-
 // MARK: - Network
 extension HappicCapsuleController {
     func getHappicCapsule() {
-        HomeService.shared.getHappicCapsule { [weak self] response in
+        HomeService.shared.getHappicCapsule { response in
             switch response {
             case .success(let result):
                 guard let data = result as? HappicCapsuleModel else { return }
-                self?.capsuleImageView.setImage(with: data.photo)
-                self?.capsuleView.dateLabel.text = "#\(data.hour)".timeFormatted
-                self?.capsuleView.whoLabel.text = "#\(data.who)"
-                self?.capsuleView.whatLabel.text = "#\(data.what)"
-                self?.capsuleView.whereLabel.text = "#\(data.place)"
-
+                self.capsuleView.dateLabel.text = data.date.serverTimeToString(forUse: .forDefault)
+                self.capsuleView.happicImageView.setImage(with: data.photo)
+                self.capsuleView.whenLabel.text = "#" + "\(data.when)".timeFormatted
+                self.capsuleView.whoLabel.text = "#\(data.who)"
+                self.capsuleView.whatLabel.text = "#\(data.what)"
+                self.capsuleView.whereLabel.text = "#\(data.place)"
             default:
                 break
             }
         }
     }
+    
+    func canPost() {
+        CreateContentsService.shared.getPostStatus { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? PostStatusModel else { return }
+                self.createContentsButton.isHidden = data.isPosted
+            default:
+                break
+            }
+        }
+        
+    }
 }
-
-
-
-

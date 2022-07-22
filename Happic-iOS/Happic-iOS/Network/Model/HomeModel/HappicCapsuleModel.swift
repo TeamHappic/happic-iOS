@@ -8,10 +8,14 @@
 import Foundation
 
 struct HappicCapsuleModel: Codable {
-    let photo, hour, who, what, place: String
-
+    let date: String
+    let photo: String
+    let when: Int
+    let place, who, what: String
+    
     enum CodingKeys: String, CodingKey {
-        case photo, hour, who, what
+        case date, photo, when
         case place = "where"
+        case who, what
     }
 }

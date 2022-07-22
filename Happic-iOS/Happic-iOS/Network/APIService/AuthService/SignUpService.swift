@@ -19,8 +19,8 @@ struct SignUpService {
         let body: Parameters = [
             "social": social,
             "characterId": characterId,
-            "characterName" : characterName,
-            "accesToken" :  accessToken
+            "characterName": characterName,
+            "accesToken": accessToken
         ]
         
         let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
@@ -39,4 +39,3 @@ struct SignUpService {
         }
     }
 }
-

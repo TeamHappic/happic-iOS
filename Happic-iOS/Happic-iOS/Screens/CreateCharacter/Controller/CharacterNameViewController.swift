@@ -7,7 +7,7 @@ class CharacterNameViewController: UIViewController {
             return
         }
         
-        //signUp()
+        //  signUp()
         
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
         namingCharacterLabel.numberOfLines = 0
@@ -92,8 +92,6 @@ extension CharacterNameViewController: UITextFieldDelegate {
     }
 }
 
-
-
 // MARK: - Network
 extension CharacterNameViewController {
 //    func signUp() { //수정 api post JSonEncoding
@@ -109,6 +107,3 @@ extension CharacterNameViewController {
 //        }
 //    }
 }
-
-
-    
