@@ -1,6 +1,6 @@
 import UIKit
 
-class CreateCharacterViewController: UIViewController, Storyboarded{
+class CreateCharacterViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     

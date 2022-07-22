@@ -1,6 +1,6 @@
 import UIKit
 
-class CharacterNameViewController: UIViewController{
+class CharacterNameViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
     @IBAction func completeButtonDidTap(_ sender: Any) {
         guard let userName = characterNameTextField.text else {
@@ -10,7 +10,6 @@ class CharacterNameViewController: UIViewController{
         namingCharacterLabel.numberOfLines = 0
         namingCharacterLabel.textAlignment = .center
 
-        
         let attributedStr = NSMutableAttributedString(string: namingCharacterLabel.text!)
         
         attributedStr.addAttribute(.foregroundColor, value: UIColor.orange, range: (namingCharacterLabel.text! as NSString).range(of: userName))

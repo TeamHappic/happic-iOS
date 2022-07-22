@@ -5,7 +5,6 @@
 //  Created by Zaid Kang on 2022/07/16.
 //
 
-
 import UIKit
 
 enum Storyboards: String {
@@ -19,4 +18,3 @@ extension UIStoryboard{
         return UIStoryboard(name: name.rawValue, bundle: nil)
     }
 }
-
