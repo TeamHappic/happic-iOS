@@ -192,7 +192,7 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         return cellSize
     }
     
-    // MARK: Paging Effect
+    // Paging Effect
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let cellWidthIncludeSpacing = cellSize.width + minItemSpacing
         
@@ -204,7 +204,7 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         targetContentOffset.pointee = offset
     }
     
-    // MARK: Carousel Effect
+    // Carousel Effect
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let cellWidthIncludeSpacing = cellSize.width + minItemSpacing
