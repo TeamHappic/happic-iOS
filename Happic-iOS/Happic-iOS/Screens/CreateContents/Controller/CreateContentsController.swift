@@ -7,9 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol CreateContentsControllerDelegate: AnyObject {
+    func showToastAfterCreating(_ message: String)
+}
+
 final class CreateContentsController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: CreateContentsControllerDelegate?
     private var photoURL: String?
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
@@ -343,6 +349,7 @@ extension CreateContentsController {
             switch response {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
+                print(data)
                 self.photoURL = data.id
             default:
                 break
@@ -374,11 +381,11 @@ extension CreateContentsController {
             switch response {
             case .success(let result):
                 guard let data = result as? CreateContentsModel else { return }
-                print(data)
-                self.showToast(message: "오늘의 해픽을 등록했어요")
-                // 주황색 코드 넣기
+                self.dismissViewController()
+                self.delegate?.showToastAfterCreating("오늘의 해픽을 등록했어요")
             default:
-                print(response)
+                self.dismissViewController()
+                self.delegate?.showToastAfterCreating("\(response)")
                 break
             }
         }

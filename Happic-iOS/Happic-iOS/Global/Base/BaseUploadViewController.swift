@@ -63,11 +63,18 @@ extension BaseUploadViewController: UIImagePickerControllerDelegate, UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let createContentsController = CreateContentsController()
+        createContentsController.delegate = self
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             createContentsController.pickerImageView.image = image
             picker.dismiss(animated: true)
             createContentsController.modalPresentationStyle = .fullScreen
             present(createContentsController, animated: true, completion: nil)
         }
+    }
+}
+
+extension BaseUploadViewController: CreateContentsControllerDelegate {
+    func showToastAfterCreating(_ message: String) {
+        showToast(message: message)
     }
 }
