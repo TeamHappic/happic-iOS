@@ -48,4 +48,9 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
             make.centerX.equalToSuperview()
         }
     }
+    
+    func setData(model: HaruHappicModel) {
+        dailyImage.setImage(with: model.thumbnail)
+        dailyLabel.text = "\(model.day)"
+    }
 }
