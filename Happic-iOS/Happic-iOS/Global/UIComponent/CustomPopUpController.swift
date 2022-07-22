@@ -50,6 +50,7 @@ class CustomPopUpController: UIViewController {
         $0.titleLabel?.font = UIFont.font(.pretendardBold, ofSize: 16)
         $0.backgroundColor = .hpBgBlack2
         $0.layer.cornerRadius = 12
+        $0.addTarget(self, action: #selector(confirmButtonDidTap), for: .touchUpInside)
     }
     
     // MARK: - View Life Cycle
@@ -115,4 +116,18 @@ class CustomPopUpController: UIViewController {
     @objc private func handleCancelButtonDidTap() {
         dismiss(animated: true)
     }
+    
+    @objc private func confirmButtonDidTap() {
+        setConfirmButtonAction()
+    }
+    
+    func setConfirmButtonAction() {
+        if popUpTitleLabel.text == "캐릭터 변경 주의사항" {
+            print("캐릭터 변경")
+        } else {
+            print("삭제하기")
+            deleteContents()
+        }
+    }
+}
 }
