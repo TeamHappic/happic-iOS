@@ -49,7 +49,7 @@ struct HappicReportService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: KeywordRankModel.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: [Rank2].self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
@@ -71,7 +71,7 @@ struct HappicReportService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: CategoryRankModel.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: [KeywordModel].self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)

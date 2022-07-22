@@ -71,10 +71,10 @@ extension KeywordRankController {
         HappicReportService.shared.getKeywordRank(year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? KeywordRankModel else { return }
-                self.keywordRankView.isHidden = data.ranks.isEmpty
-                self.containerView.isHidden = !data.ranks.isEmpty
-                self.keywordRankView.setData(model: data.ranks)
+                guard let data = result as? [Rank2] else { return }
+                self.keywordRankView.isHidden = data.isEmpty
+                self.containerView.isHidden = !data.isEmpty
+                self.keywordRankView.setData(model: data)
             default:
                 break
             }

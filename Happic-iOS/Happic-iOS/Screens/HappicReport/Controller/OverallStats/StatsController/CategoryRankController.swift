@@ -73,9 +73,9 @@ extension CategoryRankController {
         HappicReportService.shared.getCategoryRank(option: "when", year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? CategoryRankModel else { return }
-                self.handleEmptyView(isEmpty: data.ranks.isEmpty)
-                self.categoryRankView.setWhenData(model: data.ranks)
+                guard let data = result as? [KeywordModel] else { return }
+                self.handleEmptyView(isEmpty: data.isEmpty)
+                self.categoryRankView.setWhenData(model: data)
             default:
                 break
             }
@@ -84,8 +84,8 @@ extension CategoryRankController {
         HappicReportService.shared.getCategoryRank(option: "where", year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? CategoryRankModel else { return }
-                self.categoryRankView.setWhereData(model: data.ranks)
+                guard let data = result as? [KeywordModel] else { return }
+                self.categoryRankView.setWhereData(model: data)
             default:
                 break
             }
@@ -94,8 +94,8 @@ extension CategoryRankController {
         HappicReportService.shared.getCategoryRank(option: "who", year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? CategoryRankModel else { return }
-                self.categoryRankView.setWhoData(model: data.ranks)
+                guard let data = result as? [KeywordModel] else { return }
+                self.categoryRankView.setWhoData(model: data)
             default:
                 break
             }
@@ -104,8 +104,8 @@ extension CategoryRankController {
         HappicReportService.shared.getCategoryRank(option: "what", year: year, month: month) { response in
             switch response {
             case .success(let result):
-                guard let data = result as? CategoryRankModel else { return }
-                self.categoryRankView.setWhatData(model: data.ranks)
+                guard let data = result as? [KeywordModel] else { return }
+                self.categoryRankView.setWhatData(model: data)
             default:
                 break
             }
