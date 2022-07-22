@@ -20,7 +20,7 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
     private lazy var dailyLabel = UILabel().then {
         $0.text = "1"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardMedium, ofSize: 12)
+        $0.font = UIFont.font(.pretendardMedium, ofSize: 13)
     }
     
     // MARK: - Initialization

@@ -13,13 +13,13 @@ final class HomeController: BaseUploadViewController {
     private lazy var levelLabel = UILabel().then {
         $0.text = "Lv1. 응애입니다."
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 18)
     }
     
     private lazy var progressLabel = UILabel().then {
         $0.text = "1/6"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 12)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
     }
     
     private lazy var levelProgressView = UIProgressView(
@@ -37,7 +37,7 @@ final class HomeController: BaseUploadViewController {
     private lazy var nameLabel = UILabel().then {
         $0.text = "캐릭터 이름"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 18)
     }
     
     private lazy var containerView = UIView().then {
@@ -91,7 +91,7 @@ final class HomeController: BaseUploadViewController {
         
         levelLabel.snp.makeConstraints { make in
             make.leading.equalTo(view.safeAreaLayoutGuide).inset(48)
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(28)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(50)
         }
         
         progressLabel.snp.makeConstraints { make in
@@ -100,12 +100,12 @@ final class HomeController: BaseUploadViewController {
         }
         
         levelProgressView.snp.makeConstraints { make in
-            make.top.equalTo(levelLabel.snp.bottom).offset(8)
+            make.top.equalTo(levelLabel.snp.bottom).offset(16)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(48)
         }
         
         characterImageView.snp.makeConstraints { make in
-            make.top.equalTo(levelProgressView.snp.bottom).offset(118)
+            make.top.equalTo(levelProgressView.snp.bottom).offset(100)
             make.centerX.equalTo(view.safeAreaLayoutGuide)
             make.width.height.equalTo(124)
         }
