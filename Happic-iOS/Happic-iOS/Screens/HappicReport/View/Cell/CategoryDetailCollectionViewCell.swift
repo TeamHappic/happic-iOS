@@ -90,7 +90,7 @@ final class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
     func setData(model: KeywordModel) {
         if type == .whenCategory {
-            userKeywordLabel.text = model.content
+            userKeywordLabel.text = model.content.timeFormatted
         } else {
             userKeywordLabel.text = model.content
         }
