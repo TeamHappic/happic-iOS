@@ -10,6 +10,7 @@ import UIKit
 final class HaruHappicDetailController: UIViewController {
     
     // MARK: - Properties
+    var models = [HaruHappicModel]()
     let cellSize = CGSize(width: 300, height: 300)
     var minItemSpacing: CGFloat = 5
     var previousIndex: Int = 0
@@ -168,6 +169,18 @@ final class HaruHappicDetailController: UIViewController {
         alartPopUpView.modalPresentationStyle = .overFullScreen
         present(alartPopUpView, animated: true)
     }
+    
+    func setData(models: [HaruHappicModel], index: Int) {
+        self.models = models
+        photoCollectionView.reloadData()
+        
+        dateLabel.text = "2022." + "07." + "\(models[index].day)"
+
+        whenLabel.text = "#" + "\(models[index].when)".timeFormatted
+        whereLabel.text = "#" + models[index].place
+        whoLabel.text = "#" + models[index].who
+        whatLabel.text = "#" + models[index].what
+    }
 }
 
 // MARK: - Extensions
@@ -179,6 +192,7 @@ extension HaruHappicDetailController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoDetailCollectionViewCell.className, for: indexPath)
                 as? PhotoDetailCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(model: models[indexPath.row])
         if indexPath.row == 1 {
             animateZoomforCellremove(zoomCell: cell)
         }
