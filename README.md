@@ -22,6 +22,13 @@
 <br>
 <br>
 
+## 역할 분담 및 느낀점
+
+![Group 2326@3x](https://user-images.githubusercontent.com/80062632/180464057-ddb72484-fced-4672-9c6b-7bd75e357bf2.png)
+
+![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180464075-08025ba6-2634-4266-bb86-c13999dc151d.png)
+
+
 ## Development Environment and Using Library
 - Development Environment
 <p align="left">
