@@ -20,7 +20,7 @@ class CustomPopUpController: UIViewController {
         $0.tintColor = .hpGray3
     }
     
-    private lazy var popUpTitleLabel = UILabel().then {
+    lazy var popUpTitleLabel = UILabel().then {
         $0.text = "캐릭터 변경 주의사항"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
