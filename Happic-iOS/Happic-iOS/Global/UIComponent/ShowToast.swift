@@ -27,7 +27,7 @@ final class Toast {
         
         toastLabel.textColor = .hpGray2
         toastLabel.textAlignment = .center
-        toastLabel.font = UIFont.font(.pretendardMedium, ofSize: 12)
+        toastLabel.font = UIFont.font(.pretendardMedium, ofSize: 14)
         toastLabel.text = message
         toastLabel.clipsToBounds = true
         toastLabel.numberOfLines = 0
