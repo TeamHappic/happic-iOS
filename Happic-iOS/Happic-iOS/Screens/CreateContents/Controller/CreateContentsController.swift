@@ -7,9 +7,16 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol CreateContentsControllerDelegate: AnyObject {
+    func showToastAfterCreating(_ message: String)
+}
+
 final class CreateContentsController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: CreateContentsControllerDelegate?
+    private var photoURL: String?
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
     var leftPickerValue: String = "오전"
@@ -210,10 +217,10 @@ final class CreateContentsController: UIViewController {
         whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whoTagView.tagLabel.text = "#who"
-        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whatTagView.tagLabel.text = "#what"
-        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     @objc private func dismissViewController() {
@@ -221,7 +228,7 @@ final class CreateContentsController: UIViewController {
     }
     
     @objc private func saveButtonDidTap() {
-
+        createHaruHappic()
     }
 }
 
@@ -343,6 +350,7 @@ extension CreateContentsController {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
                 print(data)
+                self.photoURL = data.id
             default:
                 break
             }
@@ -358,6 +366,26 @@ extension CreateContentsController {
                 self.whoTagView.setData(tags: data.who)
                 self.whatTagView.setData(tags: data.what)
             default:
+                break
+            }
+        }
+    }
+    
+    func createHaruHappic() {
+        guard let photo = photoURL,
+              let when = whenTagView.userTextField.text,
+              let place = whereTagView.userTextField.text,
+              let who = whoTagView.userTextField.text,
+              let what = whatTagView.userTextField.text else { return }
+        CreateContentsService.shared.createHaruHappic(photo: photo, when: when, place: place, who: who, what: what) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? CreateContentsModel else { return }
+                self.dismissViewController()
+                self.delegate?.showToastAfterCreating("오늘의 해픽을 등록했어요")
+            default:
+                self.dismissViewController()
+                self.delegate?.showToastAfterCreating("\(response)")
                 break
             }
         }

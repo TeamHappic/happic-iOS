@@ -99,7 +99,7 @@ extension HaruHappicPhotoController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -120,5 +120,6 @@ extension HaruHappicPhotoController: CustomMonthPickerViewDelegate {
         } else {
             customMonthView.monthLabel.text = "2022 . \(month)"
         }
+        customMonthPickerView.isHidden = true
     }
 }

@@ -34,7 +34,7 @@ final class HaruHappicDetailController: UIViewController {
     private lazy var dateLabel = UILabel().then {
         $0.text = "2022 . 07 . 20"
         $0.textColor = .hpWhite
-        $0.font = UIFont.font(.pretendardBold, ofSize: 16)
+        $0.font = UIFont.font(.pretendardBold, ofSize: 18)
     }
     
     private lazy var photoCollectionView: UICollectionView = {
