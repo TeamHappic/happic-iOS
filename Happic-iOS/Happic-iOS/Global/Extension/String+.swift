@@ -10,7 +10,7 @@ import Foundation
 extension String {
     
     var timeFormatted: String {
-        if self.count == 1 || self == "11" {
+        if self.count == 1 || self == "11" || self == "10" {
             return "오전\(self)시"
         } else {
             if let intValue = Int(self) {
