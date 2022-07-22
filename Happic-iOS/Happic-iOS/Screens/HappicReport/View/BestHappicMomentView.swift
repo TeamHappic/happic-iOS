@@ -115,6 +115,7 @@ final class BestHappicMomentView: UIView {
         $0.text = "수집된 해픽이 부족해요"
         $0.textColor = .hpGray2
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
+        $0.isHidden = true
     }
     
     // MARK: - Initialization
@@ -154,17 +155,14 @@ final class BestHappicMomentView: UIView {
                                    startPoint: CGPoint(x: 1.4, y: -0.5),
                                    endPoint: CGPoint(x: 2.4, y: 0.8))
         
-        backgroundView.addSubviews(containerView)
-        containerView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        containerView.addSubview(needHappicLabel)
-        bringSubviewToFront(needHappicLabel)
+        backgroundView.addSubviews(needHappicLabel, containerView)
         needHappicLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-        needHappicLabel.isHidden = true
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
         backgroundView.layer.applyShadow(color: .black, alpha: 0.25, x: 8, y: 8, blur: 16, spread: 0)
         backgroundView.clipsToBounds = true
@@ -172,15 +170,10 @@ final class BestHappicMomentView: UIView {
 
     func setData(model: [Rank1]) {
         if model.isEmpty {
-            for view in containerView.subviews {
-                view.isHidden = true
-            }
-            
+            containerView.isHidden = true
             needHappicLabel.isHidden = false
         } else {
-            for view in containerView.subviews {
-                view.isHidden = false
-            }
+            containerView.isHidden = false
             needHappicLabel.isHidden = true
             bestWhenLabel.text = model[0].content
             bestWhereLabel.text = model[1].content
