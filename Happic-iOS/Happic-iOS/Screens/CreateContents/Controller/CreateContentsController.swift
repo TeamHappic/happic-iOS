@@ -10,6 +10,7 @@ import UIKit
 final class CreateContentsController: UIViewController {
     
     // MARK: - Properties
+    private var photoURL: String?
     var allMeridiem: [String] = ["오전", "오후"]
     var allHour: [String] = ["1시", "2시", "3시", "4시", "5시", "6시", "7시", "8시", "9시", "10시", "11시", "12시"]
     var leftPickerValue: String = "오전"
@@ -342,7 +343,7 @@ extension CreateContentsController {
             switch response {
             case .success(let result):
                 guard let data = result as? UploadImageModel else { return }
-                print(data)
+                self.photoURL = data.id
             default:
                 break
             }
