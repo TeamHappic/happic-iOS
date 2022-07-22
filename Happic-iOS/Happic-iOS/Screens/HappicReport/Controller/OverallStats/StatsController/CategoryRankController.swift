@@ -17,7 +17,6 @@ final class CategoryRankController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
-        getCategoryRank(month: "7")
     }
     
     // MARK: - Functions

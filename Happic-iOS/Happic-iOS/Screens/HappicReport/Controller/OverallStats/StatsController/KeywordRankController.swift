@@ -17,7 +17,6 @@ final class KeywordRankController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
-        getKeyworkRank(year: "2022", month: "7")
     }
     
     // MARK: - Functions
