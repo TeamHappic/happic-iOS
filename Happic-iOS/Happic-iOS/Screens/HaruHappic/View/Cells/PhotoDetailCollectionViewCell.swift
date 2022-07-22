@@ -35,5 +35,5 @@ final class PhotoDetailCollectionViewCell: UICollectionViewCell {
         dailyImage.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-    }    
+    }
 }
