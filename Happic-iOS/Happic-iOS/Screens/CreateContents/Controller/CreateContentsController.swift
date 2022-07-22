@@ -211,10 +211,10 @@ final class CreateContentsController: UIViewController {
         whereTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "장소를 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whoTagView.tagLabel.text = "#who"
-        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "함께한 사람을 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
         
         whatTagView.tagLabel.text = "#what"
-        whoTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
+        whatTagView.userTextField.attributedPlaceholder = NSAttributedString(string: "무엇을 했는지 입력해주세요", attributes: [.foregroundColor: UIColor.hpGray6])
     }
     
     @objc private func dismissViewController() {
