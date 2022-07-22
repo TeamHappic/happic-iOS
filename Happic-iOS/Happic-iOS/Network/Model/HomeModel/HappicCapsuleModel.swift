@@ -7,13 +7,11 @@
 
 import Foundation
 
-struct HappicCapsuleModel : Codable {
-    let photo, hour, who, what, place : String
-
+struct HappicCapsuleModel: Codable {
+    let photo, hour, who, what, place: String
 
     enum CodingKeys: String, CodingKey {
-        case hoto, hour, who, what
+        case photo, hour, who, what
         case place = "where"
     }
 }
-

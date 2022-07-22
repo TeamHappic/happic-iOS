@@ -159,31 +159,50 @@ extension HomeController {
 
 extension HomeController {
     func homeViewLoad() {
-        HomeService.shared.homeViewLoad { [weak self] response in
+        HomeService.shared.homeViewLoad { response in
             switch response {
             case .success(let result):
                 guard let data = result as? HomeModel else { return }
-                print(data)
-                self?.levelLabel.text = "Lv\(data.level). \(data.characterName)입니다."
-                if data.characterId == 0{
-                    //달 사진 못찼겠음
+                self.levelLabel.text = "Lv\(data.level). \(data.characterName)입니다."
+                if data.characterId == 0 {
+                    switch data.level {
+                    case 1:
+                        self.characterImageView.image = ImageLiterals.imageMoonLv1
+                    case 2:
+                        self.characterImageView.image = ImageLiterals.imageMoonLv2
+                    case 3:
+                        self.characterImageView.image = ImageLiterals.imageMoonLv3
+                    case 4:
+                        self.characterImageView.image = ImageLiterals.imageMoonLv4
+                    default:
+                        break
+                    }
+                } else {
+                    switch data.level {
+                    case 1:
+                        self.characterImageView.image = ImageLiterals.imageCloudLv1
+                    case 2:
+                        self.characterImageView.image = ImageLiterals.imageCloudLv2
+                    case 3:
+                        self.characterImageView.image = ImageLiterals.imageCloudLv3
+                    case 4:
+                        self.characterImageView.image = ImageLiterals.imageCloudLv4
+                    default:
+                        break
+                    }
                 }
-                else{
-                    //구름 사진
+                
+                if data.isPosted == true {
+                    self.actionButton.isHidden = true
+                } else {
+                    self.actionButton.isHidden = false
                 }
-                if data.isPosted==true {
-                    self?.actionButton.isHidden = true
-                }
-                else{
-                    self?.actionButton.isHidden = false
-                }
-                self?.progressLabel.text = \(data.growthRate)
+                self.progressLabel.text = "\(data.growthRate)/6"
+                self.nameLabel.text = data.characterName
+                self.levelProgressView.progress = Float(data.growthRate / 6)
             default:
                 break
             }
         }
     }
 }
-
-
-
