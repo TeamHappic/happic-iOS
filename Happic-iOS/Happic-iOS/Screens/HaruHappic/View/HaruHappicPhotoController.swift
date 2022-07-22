@@ -15,6 +15,7 @@ protocol HaruHappicPhotoControllerDelegate: AnyObject {
 final class HaruHappicPhotoController: UIViewController {
     
     // MARK: - Properties
+    var models = [HaruHappicModel]()
     weak var delegate: HaruHappicPhotoControllerDelegate?
     
     // MARK: - UI
@@ -74,17 +75,23 @@ final class HaruHappicPhotoController: UIViewController {
         containerCollectionView.dataSource = self
         containerCollectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.className)
     }
+    
+    func setData(models: [HaruHappicModel]) {
+        self.models = models
+        containerCollectionView.reloadData()
+    }
 }
 
 // MARK: - Extensions
 extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.className, for: indexPath)
                 as? PhotoCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(model: models[indexPath.row])
         return cell
     }
     
