@@ -71,6 +71,7 @@ final class KeywordRankView: UIView {
         keywordCollectionView.snp.makeConstraints { make in
             make.leading.top.bottom.trailing.equalToSuperview()
         }
+        containerView.showNoneKeywordView()
     }
     
     func collectionViewCanScroll(_ isScrollEnabled: Bool) {

@@ -60,6 +60,7 @@ class CategoryDetailController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
         }
+        containerView.showNoneKeywordView()
         setCollectionView()
         setCollectionViewLayout()
     }

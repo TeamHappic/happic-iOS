@@ -17,6 +17,7 @@ final class KeywordRankController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
+        showNoneKeywordViewAtViewController()
     }
     
     // MARK: - Functions
@@ -38,7 +39,12 @@ extension KeywordRankController {
             switch response {
             case .success(let result):
                 guard let data = result as? KeywordRankModel else { return }
-                self.keywordRankView.setData(model: data.ranks)
+                if data.ranks.isEmpty {
+                    self.showNoneKeywordViewAtViewController()
+                } else {
+                    self.hideNoneKeywordViewAtViewController()
+                    self.keywordRankView.setData(model: data.ranks)
+                }
             default:
                 break
             }

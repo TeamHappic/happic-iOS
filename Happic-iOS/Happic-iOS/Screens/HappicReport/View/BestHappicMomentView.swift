@@ -15,7 +15,7 @@ final class BestHappicMomentView: UIView {
         attributedString.append(NSAttributedString(string: "해픽 ",
                                                    attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16),
                                                                 .foregroundColor: UIColor.hpOrange]))
-        attributedString.append(NSAttributedString(string: "모먼트는 이거야",
+        attributedString.append(NSAttributedString(string: "모먼트는 이거야!",
                                                    attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16)]))
         $0.attributedText = attributedString
     }
