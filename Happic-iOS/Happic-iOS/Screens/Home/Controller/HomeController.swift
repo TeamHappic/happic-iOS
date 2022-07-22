@@ -74,8 +74,10 @@ final class HomeController: BaseUploadViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeViewLoad()
         setPurpleBackgroundColor()
         configureUI()
+        homeViewLoad()
         let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
         let nextVC = nextSB.instantiateViewController(withIdentifier: "AuthViewController")
         let nav = UINavigationController(rootViewController: nextVC)
@@ -154,3 +156,20 @@ extension HomeController {
         }
     }
 }
+
+extension HomeController {
+    func homeViewLoad() {
+        HomeService.shared.homeViewLoad { [weak self] response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? HomeModel else { return }
+                self?.levelLabel.text = "Lv\(data.level). \(data.characterName)입니다."
+            default:
+                break
+            }
+        }
+    }
+}
+
+
+
