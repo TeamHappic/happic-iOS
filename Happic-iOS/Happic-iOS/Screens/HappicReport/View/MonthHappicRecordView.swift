@@ -32,7 +32,7 @@ final class MonthHappicRecordView: UIView {
     }
     
     private lazy var monthLabel = UILabel().then {
-        $0.text = "6월"
+        $0.text = "7월"
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
         $0.textColor = .hpGray2
         $0.textAlignment = .center

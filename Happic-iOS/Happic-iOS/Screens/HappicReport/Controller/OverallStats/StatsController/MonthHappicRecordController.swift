@@ -21,7 +21,6 @@ final class MonthHappicRecordController: UIViewController {
         super.viewDidLoad()
         setBlueBackGroundColor()
         configureUI()
-        getMonthlyData(month: "7")
     }
     
     // MARK: - Functions
