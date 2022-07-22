@@ -51,7 +51,7 @@ final class BestHappicMomentView: UIView {
     }
     
     private lazy var whenLabel = UILabel().then {
-        $0.text = "시에"
+        $0.text = "에"
         $0.textColor = .white
         $0.font = UIFont.font(.pretendardMedium, ofSize: 14)
     }
@@ -111,6 +111,12 @@ final class BestHappicMomentView: UIView {
         }
     }
     
+    private let needHappicLabel = UILabel().then {
+        $0.text = "수집된 해픽이 부족해요"
+        $0.textColor = .hpGray2
+        $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
+    }
+    
     // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -152,31 +158,34 @@ final class BestHappicMomentView: UIView {
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        containerView.addSubview(needHappicLabel)
+        bringSubviewToFront(needHappicLabel)
+        needHappicLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        needHappicLabel.isHidden = true
+        
         backgroundView.layer.applyShadow(color: .black, alpha: 0.25, x: 8, y: 8, blur: 16, spread: 0)
         backgroundView.clipsToBounds = true
     }
-    
-    func showNeedMoreHappicView() {
-        for view in containerView.subviews {
-            view.removeFromSuperview()
-        }
-        
-        let contentLabel = UILabel().then {
-            $0.text = "수집된 해픽이 부족해요"
-            $0.textColor = .hpGray2
-            $0.font = UIFont.font(.gmarketSansBold, ofSize: 20)
-        }
-        
-        containerView.addSubview(contentLabel)
-        contentLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
-    }
-    
+
     func setData(model: [Rank1]) {
-        bestWhenLabel.text = model[0].content.timeFormatted
-        bestWhereLabel.text = model[1].content
-        bestWhoLabel.text = model[2].content
-        bestWhatLabel.text = model[3].content
+        if model.isEmpty {
+            for view in containerView.subviews {
+                view.isHidden = true
+            }
+            
+            needHappicLabel.isHidden = false
+        } else {
+            for view in containerView.subviews {
+                view.isHidden = false
+            }
+            needHappicLabel.isHidden = true
+            bestWhenLabel.text = model[0].content
+            bestWhereLabel.text = model[1].content
+            bestWhoLabel.text = model[2].content
+            bestWhatLabel.text = model[3].content
+        }
     }
 }

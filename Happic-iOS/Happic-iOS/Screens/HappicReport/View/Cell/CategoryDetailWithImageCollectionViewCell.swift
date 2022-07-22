@@ -129,7 +129,7 @@ final class CategoryDetailWithImageCollectionViewCell: UICollectionViewCell {
     
     func setData(model: KeywordModel) {
         if type == .whenCategory {
-            userKeywordLabel.text = model.content.timeFormatted
+            userKeywordLabel.text = model.content
         } else {
             userKeywordLabel.text = model.content
         }
