@@ -58,12 +58,9 @@ extension UIView {
     }
     
     func showNoneKeywordView() {
-        for view in subviews {
-            view.removeFromSuperview()
-        }
-        
         let containerView = UIView().then {
             $0.backgroundColor = .hpGray9
+            $0.tag = 1
         }
         
         let contentLabel = UILabel().then {
@@ -81,6 +78,14 @@ extension UIView {
         containerView.addSubview(contentLabel)
         contentLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+    }
+    
+    func hideNoneKeywordView() {
+        for view in subviews {
+            if view.tag == 1 {
+                view.removeFromSuperview()
+            }
         }
     }
     

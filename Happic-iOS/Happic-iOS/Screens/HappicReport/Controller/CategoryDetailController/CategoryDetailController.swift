@@ -21,6 +21,11 @@ class CategoryDetailController: UIViewController {
     var models = [KeywordModel]()
     
     // MARK: - UI
+    private lazy var containerView = UIView().then {
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 10
+    }
+    
     private lazy var rankCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -50,6 +55,12 @@ class CategoryDetailController: UIViewController {
     
     // MARK: - Functions
     private func configureUI() {
+        view.addSubview(containerView)
+        containerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+        containerView.showNoneKeywordView()
         setCollectionView()
         setCollectionViewLayout()
     }
@@ -64,11 +75,9 @@ class CategoryDetailController: UIViewController {
     }
     
     private func setCollectionViewLayout() {
-        view.addSubview(rankCollectionView)
+        containerView.addSubview(rankCollectionView)
         rankCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.edges.equalToSuperview()
         }
     }
     
@@ -104,8 +113,13 @@ extension CategoryDetailController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func setData(model: [KeywordModel]) {
-        models = model
-        rankCollectionView.reloadData()
+        if model.isEmpty {
+            containerView.showNoneKeywordView()
+        } else {
+            containerView.hideNoneKeywordView()
+            models = model
+            rankCollectionView.reloadData()
+        }
     }
 }
 

@@ -13,7 +13,10 @@ extension String {
         if self.count == 1 || self == "11" {
             return "오전\(self)시"
         } else {
-            return "오후\(Int(self)!-12)시"
+            if let intValue = Int(self) {
+                return "오후\(intValue-12)시"
+            }
+            return self
         }
     }
     

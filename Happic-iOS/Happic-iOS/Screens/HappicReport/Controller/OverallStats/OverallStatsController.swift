@@ -176,6 +176,7 @@ extension OverallStatsController: CustomMonthPickerViewDelegate {
         let monthGap = Int(month)! - selectedMonth
         monthHappicRecordController.changeCalendarMonth(monthGap: monthGap)
         selectedMonth = Int(month)!
+        customMonthPickerView.isHidden = true
     }
     
     func setCustomMonthViewText(month: String) {
