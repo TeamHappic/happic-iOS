@@ -15,6 +15,7 @@ final class HappicReportController: UIViewController {
         didSet {
             setCustomMonthViewText(month: currentMonth)
             setCustomMonthPickerViewSelected(month: currentMonth)
+            getHappicReportSummary(month: currentMonth)
         }
     }
 
@@ -174,7 +175,7 @@ extension HappicReportController: OverallStatsControllerDelegate {
 
 // MARK: - Network
 extension HappicReportController {
-    func getHappicReportSummary(year: String, month: String) {
+    func getHappicReportSummary(year: String = "2022", month: String) {
         HappicReportService.shared.getHappicReportSummary(year: year, month: month) { response in
             switch response {
             case .success(let result):

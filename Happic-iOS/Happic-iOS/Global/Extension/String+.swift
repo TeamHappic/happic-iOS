@@ -8,13 +8,6 @@
 import Foundation
 
 extension String {
-    var timeFormatted: String {
-        if self.count == 1 || self == "11" {
-            return "오전\(self)시"
-        } else {
-            return "오후\(Int(self)!-12)시"
-        }
-    }
     
     /// 서버에서 들어온 Date String을 Date 타입으로 반환하는 메서드
     func toDate() -> Date {
