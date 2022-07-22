@@ -57,7 +57,8 @@ class CategoryDetailController: UIViewController {
     private func configureUI() {
         view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         setCollectionView()
         setCollectionViewLayout()
@@ -75,9 +76,7 @@ class CategoryDetailController: UIViewController {
     private func setCollectionViewLayout() {
         containerView.addSubview(rankCollectionView)
         rankCollectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(16)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().inset(40)
+            make.edges.equalToSuperview()
         }
     }
     
