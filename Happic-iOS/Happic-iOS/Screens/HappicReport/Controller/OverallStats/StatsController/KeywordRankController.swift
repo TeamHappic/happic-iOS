@@ -38,7 +38,6 @@ final class KeywordRankController: UIViewController {
         }
     }
     
-    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
