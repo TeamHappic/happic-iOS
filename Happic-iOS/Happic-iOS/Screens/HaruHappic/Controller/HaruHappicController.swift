@@ -27,6 +27,9 @@ final class HaruHappicController: BaseUploadViewController {
         super.viewDidLoad()
         configureUI()
         setDelegate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getHaruHappicPhoto(year: 2022, month: 7)
     }
     
