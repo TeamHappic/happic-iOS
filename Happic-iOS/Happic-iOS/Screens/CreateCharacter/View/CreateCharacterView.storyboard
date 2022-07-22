@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="GmarketSansBold.otf">
             <string>GmarketSansBold</string>
+        </array>
+        <array key="Pretendard-Medium.otf">
+            <string>Pretendard-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,9 +27,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해픽의 밤하늘의 당신의 행복을 기록하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-5P-wWH">
-                                <rect key="frame" x="46" y="80" width="283" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="71.666666666666671" y="80" width="231.66666666666663" height="17"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
+                                <color key="textColor" name="hp_gray3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" restorationIdentifier="CharacterIntroduceView" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-6O-BGX" customClass="CharacterIntroduceView" customModule="Happic_iOS" customModuleProvider="target">
@@ -36,34 +40,41 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Qe-a0j">
-                                <rect key="frame" x="28" y="297" width="319" height="200"/>
+                                <rect key="frame" x="28" y="293" width="319" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nga-kV-bhk">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hp_img_m1" translatesAutoresizingMaskIntoConstraints="NO" id="TEq-We-COH">
-                                                <rect key="frame" x="19" y="38" width="114" height="124"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp_img_m1" translatesAutoresizingMaskIntoConstraints="NO" id="TEq-We-COH">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="200"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="TEq-We-COH" secondAttribute="bottom" id="4sr-IO-6tI"/>
+                                            <constraint firstItem="TEq-We-COH" firstAttribute="top" secondItem="Nga-kV-bhk" secondAttribute="top" id="8Zo-Gk-i1X"/>
                                             <constraint firstAttribute="height" constant="200" id="B4b-WF-dek"/>
+                                            <constraint firstAttribute="trailing" secondItem="TEq-We-COH" secondAttribute="trailing" id="JW7-oV-gvW"/>
+                                            <constraint firstItem="TEq-We-COH" firstAttribute="leading" secondItem="Nga-kV-bhk" secondAttribute="leading" id="R8t-G3-4YR"/>
                                             <constraint firstAttribute="width" constant="152" id="sXW-SM-niU"/>
                                         </constraints>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7T-Fm-MDr">
                                         <rect key="frame" x="167" y="0.0" width="152" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hp_img_c1" translatesAutoresizingMaskIntoConstraints="NO" id="l15-OX-jrF">
-                                                <rect key="frame" x="19" y="38" width="114" height="124"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp_img_c1" translatesAutoresizingMaskIntoConstraints="NO" id="l15-OX-jrF">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="200"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="6F2-Ed-YmO"/>
+                                            <constraint firstAttribute="trailing" secondItem="l15-OX-jrF" secondAttribute="trailing" id="LJn-2M-f5M"/>
+                                            <constraint firstAttribute="bottom" secondItem="l15-OX-jrF" secondAttribute="bottom" id="Mtg-X2-mIO"/>
                                             <constraint firstAttribute="width" constant="152" id="Rey-04-nbP"/>
+                                            <constraint firstItem="l15-OX-jrF" firstAttribute="leading" secondItem="M7T-Fm-MDr" secondAttribute="leading" id="ecy-hX-fmo"/>
+                                            <constraint firstItem="l15-OX-jrF" firstAttribute="top" secondItem="M7T-Fm-MDr" secondAttribute="top" id="fxI-Gc-iHA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -77,9 +88,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 할 길잡이를 선택해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-z0-vUp">
-                                <rect key="frame" x="96" y="237" width="183" height="16"/>
+                                <rect key="frame" x="96" y="233" width="183" height="16"/>
                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="hp_white"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -105,6 +116,8 @@
                         <outlet property="MoonUIView" destination="Nga-kV-bhk" id="Gvk-Uc-UWb"/>
                         <outlet property="bottomViewHeight" destination="bhr-LO-5po" id="Zcj-6F-JCD"/>
                         <outlet property="chooseLabel" destination="CHT-z0-vUp" id="Dmc-iy-fUA"/>
+                        <outlet property="cloudImageView" destination="l15-OX-jrF" id="ofQ-oA-9ma"/>
+                        <outlet property="moonImageView" destination="TEq-We-COH" id="K91-4N-cf8"/>
                         <outlet property="recordLabel" destination="aZM-5P-wWH" id="5T9-5D-wXH"/>
                     </connections>
                 </viewController>
@@ -116,6 +129,12 @@
     <resources>
         <image name="hp_img_c1" width="124" height="124"/>
         <image name="hp_img_m1" width="124" height="124"/>
+        <namedColor name="hp_gray3">
+            <color red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hp_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

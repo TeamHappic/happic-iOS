@@ -33,22 +33,20 @@
                                 <rect key="frame" x="111.66666666666669" y="176" width="152" height="172"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B1t-Nl-UnI">
-                                        <rect key="frame" x="35.333333333333329" y="42" width="81" height="88"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80.900000000000006" id="XxB-yX-aGU"/>
-                                            <constraint firstAttribute="height" constant="88" id="h6b-jz-v6L"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="172"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="leading" secondItem="HTo-Y0-TVc" secondAttribute="leading" id="0a1-Wx-UZU"/>
                                     <constraint firstAttribute="width" constant="152" id="5oQ-Iq-fmK"/>
                                     <constraint firstAttribute="height" constant="172" id="GMX-xT-UOd"/>
-                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="leading" secondItem="HTo-Y0-TVc" secondAttribute="leading" constant="35.5" id="XrT-pt-SWp"/>
-                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="top" secondItem="HTo-Y0-TVc" secondAttribute="top" constant="42" id="tkf-Vo-j8E"/>
+                                    <constraint firstAttribute="bottom" secondItem="B1t-Nl-UnI" secondAttribute="bottom" id="Hos-L3-M4T"/>
+                                    <constraint firstItem="B1t-Nl-UnI" firstAttribute="top" secondItem="HTo-Y0-TVc" secondAttribute="top" id="hNe-iv-z1p"/>
+                                    <constraint firstAttribute="trailing" secondItem="B1t-Nl-UnI" secondAttribute="trailing" id="q8k-AW-wCL"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름을 입력하세요" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-Hd-mfL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="이름을 입력하세요" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-Hd-mfL">
                                 <rect key="frame" x="130" y="396" width="115" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
