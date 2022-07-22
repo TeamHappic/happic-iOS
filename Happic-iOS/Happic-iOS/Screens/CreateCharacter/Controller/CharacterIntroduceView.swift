@@ -33,7 +33,7 @@ class CharacterIntroduceView: UIView {
             changeView(flag: mooonCloudFlag)
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSubviews()
@@ -44,7 +44,7 @@ class CharacterIntroduceView: UIView {
         super.init(coder: aDecoder)
         initSubviews()
     }
-
+    
     func initSubviews() {
         let nib = UINib(nibName: "CharacterIntroduceView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
@@ -69,9 +69,9 @@ class CharacterIntroduceView: UIView {
             secondAnswerLabel.clipsToBounds = true
             secondAnswerLabel.layer.cornerRadius = 8
             secondAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
+            
             thirdQuestionLabel.text = "Q. 고마울 때 어떻게 표현해?"
-
+            
             thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"
             thirdAnswerLabelWidth.constant = 224
             thirdAnswerLabel.textAlignment = .center
@@ -99,7 +99,7 @@ class CharacterIntroduceView: UIView {
             secondAnswerLabel.clipsToBounds = true
             secondAnswerLabel.layer.cornerRadius = 8
             secondAnswerLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
+            
             thirdQuestionLabel.text = "Q. 위로는 어떻게 해줘?"
             
             thirdAnswerLabel.text = "친구의 이야기를 충분히 다 들어봐"

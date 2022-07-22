@@ -15,7 +15,6 @@ class CreateCharacterViewController: UIViewController, Storyboarded {
     @IBOutlet weak var moonImageView: UIImageView!
     @IBOutlet weak var cloudImageView: UIImageView!
     
-    
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
