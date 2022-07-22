@@ -12,6 +12,10 @@ class CreateCharacterViewController: UIViewController, Storyboarded {
     @IBOutlet weak var MoonAndCloudUIView: UIView!
     @IBOutlet weak var chooseLabel: UILabel!
     
+    @IBOutlet weak var moonImageView: UIImageView!
+    @IBOutlet weak var cloudImageView: UIImageView!
+    
+    
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
@@ -25,17 +29,16 @@ class CreateCharacterViewController: UIViewController, Storyboarded {
         recordLabel.text = "해픽의 밤하늘에 \n 당신의 행복을 기록하세요 "
         recordLabel.numberOfLines = 0
         recordLabel.font = UIFont.font(.pretendardMedium, ofSize: 14)
-        recordLabel.textColor = UIColor.hpGray3
         recordLabel.textAlignment = .center
         
         MoonUIView.setDarkBlue()
         MoonUIView.clipsToBounds = true
-        MoonUIView.layer.cornerRadius = 8
+        MoonUIView.layer.cornerRadius = 10
         MoonUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         CloudUIView.setDarkPurple()
         CloudUIView.clipsToBounds = true
-        CloudUIView.layer.cornerRadius = 8
+        CloudUIView.layer.cornerRadius = 10
         CloudUIView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         setTapGesture()
