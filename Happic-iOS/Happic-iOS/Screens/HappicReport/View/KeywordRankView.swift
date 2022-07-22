@@ -78,8 +78,13 @@ final class KeywordRankView: UIView {
     }
     
     func setData(model: [Rank2]) {
-        models = model
-        keywordCollectionView.reloadData()
+        if model.isEmpty {
+            containerView.showNoneKeywordView()
+        } else {
+            containerView.hideNoneKeywordView()
+            models = model
+            keywordCollectionView.reloadData()
+        }
     }
 }
 

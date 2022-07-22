@@ -150,6 +150,7 @@ extension HappicReportController: CustomMonthViewDelegate {
 extension HappicReportController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
         currentMonth = month
+        customMonthPickerView.isHidden = true
     }
     
     func setCustomMonthViewText(month: String) {
