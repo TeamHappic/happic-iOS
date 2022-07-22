@@ -42,4 +42,7 @@ struct APIConstants {
     
     // MARK: - 회원 가입
     static let signUpURL = baseURL + "/user/signup"
+    
+    // MARK: - 캐릭터 변경
+    static let characterChangeURL = baseURL + "/setting"
 }
