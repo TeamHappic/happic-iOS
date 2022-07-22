@@ -190,10 +190,11 @@ extension CustomRecommendTagView: UITextFieldDelegate {
                 return true
             }
         }
+        
         guard let text = textField.text else { return false }
-        if text.count >= 5 {
-            return false
-        }
+        if text.count >= 5 { return false }
+        if string == " " { return false }
+
         return true
     }
     
