@@ -20,7 +20,7 @@ class CustomPopUpController: UIViewController {
         $0.tintColor = .hpGray3
     }
     
-    private lazy var popUpTitleLabel = UILabel().then {
+    lazy var popUpTitleLabel = UILabel().then {
         $0.text = "캐릭터 변경 주의사항"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
@@ -50,6 +50,7 @@ class CustomPopUpController: UIViewController {
         $0.titleLabel?.font = UIFont.font(.pretendardBold, ofSize: 16)
         $0.backgroundColor = .hpBgBlack2
         $0.layer.cornerRadius = 12
+        $0.addTarget(self, action: #selector(confirmButtonDidTap), for: .touchUpInside)
     }
     
     // MARK: - View Life Cycle
@@ -114,5 +115,34 @@ class CustomPopUpController: UIViewController {
     
     @objc private func handleCancelButtonDidTap() {
         dismiss(animated: true)
+    }
+    
+    @objc private func confirmButtonDidTap() {
+        setConfirmButtonAction()
+    }
+    
+    func setConfirmButtonAction() {
+        if popUpTitleLabel.text == "캐릭터 변경 주의사항" {
+            print("캐릭터 변경")
+        } else {
+            print("삭제하기")
+            deleteContents()
+        }
+    }
+}
+
+// MARK: - Network
+extension CustomPopUpController {
+    func deleteContents() {
+        CreateContentsService.shared.deleteHaruHappic(filmId: "수정") { response in
+            switch response {
+            case .success:
+                print("삭제 성공")
+//                self.showToast(message: "게시글이 삭제되었습니다.")
+            default:
+                print("삭제 실패")
+//                self.showToast(message: "게시글이 삭제실패.")
+            }
+        }
     }
 }

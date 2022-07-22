@@ -164,6 +164,7 @@ final class HaruHappicDetailController: UIViewController {
                                     contents: "사진 삭제시 사진과 태그가 모두 지워집니다.\n또한 해당 내용은 복구가 불가능합니다.\n삭제하시겠습니까?",
                                     firstButtonTitle: "취소",
                                     secondButtonTitle: "삭제하기")
+        alartPopUpView.setConfirmButtonAction()
         alartPopUpView.modalTransitionStyle = .crossDissolve
         alartPopUpView.modalPresentationStyle = .overFullScreen
         present(alartPopUpView, animated: true)
@@ -192,7 +193,7 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         return cellSize
     }
     
-    // MARK: Paging Effect
+    // Paging Effect
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let cellWidthIncludeSpacing = cellSize.width + minItemSpacing
         
@@ -204,7 +205,7 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
         targetContentOffset.pointee = offset
     }
     
-    // MARK: Carousel Effect
+    // Carousel Effect
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let cellWidthIncludeSpacing = cellSize.width + minItemSpacing
