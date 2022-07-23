@@ -89,6 +89,25 @@ final class HaruHappicPhotoController: UIViewController {
             customMonthPickerView.isHidden = true
         }
     }
+    
+    func setMonthData(month: String) {
+        setCustomMonthViewText(month: month)
+        setCustomMonthPickerViewSelected(month: month)
+    }
+    
+    func setCustomMonthViewText(month: String) {
+        if month.count == 1 {
+            customMonthView.monthLabel.text = "2022 . 0\(month)"
+        } else {
+            customMonthView.monthLabel.text = "2022 . \(month)"
+        }
+    }
+    
+    func setCustomMonthPickerViewSelected(month: String) {
+        if let currentMonth = Int(month) {
+            customMonthPickerView.setButtonStatus(month: currentMonth)
+        }
+    }
 }
 
 // MARK: - Extensions
