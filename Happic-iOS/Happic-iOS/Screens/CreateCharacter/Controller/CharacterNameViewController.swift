@@ -1,3 +1,10 @@
+//
+//  CharacterNameViewController.swift
+//  Happic-iOS
+//
+//  Created by Zaid Kang on 2022/07/20.
+//
+
 import UIKit
 
 class CharacterNameViewController: UIViewController {

@@ -10,6 +10,7 @@ import UIKit
 // MARK: - Protocols
 protocol HaruHappicPhotoControllerDelegate: AnyObject {
     func showDetailView(index: Int)
+    func changeMonth(month: String)
 }
 
 final class HaruHappicPhotoController: UIViewController {
@@ -80,6 +81,33 @@ final class HaruHappicPhotoController: UIViewController {
         self.models = models
         containerCollectionView.reloadData()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first,
+           touch.view == self.view || touch.view == containerCollectionView {
+            customMonthPickerView.isHidden = true
+        }
+    }
+    
+    func setMonthData(month: String) {
+        setCustomMonthViewText(month: month)
+        setCustomMonthPickerViewSelected(month: month)
+    }
+    
+    func setCustomMonthViewText(month: String) {
+        if month.count == 1 {
+            customMonthView.monthLabel.text = "2022 . 0\(month)"
+        } else {
+            customMonthView.monthLabel.text = "2022 . \(month)"
+        }
+    }
+    
+    func setCustomMonthPickerViewSelected(month: String) {
+        if let currentMonth = Int(month) {
+            customMonthPickerView.setButtonStatus(month: currentMonth)
+        }
+    }
 }
 
 // MARK: - Extensions
@@ -96,7 +124,11 @@ extension HaruHappicPhotoController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailView(index: indexPath.row)
+        if customMonthPickerView.isHidden {
+            delegate?.showDetailView(index: indexPath.row)
+        } else {
+            customMonthPickerView.isHidden = true
+        }
     }
 }
 
@@ -122,6 +154,7 @@ extension HaruHappicPhotoController: CustomMonthViewDelegate {
 
 extension HaruHappicPhotoController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
+        delegate?.changeMonth(month: month)
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {

@@ -106,5 +106,12 @@ final class TagCollectionViewCell: UICollectionViewCell {
         whereLabel.text = model.place
         whoLabel.text = model.who
         whatLabel.text = model.what
+        
+        let date = Date()
+        let todayDay = Calendar.current.dateComponents([.day], from: date)
+        
+        if model.day == todayDay.day {
+            dailyLabel.textColor = .hpOrange
+        }
     }
 }
