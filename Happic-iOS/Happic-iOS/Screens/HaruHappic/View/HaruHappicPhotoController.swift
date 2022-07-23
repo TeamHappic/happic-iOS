@@ -10,6 +10,7 @@ import UIKit
 // MARK: - Protocols
 protocol HaruHappicPhotoControllerDelegate: AnyObject {
     func showDetailView(index: Int)
+    func changeMonth(month: String)
 }
 
 final class HaruHappicPhotoController: UIViewController {
@@ -134,6 +135,7 @@ extension HaruHappicPhotoController: CustomMonthViewDelegate {
 
 extension HaruHappicPhotoController: CustomMonthPickerViewDelegate {
     func changeMonthStatus(_ month: String) {
+        delegate?.changeMonth(month: month)
         if month.count == 1 {
             customMonthView.monthLabel.text = "2022 . 0\(month)"
         } else {

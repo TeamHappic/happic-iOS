@@ -11,6 +11,7 @@ final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - Properties
     var models = [HaruHappicModel]()
+    var currentMonth: String = "7"
     private lazy var haruHappicPhotoController = HaruHappicPhotoController()
     private lazy var haruHappicTagController = HaruHappicTagController()
     
@@ -69,6 +70,11 @@ extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTag
         let detailViewController = HaruHappicDetailController()
         detailViewController.setData(models: models, index: index)
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    func changeMonth(month: String) {
+        self.currentMonth = month
+        print(self.currentMonth)
     }
 }
 
