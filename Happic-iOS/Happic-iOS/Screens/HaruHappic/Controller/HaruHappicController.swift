@@ -74,7 +74,9 @@ extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTag
     
     func changeMonth(month: String) {
         self.currentMonth = month
-        print(self.currentMonth)
+        haruHappicPhotoController.setMonthData(month: month)
+        haruHappicTagController.setMonthData(month: month)
+        getHaruHappicPhoto(year: 2022, month: Int(currentMonth)!)
     }
 }
 
