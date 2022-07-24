@@ -4,9 +4,8 @@
 
 **Be happy, take a happic:**
 
-> **매일의 추억이 나의 행복이 되어, 해픽** <br>
-> 서비스 한 줄 소개: 하루 한 컷의 사진과 키워드 추출을 통해 찾아가는 매일의 행복
->
+하루 한 컷의 사진과 키워드 분석이 알려주는 나의 행복
+
 > SOPT 30th APP JAM <br>
 > 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
 
@@ -204,13 +203,6 @@ Happic-iOS
 <br>
 <br>
 
-## Service workflow
-
-![IA-FLOW@3x](https://user-images.githubusercontent.com/80062632/178763859-26283266-06bc-4469-b121-223da1c52b53.png)
-
-
-<br>
-
 ## Task
 
 대분류 | 기능 | 구현 여부 | 담당자
@@ -242,5 +234,8 @@ Happic-iOS
 <br>
 
 ---
+  
+> **Be happy, Take a happic:** <br>
+
 
 <img src = "https://user-images.githubusercontent.com/80062632/178400592-f38ba33e-d58e-4ecf-9c1a-96fec9f305a6.png" width="100"> 
