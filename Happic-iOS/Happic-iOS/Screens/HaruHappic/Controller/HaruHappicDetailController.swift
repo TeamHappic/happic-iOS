@@ -13,7 +13,20 @@ final class HaruHappicDetailController: UIViewController {
     var models = [HaruHappicModel]()
     let cellSize = CGSize(width: 300, height: 300)
     var minItemSpacing: CGFloat = 5
-    var previousIndex: Int = 0
+    var previousIndex: Int = 0 {
+        didSet {
+            dateLabel.text = "2022." + "07." + "\(models[previousIndex].day)"
+
+            whenLabel.text = "#" + "\(models[previousIndex].when)".timeFormatted
+            whereLabel.text = "#" + models[previousIndex].place
+            whoLabel.text = "#" + models[previousIndex].who
+            whatLabel.text = "#" + models[previousIndex].what
+            
+            if models[previousIndex].day < 10 {
+                dateLabel.text = "2022." + "07.0" + "\(models[previousIndex].day)"
+            }
+        }
+    }
     
     // MARK: - UI
     private lazy var headerView = UIView()
