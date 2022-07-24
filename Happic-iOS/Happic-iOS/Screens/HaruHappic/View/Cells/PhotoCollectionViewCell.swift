@@ -60,6 +60,10 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
             dailyImage.layer.borderColor = UIColor.hpOrange.cgColor
             dailyImage.layer.borderWidth = 1
             dailyLabel.textColor = .hpOrange
+        } else {
+            dailyImage.layer.borderColor = UIColor.black.cgColor
+            dailyImage.layer.borderWidth = 1
+            dailyLabel.textColor = .hpWhite
         }
     }
 }
