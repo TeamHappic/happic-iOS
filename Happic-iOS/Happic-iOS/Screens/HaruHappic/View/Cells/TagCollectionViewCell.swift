@@ -112,6 +112,8 @@ final class TagCollectionViewCell: UICollectionViewCell {
         
         if model.day == todayDay.day {
             dailyLabel.textColor = .hpOrange
+        } else {
+            dailyLabel.textColor = .hpWhite
         }
     }
 }
