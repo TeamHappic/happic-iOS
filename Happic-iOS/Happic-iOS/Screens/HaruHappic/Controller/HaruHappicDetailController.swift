@@ -11,19 +11,26 @@ final class HaruHappicDetailController: UIViewController {
     
     // MARK: - Properties
     var models = [HaruHappicModel]()
+    var currentMonth: String = "" {
+        didSet {
+            if currentMonth.count < 2 {
+                currentMonth = "0" + "\(currentMonth)"
+            }
+        }
+    }
     let cellSize = CGSize(width: 300, height: 300)
     var minItemSpacing: CGFloat = 5
     var previousIndex: Int = 0 {
         didSet {
-            dateLabel.text = "2022." + "07." + "\(models[previousIndex].day)"
-
+            dateLabel.text = "2022." + currentMonth + "." + "\(models[previousIndex].day)"
+            
             whenLabel.text = "#" + "\(models[previousIndex].when)".timeFormatted
             whereLabel.text = "#" + models[previousIndex].place
             whoLabel.text = "#" + models[previousIndex].who
             whatLabel.text = "#" + models[previousIndex].what
             
             if models[previousIndex].day < 10 {
-                dateLabel.text = "2022." + "07.0" + "\(models[previousIndex].day)"
+                dateLabel.text = "2022." + currentMonth + ".0" + "\(models[previousIndex].day)"
             }
         }
     }
@@ -183,7 +190,7 @@ final class HaruHappicDetailController: UIViewController {
         present(alartPopUpView, animated: true)
     }
     
-    func setData(models: [HaruHappicModel], index: Int) {
+    func setData(models: [HaruHappicModel], index: Int, month: String) {
         self.models = models
         photoCollectionView.reloadData()
         photoCollectionView.layoutIfNeeded()
@@ -193,15 +200,22 @@ final class HaruHappicDetailController: UIViewController {
                 self.photoCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
             }
         }
-        dateLabel.text = "2022." + "07." + "\(models[index].day)"
+        
+        currentMonth = month
+        
+        dateLabel.text = "2022." + currentMonth + "." + "\(models[previousIndex].day)"
 
         whenLabel.text = "#" + "\(models[index].when)".timeFormatted
         whereLabel.text = "#" + models[index].place
         whoLabel.text = "#" + models[index].who
         whatLabel.text = "#" + models[index].what
         
-        if models[index].day < 10 {
-            dateLabel.text = "2022." + "07.0" + "\(models[index].day)"
+        if models[previousIndex].day < 10 {
+            dateLabel.text = "2022." + currentMonth + ".0" + "\(models[previousIndex].day)"
+        }
+        
+        if currentMonth.count < 2 {
+            currentMonth = "0" + "\(currentMonth)"
         }
     }
 }
