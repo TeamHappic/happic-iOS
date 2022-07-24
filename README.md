@@ -8,7 +8,7 @@
 > 서비스 한 줄 소개: 하루 한 컷의 사진과 키워드 추출을 통해 찾아가는 매일의 행복
 >
 > SOPT 30th APP JAM <br>
-> 프로젝트 기간 : 2021.07.02 ~
+> 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
 
 <br>
 <br>
@@ -21,13 +21,6 @@
 
 <br>
 <br>
-
-## 역할 분담 및 느낀점
-
-![Group 2326@3x](https://user-images.githubusercontent.com/80062632/180464057-ddb72484-fced-4672-9c6b-7bd75e357bf2.png)
-
-![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180464075-08025ba6-2634-4266-bb86-c13999dc151d.png)
-
 
 ## Development Environment and Using Library
 - Development Environment
@@ -243,10 +236,8 @@ Happic-iOS
 <br>
 <br>
 
-## App Description
-앱 주요 기능 설명 
+![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180644073-76bc7d0f-ae17-40a8-9e13-7c99933658c3.png)
 
-`추후 업데이트 예정`
 
 <br>
 
