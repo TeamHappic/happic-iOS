@@ -1,10 +1,8 @@
 <img src = "https://user-images.githubusercontent.com/80062632/178316819-9873c137-bcbc-4162-afae-095e1a8e99ce.png">  <br>
 
-# happic: 해픽
+# happic:
 
-**Be happy, take a happic:**
-
-하루 한 컷의 사진과 키워드 분석이 알려주는 나의 행복
+**하루 한 컷의 사진과 키워드 분석이 알려주는 나의 행복, 해픽**
 
 > SOPT 30th APP JAM <br>
 > 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
