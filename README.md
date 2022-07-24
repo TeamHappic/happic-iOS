@@ -226,14 +226,10 @@ Happic-iOS
 <br>
 <br>
 
-![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180644073-76bc7d0f-ae17-40a8-9e13-7c99933658c3.png)
-
+---
+  
+### **Be happy, Take a happic:** 
 
 <br>
 
----
-  
-> **Be happy, Take a happic:** <br>
-
-
-<img src = "https://user-images.githubusercontent.com/80062632/178400592-f38ba33e-d58e-4ecf-9c1a-96fec9f305a6.png" width="100"> 
+![Group 2325@3x](https://user-images.githubusercontent.com/80062632/180644073-76bc7d0f-ae17-40a8-9e13-7c99933658c3.png)
