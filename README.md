@@ -7,6 +7,13 @@
 > SOPT 30th APP JAM <br>
 > 프로젝트 기간 : 2021.07.02 ~ 2021.07.23
 
+
+<br>
+<br>
+
+![happic](https://user-images.githubusercontent.com/80062632/180698857-bb5d84e9-71cf-46a5-9282-846b9333f80a.jpeg)
+
+
 <br>
 <br>
 
@@ -201,6 +208,7 @@ Happic-iOS
 <br>
 <br>
 
+
 ## Task
 
 대분류 | 기능 | 구현 여부 | 담당자
@@ -221,6 +229,7 @@ Happic-iOS
   &nbsp; | 카테고리 순위 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   &nbsp; | 월 기록 횟수 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
   설정 | 설정 뷰 | <img width=25px src=https://user-images.githubusercontent.com/80062632/178400930-fffb094c-32ce-4b28-8901-527938888f0c.png> | 이세진
+
 
 
 <br>
