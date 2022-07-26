@@ -9,6 +9,5 @@ import Foundation
 
 // MARK: - SignUpModel
 struct SignUpModel: Codable {
-    let characterId: Int
-    let social, characterName, accessToken: String
+    let jwtToken: String
 }
