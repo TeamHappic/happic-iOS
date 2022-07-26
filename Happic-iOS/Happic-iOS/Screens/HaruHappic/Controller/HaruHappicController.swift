@@ -99,7 +99,6 @@ extension HaruHappicController {
     }
 }
 
-// MARK: - Extensions
 extension HaruHappicController {
     func getHaruHappicPhoto(year: Int, month: Int) {
         HaruHappicService.shared.getHaruHappic(year: year, month: month) { response in

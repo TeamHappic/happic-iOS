@@ -7,8 +7,7 @@
 
 import Foundation
 
-// MARK: - HomeModel
-
+// MARK: - SignUpModel
 struct SignUpModel: Codable {
     let characterId: Int
     let social, characterName, accessToken: String
