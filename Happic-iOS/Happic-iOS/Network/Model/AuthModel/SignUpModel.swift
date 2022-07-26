@@ -11,5 +11,4 @@ import Foundation
 struct SignUpModel: Codable {
     let characterId: Int
     let social, characterName, accessToken: String
-    let isPosted: Bool
 }
