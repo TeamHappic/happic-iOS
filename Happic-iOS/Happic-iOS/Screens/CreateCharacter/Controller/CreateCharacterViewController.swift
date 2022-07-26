@@ -8,6 +8,8 @@
 import UIKit
 
 class CreateCharacterViewController: UIViewController, Storyboarded {
+    
+    var accessToken: String = ""
 
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
@@ -115,5 +117,6 @@ extension CreateCharacterViewController: CharacterIntroduceViewDelegate {
         guard let characterNameViewController = characterNameStoryBoard.instantiateViewController(withIdentifier: "CharacterNameViewController") as? CharacterNameViewController else { return }
         characterNameViewController.flag = flag
         self.navigationController?.pushViewController(characterNameViewController, animated: true)
+        characterNameViewController.accessToken = accessToken
     }
 }

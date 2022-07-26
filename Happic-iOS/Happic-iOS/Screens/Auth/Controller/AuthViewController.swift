@@ -40,7 +40,12 @@ class AuthViewController: UIViewController {
                 } else {
                     if let accessToken = oauthToken?.accessToken {
                         print("앱 로그인 성공" + accessToken)
-                        self.kakaoLogin(token: accessToken)
+    
+//                        self.kakaoLogin(token: accessToken)
+                        
+                        let createCharacterView = CreateCharacterViewController.instantiate()
+                        self.navigationController?.pushViewController(createCharacterView, animated: true)
+                        createCharacterView.accessToken = accessToken
                     }
                 }
             }
@@ -51,7 +56,12 @@ class AuthViewController: UIViewController {
                } else {
                    if let accessToken = oauthToken?.accessToken {
                        print("웹 로그인 성공" + accessToken)
-                       self.kakaoLogin(token: accessToken)
+                       
+//                       self.kakaoLogin(token: accessToken)
+                       
+                       let createCharacterView = CreateCharacterViewController.instantiate()
+                       self.navigationController?.pushViewController(createCharacterView, animated: true)
+                       createCharacterView.accessToken = accessToken
                    }
                }
             }
@@ -67,8 +77,8 @@ extension AuthViewController {
             case .success(let result):
                 guard let data = result as? KakaoLoginModel else { return }
                 print("jwt 토큰 받기 성공", data)
-                let createCharacterView = CreateCharacterViewController.instantiate()
-                self.navigationController?.pushViewController(createCharacterView, animated: true)
+//                let createCharacterView = CreateCharacterViewController.instantiate()
+//                self.navigationController?.pushViewController(createCharacterView, animated: true)
             default:
                 print(response)
             }
