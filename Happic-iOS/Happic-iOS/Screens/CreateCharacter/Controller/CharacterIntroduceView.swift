@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol CharacterIntroduceViewDelegate: AnyObject {
     func pushCharaterNameController(flag: Int)
 }
