@@ -44,7 +44,7 @@ struct SignUpService {
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.characterChangeURL
         let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
-        let parameters: Parameters = ["year": characterId, "characterName": characterName]
+        let parameters: Parameters = ["characterId": characterId, "characterName": characterName]
         
         let dataRequest = AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding.default, headers: header)
         

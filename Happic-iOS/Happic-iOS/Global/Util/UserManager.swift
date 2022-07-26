@@ -30,4 +30,8 @@ final class UserManager {
     func setSocialToken(token: String) {
         self.jwtToken = token
     }
+    
+    func setLoginStatus(isLoginned: Bool) {
+        self.currentLoginStatus = isLoginned
+    }
 }
