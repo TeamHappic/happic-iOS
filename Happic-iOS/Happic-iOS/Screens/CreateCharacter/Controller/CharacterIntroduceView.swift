@@ -11,7 +11,7 @@ protocol CharacterIntroduceViewDelegate: AnyObject {
     func pushCharaterNameController(flag: Int)
 }
 
-class CharacterIntroduceView: UIView {
+final class CharacterIntroduceView: UIView {
     
     weak var delegate: CharacterIntroduceViewDelegate?
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateCharacterViewController: UIViewController, Storyboarded {
+final class CreateCharacterViewController: UIViewController, Storyboarded {
     
     var accessToken: String = ""
 

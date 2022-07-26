@@ -9,7 +9,7 @@ import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
     
     // MARK: - @IBOutlet Properties
     @IBOutlet weak var startWithKakaoView: UIView!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterNameViewController: UIViewController {
+final class CharacterNameViewController: UIViewController {
     
     var accessToken: String = ""
 
