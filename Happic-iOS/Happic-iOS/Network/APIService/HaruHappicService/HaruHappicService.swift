@@ -10,13 +10,14 @@ import Alamofire
 
 struct HaruHappicService {
     static let shared = HaruHappicService()
-    
+    private let userManager = UserManager.shared
+
     private init() {}
     
     /// 하루해픽 전체 조회
     func getHaruHappic(year: Int, month: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.haruHappicURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let parameters: Parameters = ["year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)

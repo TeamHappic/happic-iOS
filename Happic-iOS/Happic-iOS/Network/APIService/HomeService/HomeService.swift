@@ -10,12 +10,13 @@ import Alamofire
 
 struct HomeService {
     static let shared = HomeService()
-    
+    private let userManager = UserManager.shared
+
     private init() {}
     
     func homeViewLoad(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.homeURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
@@ -26,6 +27,7 @@ struct HomeService {
                 guard let value = response.value else { return }
                 
                 let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: HomeModel.self)
+                print(networkResult)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
@@ -35,7 +37,7 @@ struct HomeService {
     
     func getHappicCapsule(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicCapsuleURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         

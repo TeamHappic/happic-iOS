@@ -10,6 +10,7 @@ import UIKit
 class CharacterNameViewController: UIViewController {
     
     var accessToken: String = ""
+    private let userManager = UserManager.shared
 
     @IBOutlet weak var characterImage: UIImageView!
     @IBAction func completeButtonDidTap(_ sender: Any) {
@@ -19,7 +20,7 @@ class CharacterNameViewController: UIViewController {
         
         if let name = characterNameTextField.text {
             signUp(characterId: flag, characterName: name, accessToken: accessToken)
-//            changeCharacter(characterId: flag, characterName: name)
+            changeCharacter(characterId: flag, characterName: name)
         }
         
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
@@ -115,6 +116,7 @@ extension CharacterNameViewController {
             switch response {
             case .success(let result):
                 guard let data = result as? SignUpModel else { return }
+                self.userManager.setSocialToken(token: data.jwtToken)
                 print("signup success", data)
             default:
                 print(response)
