@@ -106,8 +106,14 @@ extension HaruHappicController {
             case .success(let result):
                 guard let data = result as? [HaruHappicModel] else { return }
                 self.models = data
-                self.haruHappicPhotoController.setData(models: self.models)
-                self.haruHappicTagController.setData(models: self.models)
+                if data.isEmpty {
+                    self.haruHappicPhotoController.setEmptyImageView(bool: true)
+                    self.haruHappicTagController.setEmptyImageView(bool: true)
+                } else {
+                    self.haruHappicPhotoController.setEmptyImageView(bool: false)
+                    self.haruHappicTagController.setEmptyImageView(bool: false)
+                    self.haruHappicPhotoController.setData(models: self.models)
+                    self.haruHappicTagController.setData(models: self.models)
                 }
             default:
                 break
