@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - KakaoLoginModel
+struct KakaoLoginModel: Codable {
+    let jwtToken: String
+}
