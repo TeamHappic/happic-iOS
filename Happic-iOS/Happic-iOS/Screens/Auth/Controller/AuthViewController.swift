@@ -29,7 +29,7 @@ class AuthViewController: UIViewController {
     }
     
     @objc private func loginButtonDidTap() {
-    @objc private func presentCharacterChooseViewController() {
+         loginWithKakao()
     }
     
     private func loginWithKakao() {
@@ -40,6 +40,7 @@ class AuthViewController: UIViewController {
                 } else {
                     if let accessToken = oauthToken?.accessToken {
                         print("앱 로그인 성공" + accessToken)
+                        self.kakaoLogin(token: accessToken)
                     }
                 }
             }
@@ -48,11 +49,28 @@ class AuthViewController: UIViewController {
                if let error = error {
                  print(error)
                } else {
-                print("loginWithKakaoAccount() success.")
                    if let accessToken = oauthToken?.accessToken {
-                       print("\(accessToken)")
+                       print("웹 로그인 성공" + accessToken)
+                       self.kakaoLogin(token: accessToken)
                    }
                }
+            }
+        }
+    }
+}
+
+// MARK: - Network
+extension AuthViewController {
+    func kakaoLogin(token: String) {
+        KakaoLoginService.shared.loginWithKakao(kakaoToken: token) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? KakaoLoginModel else { return }
+                print("jwt 토큰 받기 성공", data)
+                let createCharacterView = CreateCharacterViewController.instantiate()
+                self.navigationController?.pushViewController(createCharacterView, animated: true)
+            default:
+                print(response)
             }
         }
     }
