@@ -14,7 +14,7 @@ struct KakaoLoginService {
     private init() {}
     
     func loginWithKakao(kakaoToken: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.pushUserRegisterURL
+        let url = APIConstants.signInURL
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         let body: Parameters = [
             "accessToken": kakaoToken
@@ -27,8 +27,7 @@ struct KakaoLoginService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                
-                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: BlankData.self)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: KakaoLoginModel.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)

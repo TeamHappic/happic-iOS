@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - HappicCapsuleModel
 struct HappicCapsuleModel: Codable {
     let date: String
     let photo: String

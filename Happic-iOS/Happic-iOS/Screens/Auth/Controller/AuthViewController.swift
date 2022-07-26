@@ -24,29 +24,28 @@ class AuthViewController: UIViewController {
     // MARK: - Functions
     private func setTapGesture() {
         startWithKakaoView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(presentCharacterChooseViewController))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(loginButtonDidTap))
         startWithKakaoView.addGestureRecognizer(tap)
     }
     
-    // TO DO : 함수 이름 바꾸기
-    @objc private func presentCharacterChooseViewController() {
-        let createCharacterStoryBoard = UIStoryboard(name: "CreateCharacterView", bundle: nil)
-        let creatCharacterViewController = createCharacterStoryBoard.instantiateViewController(withIdentifier: "CreateCharacterViewController")
-        self.navigationController?.pushViewController(creatCharacterViewController, animated: true)
-
-        // loginWithKakao()
+    @objc private func loginButtonDidTap() {
+         loginWithKakao()
     }
     
     private func loginWithKakao() {
-        // 카카오톡 로그인
         if UserApi.isKakaoTalkLoginAvailable() {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoTalk() success.")
                     if let accessToken = oauthToken?.accessToken {
-                        print("\(accessToken)")
+                        print("앱 로그인 성공" + accessToken)
+    
+//                        self.kakaoLogin(token: accessToken)
+                        
+                        let createCharacterView = CreateCharacterViewController.instantiate()
+                        createCharacterView.accessToken = accessToken
+                        self.navigationController?.pushViewController(createCharacterView, animated: true)
                     }
                 }
             }
@@ -55,11 +54,33 @@ class AuthViewController: UIViewController {
                if let error = error {
                  print(error)
                } else {
-                print("loginWithKakaoAccount() success.")
                    if let accessToken = oauthToken?.accessToken {
-                       print("\(accessToken)")
+                       print("웹 로그인 성공" + accessToken)
+                       
+//                       self.kakaoLogin(token: accessToken)
+                       
+                       let createCharacterView = CreateCharacterViewController.instantiate()
+                       createCharacterView.accessToken = accessToken
+                       self.navigationController?.pushViewController(createCharacterView, animated: true)
                    }
                }
+            }
+        }
+    }
+}
+
+// MARK: - Network
+extension AuthViewController {
+    func kakaoLogin(token: String) {
+        KakaoLoginService.shared.loginWithKakao(kakaoToken: token) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? KakaoLoginModel else { return }
+                print("jwt 토큰 받기 성공", data)
+                let createCharacterView = CreateCharacterViewController.instantiate()
+                self.navigationController?.pushViewController(createCharacterView, animated: true)
+            default:
+                print(response)
             }
         }
     }

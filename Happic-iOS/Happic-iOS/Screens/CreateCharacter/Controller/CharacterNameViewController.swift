@@ -8,6 +8,9 @@
 import UIKit
 
 class CharacterNameViewController: UIViewController {
+    
+    var accessToken: String = ""
+
     @IBOutlet weak var characterImage: UIImageView!
     @IBAction func completeButtonDidTap(_ sender: Any) {
         guard let userName = characterNameTextField.text else {
@@ -15,7 +18,8 @@ class CharacterNameViewController: UIViewController {
         }
         
         if let name = characterNameTextField.text {
-            characterChange(characterId: flag, characterName: name)
+            signUp(characterId: flag, characterName: name, accessToken: accessToken)
+//            changeCharacter(characterId: flag, characterName: name)
         }
         
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
@@ -103,14 +107,28 @@ extension CharacterNameViewController: UITextFieldDelegate {
 
 // MARK: - Network
 extension CharacterNameViewController {
-
-    func characterChange(characterId: Int, characterName: String) {
+    func signUp(characterId: Int, characterName: String, accessToken: String) {
+        SignUpService.shared.signUp(social: "kakao",
+                                    characterId: characterId,
+                                    characterName: characterName,
+                                    accessToken: accessToken) { response in
+            switch response {
+            case .success(let result):
+                guard let data = result as? SignUpModel else { return }
+                print("signup success", data)
+            default:
+                print(response)
+            }
+        }
+    }
+    
+    func changeCharacter(characterId: Int, characterName: String) {
         SignUpService.shared.changeCharacter(characterId: characterId, characterName: characterName) { response in
             switch response {
             case .success:
-                print("변경 성공")
+                print("change character name success")
             default:
-                print("캐릭터 변경 실패")
+                print(response)
             }
         }
     }
