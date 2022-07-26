@@ -20,6 +20,10 @@ final class HaruHappicPhotoController: UIViewController {
     weak var delegate: HaruHappicPhotoControllerDelegate?
     
     // MARK: - UI
+    private lazy var emptyImageView = UIImageView().then {
+        $0.image = ImageLiterals.imageEmpty
+        $0.contentMode = .scaleAspectFill
+    }
     private lazy var customMonthView = CustomMonthView()
     private lazy var customMonthPickerView = CustomMonthPickerView()
     private lazy var containerCollectionView: UICollectionView = {
@@ -42,7 +46,7 @@ final class HaruHappicPhotoController: UIViewController {
     // MARK: - Functions
     private func configureUI() {
         
-        view.addSubviews(containerCollectionView, customMonthView, customMonthPickerView)
+        view.addSubviews(emptyImageView, containerCollectionView, customMonthView, customMonthPickerView)
         
         containerCollectionView.backgroundColor = .clear
         
@@ -58,12 +62,19 @@ final class HaruHappicPhotoController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
+        emptyImageView.snp.makeConstraints { make in
+            make.center.equalTo(containerCollectionView)
+            make.width.height.equalTo(200)
+        }
+        
         customMonthPickerView.snp.makeConstraints { make in
             make.top.equalTo(customMonthView.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(10)
             make.height.equalTo(230)
         }
+        
         customMonthPickerView.isHidden = true
+        emptyImageView.isHidden = true
     }
     
     private func setDelegate() {
@@ -80,6 +91,11 @@ final class HaruHappicPhotoController: UIViewController {
     func setData(models: [HaruHappicModel]) {
         self.models = models
         containerCollectionView.reloadData()
+    }
+    
+    func setEmptyImageView(bool: Bool) {
+        emptyImageView.isHidden = !bool
+        containerCollectionView.isHidden = bool
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
