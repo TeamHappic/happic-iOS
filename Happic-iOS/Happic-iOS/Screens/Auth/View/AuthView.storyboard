@@ -157,7 +157,6 @@
                     <navigationItem key="navigationItem" id="1NM-7A-ZZI"/>
                     <connections>
                         <outlet property="startWithKakaoView" destination="W96-9x-RYh" id="yQa-Wj-ULX"/>
-                        <outlet property="termsIntroduceLabel" destination="4Be-Qs-aAC" id="vU9-Tu-7dh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw7-08-llv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,7 +167,7 @@
     <resources>
         <image name="bg_splash" width="375" height="812"/>
         <image name="hp_image_splash" width="188" height="155"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="message.fill" catalog="system" width="32" height="32"/>
         <namedColor name="hp_bgblack2h">
             <color red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
