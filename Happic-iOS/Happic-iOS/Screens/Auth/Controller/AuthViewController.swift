@@ -13,7 +13,6 @@ class AuthViewController: UIViewController {
     
     // MARK: - @IBOutlet Properties
     @IBOutlet weak var startWithKakaoView: UIView!
-    @IBOutlet weak var termsIntroduceLabel: UILabel!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
