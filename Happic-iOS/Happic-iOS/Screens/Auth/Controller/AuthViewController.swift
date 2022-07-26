@@ -24,29 +24,22 @@ class AuthViewController: UIViewController {
     // MARK: - Functions
     private func setTapGesture() {
         startWithKakaoView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(presentCharacterChooseViewController))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(loginButtonDidTap))
         startWithKakaoView.addGestureRecognizer(tap)
     }
     
-    // TO DO : 함수 이름 바꾸기
+    @objc private func loginButtonDidTap() {
     @objc private func presentCharacterChooseViewController() {
-        let createCharacterStoryBoard = UIStoryboard(name: "CreateCharacterView", bundle: nil)
-        let creatCharacterViewController = createCharacterStoryBoard.instantiateViewController(withIdentifier: "CreateCharacterViewController")
-        self.navigationController?.pushViewController(creatCharacterViewController, animated: true)
-
-        // loginWithKakao()
     }
     
     private func loginWithKakao() {
-        // 카카오톡 로그인
         if UserApi.isKakaoTalkLoginAvailable() {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoTalk() success.")
                     if let accessToken = oauthToken?.accessToken {
-                        print("\(accessToken)")
+                        print("앱 로그인 성공" + accessToken)
                     }
                 }
             }
