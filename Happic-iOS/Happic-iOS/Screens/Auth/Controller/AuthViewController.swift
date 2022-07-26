@@ -44,8 +44,8 @@ class AuthViewController: UIViewController {
 //                        self.kakaoLogin(token: accessToken)
                         
                         let createCharacterView = CreateCharacterViewController.instantiate()
-                        self.navigationController?.pushViewController(createCharacterView, animated: true)
                         createCharacterView.accessToken = accessToken
+                        self.navigationController?.pushViewController(createCharacterView, animated: true)
                     }
                 }
             }
@@ -60,8 +60,8 @@ class AuthViewController: UIViewController {
 //                       self.kakaoLogin(token: accessToken)
                        
                        let createCharacterView = CreateCharacterViewController.instantiate()
-                       self.navigationController?.pushViewController(createCharacterView, animated: true)
                        createCharacterView.accessToken = accessToken
+                       self.navigationController?.pushViewController(createCharacterView, animated: true)
                    }
                }
             }
@@ -77,8 +77,8 @@ extension AuthViewController {
             case .success(let result):
                 guard let data = result as? KakaoLoginModel else { return }
                 print("jwt 토큰 받기 성공", data)
-//                let createCharacterView = CreateCharacterViewController.instantiate()
-//                self.navigationController?.pushViewController(createCharacterView, animated: true)
+                let createCharacterView = CreateCharacterViewController.instantiate()
+                self.navigationController?.pushViewController(createCharacterView, animated: true)
             default:
                 print(response)
             }
