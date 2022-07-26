@@ -19,6 +19,7 @@ class CharacterNameViewController: UIViewController {
         
         if let name = characterNameTextField.text {
             signUp(characterId: flag, characterName: name, accessToken: accessToken)
+//            changeCharacter(characterId: flag, characterName: name)
         }
         
         namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
@@ -115,6 +116,17 @@ extension CharacterNameViewController {
             case .success(let result):
                 guard let data = result as? SignUpModel else { return }
                 print("signup success", data)
+            default:
+                print(response)
+            }
+        }
+    }
+    
+    func changeCharacter(characterId: Int, characterName: String) {
+        SignUpService.shared.changeCharacter(characterId: characterId, characterName: characterName) { response in
+            switch response {
+            case .success:
+                print("change character name success")
             default:
                 print(response)
             }
