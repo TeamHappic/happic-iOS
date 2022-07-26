@@ -27,7 +27,6 @@ struct HomeService {
                 guard let value = response.value else { return }
                 
                 let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: HomeModel.self)
-                print(networkResult)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)

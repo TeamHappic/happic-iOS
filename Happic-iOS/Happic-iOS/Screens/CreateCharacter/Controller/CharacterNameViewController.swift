@@ -117,7 +117,8 @@ extension CharacterNameViewController {
             case .success(let result):
                 guard let data = result as? SignUpModel else { return }
                 self.userManager.setSocialToken(token: data.jwtToken)
-                print("signup success", data)
+                
+                self.dismiss(animated: true)
             default:
                 print(response)
             }
