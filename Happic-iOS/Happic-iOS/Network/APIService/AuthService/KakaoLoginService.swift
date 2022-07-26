@@ -14,7 +14,7 @@ struct KakaoLoginService {
     private init() {}
     
     func loginWithKakao(kakaoToken: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        let url = APIConstants.pushUserRegisterURL
+        let url = APIConstants.signInURL
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         let body: Parameters = [
             "accessToken": kakaoToken
