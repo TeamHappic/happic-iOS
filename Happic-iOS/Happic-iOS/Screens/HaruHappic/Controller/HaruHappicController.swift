@@ -108,7 +108,7 @@ extension HaruHappicController {
                 self.models = data
                 self.haruHappicPhotoController.setData(models: self.models)
                 self.haruHappicTagController.setData(models: self.models)
-//                print(self.models)
+                }
             default:
                 break
             }
