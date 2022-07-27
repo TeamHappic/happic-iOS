@@ -180,6 +180,7 @@ final class HaruHappicDetailController: UIViewController {
     
     @objc private func showAlertPopUp() {
         let alartPopUpView = CustomPopUpController()
+        alartPopUpView.delegate = self
         alartPopUpView.id = models[previousIndex].id
         alartPopUpView.setPopUpText(title: "해픽 삭제",
                                     contents: "사진 삭제시 사진과 태그가 모두 지워집니다.\n또한 해당 내용은 복구가 불가능합니다.\n삭제하시겠습니까?",
@@ -327,5 +328,12 @@ extension HaruHappicDetailController: UICollectionViewDelegateFlowLayout {
                 zoomCell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             },
             completion: nil)
+    }
+}
+
+extension HaruHappicDetailController: CustomPopUpControllerDelegate {
+    func popUpDidDismiss() {
+        navigationController?.popViewController(animated: true)
+        showToast(message: "게시글이 삭제되었습니다.")
     }
 }

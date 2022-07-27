@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol CustomPopUpControllerDelegate: AnyObject {
+    func popUpDidDismiss()
+}
+
 class CustomPopUpController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: CustomPopUpControllerDelegate?
     var id: String = ""
 
     // MARK: - UI
@@ -146,9 +151,8 @@ extension CustomPopUpController {
             switch response {
             case .success:
                 self.dismiss(animated: true) {
-                    self.tabBarController?.selectedIndex = 1
+                    self.delegate?.popUpDidDismiss()
                 }
-                self.showToast(message: "게시글이 삭제되었습니다.")
             default:
                 break
             }
