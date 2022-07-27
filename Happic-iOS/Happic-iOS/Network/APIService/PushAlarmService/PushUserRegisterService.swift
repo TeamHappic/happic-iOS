@@ -10,12 +10,13 @@ import Alamofire
 
 struct PushUserRegisterService {
     static let shared = PushUserRegisterService()
-    
+    private let userManager = UserManager.shared
+
     private init() {}
     
     func registerUserWithFcmToken(token: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.pushUserRegisterURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let body: Parameters = [
             "fcmToken": token
         ]

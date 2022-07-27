@@ -10,6 +10,7 @@ import UIKit
 final class CreateCharacterViewController: UIViewController, Storyboarded {
     
     var accessToken: String = ""
+    var isSignUp: Bool = true
 
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
@@ -116,6 +117,7 @@ extension CreateCharacterViewController: CharacterIntroduceViewDelegate {
         let characterNameStoryBoard = UIStoryboard(name: "CharacterNameView", bundle: nil)
         guard let characterNameViewController = characterNameStoryBoard.instantiateViewController(withIdentifier: "CharacterNameViewController") as? CharacterNameViewController else { return }
         characterNameViewController.flag = flag
+        characterNameViewController.isSignUp = isSignUp
         self.navigationController?.pushViewController(characterNameViewController, animated: true)
         characterNameViewController.accessToken = accessToken
     }

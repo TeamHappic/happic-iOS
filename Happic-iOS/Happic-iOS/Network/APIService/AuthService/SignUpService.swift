@@ -10,7 +10,8 @@ import Alamofire
 
 struct SignUpService {
     static let shared = SignUpService()
-    
+    private let userManager = UserManager.shared
+
     private init() {}
     
     func signUp(social: String, characterId: Int, characterName: String, accessToken: String, completion: @escaping (NetworkResult<Any>) -> Void) {
@@ -42,8 +43,8 @@ struct SignUpService {
     func changeCharacter(characterId: Int, characterName: String,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.characterChangeURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
-        let parameters: Parameters = ["year": characterId, "characterName": characterName]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
+        let parameters: Parameters = ["characterId": characterId, "characterName": characterName]
         
         let dataRequest = AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding.default, headers: header)
         

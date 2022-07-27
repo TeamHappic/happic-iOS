@@ -12,6 +12,7 @@ import FirebaseCore
 import Firebase
 import FirebaseMessaging
 import UserNotifications
+import KakaoSDKUser
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,6 +64,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
+        
+        let userManager = UserManager.shared
+        if userManager.hasJwtToken {
+            UserApi.shared.accessTokenInfo { data, error in
+                if let error = error {
+                    if let sdkError = error as? SdkError,
+                       sdkError.isInvalidTokenError() == true {
+                        userManager.setLoginStatus(isLoginned: false)
+                    }
+                } else {
+                    // 토큰 유효성이 확인된 경우
+                    userManager.setLoginStatus(isLoginned: true)
+                }
+            } 
+        } else {
+            //유효한 토큰이 없는 경우
+            userManager.setLoginStatus(isLoginned: false)
+        }
         
         return true
     }
