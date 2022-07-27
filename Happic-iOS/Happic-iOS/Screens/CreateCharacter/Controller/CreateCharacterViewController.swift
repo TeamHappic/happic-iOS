@@ -84,9 +84,9 @@ final class CreateCharacterViewController: UIViewController, Storyboarded {
     @objc
     private func scaleDownCreateCharacterView(sender: UITapGestureRecognizer) {
         if let tag = sender.view?.tag {
-            CharacterIntroduceUIView.mooonCloudFlag = tag
+            CharacterIntroduceUIView.characterFlag = tag
         }
-        if CharacterIntroduceUIView.mooonCloudFlag == 0 {
+        if CharacterIntroduceUIView.characterFlag == 0 {
             MoonUIView.layer.borderColor = UIColor.hpDarkBlue.cgColor
             MoonUIView.layer.borderWidth = 2
             CloudUIView.layer.borderWidth = 0
