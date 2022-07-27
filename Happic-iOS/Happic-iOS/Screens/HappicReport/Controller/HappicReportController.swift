@@ -35,8 +35,10 @@ final class HappicReportController: UIViewController {
         setPurpleBackgroundColor()
         configureUI()
         setDelegate()
-        
-        getHappicReportSummary(year: "2022", month: "7")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getHappicReportSummary(year: "2022", month: currentMonth)
     }
     
     // MARK: - Functions
