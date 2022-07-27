@@ -41,11 +41,13 @@ class AuthViewController: UIViewController {
                     if let accessToken = oauthToken?.accessToken {
                         print("앱 로그인 성공" + accessToken)
     
-//                        self.kakaoLogin(token: accessToken)
-                        
-                        let createCharacterView = CreateCharacterViewController.instantiate()
-                        createCharacterView.accessToken = accessToken
-                        self.navigationController?.pushViewController(createCharacterView, animated: true)
+                        if AuthApi.hasToken() {
+                            self.kakaoLogin(token: accessToken)
+                        } else {
+                            let createCharacterView = CreateCharacterViewController.instantiate()
+                            createCharacterView.accessToken = accessToken
+                            self.navigationController?.pushViewController(createCharacterView, animated: true)
+                        }
                     }
                 }
             }
@@ -57,11 +59,13 @@ class AuthViewController: UIViewController {
                    if let accessToken = oauthToken?.accessToken {
                        print("웹 로그인 성공" + accessToken)
                        
-//                       self.kakaoLogin(token: accessToken)
-                       
-                       let createCharacterView = CreateCharacterViewController.instantiate()
-                       createCharacterView.accessToken = accessToken
-                       self.navigationController?.pushViewController(createCharacterView, animated: true)
+                       if AuthApi.hasToken() {
+                           self.kakaoLogin(token: accessToken)
+                       } else {
+                           let createCharacterView = CreateCharacterViewController.instantiate()
+                           createCharacterView.accessToken = accessToken
+                           self.navigationController?.pushViewController(createCharacterView, animated: true)
+                       }
                    }
                }
             }
@@ -77,8 +81,9 @@ extension AuthViewController {
             case .success(let result):
                 guard let data = result as? KakaoLoginModel else { return }
                 print("jwt 토큰 받기 성공", data)
-                let createCharacterView = CreateCharacterViewController.instantiate()
-                self.navigationController?.pushViewController(createCharacterView, animated: true)
+                let userManager = UserManager.shared
+                userManager.setSocialToken(token: data.jwtToken)
+                self.dismiss(animated: true)
             default:
                 print(response)
             }
