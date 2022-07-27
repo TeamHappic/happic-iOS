@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol CustomPopUpControllerDelegate: AnyObject {
     func popUpDidDismiss()
 }
@@ -134,9 +135,9 @@ class CustomPopUpController: UIViewController {
             print("캐릭터 변경")
             let createCharacterView = CreateCharacterViewController.instantiate()
             createCharacterView.isSignUp = false
-            let nav = UINavigationController(rootViewController: createCharacterView)
-            nav.modalPresentationStyle = .fullScreen
-            present(nav, animated: true)
+            let navicationController = UINavigationController(rootViewController: createCharacterView)
+            navicationController.modalPresentationStyle = .fullScreen
+            present(navicationController, animated: true)
         } else {
             print("삭제하기")
             deleteContents()

@@ -36,9 +36,9 @@ class CharacterNameViewController: UIViewController {
         
         namingCharacterLabel.attributedText = attributedStr
         
-        guard let pvc = self.presentingViewController else { return }
+        guard let previousViewController = self.presentingViewController else { return }
         self.dismiss(animated: true) {
-            pvc.dismiss(animated: true)
+            previousViewController.dismiss(animated: true)
         }
     }
     
