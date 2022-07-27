@@ -89,6 +89,7 @@ extension HaruHappicController: HaruHappicPhotoControllerDelegate, HaruHappicTag
 // MARK: - Network
 extension HaruHappicController {
     func checkPostStatus() {
+        LoadingIndicator.showLoading()
         CreateContentsService.shared.getPostStatus { response in
             switch response {
             case .success(let result):
@@ -102,11 +103,13 @@ extension HaruHappicController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }
 
 extension HaruHappicController {
     func getHaruHappicPhoto(year: Int, month: Int) {
+        LoadingIndicator.showLoading()
         HaruHappicService.shared.getHaruHappic(year: year, month: month) { response in
             switch response {
             case .success(let result):
@@ -125,5 +128,6 @@ extension HaruHappicController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

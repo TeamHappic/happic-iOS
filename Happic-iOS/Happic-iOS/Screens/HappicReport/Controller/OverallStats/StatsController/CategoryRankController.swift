@@ -70,6 +70,7 @@ final class CategoryRankController: UIViewController {
 // MARK: - Network
 extension CategoryRankController {
     func getCategoryRank(year: String = "2022", month: String) {
+        LoadingIndicator.showLoading()
         HappicReportService.shared.getCategoryRank(option: "when", year: year, month: month) { response in
             switch response {
             case .success(let result):
@@ -110,5 +111,6 @@ extension CategoryRankController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

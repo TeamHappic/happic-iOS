@@ -141,6 +141,7 @@ final class HappicCapsuleController: BaseUploadViewController {
 // MARK: - Network
 extension HappicCapsuleController {
     func getHappicCapsule() {
+        LoadingIndicator.showLoading()
         HomeService.shared.getHappicCapsule { response in
             switch response {
             case .success(let result):
@@ -155,9 +156,11 @@ extension HappicCapsuleController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
     
     func canPost() {
+        LoadingIndicator.showLoading()
         CreateContentsService.shared.getPostStatus { response in
             switch response {
             case .success(let result):
@@ -167,6 +170,6 @@ extension HappicCapsuleController {
                 break
             }
         }
-        
+        LoadingIndicator.hideLoading()
     }
 }

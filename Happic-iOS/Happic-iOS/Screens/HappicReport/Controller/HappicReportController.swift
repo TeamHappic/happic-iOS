@@ -179,6 +179,7 @@ extension HappicReportController: OverallStatsControllerDelegate {
 // MARK: - Network
 extension HappicReportController {
     func getHappicReportSummary(year: String = "2022", month: String) {
+        LoadingIndicator.showLoading()
         HappicReportService.shared.getHappicReportSummary(year: year, month: month) { response in
             switch response {
             case .success(let result):
@@ -191,5 +192,6 @@ extension HappicReportController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

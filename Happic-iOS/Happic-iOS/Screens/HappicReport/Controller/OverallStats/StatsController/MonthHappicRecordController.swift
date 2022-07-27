@@ -73,6 +73,7 @@ final class MonthHappicRecordController: UIViewController {
 // MARK: - Network
 extension MonthHappicRecordController {
     func getMonthlyData(year: String = "2022", month: String) {
+        LoadingIndicator.showLoading()
         HappicReportService.shared.getMonthlyCount(year: year, month: month) { response in
             switch response {
             case .success(let result):
@@ -83,5 +84,6 @@ extension MonthHappicRecordController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

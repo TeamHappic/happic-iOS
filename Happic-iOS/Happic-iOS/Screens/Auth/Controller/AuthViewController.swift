@@ -75,6 +75,7 @@ final class AuthViewController: UIViewController {
 // MARK: - Network
 extension AuthViewController {
     func kakaoLogin(token: String) {
+        LoadingIndicator.showLoading()
         KakaoLoginService.shared.loginWithKakao(kakaoToken: token) { response in
             switch response {
             case .success(let result):
@@ -82,8 +83,10 @@ extension AuthViewController {
                 print("jwt 토큰 받기 성공", data)
                 let userManager = UserManager.shared
                 userManager.setSocialToken(token: data.jwtToken)
+                LoadingIndicator.hideLoading()
                 self.dismiss(animated: true)
             default:
+                LoadingIndicator.hideLoading()
                 print(response)
             }
         }
