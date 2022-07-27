@@ -85,6 +85,7 @@
 		CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */; };
 		CECD7F3E2888817D00FD1420 /* HappicReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3D2888817D00FD1420 /* HappicReportService.swift */; };
 		CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */; };
+		CEE8585F2891940100ABA790 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8585E2891940100ABA790 /* LoadingIndicator.swift */; };
 		CEF6E05428780FAA00A1636F /* CustomViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E05328780FAA00A1636F /* CustomViewPager.swift */; };
 		CEF6E07D287814A400A1636F /* tempAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E07C287814A400A1636F /* tempAuthModel.swift */; };
 		CEF6E083287814B300A1636F /* tempCreateCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */; };
@@ -203,6 +204,7 @@
 		CECD7F3B28887F5B00FD1420 /* HappicReportSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportSummaryModel.swift; sourceTree = "<group>"; };
 		CECD7F3D2888817D00FD1420 /* HappicReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappicReportService.swift; sourceTree = "<group>"; };
 		CECD7F3F288886AB00FD1420 /* KeywordRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordRankModel.swift; sourceTree = "<group>"; };
+		CEE8585E2891940100ABA790 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		CEF6E05328780FAA00A1636F /* CustomViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPager.swift; sourceTree = "<group>"; };
 		CEF6E07C287814A400A1636F /* tempAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempAuthModel.swift; sourceTree = "<group>"; };
 		CEF6E082287814B300A1636F /* tempCreateCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempCreateCharacterModel.swift; sourceTree = "<group>"; };
@@ -932,6 +934,7 @@
 				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
 				CE8EDD1F2890481B009A652A /* UserDefaultWrapper.swift */,
 				CE8EDD2128904CB6009A652A /* UserManager.swift */,
+				CEE8585E2891940100ABA790 /* LoadingIndicator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				8E2F75812882A6DD001025DE /* CustomRecommendTagView.swift in Sources */,
 				8EE3D740288B2878002F47DA /* HaruHappicModel.swift in Sources */,
 				CEA47C4F288934FC008DF7CF /* MonthlyCountModel.swift in Sources */,
+				CEE8585F2891940100ABA790 /* LoadingIndicator.swift in Sources */,
 				CEF6E0A5287814FC00A1636F /* HappicReportController.swift in Sources */,
 				CEBB69D52873087D000EEB8A /* SceneDelegate.swift in Sources */,
 				8E31DD1C288FFDC4004001A6 /* KakaoLoginModel.swift in Sources */,

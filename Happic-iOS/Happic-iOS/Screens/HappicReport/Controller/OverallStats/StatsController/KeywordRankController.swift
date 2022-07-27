@@ -68,6 +68,7 @@ final class KeywordRankController: UIViewController {
 // MARK: - Network
 extension KeywordRankController {
     func getKeyworkRank(year: String, month: String) {
+        LoadingIndicator.showLoading()
         HappicReportService.shared.getKeywordRank(year: year, month: month) { response in
             switch response {
             case .success(let result):
@@ -79,5 +80,6 @@ extension KeywordRankController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

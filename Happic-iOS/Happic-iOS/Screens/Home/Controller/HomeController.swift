@@ -153,6 +153,7 @@ final class HomeController: BaseUploadViewController {
 // MARK: - Network
 extension HomeController {
     func checkPostStatus() {
+        LoadingIndicator.showLoading()
         CreateContentsService.shared.getPostStatus { response in
             switch response {
             case .success(let result):
@@ -166,11 +167,13 @@ extension HomeController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }
 
 extension HomeController {
     func homeViewLoad() {
+        LoadingIndicator.showLoading()
         HomeService.shared.homeViewLoad { response in
             switch response {
             case .success(let result):
@@ -216,5 +219,6 @@ extension HomeController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

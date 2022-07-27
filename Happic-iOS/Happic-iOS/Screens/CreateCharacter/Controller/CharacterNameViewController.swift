@@ -116,6 +116,7 @@ extension CharacterNameViewController: UITextFieldDelegate {
 // MARK: - Network
 extension CharacterNameViewController {
     func signUp(characterId: Int, characterName: String, accessToken: String) {
+        LoadingIndicator.showLoading()
         SignUpService.shared.signUp(social: "kakao",
                                     characterId: characterId,
                                     characterName: characterName,
@@ -124,15 +125,17 @@ extension CharacterNameViewController {
             case .success(let result):
                 guard let data = result as? SignUpModel else { return }
                 self.userManager.setSocialToken(token: data.jwtToken)
-                
+                LoadingIndicator.hideLoading()
                 self.dismiss(animated: true)
             default:
+                LoadingIndicator.hideLoading()
                 print(response)
             }
         }
     }
     
     func changeCharacter(characterId: Int, characterName: String) {
+        LoadingIndicator.showLoading()
         SignUpService.shared.changeCharacter(characterId: characterId, characterName: characterName) { response in
             switch response {
             case .success:
@@ -141,5 +144,6 @@ extension CharacterNameViewController {
                 print(response)
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }

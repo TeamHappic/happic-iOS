@@ -344,6 +344,7 @@ extension CreateContentsController: UIScrollViewDelegate {
 // MARK: - Network
 extension CreateContentsController {
     func uploadImage() {
+        LoadingIndicator.showLoading()
         guard let image = self.pickerImageView.image else { return }
         CreateContentsService.shared.uploadImage(imageData: image) { response in
             switch response {
@@ -355,9 +356,11 @@ extension CreateContentsController {
                 print(response)
             }
         }
+        LoadingIndicator.hideLoading()
     }
     
     func getRecommendTag() {
+        LoadingIndicator.showLoading()
         CreateContentsService.shared.getRecommendTag { response in
             switch response {
             case .success(let result):
@@ -369,9 +372,11 @@ extension CreateContentsController {
                 break
             }
         }
+        LoadingIndicator.hideLoading()
     }
     
     func createHaruHappic() {
+        LoadingIndicator.showLoading()
         guard let photo = photoURL,
               let place = whereTagView.userTextField.text,
               let who = whoTagView.userTextField.text,
@@ -397,5 +402,6 @@ extension CreateContentsController {
                 self.delegate?.showToastAfterCreating("\(response)")
             }
         }
+        LoadingIndicator.hideLoading()
     }
 }
