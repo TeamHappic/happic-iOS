@@ -62,6 +62,8 @@
 		CE479652288489F60095ADD4 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE479651288489F60095ADD4 /* NetworkResult.swift */; };
 		CE47965428848A450095ADD4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47965328848A450095ADD4 /* BaseResponse.swift */; };
 		CE47965628848B4F0095ADD4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47965528848B4F0095ADD4 /* NetworkHelper.swift */; };
+		CE8EDD202890481B009A652A /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8EDD1F2890481B009A652A /* UserDefaultWrapper.swift */; };
+		CE8EDD2228904CB6009A652A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8EDD2128904CB6009A652A /* UserManager.swift */; };
 		CEA4028628807004009D98EF /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */; };
 		CEA40289288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */; };
 		CEA4028B2880799B009D98EF /* CustomPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4028A2880799B009D98EF /* CustomPopUpController.swift */; };
@@ -180,6 +182,8 @@
 		CE479651288489F60095ADD4 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		CE47965328848A450095ADD4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		CE47965528848B4F0095ADD4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		CE8EDD1F2890481B009A652A /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		CE8EDD2128904CB6009A652A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CEA4028528807004009D98EF /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEA40288288074FE009D98EF /* SettingSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		CEA4028A2880799B009D98EF /* CustomPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpController.swift; sourceTree = "<group>"; };
@@ -926,6 +930,8 @@
 			isa = PBXGroup;
 			children = (
 				CEFC3C43287DCFF600F187BE /* CalendarHelper.swift */,
+				CE8EDD1F2890481B009A652A /* UserDefaultWrapper.swift */,
+				CE8EDD2128904CB6009A652A /* UserManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1084,6 +1090,7 @@
 				CEBB69D72873087D000EEB8A /* TabBarController.swift in Sources */,
 				CEBB69D32873087D000EEB8A /* AppDelegate.swift in Sources */,
 				CEF6E0B42878A08400A1636F /* UITextField+.swift in Sources */,
+				CE8EDD2228904CB6009A652A /* UserManager.swift in Sources */,
 				8EC8748A28888E2100974ACE /* PushUserRegisterService.swift in Sources */,
 				CECD7F40288886AB00FD1420 /* KeywordRankModel.swift in Sources */,
 				CECD7F3C28887F5B00FD1420 /* HappicReportSummaryModel.swift in Sources */,
@@ -1105,6 +1112,7 @@
 				8ECAD2BB28894D9700B2CEF0 /* CreateContentsService.swift in Sources */,
 				6BB88529288B096900832D00 /* SignUpService.swift in Sources */,
 				CEF6E0B82878A1C200A1636F /* String+.swift in Sources */,
+				CE8EDD202890481B009A652A /* UserDefaultWrapper.swift in Sources */,
 				CEFC3C49287E945000F187BE /* OverallStatsController.swift in Sources */,
 				CEFC3C53287EA88C00F187BE /* CustomTabPagerButton.swift in Sources */,
 				6BB88523288ADD2100832D00 /* HomeService.swift in Sources */,

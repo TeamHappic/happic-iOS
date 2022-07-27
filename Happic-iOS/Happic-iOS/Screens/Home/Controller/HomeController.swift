@@ -9,6 +9,9 @@ import UIKit
 
 final class HomeController: BaseUploadViewController {
     
+    // MARK: - Properties
+    let userManager = UserManager.shared
+    
     // MARK: - UI
     private lazy var levelLabel = UILabel().then {
         $0.text = "Lv1. 응애입니다."
@@ -74,14 +77,10 @@ final class HomeController: BaseUploadViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkLogin()
         homeViewLoad()
         setPurpleBackgroundColor()
         configureUI()
-        let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
-        let nextVC = nextSB.instantiateViewController(withIdentifier: "AuthViewController")
-        let nav = UINavigationController(rootViewController: nextVC)
-        nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,6 +137,16 @@ final class HomeController: BaseUploadViewController {
     @objc private func handleActionButtonDidTap(sender: UIButton) {
 //        checkPostStatus()
         setActionSheet()
+    }
+    
+    func checkLogin() {
+        if !userManager.hasJwtToken {
+            let nextSB = UIStoryboard(name: "AuthView", bundle: nil)
+            let nextVC = nextSB.instantiateViewController(withIdentifier: "AuthViewController")
+            let nav = UINavigationController(rootViewController: nextVC)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: false)
+        }
     }
 }
 

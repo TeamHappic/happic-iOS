@@ -7,9 +7,15 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol CustomPopUpControllerDelegate: AnyObject {
+    func popUpDidDismiss()
+}
+
 class CustomPopUpController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: CustomPopUpControllerDelegate?
     var id: String = ""
 
     // MARK: - UI
@@ -127,6 +133,11 @@ class CustomPopUpController: UIViewController {
     func setConfirmButtonAction() {
         if popUpTitleLabel.text == "캐릭터 변경 주의사항" {
             print("캐릭터 변경")
+            let createCharacterView = CreateCharacterViewController.instantiate()
+            createCharacterView.isSignUp = false
+            let navicationController = UINavigationController(rootViewController: createCharacterView)
+            navicationController.modalPresentationStyle = .fullScreen
+            present(navicationController, animated: true)
         } else {
             print("삭제하기")
             deleteContents()
@@ -141,9 +152,8 @@ extension CustomPopUpController {
             switch response {
             case .success:
                 self.dismiss(animated: true) {
-                    self.tabBarController?.selectedIndex = 1
+                    self.delegate?.popUpDidDismiss()
                 }
-                self.showToast(message: "게시글이 삭제되었습니다.")
             default:
                 break
             }

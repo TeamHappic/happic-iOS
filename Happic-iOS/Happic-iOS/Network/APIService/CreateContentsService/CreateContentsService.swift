@@ -10,13 +10,14 @@ import Alamofire
 
 struct CreateContentsService {
     static let shared = CreateContentsService()
+    private let userManager = UserManager.shared
     
     private init() {}
     
     /// 오늘 하루해픽 게시글 작성 여부 조회
     func getPostStatus(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.isPostedURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
@@ -58,7 +59,7 @@ struct CreateContentsService {
     /// 게시글 작성 시 최다 태그 추천
     func getRecommendTag(completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.recommendTagURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         
         let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: header)
         
@@ -78,7 +79,7 @@ struct CreateContentsService {
     /// 하루해픽 게시글 생성
     func createHaruHappic(photo: String, when: Int, place: String, who: String, what: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.createContentsURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let body: Parameters = ["photo": photo,
                                 "when": when,
                                 "where": place,
@@ -103,7 +104,7 @@ struct CreateContentsService {
     /// 하루해픽 게시글 삭제
     func deleteHaruHappic(filmId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.deleteContentsURL + filmId
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let dataRequest = AF.request(url, method: .delete, encoding: URLEncoding.default, headers: header)
         dataRequest.responseData { response in
             switch response.result {

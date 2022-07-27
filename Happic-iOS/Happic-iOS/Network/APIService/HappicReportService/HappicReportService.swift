@@ -10,13 +10,14 @@ import Alamofire
 
 struct HappicReportService {
     static let shared = HappicReportService()
+    private let userManager = UserManager.shared
     
     private init() {}
     
     /// 해픽 레포트 조회
     func getHappicReportSummary(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportSummaryURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let parameters: Parameters = [
             "year": year,
             "month": month
@@ -40,7 +41,7 @@ struct HappicReportService {
     /// 해픽 레포트 키워드 전체 순위 조회
     func getKeywordRank(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportKeywordRankURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let parameters: Parameters = ["year": year, "month": month]
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
         
@@ -61,7 +62,7 @@ struct HappicReportService {
     func getCategoryRank(option: String, year: String, month: String,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportCategoryRankURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let parameters: Parameters = ["option": option, "year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
@@ -82,7 +83,7 @@ struct HappicReportService {
     /// 월별 하루 해픽 조회
     func getMonthlyCount(year: String, month: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.happicReportMonthlyURL
-        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + UserDefaults.tempJWT]
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Authorization": "Bearer " + userManager.getJwtToken]
         let parameters: Parameters = ["year": year, "month": month]
         
         let dataRequest = AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header)
