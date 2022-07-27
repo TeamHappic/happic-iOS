@@ -127,6 +127,11 @@ class CustomPopUpController: UIViewController {
     func setConfirmButtonAction() {
         if popUpTitleLabel.text == "캐릭터 변경 주의사항" {
             print("캐릭터 변경")
+            let createCharacterView = CreateCharacterViewController.instantiate()
+            createCharacterView.isSignUp = false
+            let nav = UINavigationController(rootViewController: createCharacterView)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
         } else {
             print("삭제하기")
             deleteContents()

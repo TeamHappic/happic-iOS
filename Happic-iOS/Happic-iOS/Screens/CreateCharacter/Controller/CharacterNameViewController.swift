@@ -10,6 +10,7 @@ import UIKit
 class CharacterNameViewController: UIViewController {
     
     var accessToken: String = ""
+    var isSignUp: Bool = true
     private let userManager = UserManager.shared
 
     @IBOutlet weak var characterImage: UIImageView!
@@ -19,7 +20,9 @@ class CharacterNameViewController: UIViewController {
         }
         
         if let name = characterNameTextField.text {
-            signUp(characterId: flag, characterName: name, accessToken: accessToken)
+            if isSignUp {
+                signUp(characterId: flag, characterName: name, accessToken: accessToken)
+            }
             changeCharacter(characterId: flag, characterName: name)
         }
         
@@ -33,7 +36,10 @@ class CharacterNameViewController: UIViewController {
         
         namingCharacterLabel.attributedText = attributedStr
         
-        self.dismiss(animated: true)
+        guard let pvc = self.presentingViewController else { return }
+        self.dismiss(animated: true) {
+            pvc.dismiss(animated: true)
+        }
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
