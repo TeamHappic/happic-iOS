@@ -9,80 +9,80 @@ import UIKit
 
 final class CharacterNameViewController: UIViewController {
     
+    // MARK: - Properties
     var accessToken: String = ""
-
+    var flag: Int = 0
+    
+    // MARK: - @IBOutlet Properties
+    @IBOutlet weak var characterImageUIView: UIView!
     @IBOutlet weak var characterImage: UIImageView!
-    @IBAction func completeButtonDidTap(_ sender: Any) {
-        guard let userName = characterNameTextField.text else {
-            return
+    @IBOutlet weak var characterNameTextField: UITextField!
+    @IBOutlet weak var namingCharacterLabel: UILabel!
+    @IBOutlet weak var completeButton: UIButton! {
+        didSet {
+            completeButton.isEnabled = false
         }
+    }
+    
+    // MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureUI()
+        setDelegate()
+    }
+    
+    // MARK: - @IBAction Properties
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+                
+        guard let userName = characterNameTextField.text else { return }
         
         if let name = characterNameTextField.text {
             signUp(characterId: flag, characterName: name, accessToken: accessToken)
 //            changeCharacter(characterId: flag, characterName: name)
         }
         
-        namingCharacterLabel.text = "당신의 \(userName) 이(가) 오고 있어요 \n 잠시 기다려주세요"
-        namingCharacterLabel.numberOfLines = 0
-        namingCharacterLabel.textAlignment = .center
-
+        namingCharacterLabel.text = "당신의 \(userName)이(가) 오고 있어요\n잠시 기다려주세요"
+        
         let attributedStr = NSMutableAttributedString(string: namingCharacterLabel.text!)
         
         attributedStr.addAttribute(.foregroundColor, value: UIColor.orange, range: (namingCharacterLabel.text! as NSString).range(of: userName))
         
         namingCharacterLabel.attributedText = attributedStr
         
+        characterNameTextField.resignFirstResponder()
         self.dismiss(animated: true)
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    @IBOutlet weak var completeButton: UIButton!
-    
-    @IBOutlet weak var characterNameTextField: UITextField!
-    @IBOutlet weak var characterImageUIView: UIView!
-    @IBOutlet weak var namingCharacterLabel: UILabel!
-    
-    var flag: Int = 0 {
-        didSet {
-            print(flag)
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setPurpleBackgroundColor()
-        if flag == 0 {
-            characterImage.image = UIImage(named: "hp_img_m1")
-            characterImageUIView.setDarkBlue()
-            characterImageUIView.clipsToBounds = true
-        } else {
-            characterImage.image = UIImage(named: "hp_img_c1")
-            characterImageUIView.setDarkPurple()
-            characterImageUIView.clipsToBounds = true
-        }
-        characterImageUIView.layer.cornerRadius = 8
-        characterImageUIView.layer.maskedCorners = [.layerMinXMinYCorner,
-                                                    .layerMinXMaxYCorner,
-                                                    .layerMaxXMinYCorner,
-                                                    .layerMaxXMaxYCorner]
-        completeButton.isEnabled = false
-        completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)
-        characterNameTextField.delegate = self
-        characterNameTextField.becomeFirstResponder()
-    }
     
     @IBAction func textFieldIsEditing(_ sender: UITextField) {
-        if sender.hasText {
-            completeButton.isEnabled = true
-            completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpWhite]), for: .normal)        } else {
-                completeButton.isEnabled = false
-                completeButton.setAttributedTitle(NSAttributedString(string: "완료", attributes: [.font: UIFont.font(.pretendardBold, ofSize: 16), .foregroundColor: UIColor.hpGray7]), for: .normal)        }
+        completeButton.isEnabled = sender.hasText
     }
     
+    // MARK: - Functions
+    private func configureUI() {
+        
+        setPurpleBackgroundColor()
+        
+        characterImageUIView.clipsToBounds = true
+        
+        if flag == 0 {
+            characterImage.image = ImageLiterals.imageMoonLv1
+            characterImageUIView.setDarkBlue()
+        } else {
+            characterImage.image = ImageLiterals.imageCloudLv1
+            characterImageUIView.setDarkPurple()
+        }
+    }
+    
+    private func setDelegate() {
+        characterNameTextField.delegate = self
+    }
 }
 
+// MARK: - Extensions
 extension CharacterNameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let char = string.cString(using: String.Encoding.utf8) {
