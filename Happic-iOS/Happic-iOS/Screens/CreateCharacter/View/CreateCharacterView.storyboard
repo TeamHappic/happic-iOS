@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -13,9 +13,6 @@
         <array key="GmarketSansBold.otf">
             <string>GmarketSansBold</string>
         </array>
-        <array key="Pretendard-Medium.otf">
-            <string>Pretendard-Medium</string>
-        </array>
     </customFonts>
     <scenes>
         <!--CreateCharacterView-->
@@ -26,10 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해픽의 밤하늘의 당신의 행복을 기록하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-5P-wWH">
-                                <rect key="frame" x="71.666666666666671" y="80" width="231.66666666666663" height="17"/>
-                                <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
-                                <color key="textColor" name="hp_gray3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-5P-wWH">
+                                <rect key="frame" x="117.66666666666669" y="80" width="140" height="40.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="해픽의 밤하늘에 당신의 행복을 기록하세요">
+                                        <attributes>
+                                            <color key="NSColor" name="hp_gray3"/>
+                                            <font key="NSFont" size="14" name="Pretendard-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" restorationIdentifier="CharacterIntroduceView" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-6O-BGX" customClass="CharacterIntroduceView" customModule="Happic_iOS" customModuleProvider="target">
@@ -40,7 +44,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Qe-a0j">
-                                <rect key="frame" x="28" y="293" width="319" height="200"/>
+                                <rect key="frame" x="28" y="316.66666666666669" width="319" height="200.00000000000006"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nga-kV-bhk">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="200"/>
@@ -88,7 +92,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 할 길잡이를 선택해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-z0-vUp">
-                                <rect key="frame" x="96" y="233" width="183" height="16"/>
+                                <rect key="frame" x="96" y="256.66666666666669" width="183" height="16"/>
                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="16"/>
                                 <color key="textColor" name="hp_white"/>
                                 <nil key="highlightedColor"/>

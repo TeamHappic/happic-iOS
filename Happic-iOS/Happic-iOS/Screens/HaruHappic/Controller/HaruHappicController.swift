@@ -11,7 +11,7 @@ final class HaruHappicController: BaseUploadViewController {
     
     // MARK: - Properties
     var models = [HaruHappicModel]()
-    var currentMonth: String = "7"
+    private lazy var currentMonth: String = setCurrentMonth()
     private lazy var haruHappicPhotoController = HaruHappicPhotoController()
     private lazy var haruHappicTagController = HaruHappicTagController()
     
@@ -31,7 +31,7 @@ final class HaruHappicController: BaseUploadViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getHaruHappicPhoto(year: 2022, month: 7)
+        getHaruHappicPhoto(year: 2022, month: Int(currentMonth)!)
     }
     
     // MARK: - Functions
@@ -61,6 +61,12 @@ final class HaruHappicController: BaseUploadViewController {
     private func setDelegate() {
         haruHappicPhotoController.delegate = self
         haruHappicTagController.delegate = self
+    }
+    
+    private func setCurrentMonth() -> String {
+        let date = Date()
+        let todayMonth = Calendar.current.dateComponents([.month], from: date)
+        return String(todayMonth.month ?? 7)
     }
 }
 
@@ -106,9 +112,15 @@ extension HaruHappicController {
             case .success(let result):
                 guard let data = result as? [HaruHappicModel] else { return }
                 self.models = data
-                self.haruHappicPhotoController.setData(models: self.models)
-                self.haruHappicTagController.setData(models: self.models)
-//                print(self.models)
+                if data.isEmpty {
+                    self.haruHappicPhotoController.setEmptyImageView(bool: true)
+                    self.haruHappicTagController.setEmptyImageView(bool: true)
+                } else {
+                    self.haruHappicPhotoController.setEmptyImageView(bool: false)
+                    self.haruHappicTagController.setEmptyImageView(bool: false)
+                    self.haruHappicPhotoController.setData(models: self.models)
+                    self.haruHappicTagController.setData(models: self.models)
+                }
             default:
                 break
             }

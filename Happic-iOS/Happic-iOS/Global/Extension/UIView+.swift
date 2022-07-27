@@ -82,10 +82,8 @@ extension UIView {
     }
     
     func hideNoneKeywordView() {
-        for view in subviews {
-            if view.tag == 1 {
-                view.removeFromSuperview()
-            }
+        for view in subviews where view.tag == 1 {
+            view.removeFromSuperview()
         }
     }
     

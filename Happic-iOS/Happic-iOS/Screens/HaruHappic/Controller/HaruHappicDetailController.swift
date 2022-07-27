@@ -197,7 +197,7 @@ final class HaruHappicDetailController: UIViewController {
         photoCollectionView.layoutIfNeeded()
         
         DispatchQueue.main.async {
-            if let _ = self.photoCollectionView.dataSource?.collectionView(self.photoCollectionView, cellForItemAt: IndexPath(row: 0, section: 0)) {
+            if self.photoCollectionView.dataSource?.collectionView(self.photoCollectionView, cellForItemAt: IndexPath(row: 0, section: 0)) != nil {
                 self.photoCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
             }
         }

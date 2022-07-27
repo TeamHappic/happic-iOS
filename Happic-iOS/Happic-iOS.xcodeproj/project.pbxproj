@@ -717,7 +717,6 @@
 		CEF6E0642878142000A1636F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6BB885162887F24400832D00 /* CharacterIntroduceView.swift */,
 				6BB885122887E10D00832D00 /* CreateCharacterViewController.swift */,
 				6BB8851C288992BB00832D00 /* CharacterNameViewController.swift */,
 			);
@@ -729,6 +728,7 @@
 			children = (
 				6BB8850C2887E0F300832D00 /* CreateCharacterView.storyboard */,
 				6BB885182887F28E00832D00 /* CharacterIntroduceView.xib */,
+				6BB885162887F24400832D00 /* CharacterIntroduceView.swift */,
 				6BB8851A288992A500832D00 /* CharacterNameView.storyboard */,
 			);
 			path = View;
