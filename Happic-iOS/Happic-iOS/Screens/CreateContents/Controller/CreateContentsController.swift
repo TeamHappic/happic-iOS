@@ -354,7 +354,7 @@ extension CreateContentsController {
                 self.photoURL = data.link
                 LoadingIndicator.hideLoading()
             default:
-                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
                 print(response)
             }
         }
@@ -371,7 +371,7 @@ extension CreateContentsController {
                 self.whatTagView.setData(tags: data.what)
                 LoadingIndicator.hideLoading()
             default:
-                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
     }
@@ -402,7 +402,7 @@ extension CreateContentsController {
             default:
                 self.dismissViewController()
                 self.delegate?.showToastAfterCreating("\(response)")
-                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
     }

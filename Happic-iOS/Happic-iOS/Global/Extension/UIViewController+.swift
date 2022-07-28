@@ -44,7 +44,7 @@ extension UIViewController {
                               endPoint: CGPoint(x: 2.4, y: 0.4))
     }
     
-    func makeAlert(title: String, message: String? = nil,
+    func showAlert(title: String, message: String? = nil,
                    okTitle: String = "확인", okAction: ((UIAlertAction) -> Void)? = nil,
                    completion : (() -> Void)? = nil) {
         LoadingIndicator.hideLoading()
