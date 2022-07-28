@@ -75,7 +75,6 @@ final class HaruHappicTagController: UIViewController {
         }
         
         customMonthPickerView.isHidden = true
-        emptyImageView.isHidden = true
     }
     
     private func setDelegate() {
