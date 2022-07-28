@@ -44,4 +44,15 @@ extension UIViewController {
                               endPoint: CGPoint(x: 2.4, y: 0.4))
     }
     
+    func makeAlert(title: String, message: String? = nil,
+                   okTitle: String = "확인", okAction: ((UIAlertAction) -> Void)? = nil,
+                   completion : (() -> Void)? = nil) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        let alertVC = UIAlertController(title: title, message: message,
+                                                    preferredStyle: .alert)
+        let okAction = UIAlertAction(title: okTitle, style: .default, handler: okAction)
+        alertVC.addAction(okAction)
+        self.present(alertVC, animated: true, completion: completion)
+    }
 }
