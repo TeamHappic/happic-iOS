@@ -214,7 +214,8 @@ extension HomeController {
                 }
                 self.progressLabel.text = "\(data.growthRate)/6"
                 self.nameLabel.text = data.characterName
-                self.levelProgressView.progress = Float(data.growthRate / 6)
+                let progressValue: Float = Float(data.growthRate) / 6
+                self.levelProgressView.setProgress(progressValue, animated: true)
                 
                 LoadingIndicator.hideLoading()
             default:
