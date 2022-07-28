@@ -14,11 +14,10 @@ class LoadingIndicator {
             guard let window = UIApplication.shared.windows.last else { return }
 
             let loadingIndicatorView: UIActivityIndicatorView
-            if let existedView = window.subviews.first(where: { $0 is UIActivityIndicatorView } ) as? UIActivityIndicatorView {
+            if let existedView = window.subviews.first(where: { $0 is UIActivityIndicatorView }) as? UIActivityIndicatorView {
                 loadingIndicatorView = existedView
             } else {
                 loadingIndicatorView = UIActivityIndicatorView(style: .large)
-                /// 다른 UI가 눌리지 않도록 indicatorView의 크기를 full로 할당
                 loadingIndicatorView.frame = window.frame
                 loadingIndicatorView.color = .lightGray
                 window.addSubview(loadingIndicatorView)

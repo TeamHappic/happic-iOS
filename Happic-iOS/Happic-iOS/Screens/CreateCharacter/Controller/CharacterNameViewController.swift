@@ -128,7 +128,7 @@ extension CharacterNameViewController {
                 LoadingIndicator.hideLoading()
                 self.dismiss(animated: true)
             default:
-                LoadingIndicator.hideLoading()
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
                 print(response)
             }
         }
@@ -139,11 +139,12 @@ extension CharacterNameViewController {
         SignUpService.shared.changeCharacter(characterId: characterId, characterName: characterName) { response in
             switch response {
             case .success:
+                LoadingIndicator.hideLoading()
                 print("change character name success")
             default:
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
                 print(response)
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }

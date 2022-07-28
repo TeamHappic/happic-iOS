@@ -352,11 +352,12 @@ extension CreateContentsController {
                 print(response)
                 guard let data = result as? UploadImageModel else { return }
                 self.photoURL = data.link
+                LoadingIndicator.hideLoading()
             default:
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
                 print(response)
             }
         }
-        LoadingIndicator.hideLoading()
     }
     
     func getRecommendTag() {
@@ -368,11 +369,11 @@ extension CreateContentsController {
                 self.whereTagView.setData(tags: data.place)
                 self.whoTagView.setData(tags: data.who)
                 self.whatTagView.setData(tags: data.what)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
     
     func createHaruHappic() {
@@ -397,11 +398,12 @@ extension CreateContentsController {
             case .success:
                 self.dismissViewController()
                 self.delegate?.showToastAfterCreating("오늘의 해픽을 등록했어요")
+                LoadingIndicator.hideLoading()
             default:
                 self.dismissViewController()
                 self.delegate?.showToastAfterCreating("\(response)")
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }
