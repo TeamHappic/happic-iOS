@@ -77,8 +77,9 @@ extension CategoryRankController {
                 guard let data = result as? [KeywordModel] else { return }
                 self.handleEmptyView(isEmpty: data.isEmpty)
                 self.categoryRankView.setWhenData(model: data)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
         
@@ -87,8 +88,9 @@ extension CategoryRankController {
             case .success(let result):
                 guard let data = result as? [KeywordModel] else { return }
                 self.categoryRankView.setWhereData(model: data)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
         
@@ -97,8 +99,9 @@ extension CategoryRankController {
             case .success(let result):
                 guard let data = result as? [KeywordModel] else { return }
                 self.categoryRankView.setWhoData(model: data)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
         
@@ -107,10 +110,10 @@ extension CategoryRankController {
             case .success(let result):
                 guard let data = result as? [KeywordModel] else { return }
                 self.categoryRankView.setWhatData(model: data)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }

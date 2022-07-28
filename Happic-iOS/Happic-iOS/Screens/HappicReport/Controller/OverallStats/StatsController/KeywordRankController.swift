@@ -76,10 +76,10 @@ extension KeywordRankController {
                 self.keywordRankView.isHidden = data.isEmpty
                 self.containerView.isHidden = !data.isEmpty
                 self.keywordRankView.setData(model: data)
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }

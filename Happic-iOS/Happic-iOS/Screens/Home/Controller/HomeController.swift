@@ -163,11 +163,11 @@ extension HomeController {
                 } else {
                     self.setActionSheet()
                 }
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }
 
@@ -215,10 +215,11 @@ extension HomeController {
                 self.progressLabel.text = "\(data.growthRate)/6"
                 self.nameLabel.text = data.characterName
                 self.levelProgressView.progress = Float(data.growthRate / 6)
+                
+                LoadingIndicator.hideLoading()
             default:
-                break
+                self.makeAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
-        LoadingIndicator.hideLoading()
     }
 }
