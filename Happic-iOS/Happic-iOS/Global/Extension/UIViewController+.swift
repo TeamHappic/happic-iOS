@@ -47,6 +47,7 @@ extension UIViewController {
     func makeAlert(title: String, message: String? = nil,
                    okTitle: String = "확인", okAction: ((UIAlertAction) -> Void)? = nil,
                    completion : (() -> Void)? = nil) {
+        LoadingIndicator.hideLoading()
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         let alertVC = UIAlertController(title: title, message: message,
