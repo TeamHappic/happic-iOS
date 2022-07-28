@@ -121,8 +121,9 @@ extension HaruHappicController {
                 } else {
                     self.haruHappicPhotoController.setEmptyImageView(bool: false)
                     self.haruHappicTagController.setEmptyImageView(bool: false)
-                    self.haruHappicPhotoController.setData(models: self.models)
-                    self.haruHappicTagController.setData(models: self.models)
+                }
+                self.haruHappicPhotoController.setData(models: self.models)
+                self.haruHappicTagController.setData(models: self.models)
                 LoadingIndicator.hideLoading()
             default:
                 self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
