@@ -61,11 +61,27 @@ extension BaseUploadViewController: UIImagePickerControllerDelegate, UINavigatio
         present(picker, animated: false, completion: nil)
     }
     
+    // 세로 이미지 회전 문제로 인한 함수
+    func fixOrientation(img: UIImage) -> UIImage {
+        if (img.imageOrientation == .up) {
+            return img
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(img.size, false, img.scale)
+        let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+        img.draw(in: rect)
+        
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return normalizedImage
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let createContentsController = CreateContentsController()
         createContentsController.delegate = self
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            createContentsController.pickerImageView.image = image
+            createContentsController.pickerImageView.image = fixOrientation(img: image)
             picker.dismiss(animated: true)
             createContentsController.modalPresentationStyle = .fullScreen
             present(createContentsController, animated: true, completion: nil)
