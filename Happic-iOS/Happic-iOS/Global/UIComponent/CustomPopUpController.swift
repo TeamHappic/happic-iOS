@@ -152,10 +152,11 @@ extension CustomPopUpController {
             switch response {
             case .success:
                 self.dismiss(animated: true) {
+                    LoadingIndicator.hideLoading()
                     self.delegate?.popUpDidDismiss()
                 }
             default:
-                break
+                self.showAlert(title: "네트워크 오류로 인해\n데이터를 불러올 수 없습니다.\n다시 시도해 주세요.")
             }
         }
     }

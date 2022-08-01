@@ -11,7 +11,7 @@ import Then
 
 final class HappicReportController: UIViewController {
     // MARK: - Properties
-    var currentMonth: String = "7" {
+    var currentMonth: String = String(Calendar.current.component(.month, from: Date())) {
         didSet {
             setCustomMonthViewText(month: currentMonth)
             setCustomMonthPickerViewSelected(month: currentMonth)
