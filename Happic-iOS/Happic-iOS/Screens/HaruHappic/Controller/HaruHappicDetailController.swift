@@ -52,7 +52,6 @@ final class HaruHappicDetailController: UIViewController {
     }
     
     private lazy var dateLabel = UILabel().then {
-        $0.text = "2022 . 07 . 20"
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.pretendardBold, ofSize: 18)
     }
@@ -68,21 +67,10 @@ final class HaruHappicDetailController: UIViewController {
         return collectionView
     }()
     
-    private lazy var whenLabel = UILabel().then {
-        $0.text = "#오후2시"
-    }
-    
-    private lazy var whereLabel = UILabel().then {
-        $0.text = "#집구석구석"
-    }
-    
-    private lazy var whoLabel = UILabel().then {
-        $0.text = "#햄식달식이"
-    }
-    
-    private lazy var whatLabel = UILabel().then {
-        $0.text = "#짱짱귀여워"
-    }
+    private lazy var whenLabel = UILabel()
+    private lazy var whereLabel = UILabel()
+    private lazy var whoLabel = UILabel()
+    private lazy var whatLabel = UILabel()
     
     private lazy var tagStackView = UIStackView(arrangedSubviews: [whenLabel, whereLabel, whoLabel, whatLabel]).then {
         $0.axis = .horizontal
