@@ -16,11 +16,16 @@ final class CustomMonthView: UIView {
     
     // MARK: - Properties
     weak var delegate: CustomMonthViewDelegate?
+    var currentMonth: Int = Calendar.current.component(.month, from: Date())
     var isMonthViewEnabled: Bool = false
     
     // MARK: - UI
     lazy var monthLabel = UILabel().then {
-        $0.text = "2022 . 07"
+        if currentMonth < 10 {
+            $0.text = "2022 . 0" + "\(currentMonth)"
+        } else {
+            $0.text = "2022 . " + "\(currentMonth)"
+        }
         $0.textColor = .hpWhite
         $0.font = UIFont.font(.gmarketSansBold, ofSize: 16)
     }
