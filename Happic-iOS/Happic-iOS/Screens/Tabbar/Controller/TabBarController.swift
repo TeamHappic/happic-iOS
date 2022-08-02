@@ -128,7 +128,7 @@ extension TabBarController: UIImagePickerControllerDelegate, UINavigationControl
     
     // 세로 이미지 회전 문제로 인한 함수
     func fixOrientation(img: UIImage) -> UIImage {
-        if (img.imageOrientation == .up) {
+        if img.imageOrientation == .up {
             return img
         }
         
