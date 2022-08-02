@@ -193,9 +193,12 @@ final class CreateContentsController: UIViewController {
               let day = todayDay.day else { return }
         
         var monthStr = String(month)
-        let dayStr = String(day)
+        var dayStr = String(day)
         if monthStr.count == 1 {
             monthStr = "0\(monthStr)"
+        }
+        if dayStr.count == 1 {
+            dayStr = "0\(dayStr)"
         }
         self.dateLabel.text = "\(monthStr).\(dayStr) 해픽"
     }
